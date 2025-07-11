@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Tags Visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        #file-input-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 2px dashed #ddd;
+        }
+        
+        input[type="file"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+        #chart-container {
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+        
+        .bar-segment {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        /*.bar-segment:hover {*/
+        /*    opacity: 0.8;*/
+        /*}*/
+        
+        .bar-label {
+            font-size: 14px;
+            fill: #333;
+        }
+        
+        .bar-count {
+            font-size: 12px;
+            fill: #666;
+        }
+        
+        .tooltip {
+            position: absolute;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            border-radius: 6px;
+            pointer-events: none;
+            font-size: 14px;
+            max-width: 400px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .tooltip.persistent {
+            pointer-events: auto;
+        }
+        
+        .tooltip h4 {
+            margin: 0 0 10px 0;
+            color: #4CAF50;
+            font-size: 16px;
+        }
+        
+        .tooltip .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #ccc;
+            line-height: 1;
+        }
+        
+        .tooltip .close-btn:hover {
+            color: white;
+        }
+        
+        .tooltip a {
+            color: #81C784;
+            text-decoration: none;
+            display: inline-block;
+            margin: 3px 0;
+        }
+        
+        .tooltip a:hover {
+            color: #A5D6A7;
+            text-decoration: underline;
+        }
+        
+        .tooltip .extension-breakdown {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #555;
+        }
+        
+        .tooltip .extension-item {
+            margin: 2px 0;
+            font-size: 12px;
+        }
+        
+        .stats {
+            margin: 20px 0;
+            padding: 15px;
+            background: #e8f5e9;
+            border-radius: 6px;
+            color: #2e7d32;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .legend {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .legend-title {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+        }
+        
+        .legend-text {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Drive Tags Visualization</h1>
+        <p class="subtitle">Upload your google_drive_tagged_files.csv to see tag distribution</p>
+        
+        <div id="file-input-container">
+            <input type="file" id="csvFile" accept=".csv">
+            <p style="margin: 10px 0 0 0; color: #666;">Select the CSV file generated by the tagging script</p>
+        </div>
+        
+        <div id="controls" style="display: none; margin: 20px 0;">
+            <label style="font-weight: bold; margin-right: 10px;">Sort by:</label>
+            <input type="radio" id="sortCount" name="sortOption" value="count" checked>
+            <label for="sortCount" style="margin-right: 20px;">Count (High to Low, then A-Z)</label>
+            <input type="radio" id="sortTag" name="sortOption" value="tag">
+            <label for="sortTag">Tag Name (A to Z)</label>
+        </div>
+        
+        <div id="stats" class="stats" style="display: none;"></div>
+        <div id="legend" class="legend" style="display: none;">
+            <div class="legend-title">File Types:</div>
+        </div>
+        <div id="chart-container"></div>
+    </div>
+    
+    <div class="tooltip" style="display: none;"></div>
+
+    <script>
+        let csvData = [];
+        let currentData = [];
+        const tooltip = d3.select('.tooltip');
+        let tooltipPersistent = false;
+        
+        // Define colors for file extensions
+        const extensionColors = {
+            'pdf': '#DC2626',    // Acrobat red
+            'doc': '#2563EB',    // Word blue
+            'docx': '#1E40AF',   // Darker Word blue
+            'xpt': '#7C3AED',    // Purple
+            'jpg': '#EAB308',    // Yellow
+            'jpeg': '#CA8A04',   // Darker yellow
+            'xml': '#059669',    // Green
+            'xlsx': '#10B981',   // Excel green
+            'xls': '#059669',    // Darker Excel green
+            'ppt': '#EA580C',    // PowerPoint orange
+            'pptx': '#DC2626',   // PowerPoint red-orange
+            'png': '#F59E0B',    // Orange
+            'gif': '#8B5CF6',    // Light purple
+            'txt': '#6B7280',    // Gray
+            'csv': '#14B8A6',    // Teal
+            'zip': '#64748B',    // Slate
+            'msg': '#0891B2',    // Cyan
+            'html': '#F97316',   // Orange
+            'htm': '#FB923C',    // Light orange
+            'other': '#9CA3AF'   // Light gray for unknown types
+        };
+        
+        // Close tooltip when clicking outside
+        document.addEventListener('click', function(event) {
+            if (tooltipPersistent && !event.target.closest('.tooltip') && 
+                !event.target.closest('.bar-segment') && !event.target.closest('text')) {
+                hideTooltip();
+                tooltipPersistent = false;
+            }
+        });
+        
+        // Close tooltip with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && tooltipPersistent) {
+                hideTooltip();
+                tooltipPersistent = false;
+            }
+        });
+        
+        // Add event listeners for sort options
+        document.getElementById('sortCount').addEventListener('change', function() {
+            if (this.checked && currentData.length > 0) {
+                const sortedData = [...currentData].sort((a, b) => {
+                    // First sort by count (descending)
+                    if (b.count !== a.count) {
+                        return b.count - a.count;
+                    }
+                    // If counts are equal, sort alphabetically by tag
+                    return a.tag.localeCompare(b.tag);
+                });
+                createChart(sortedData);
+            }
+        });
+        
+        document.getElementById('sortTag').addEventListener('change', function() {
+            if (this.checked && currentData.length > 0) {
+                const sortedData = [...currentData].sort((a, b) => a.tag.localeCompare(b.tag));
+                createChart(sortedData);
+            }
+        });
+        
+        document.getElementById('csvFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    parseAndVisualize(e.target.result);
+                };
+                reader.readAsText(file);
+            }
+        });
+        
+        function parseAndVisualize(csvText) {
+            Papa.parse(csvText, {
+                header: true,
+                complete: function(results) {
+                    csvData = results.data.filter(row => row.filename); // Filter out empty rows
+                    processData();
+                }
+            });
+        }
+        
+        function getFileExtension(filename) {
+            const parts = filename.split('.');
+            if (parts.length > 1) {
+                return parts[parts.length - 1].toLowerCase();
+            }
+            return 'other';
+        }
+        
+        function processData() {
+            // Define acronyms that should be all caps
+            const acronyms = new Set([
+                'FDA', 'EUA', 'CBER', 'CDC', 'CRO', 'WHO', 'NIH', 'NIEHS', 'CIOMS', 'VAERS', 'BIMO',
+                'GLP', 'GMP', 'CMC', 'OCBQ/DMPQ/MRBI', 'CBER/OVRR/DVP/LDV', 'COVID-19', 'COVID', 
+                'SARS-COV-2', 'SARS-COV', 'MERS-COV', 'CRF', 'ECRF', 'RNA', 'MRNA', 'DNA', 
+                'ADSL', 'ADAE', 'ADVA', 'ADCEVD', 'CDISC', 'SAS', 'SDTM', 'RT-PCR', 'PCR', 
+                'NAAT', 'BMI', 'ECG', 'THC', 'HEK293T', 'BALB/C', 'GS1', 'NDC', 'BNT162B2', 
+                'BNT162B1', 'BNT162', 'IND', 'PF-07302048', 'C4591001', 'M1', 'M2', 'M3', 
+                'M4', 'M5', 'M6', 'ALC-0315', 'ALC-0159', 'DSPC', 'ACE2', 'DPP4', 'RBD', 
+                'VRBPAC', 'VAED', 'MIS', 'EVALI', 'RSV', 'FI-RSV', 'ACTIV', 'BARDA', 'DART', 
+                'GMFR', 'AAI', 'ISARIC', 'CEPI', 'MCDC', 'SBU', 'FOIA', 'LNP', 'PEG', 
+                'TMPRSS2', 'ICOS', 'MTB', 'NEPA', 'CEQ', 'OVRR', 'IB', 'PVP', 'QC', 'US', 'PMG', 'R&D',
+                'USA', 'UK', 'EU/EEA', 'ECDC', 'RS', 'CY', 'LPT', 'SUNY', 'VA', 'USPHS', 'CMI', 'ID',
+                'OVRR/DVP/LDV', 'RELREC'
+            ]);
+            
+            // Function to standardize tag capitalization
+            function standardizeTag(tag) {
+                // First, handle special cases where certain words should always be capitalized
+                let result = tag;
+                
+                // Replace specific terms with their proper capitalization
+                const replacements = {
+                    'fda': 'FDA',
+                    'eua': 'EUA',
+                    'ace2': 'ACE2',
+                    'qc': 'QC',
+                    'crf': 'CRF',
+                    'crfs': 'CRFs',
+                    'mrna': 'mRNA',
+                    'mcdc': 'MCDC',
+                    'covid': 'COVID',
+                    'sars': 'SARS',
+                    'mers': 'MERS',
+                    'cov': 'CoV',
+                    'pcr': 'PCR',
+                    'rna': 'RNA',
+                    'dna': 'DNA',
+                    'ecrf': 'eCRF',
+                    'crfs': 'CRFs',
+
+                };
+                
+                // Replace words in the tag while preserving word boundaries
+                Object.entries(replacements).forEach(([key, value]) => {
+                    const regex = new RegExp(`\\b${key}\\b`, 'gi');
+                    result = result.replace(regex, value);
+                });
+                
+                // Check if the entire tag (uppercase) matches an acronym
+                const upperTag = tag.toUpperCase();
+                for (let acronym of acronyms) {
+                    if (upperTag === acronym.toUpperCase()) {
+                        return acronym;
+                    }
+                }
+                
+                // Handle compound terms with hyphens
+                if (result.includes('-')) {
+                    result = result.split('-').map(part => {
+                        // Check each part against replacements
+                        const lowerPart = part.toLowerCase();
+                        if (replacements[lowerPart]) {
+                            return replacements[lowerPart];
+                        }
+                        // Otherwise capitalize first letter
+                        return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                    }).join('-');
+                } else {
+                    // Convert to proper case but preserve already capitalized terms
+                    const words = result.split(' ');
+                    result = words.map(word => {
+                        // If word is already all caps and more than 1 char, keep it
+                        if (word.length > 1 && word === word.toUpperCase()) {
+                            return word;
+                        }
+                        // Otherwise, capitalize first letter
+                        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                    }).join(' ');
+                }
+                
+                return result;
+            }
+            
+            // Count tags and collect files for each tag
+            const tagMap = new Map();
+            const allExtensions = new Set();
+            
+            csvData.forEach(row => {
+                if (row.tags) {
+                    // Split tags by comma and trim whitespace
+                    const tags = row.tags.split(',').map(tag => tag.trim());
+                    const extension = getFileExtension(row.filename);
+                    allExtensions.add(extension);
+                    
+                    tags.forEach(tag => {
+                        if (tag) {
+                            // Standardize the tag
+                            const standardizedTag = standardizeTag(tag);
+                            
+                            if (!tagMap.has(standardizedTag)) {
+                                tagMap.set(standardizedTag, {
+                                    count: 0,
+                                    files: [],
+                                    extensionCounts: {}
+                                });
+                            }
+                            
+                            const tagData = tagMap.get(standardizedTag);
+                            tagData.count++;
+                            tagData.files.push({
+                                filename: row.filename,
+                                link: row.google_drive_link,
+                                title: row.title || row.filename,
+                                extension: extension
+                            });
+                            
+                            // Count extensions
+                            if (!tagData.extensionCounts[extension]) {
+                                tagData.extensionCounts[extension] = 0;
+                            }
+                            tagData.extensionCounts[extension]++;
+                        }
+                    });
+                }
+            });
+            
+            // Convert to array and sort by count (descending) then by tag name (ascending)
+            const tagArray = Array.from(tagMap.entries())
+                .map(([tag, data]) => ({
+                    tag: tag,
+                    count: data.count,
+                    files: data.files,
+                    extensionCounts: data.extensionCounts
+                }))
+                .sort((a, b) => {
+                    // First sort by count (descending)
+                    if (b.count !== a.count) {
+                        return b.count - a.count;
+                    }
+                    // If counts are equal, sort alphabetically by tag
+                    return a.tag.localeCompare(b.tag);
+                });
+            
+            // Store data globally for re-sorting
+            currentData = tagArray;
+            
+            // Display stats
+            const statsDiv = document.getElementById('stats');
+            statsDiv.style.display = 'block';
+            statsDiv.innerHTML = `
+                <strong>Summary:</strong> 
+                ${csvData.length} files processed | 
+                ${tagArray.length} unique tags found | 
+                Most common tag: "${tagArray[0]?.tag}" (${tagArray[0]?.count} files)
+            `;
+            
+            // Create legend
+            createLegend(allExtensions);
+            
+            // Show controls
+            document.getElementById('controls').style.display = 'block';
+            
+            createChart(tagArray);
+        }
+        
+        function createLegend(extensions) {
+            const legendDiv = document.getElementById('legend');
+            legendDiv.style.display = 'flex';
+            
+            // Clear existing legend items (keep title)
+            const title = legendDiv.querySelector('.legend-title');
+            legendDiv.innerHTML = '';
+            legendDiv.appendChild(title);
+            
+            // Sort extensions alphabetically
+            const sortedExtensions = Array.from(extensions).sort();
+            
+            sortedExtensions.forEach(ext => {
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                
+                const color = document.createElement('div');
+                color.className = 'legend-color';
+                color.style.backgroundColor = extensionColors[ext] || extensionColors['other'];
+                
+                const text = document.createElement('div');
+                text.className = 'legend-text';
+                text.textContent = ext.toUpperCase();
+                
+                item.appendChild(color);
+                item.appendChild(text);
+                legendDiv.appendChild(item);
+            });
+        }
+        
+        function createChart(data) {
+            const container = document.getElementById('chart-container');
+            container.innerHTML = '<div class="loading">Creating visualization...</div>';
+            
+            // Set dimensions
+            const margin = { top: 20, right: 150, bottom: 40, left: 250 };
+            const barHeight = 22; // Reduced height per bar
+            const width = 1200;
+            const height = data.length * barHeight + margin.top + margin.bottom;
+            
+            // Clear previous chart
+            container.innerHTML = '';
+            
+            // Create SVG
+            const svg = d3.select('#chart-container')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+            
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+            
+            // Create scales
+            const xScale = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.count)])
+                .range([0, width - margin.left - margin.right]);
+            
+            const yScale = d3.scaleBand()
+                .domain(data.map(d => d.tag))
+                .range([0, height - margin.top - margin.bottom])
+                .padding(0.1); // Reduced padding
+            
+            // Add X axis
+            g.append('g')
+                .attr('transform', `translate(0,${height - margin.top - margin.bottom})`)
+                .call(d3.axisBottom(xScale).ticks(10));
+            
+            // Add X axis label
+            g.append('text')
+                .attr('x', (width - margin.left - margin.right) / 2)
+                .attr('y', height - margin.top - margin.bottom + 35)
+                .style('text-anchor', 'middle')
+                .style('font-size', '14px')
+                .text('Number of Files');
+            
+            // Create custom Y axis with clickable labels
+            const yAxis = g.append('g');
+            
+            data.forEach(d => {
+                yAxis.append('text')
+                    .attr('x', -10)
+                    .attr('y', yScale(d.tag) + yScale.bandwidth() / 2)
+                    .attr('dy', '0.35em')
+                    .attr('text-anchor', 'end')
+                    .style('font-size', '14px')
+                    .style('cursor', 'pointer')
+                    .style('fill', '#333')
+                    .text(d.tag)
+                    .on('click', function(event) {
+                        showTooltipPersistent(event, d);
+                    })
+                    .on('mouseover', function(event) {
+                        d3.select(this).style('fill', '#45a049');
+                        if (!tooltipPersistent) {
+                            showTooltip(event, d);
+                        }
+                    })
+                    .on('mousemove', function(event) {
+                        if (!tooltipPersistent) {
+                            moveTooltip(event);
+                        }
+                    })
+                    .on('mouseout', function() {
+                        d3.select(this).style('fill', '#333');
+                        if (!tooltipPersistent) {
+                            hideTooltip();
+                        }
+                    });
+            });
+            
+            // Create segmented bars
+            const bars = g.selectAll('.bar-group')
+                .data(data)
+                .enter()
+                .append('g')
+                .attr('class', 'bar-group');
+            
+            // For each tag, create segments for each file type
+            bars.each(function(d) {
+                const group = d3.select(this);
+                let currentX = 0;
+                
+                // Sort extensions to ensure consistent ordering
+                const sortedExtensions = Object.keys(d.extensionCounts).sort();
+                
+                sortedExtensions.forEach(ext => {
+                    const count = d.extensionCounts[ext];
+                    const width = xScale(count);
+                    
+                    group.append('rect')
+                        .attr('class', 'bar-segment')
+                        .attr('x', currentX)
+                        .attr('y', yScale(d.tag))
+                        .attr('width', width)
+                        .attr('height', yScale.bandwidth())
+                        .attr('fill', extensionColors[ext] || extensionColors['other'])
+                        .attr('data-extension', ext)
+                        .attr('data-count', count)
+                        .on('click', function(event) {
+                            showTooltipPersistent(event, d);
+                        })
+                        .on('mouseover', function(event) {
+                            if (!tooltipPersistent) {
+                                showTooltip(event, d);
+                            }
+                        })
+                        .on('mousemove', function(event) {
+                            if (!tooltipPersistent) {
+                                moveTooltip(event);
+                            }
+                        })
+                        .on('mouseout', function() {
+                            if (!tooltipPersistent) {
+                                hideTooltip();
+                            }
+                        });
+                    
+                    currentX += width;
+                });
+            });
+            
+            // Add count labels on bars
+            bars.append('text')
+                .attr('class', 'bar-count')
+                .attr('x', d => xScale(d.count) + 5)
+                .attr('y', d => yScale(d.tag) + yScale.bandwidth() / 2)
+                .attr('dy', '0.35em')
+                .text(d => d.count)
+                .style('pointer-events', 'none'); // Prevent blocking click events
+        }
+        
+        function showTooltip(event, d) {
+            if (tooltipPersistent) return; // Don't show hover tooltip if persistent one is open
+            
+            const fileLinks = d.files
+                .map(file => `<a href="${file.link}" target="_blank">${file.filename}</a>`)
+                .join('<br>');
+            
+            tooltip
+                .classed('persistent', false)
+                .style('display', 'block')
+                .html(`
+                    <h4>${d.tag} (${d.count} files)</h4>
+                    ${fileLinks}
+                `);
+            
+            moveTooltip(event);
+        }
+        
+        function showTooltipPersistent(event, d) {
+            event.stopPropagation();
+            tooltipPersistent = true;
+            
+            const fileLinks = d.files
+                .map(file => `<a href="${file.link}" target="_blank">${file.filename}</a>`)
+                .join('<br>');
+            
+            tooltip
+                .classed('persistent', true)
+                .style('display', 'block')
+                .html(`
+                    <span class="close-btn" onclick="closeTooltip()">×</span>
+                    <h4>${d.tag} (${d.count} files)</h4>
+                    ${fileLinks}
+                `);
+            
+            moveTooltip(event);
+        }
+        
+        function closeTooltip() {
+            hideTooltip();
+            tooltipPersistent = false;
+        }
+        
+        function moveTooltip(event) {
+            const tooltipNode = tooltip.node();
+            const tooltipWidth = tooltipNode.offsetWidth;
+            const tooltipHeight = tooltipNode.offsetHeight;
+            const pageWidth = window.innerWidth;
+            const pageHeight = window.innerHeight;
+            
+            let left = event.pageX + 10;
+            let top = event.pageY - 10;
+            
+            // Adjust if tooltip would go off right edge
+            if (left + tooltipWidth > pageWidth - 20) {
+                left = event.pageX - tooltipWidth - 10;
+            }
+            
+            // Adjust if tooltip would go off bottom edge
+            if (top + tooltipHeight > pageHeight + window.scrollY - 20) {
+                top = event.pageY - tooltipHeight - 10;
+            }
+            
+            tooltip
+                .style('left', left + 'px')
+                .style('top', top + 'px');
+        }
+        
+        function hideTooltip() {
+            tooltip
+                .style('display', 'none')
+                .classed('persistent', false);
+        }
+    </script>
+</body>
+</html>

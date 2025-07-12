@@ -1,0 +1,35 @@
+Domain Code,Domain Name
+ae,Adverse Events
+ce,Clinical Events
+cm,Concomitant Medications
+co,Comments
+dd,Drug Accountability
+di,Device Identification
+dm,Demographics
+ds,Disposition
+dv,Protocol Deviations
+ec,Exposure as Collected
+eg,ECG Test Results
+ex,Exposure
+face,Findings About - Clinical Events
+faho,Findings About - Hospitalizations
+ho,Hospitalization Events
+ie,Inclusion/Exclusion Criteria Not Met
+is,Immunogenicity Specimen Assessments
+lb,Laboratory Test Results
+mb,Microbiology Specimen Assessments
+mh,Medical History
+mo,Unknown or Custom Domain
+pe,Physical Examination
+pr,Procedures
+relrec,Related Records
+rp,Protocol Elements
+se,Subject Elements
+sv,Subject Visits
+ta,Trial Arms
+te,Trial Elements
+ti,Trial Inclusion/Exclusion Criteria
+ts,Trial Summary
+tv,Trial Visits
+vs,Vital Signs
+xa,"Custom Domain - e.g., Exploratory Analysis"

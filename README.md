@@ -5,7 +5,7 @@ First effort to review newly-released EUA documents (Source: search for `eua` at
 3. Upload the csv file that has used AI to tag the first 7 pages of each document
 4. Click on a tag name or bar to access the files that were given those tags.
 
-# Notes on using Datasette to view CSV files on the virtual machine
+#### Notes on using Datasette to view CSV files on the virtual machine
 
 
 $ ```cd ~```

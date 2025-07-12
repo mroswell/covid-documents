@@ -8,4 +8,4 @@ First effort to review newly-released EUA documents (Source: search for `eua` at
 
 ### Data Dictionary
 
-https://mroswell.github.io/data-dictionary.html
+https://mroswell.github.io/eua-review/data-dictionary.html

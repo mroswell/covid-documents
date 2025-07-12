@@ -1,5 +1,5 @@
 ####
-
+Visit: http://35.231.8.125:8001/pd-eua-data
 % ```
 gcloud compute instances create datasette-vm \
     --zone=us-east1-b \

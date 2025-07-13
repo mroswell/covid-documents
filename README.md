@@ -10,7 +10,7 @@ First effort to review newly-released EUA documents (Source: search for `eua` at
 
 https://mroswell.github.io/eua-review/data-dictionary.html
 
-### Related Documentaion that can provide insight into data variables
+### Related Documentation that can provide insight into data variables
 - Study Data Tabulation Model: https://www.cdisc.org/system/files/members/standard/foundational/SDTM_v2.0.pdf
 - Analysis Data Reviewer Guide - BLA Analysis for Participants ≥16 Years of Age: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c4591001-A-adrg.pdf
 - Analysis Data Reviewer’s Guide - ModernaTX, Inc. Study mRNA-1273-P201 Part A: https://phmpt.org/wp-content/uploads/2025/05/125752_S3_M5_mrna-1273-p201-add1_A_D_adrg.pdf

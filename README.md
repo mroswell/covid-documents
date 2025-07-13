@@ -17,5 +17,7 @@ Study C4591001: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c45910
 - Analysis Data Reviewer’s Guide - ModernaTX, Inc. Study mRNA-1273-P201 Part A: https://phmpt.org/wp-content/uploads/2025/05/125752_S3_M5_mrna-1273-p201-add1_A_D_adrg.pdf
 - Create addv dataset (SAS) https://phmpt.org/wp-content/uploads/2023/09/125742-45_S211_M5_c4591001-A_1mth-P-addv-sas.pdf
 - Create adsl dataset (SAS): https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022867-to-0023006_125742_S1_M5_c4591001-A-P-adsl-sas.txt
+-  Create adc19ef-ve-cov-7pd2-wo-sg-eval (SAS): https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022041-to-0022053_125742_S1_M5_c4591001-A-P-adc19ef-ve-cov-7pd2-wo-sg-eval-sas.txt
+- https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022041-to-0022053_125742_S1_M5_c4591001-A-P-adc19ef-ve-cov-7pd2-wo-sg-eval-sas.txt
 - SDTM Variables You Might Forget About: https://pharmasug.org/proceedings/2023/DS/PharmaSUG-2023-DS-054.pdf
 - Practical Guide to Creating ADaM Datasets for Cross-over Studies: https://www.lexjansen.com/pharmasug/2019/DS/PharmaSUG-2019-DS-196.pdf

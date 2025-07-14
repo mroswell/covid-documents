@@ -23,3 +23,4 @@ Study C4591001: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c45910
 - SDTM Variables You Might Forget About: https://pharmasug.org/proceedings/2023/DS/PharmaSUG-2023-DS-054.pdf
 - Practical Guide to Creating ADaM Datasets for Cross-over Studies: https://www.lexjansen.com/pharmasug/2019/DS/PharmaSUG-2019-DS-196.pdf
 - CDISC Standards RDF REference Guide Final https://www.cdisc.org/system/files/members/standard/foundational/rdf/CDISC%20Standards%20RDF%20Reference%20Guide%201.0%20Final%202015-06-18.pdf
+- Analysis of Adverse EVEnts: https://leg.colorado.gov/sites/default/files/html-attachments/h_bus_2022a_03032022_013716_pm_committee_summary/Attachment%20C.pdf

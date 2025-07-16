@@ -29,6 +29,7 @@ Study C4591001: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c45910
 - https://dctd.cancer.gov/research/ctep-trials/trial-development
 - SAP - https://cdn.clinicaltrials.gov/large-docs/28/NCT04368728/SAP_001.pdf
 
+### Modules
 In clinical trial submissions to regulatory authorities (like the FDA, EMA, or other agencies), the content is organized into a standardized format called the Common Technical Document (CTD). Here are the five modules:
 
 **Module 1: Administrative Information and Prescribing Information**

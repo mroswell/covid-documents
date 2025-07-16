@@ -828,15 +828,15 @@
             'COMPLFN': 'Completers population flag (numeric)',
             'RANDFL': 'Randomized population flag',
             'EVALEFFL': 'Evaluable efficacy population flag',
-            'AAI1EFFL': 'Dose 1 all-available efficacy population flag',
-            'AAI2EFFL': 'Dose 2 all-available efficacy population flag',
+            'AAI1EFFL': 'Dose 1 all-available efficacy population flag - All randomized participants who complete 1 vaccination dose1.',
+            'AAI2EFFL': 'Dose 2 all-available efficacy population flag - All randomized participants who complete 2 vaccination doses.',
             'ENRLFL': 'Enrolled population flag',
             'JPNFL': 'Japanese subject flag',
             'EVAL01FL': 'Dose 1 evaluable immunogenicity population flag', ///https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c4591001-A-adrg.pdf
             'EVAL02FL': 'Dose 2 evaluable immunogenicity population flag',
             'AAI01FL': 'Dose 1 all-available immunogenicity population flag',
             'AAI02FL': 'Dose 2 all-available immunogenicity population flag',
-            'MULENRFL': 'Multiply enrolled subjects flag',
+            'MULENRFL': 'Multiply enrolled subjects flag (Subjects with multiple sites are excluded from all analysis.)',
             'STEXCFL': 'Site/subject exclusion flag for SQE',
             'UNKRDFL': 'Unknown randomization group flag',
             'EXCL1FL': 'Exclusion criterion 1 flag',
@@ -872,10 +872,10 @@
             'COMBODFL': 'Comorbidity flag', // https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022867-to-0023006_125742_S1_M5_c4591001-A-P-adsl-sas.txt
             'PREFL': 'Pre-treatment flag',
             'INWDFL': 'In window flag',
-            'KNOWVFL': '*Known variant flag', // uncertain
-            'KNOWVDFL': 'Known variant detail flag',
-            'EVENTFL': 'Event flag',
-            'EVENTDFL': 'Event detail flag',
+            'KNOWVFL': 'Known value flag - Y if reaction happened at least once during Days 1-7 post-dose (per subject/dose/event)',
+            'KNOWVDFL': 'Data collection flag - Y if reaction data was recorded on this specific day, regardless of occurrence (per subject/dose/event/day)',
+            'EVENTFL': 'Event value flag',
+            'EVENTDFL': 'Day event value flag - "Daily flag (Y/N) for adverse events meeting criteria on days 1-7 post-dose per subject/dose/parameter"',
             'EVENTOCC': 'Event occurrence',
             'COMORBFL': 'Comorbidity flag',
             'EVIMMFL': 'Evaluable immunogenicity flag',
@@ -1129,7 +1129,7 @@
             'LBLOINC': 'LOINC code',
             'LBBLFL': 'Baseline flag',
             'LBSPID': 'Lab sponsor-defined identifier',
-            'ISLLOQ': '*Is lower limit of quantitation', // uncertain
+            'ISLLOQ': 'Lower limit of quantitation (COVID-19 S1 IgG (U/mL)) = 1.2665;',
 
             // Visit Variables
             'AVISIT': 'Analysis visit',
@@ -1346,8 +1346,8 @@
             'FADRVFL': 'Derived flag',
             'FAENRTPT': 'End reference time point',
             'FAENTPT': 'End time point',
-            'FASTINT': '*Start interval', // uncertain
-            'FAENINT': '*End interval', // uncertain
+            'FASTINT': 'Evaluation interval start ', // uncertain
+            'FAENINT': 'Evaluation interval end', // uncertain
 
             // Immunogenicity Variables
             'ISSEQ': 'Sequence number for immunogenicity',
@@ -1561,10 +1561,10 @@
             'CDP214FL': 'Flag indicates if subject is included in vaccine efficacy population for CDC-defined COVID-19 7 days after dose 2',
             'NMPDOCFL': 'No major protocol deviation occurrence flag',
             'CDCSYMFL': 'CDC-defined symptom present flag',
-            'CDCRMUFL': 'CDC-symptom result missing or unknown Flag',
+            'CDCRMUFL': 'CDC-symptom result missing or unknown flag',
             'COVBLST': 'Baseline SARS-CoV-2 Status (Positive/Negative)',
             'HIVFL': 'HIV positive flag',
-            'EV14EFFL': '[Seeking documentation for this flag]', // uncertain
+            'EV14EFFL': 'Evaluable efficacy population flag - 14 days',
 
             // Vaccination Variables
             'VAX101': 'Vaccination 1 given',
@@ -1598,15 +1598,15 @@
             'FU2MPD2': '*Follow-up 2 months post dose 2', // uncertain
             'F2MP2CAT': 'Follow-up 2 months post dose 2 category',
             'F2MP2CAN': 'Follow-up 2 months post dose 2 category (numeric)',
-            'CLTYP': '*Cell type', // uncertain
-            'FTEMCAT': '*First temperature category', // uncertain
-            'FTEMCATN': 'First temperature category (numeric)',
+            'CLTYP': 'Collection type',
+            'FTEMCAT': 'Fever temperature category',
+            'FTEMCATN': 'Fever temperature category (numeric)',
             'CAT1': 'Charlson Comorbidity Index Category 1', //https://icandecide.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022601-to-0022617_125742_S1_M5_c4591001-A-P-admh-sas.txt
             'CAT2': 'Charlson Comorbidity Index Category 2', //ibid.
             'CDECASE': '*CDE case', // uncertain
             'PC1MD2FL': '*Post challenge 1 month dose 2 flag', // uncertain
-            'BSSEROC': '*Baseline seroconversion', // uncertain
-            'BSSERON': 'Baseline seroconversion (numeric)',
+            'BSSEROC': '*Baseline serostatus',
+            'BSSERON': 'Baseline serostatus (numeric)',
 
             // Additional Domain-specific Variables
             'DDSEQ': 'Sequence number for death details',

@@ -27,3 +27,4 @@ Study C4591001: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c45910
 - CDISC Standards RDF REference Guide Final https://www.cdisc.org/system/files/members/standard/foundational/rdf/CDISC%20Standards%20RDF%20Reference%20Guide%201.0%20Final%202015-06-18.pdf
 - Analysis of Adverse EVEnts: https://leg.colorado.gov/sites/default/files/html-attachments/h_bus_2022a_03032022_013716_pm_committee_summary/Attachment%20C.pdf
 - https://dctd.cancer.gov/research/ctep-trials/trial-development
+- SAP - https://cdn.clinicaltrials.gov/large-docs/28/NCT04368728/SAP_001.pdf

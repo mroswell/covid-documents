@@ -28,6 +28,7 @@ Study C4591001: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c45910
 - Analysis of Adverse EVEnts: https://leg.colorado.gov/sites/default/files/html-attachments/h_bus_2022a_03032022_013716_pm_committee_summary/Attachment%20C.pdf
 - https://dctd.cancer.gov/research/ctep-trials/trial-development
 - SAP - https://cdn.clinicaltrials.gov/large-docs/28/NCT04368728/SAP_001.pdf
+- https://rdrr.io/cran/pharmaversesdtm/man/suppae.html
 
 ### Modules
 In clinical trial submissions to regulatory authorities (like the FDA, EMA, or other agencies), the content is organized into a standardized format called the Common Technical Document (CTD). Here are the five modules:

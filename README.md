@@ -4,7 +4,7 @@ First effort to review newly-released EUA documents (Source: search for `eua` at
 [Data Dictionary](data-dictionary.html) | [Tag Visualization](index.html)
 
 ### Documents 
-[Domains](domains.txt) | [FOIA Exemptions](FOIA-exemptions.md) | [Parameter Codes](documentation-paramcd.md)
+[Domains](domains.txt) | [FOIA Exemptions](FOIA-exemptions.md) | [Modules](modules.md) [Parameter Codes](documentation-paramcd.md)
 
 #### Python Programs
 [process_define_xml_to_single_csv.py](process_define_xml_to_single_csv.py) | [xpt2csv.py](xpt2csv.py)

@@ -1,4 +1,4 @@
-"EX01A00: Other medical or psychiatric condition incl. recent (within past year) or active suicidal ideation/behavior/lab abnormality that may increase the risk of study participation;
+EX01A00: Other medical or psychiatric condition incl. recent (within past year) or active suicidal ideation/behavior/lab abnormality that may increase the risk of study participation;
 EX02A00: Known infection with human immunodeficiency virus (HIV), hepatitis C virus (HCV), or hepatitis B virus (HBV);
 EX02A06: Phase 1 & 2 only: Known infection with human immunodeficiency virus (HIV), hepatitis C virus (HCV), or hepatitis B virus (HBV);
 EX03A00: History of severe adverse reaction associated with a vaccine and/or severe allergic reaction (eg, anaphylaxis) to any component of the study intervention(s);
@@ -46,4 +46,4 @@ IN03A06: Healthy participants, determined by medical history, physical examinati
 IN04A00: Capable of giving personal signed informed consent, which includes compliance with the requirements and restrictions listed in the ICD and in this protocol;
 IN04A07: Capable of giving personal signed informed consent/have parent/legal guardian capable of giving signed informed consent, which includes compliance with requirements, restrictions in ICD and protocol;
 IN05A05: Participants who, in the judgment of the investigator, are at risk for acquiring COVID-19;
-IN05A06: Phase 2/3 only: Participants who, in the judgment of the investigator, are at higher risk for acquiring COVID-19"
+IN05A06: Phase 2/3 only: Participants who, in the judgment of the investigator, are at higher risk for acquiring COVID-19

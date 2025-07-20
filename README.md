@@ -1,7 +1,8 @@
 First effort to review newly-released EUA documents (Source: search for `eua` at https://phmpt.org) 
-These cover: 
+These cover:
+- BNT162b2: A Multi-site, Phase I/II, 2-Part, Dose-Escalation Trial Investigating the Safety and Immunogenicity of Four Prophylactic SARS-CoV-2 RNA Vaccines Against COVID-19 Using Different Dosing Regimens in Healthy Adults
 - C4591001: A Phase 1/2/3 Study to Evaluate the Safety, Tolerability, Immunogenicity, and Efficacy of RNA Vaccine Candidates Against COVID-19 in Healthy Adults
-- A Multi-site, Phase I/II, 2-Part, Dose-Escalation Trial Investigating the Safety and Immunogenicity of Four Prophylactic SARS-CoV-2 RNA Vaccines Against COVID-19 Using Different Dosing Regimens in Healthy Adults
+
 
 ### Applications
 [Data Dictionary](data-dictionary.html) | [Tag Visualization](index.html)

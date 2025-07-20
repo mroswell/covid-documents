@@ -21,6 +21,17 @@ These cover:
 3. Upload the csv file that has used AI to tag the first 7 pages of each document
 4. Click on a tag name or bar to access the files that were given those tags.
 
+### Steps I've taken to explore this release
+1. Download and unzip the two 'eua' zipfiles at https://phmpt.org
+2. upload all the files to Google Drive
+4. Write Python code to create tagged_eua_files.csv
+5. Create web visialization of the tags. serves as an index.
+6. Write and run xpt2csv.py to export thr SAS export files to CSVs
+7. Use sql-utils to convert the files to Sqllite
+8. create a Google Compute Engine virtual machine with a virtual environment to view all 158 tables in Datasette
+9. Build a data dictionary, using the XMLfioes and SAS code and internet research to inform the field descriptions and code values
+10. use a trial version of JMP to export JMP fiors to csv
+
 ### Data Dictionary
 
 https://mroswell.github.io/eua-review/data-dictionary.html

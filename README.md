@@ -30,7 +30,7 @@ These cover:
 7. Use sql-utils to convert the files to SQLite
 8. Create a Google Compute Engine virtual machine with a virtual environment to view all 158 tables in Datasette
 9. Build a data dictionary, using the XML files and SAS code and internet research to inform the field descriptions and (developing) code values
-10. Use a trial version of JMP to export JMP fiors to csv
+10. Use a trial version of JMP to export JMP files to CSVs
 
 ### Data Dictionary
 

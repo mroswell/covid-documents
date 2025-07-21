@@ -29,8 +29,9 @@ These cover:
 6. Write and run [xpt2csv.py](xpt2csv.py) to export the SAS export files to CSVs
 7. Use sql-utils to convert the 158 CSV files to asingle SQLite database
 8. Create a Google Compute Engine virtual machine with a virtual environment to view all 158 tables in Datasette
-9. Build a data dictionary, using the XML files and SAS code and internet research to inform the field descriptions and (developing) code values
-10. Use a trial version of JMP to export JMP files to CSVs
+9. Write and run [definexml2csv.py](definexml2csv.py)
+10. Build a data dictionary, using the XML files and SAS code and internet research to inform the field descriptions and (developing) code values
+11. Use a trial version of JMP to export JMP files to CSVs
 
 ### Data Dictionary
 

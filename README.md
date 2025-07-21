@@ -25,7 +25,7 @@ These cover:
 1. Download and unzip the two 'eua' zipfiles at https://phmpt.org/multiple-file-downloads/
 2. Upload all the files to Google Drive
 4. Write Python code to create tagged_eua_files.csv
-5. Create web visialization of the tags. This serves as an index.
+5. Create web visualization of the tags. This serves as an index.
 6. Write and run [xpt2csv.py](xpt2csv.py) to export thr SAS export files to CSVs
 7. Use sql-utils to convert the files to Sqllite
 8. Create a Google Compute Engine virtual machine with a virtual environment to view all 158 tables in Datasette

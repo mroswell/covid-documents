@@ -29,8 +29,8 @@ These cover:
 6. Write and run xpt2csv.py to export thr SAS export files to CSVs
 7. Use sql-utils to convert the files to Sqllite
 8. create a Google Compute Engine virtual machine with a virtual environment to view all 158 tables in Datasette
-9. Build a data dictionary, using the XMLfioes and SAS code and internet research to inform the field descriptions and code values
-10. use a trial version of JMP to export JMP fiors to csv
+9. Build a data dictionary, using the XML files and SAS code and internet research to inform the field descriptions and (developing) code values
+10. Use a trial version of JMP to export JMP fiors to csv
 
 ### Data Dictionary
 
@@ -45,7 +45,7 @@ Study C4591001: https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c45910
 - https://rpodcast.quarto.pub/pilot4-webassembly-adrg/
 - Create addv dataset (SAS) https://phmpt.org/wp-content/uploads/2023/09/125742-45_S211_M5_c4591001-A_1mth-P-addv-sas.pdf
 - Create adsl dataset (SAS): https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022867-to-0023006_125742_S1_M5_c4591001-A-P-adsl-sas.txt
--  Create adc19ef-ve-cov-7pd2-wo-sg-eval (SAS): https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022041-to-0022053_125742_S1_M5_c4591001-A-P-adc19ef-ve-cov-7pd2-wo-sg-eval-sas.txt
+- Create adc19ef-ve-cov-7pd2-wo-sg-eval (SAS): https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022041-to-0022053_125742_S1_M5_c4591001-A-P-adc19ef-ve-cov-7pd2-wo-sg-eval-sas.txt
 - https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022041-to-0022053_125742_S1_M5_c4591001-A-P-adc19ef-ve-cov-7pd2-wo-sg-eval-sas.txt
 - create admh dataset (SAS) https://icandecide.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022601-to-0022617_125742_S1_M5_c4591001-A-P-admh-sas.txt
 - SDTM Variables You Might Forget About: https://pharmasug.org/proceedings/2023/DS/PharmaSUG-2023-DS-054.pdf

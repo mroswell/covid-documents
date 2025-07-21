@@ -18,7 +18,7 @@ These cover:
 ### Data Visualization of Tags (and file picker)
 1. Download the CSV from this repository
 2. Visit https://mroswell.github.io/eua-review
-3. Upload the csv file that has used AI to tag the first 7 pages of each document
+3. Upload the CSV file that has used AI to tag the first 7 pages of each document
 4. Click on a tag name or bar to access the files that were given those tags.
 
 ### Steps I've taken to explore this release
@@ -26,7 +26,7 @@ These cover:
 2. Upload all the files to Google Drive
 4. Write Python code to create tagged_eua_files.csv
 5. Create web visialization of the tags. This serves as an index.
-6. Write and run xpt2csv.py to export thr SAS export files to CSVs
+6. Write and run [xpt2csv.py](xpt2csv.py) to export thr SAS export files to CSVs
 7. Use sql-utils to convert the files to Sqllite
 8. Create a Google Compute Engine virtual machine with a virtual environment to view all 158 tables in Datasette
 9. Build a data dictionary, using the XML files and SAS code and internet research to inform the field descriptions and (developing) code values

@@ -3,13 +3,13 @@ These cover:
 - BNT162b2: A Multi-site, Phase I/II, 2-Part, Dose-Escalation Trial Investigating the Safety and Immunogenicity of Four Prophylactic SARS-CoV-2 RNA Vaccines Against COVID-19 Using Different Dosing Regimens in Healthy Adults
 - C4591001: A Phase 1/2/3 Study to Evaluate the Safety, Tolerability, Immunogenicity, and Efficacy of RNA Vaccine Candidates Against COVID-19 in Healthy Adults
 
-** Applications: **
+**Applications:**
 [Data Dictionary](data-dictionary.html) | [Tag Visualization](index.html)
 
-** Documents: **
+**Documents:**
 [Domains](domains.txt) | [FOIA Exemptions](FOIA-exemptions.md) | [Inclusions/Exclusions](documentation/inclusion-exclusion.txt) | [Modules](modules.md) | [Parameter Codes](documentation-paramcd.md)
 
-** Python Programs: **
+**Python Programs:**
 [process_define_xml_to_single_csv.py](process_define_xml_to_single_csv.py) | [xpt2csv.py](xpt2csv.py)
 
 

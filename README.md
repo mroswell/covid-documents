@@ -7,7 +7,9 @@ These cover:
 [Data Dictionary](data-dictionary.html) | [Tag Visualization](index.html)
 
 **Documents:**
-[Domains](domains.txt) | [FOIA Exemptions](FOIA-exemptions.md) | [Inclusions/Exclusions](documentation/inclusion-exclusion.txt) | [Modules](modules.md) | [Parameter Codes](documentation-paramcd.md)
+[Domains](documentation/domains.txt) | [FOIA Exemptions](documentation/FOIA-exemptions.md) | [Inclusions/Exclusions](documentation/inclusion-exclusion.txt) | 
+[Modules](documentation/modules.md) | [Parameter Codes](documentation/documentation-paramcd.md)
+
 
 **Python Programs:**
 [definexml2csv.py](definexml2csv_csv.py) | [xpt2csv.py](xpt2csv.py)

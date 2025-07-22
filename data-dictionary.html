@@ -16,6 +16,8 @@
             background-color: #f8f9fa;
             color: #2c3e50;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -24,14 +26,52 @@
             padding: 20px;
         }
 
+        .nav-menu {
+            background: #f8f9fa;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        .nav-menu a.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+
         header {
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 2px 0;
             margin-bottom: 32px;
-/*             position: sticky;
-            top: 0;
-            z-index: 100; */
         }
 
         h1 {
@@ -396,6 +436,14 @@
     </style>
 </head>
 <body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="data-dictionary.html" class="active">Data Dictionary</a></li>
+        </ul>
+    </nav>
+    
     <header>
         <div class="container">
             <h4>Work in Progress Unofficial</h4>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - EUA File Navigator</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-menu {
+            background: #f8f9fa;
+            padding: 12px 0;
+            margin: -20px -30px 20px -30px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            padding: 0 30px;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        .nav-menu a.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        h2 {
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="data-dictionary.html">Data Dictionary</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content-section">
+            <h1>About the EUA File Navigator</h1>
+            
+            <h2>Overview</h2>
+            <p>
+                This navigator provides access to clinical trial documents submitted to the FDA for the 
+                Pfizer-BioNTech COVID-19 vaccine Emergency Use Authorization (EUA). These documents were 
+                obtained through Freedom of Information Act (FOIA) requests and represent a comprehensive 
+                collection of clinical trial data, safety reports, and efficacy analyses.
+            </p>
+            
+            <h2>Document Collection</h2>
+            <p>
+                The collection includes 854 documents spanning multiple modules of the regulatory submission:
+            </p>
+            <ul>
+                <li><strong>Module 1 (M1):</strong> Administrative and prescribing information</li>
+                <li><strong>Module 2 (M2):</strong> Summaries and overviews</li>
+                <li><strong>Module 4 (M4):</strong> Nonclinical study reports</li>
+                <li><strong>Module 5 (M5):</strong> Clinical study reports</li>
+            </ul>
+            
+            <h2>Data Standards</h2>
+            <p>
+                The clinical trial data follows CDISC (Clinical Data Interchange Standards Consortium) standards:
+            </p>
+            <ul>
+                <li><strong>SDTM (Study Data Tabulation Model):</strong> Standardized format for organizing clinical trial data</li>
+                <li><strong>ADaM (Analysis Data Model):</strong> Datasets prepared for statistical analysis</li>
+                <li><strong>Supplemental Qualifiers:</strong> Additional data that extends the standard domains</li>
+            </ul>
+            
+            <h2>Using the Navigator</h2>
+            <p>
+                The file navigator allows you to explore documents by various criteria:
+            </p>
+            <ul>
+                <li>Filter by file type (PDF, Word, Excel, etc.)</li>
+                <li>Filter by domain (adverse events, laboratory data, demographics, etc.)</li>
+                <li>Filter by folder (different submission dates)</li>
+                <li>Filter by module (M1, M2, M4, M5)</li>
+                <li>Sort by document count or alphabetically by tag name</li>
+            </ul>
+            
+            <div class="highlight">
+                <strong>Note:</strong> This is an unofficial resource created to help researchers and the public 
+                navigate the FOIA'd documents. Always refer to official FDA sources for authoritative information.
+            </div>
+            
+            <h2>Related Resources</h2>
+            <ul>
+                <li><a href="data-dictionary.html">Data Dictionary</a> - Definitions of all clinical trial data fields</li>
+                <li><a href="https://www.fda.gov" target="_blank">FDA Official Website</a></li>
+                <li><a href="https://www.cdisc.org" target="_blank">CDISC Standards</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

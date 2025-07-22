@@ -1,0 +1,60 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.env
+
+# Node.js (if you add any npm packages later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+.cache/
+
+# Local development
+*.local
+
+# Data files that might be too large or sensitive
+# Uncomment these if needed:
+# *.xpt
+# *.sas7bdat
+# /data/raw/
+# /data/processed/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# R (if you use R for analysis)
+.Rhistory
+.RData
+.Rproj.user/
+
+# Custom project-specific
+# Add any large data files or sensitive information here
+# /path/to/sensitive/data/

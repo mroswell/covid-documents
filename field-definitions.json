@@ -1,0 +1,3182 @@
+{
+  "sections": [
+    {
+      "name": "Study Identifiers",
+      "fields": {
+        "STUDYID": {
+          "definition": "Unique study identifier",
+          "comment": "ADSL"
+        },
+        "USUBJID": {
+          "definition": "Unique subject identifier within a study",
+          "comment": "ADSL"
+        },
+        "SUBJID": {
+          "definition": "Subject identifier for the study",
+          "comment": "ADSL"
+        },
+        "SUBJIDN": {
+          "definition": "Subject identifier (numeric)"
+        },
+        "SITEID": {
+          "definition": "Study site identifier",
+          "comment": "ADSL"
+        },
+        "INVID": {
+          "definition": "Investigator identifier"
+        },
+        "INVNAM": {
+          "definition": "Investigator name"
+        }
+      }
+    },
+    {
+      "name": "Subject Grouping Variables",
+      "fields": {
+        "COHORT": {
+          "definition": "Cohort identifier"
+        },
+        "COHORTN": {
+          "definition": "Cohort identifier (numeric)"
+        },
+        "GROUP": {
+          "definition": "Group identifier"
+        },
+        "GROUPN": {
+          "definition": "Group identifier (numeric)"
+        },
+        "ARM": {
+          "definition": "Description of planned treatment arm (BNT162b[n] Phase and dose or Placebo, or null)"
+        },
+        "ARMCD": {
+          "definition": "Planned arm code"
+        },
+        "ACTATRTSDTRM": {
+          "definition": "Description of actual treatment arm"
+        },
+        "ACTARMCD": {
+          "definition": "Actual treatment arm code"
+        }
+      }
+    },
+    {
+      "name": "Treatment Variables",
+      "fields": {
+        "TRTP": {
+          "definition": "Planned treatment"
+        },
+        "TRTPN": {
+          "definition": "Planned treatment (numeric)"
+        },
+        "TRTA": {
+          "definition": "Actual treatment"
+        },
+        "TRTAN": {
+          "definition": "Actual treatment (numeric)"
+        },
+        "TRT01P": {
+          "definition": "Planned treatment for period 01"
+        },
+        "TRT01PN": {
+          "definition": "Planned treatment for period 01 (numeric)"
+        },
+        "TRT01A": {
+          "definition": "Actual treatment for period 01 (BNT162b[n] Phase and dose or Placebo, or null)"
+        },
+        "TRT01AN": {
+          "definition": "Actual treatment for period 01 (numeric)"
+        },
+        "TRTAR": {
+          "definition": "*Treatment arm",
+          "comment": "uncertain - possibly actual treatment arm"
+        },
+        "TRTARN": {
+          "definition": "Treatment arm (numeric)"
+        },
+        "TRTPR": {
+          "definition": "Treatment planned",
+          "comment": "https://pharmasug.org/proceedings/2016/DS/PharmaSUG-2016-DS14.pdf"
+        },
+        "TRTPRN": {
+          "definition": "Treatment planned (numeric)"
+        },
+        "TRTSDT": {
+          "definition": "Date of first exposure to treatment"
+        },
+        "TRTSTM": {
+          "definition": "Time of first exposure to treatment"
+        },
+        "TRTSDTM": {
+          "definition": "Datetime of first exposure to treatment"
+        },
+        "TRTEDT": {
+          "definition": "Date of last exposure to treatment"
+        },
+        "TRTETM": {
+          "definition": "Time of last exposure to treatment"
+        },
+        "TRTEDTM": {
+          "definition": "Datetime of last exposure to treatment"
+        }
+      }
+    },
+    {
+      "name": "Adverse Event Variables",
+      "fields": {
+        "AESEQ": {
+          "definition": "Sequence number for adverse event"
+        },
+        "AEGRPID": {
+          "definition": "Adverse event group identifier"
+        },
+        "AESPID": {
+          "definition": "Adverse event sponsor-defined identifier"
+        },
+        "AETERM": {
+          "definition": "Reported term for the adverse event (The verbatim term of the AE as reported by the investigator)"
+        },
+        "AEMODIFY": {
+          "definition": "Modified reported term"
+        },
+        "AELLT": {
+          "definition": "Lowest level term (MedDRA)"
+        },
+        "AELLTCD": {
+          "definition": "Lowest level term code  (MedDRA) (numeric)"
+        },
+        "AEDECOD": {
+          "definition": "Dictionary-derived term (MedDRA Preferred Term (PT) )"
+        },
+        "AEPTCD": {
+          "definition": "Preferred term code (MedDRA) (numeric)"
+        },
+        "AEHLT": {
+          "definition": "High level term (MedDRA)"
+        },
+        "AEHLTCD": {
+          "definition": "High level term code"
+        },
+        "AEHLGT": {
+          "definition": "High level group term (MedDRA)"
+        },
+        "AEHLGTCD": {
+          "definition": "High level group term code"
+        },
+        "AECAT": {
+          "definition": "Category for adverse event (Adverse Event/Reactogenicity/Medication Error/General)"
+        },
+        "AEBODSYS": {
+          "definition": "Body system or organ class (The primary MedDRA System Organ Class (SOC) for the AE)"
+        },
+        "AEBDSYCD": {
+          "definition": "Body system or organ class code"
+        },
+        "AESOC": {
+          "definition": "Primary system organ class (MedDRA)"
+        },
+        "AESOCCD": {
+          "definition": "System organ class code"
+        },
+        "AESEV": {
+          "definition": "Severity/intensity of adverse event (Mild/Moderate/Severe/null)"
+        },
+        "AETOXGR": {
+          "definition": "Standard toxicity grade (NCI CTCAE)"
+        },
+        "AETOXGRN": {
+          "definition": "Standard toxicity grade (numeric)"
+        },
+        "ASEV": {
+          "definition": "Seeking more detail on this severity field (Mild/Moderate/Severe Does not match count of AESEV, which includes null values. Possibly adjusted severity",
+          "comment": "Not calculated in release SAS code"
+        },
+        "ASEVN": {
+          "definition": "Analysis severity (numeric) (1/2/3)"
+        },
+        "AESER": {
+          "definition": "Serious adverse event (Y/N)"
+        },
+        "AESERN": {
+          "definition": "Serious adverse event (numeric: 1=Y, 0=N)"
+        },
+        "AEACN": {
+          "definition": "Action taken with study treatment"
+        },
+        "AACN": {
+          "definition": "*Analysis action taken",
+          "comment": "uncertain"
+        },
+        "AACNN": {
+          "definition": "Analysis action taken (numeric)"
+        },
+        "AREL": {
+          "definition": "Derived/standardized causality for AE",
+          "comment": "review"
+        },
+        "ARELN": {
+          "definition": "Derived/standardized causality (numeric)"
+        },
+        "AERELN": {
+          "definition": "Relationship to treatment (numeric)"
+        },
+        "AERELNST": {
+          "definition": "Relationship to non-study treatment"
+        },
+        "AERELTXT": {
+          "definition": "Relationship to treatment text"
+        },
+        "AEOUT": {
+          "definition": "Outcome of adverse event"
+        },
+        "AOUT": {
+          "definition": "Outcome",
+          "comment": "https://pharmasug.org/proceedings/2016/IB/PharmaSUG-2016-IB11.pdf"
+        },
+        "AOUTN": {
+          "definition": "Outcome (numeric)"
+        },
+        "AESCONG": {
+          "definition": "Congenital anomaly or birth defect"
+        },
+        "AESDISAB": {
+          "definition": "Persistent or significant disability"
+        },
+        "AESDTH": {
+          "definition": "Results in death"
+        },
+        "AESHOSP": {
+          "definition": "Requires or prolongs hospitalization"
+        },
+        "AESLIFE": {
+          "definition": "Is life threatening"
+        },
+        "AESMIE": {
+          "definition": "Is a medically important event"
+        },
+        "AECONTRT": {
+          "definition": "Concomitant or additional treatment given"
+        },
+        "AETRTEM": {
+          "definition": "Treatment emergent flag"
+        },
+        "AEDLT": {
+          "definition": "Dose limiting toxicity"
+        },
+        "AEEPRELI": {
+          "definition": "Epi/Pandemic Related Indicator - cause of the AE is or is not due to COVID-1",
+          "comment": "https://globalforum.diaglobal.org/issue/june-2020/data-handling-and-reporting-for-ongoing-clinical-trials-during-covid-19/"
+        },
+        "AEEMREL": {
+          "definition": "*Emergency related",
+          "comment": "uncertain"
+        },
+        "AEEMS": {
+          "definition": "Severe or life-threatening treatment-emergent adverse event flag",
+          "comment": "https://phmpt.org/wp-content/uploads/2022/05/125742_S1_M5_bnt162-01-A-adrg.pdf, https://phmpt.org/wp-content/uploads/2022/05/125742_S1_M5_bnt162-01-A-adrg.pdf"
+        },
+        "AEEMSREL": {
+          "definition": "Treatment emergent severe related AE"
+        },
+        "AEEMSER": {
+          "definition": "Serious treatment emergent AE"
+        },
+        "AEEMSERR": {
+          "definition": "Serious treatment emergent related AE"
+        },
+        "PTDIAFL": {
+          "definition": "Preferred Term based on diary entry",
+          "comment": "https://phmpt.org/wp-content/uploads/2022/05/125742_S1_M5_bnt162-01-A-adrg.pdf"
+        },
+        "AESTDTC": {
+          "definition": "Start date/time of adverse event"
+        },
+        "AEENDTC": {
+          "definition": "End date/time of adverse event"
+        },
+        "ASTDT": {
+          "definition": "Analysis start date"
+        },
+        "ASTTM": {
+          "definition": "Analysis start time"
+        },
+        "ASTDTM": {
+          "definition": "Analysis start datetime"
+        },
+        "AENDT": {
+          "definition": "Analysis end date"
+        },
+        "AENTM": {
+          "definition": "Analysis end time"
+        },
+        "AENDTM": {
+          "definition": "Analysis end datetime"
+        },
+        "AESTDY": {
+          "definition": "Study day of start of adverse event"
+        },
+        "ASTDY": {
+          "definition": "Day of AE start/end relative to a reference date "
+        },
+        "AEENDY": {
+          "definition": "Study day of end of adverse event"
+        },
+        "AENDY": {
+          "definition": "Analysis end relative day"
+        },
+        "ADURN": {
+          "definition": "AE Duration",
+          "comment": "https://pharmasug.org/proceedings/2016/IB/PharmaSUG-2016-IB11.pdf"
+        },
+        "ADURU": {
+          "definition": "Analysis duration units"
+        },
+        "LSTDD": {
+          "definition": "Days since last dose "
+        },
+        "AEENRTPT": {
+          "definition": "End reference time point"
+        },
+        "AEENTPT": {
+          "definition": "End time point"
+        },
+        "TRTEMFL": {
+          "definition": "Treatment emergent analysis flag"
+        },
+        "TMINT1FL": {
+          "definition": "*Time interval 1 flag",
+          "comment": "uncertain - possibly treatment period flags"
+        },
+        "TMINT2FL": {
+          "definition": "*Time interval 2 flag"
+        },
+        "TMINT3FL": {
+          "definition": "*Time interval 3 flag"
+        },
+        "TMINT4FL": {
+          "definition": "*Time interval 4 flag"
+        },
+        "TMINT5FL": {
+          "definition": "*Time interval 5 flag"
+        },
+        "EPOCH": {
+          "definition": "Epoch of the observation"
+        },
+        "AEREFID": {
+          "definition": "Adverse event reference ID"
+        },
+        "AELNKGRP": {
+          "definition": "Adverse event link group"
+        },
+        "AESCAT": {
+          "definition": "Adverse event subcategory (\"Systemic\",\"Acute reactions\",\"Local reactions\",\"null\")"
+        },
+        "AEPRESP": {
+          "definition": "Adverse event pre-specified"
+        },
+        "AELOC": {
+          "definition": "Location of adverse event"
+        },
+        "AELAT": {
+          "definition": "Laterality of adverse event"
+        },
+        "AEDUR": {
+          "definition": "Duration of adverse event"
+        },
+        "AETPTREF": {
+          "definition": "Adverse event time point reference"
+        },
+        "AERFTDTC": {
+          "definition": "Adverse event reference date/time"
+        },
+        "ADESFL": {
+          "definition": "A derived flag (\\'Y\\'/\\'N\\') indicating if the subject discontinued the study drug due to the AE"
+        },
+        "ASTDTF": {
+          "definition": "Analysis start date imputation flag"
+        },
+        "AEMERES": {
+          "definition": "*Medical review result",
+          "comment": "uncertain"
+        },
+        "AECMGIV": {
+          "definition": "Concomitant medication given"
+        },
+        "AENDGIV": {
+          "definition": "*End treatment given",
+          "comment": "uncertain"
+        },
+        "AESUBJDC": {
+          "definition": "*Subject decision",
+          "comment": "uncertain"
+        },
+        "ATOXGR": {
+          "definition": "Analysis toxicity grade(GRADE 1,2,3,4, null)"
+        },
+        "ATOXGRN": {
+          "definition": "Analysis toxicity grade (numeric)"
+        },
+        "AEMEFL": {
+          "definition": "*Medically significant event flag",
+          "comment": "uncertain"
+        },
+        "AETPDOS": {
+          "definition": "*Time post dose",
+          "comment": "uncertain"
+        },
+        "AEIMMFL": {
+          "definition": "Immune-related adverse event flag"
+        },
+        "APERIOD": {
+          "definition": "Analysis period"
+        },
+        "APERIODC": {
+          "definition": "Analysis period code"
+        },
+        "APERSDT": {
+          "definition": "Analysis period start date"
+        },
+        "APERSTM": {
+          "definition": "Analysis period start time"
+        },
+        "APERSDTM": {
+          "definition": "Analysis period start datetime"
+        },
+        "APEREDT": {
+          "definition": "Analysis period end date"
+        },
+        "APERETM": {
+          "definition": "Analysis period end time"
+        },
+        "APEREDTM": {
+          "definition": "Analysis period end datetime"
+        },
+        "AEELTM": {
+          "definition": "*Adverse event planned elapsed time from time point ref",
+          "comment": "uncertain"
+        },
+        "AENDTF": {
+          "definition": "Analysis end imputation date time flag",
+          "comment": "https://pharmasug.org/proceedings/2016/IB/PharmaSUG-2016-IB11.pdf"
+        },
+        "VPHASE": {
+          "definition": "Derived phase of the study when the AE occurred"
+        },
+        "VPHASEN": {
+          "definition": "Derived phase of the study when the AE occurred\" (numeric)"
+        }
+      }
+    },
+    {
+      "name": "Age Group Variables",
+      "fields": {
+        "AGEGR1": {
+          "definition": "Pooled age group 1 (12-15, 16-55, 18-55, 65-85, >55 years)"
+        },
+        "AGEGR1N": {
+          "definition": "Pooled age group 1 (numeric)"
+        },
+        "AGEGR2": {
+          "definition": "Pooled age group 2 (<65, >=65 years)"
+        },
+        "AGEGR2N": {
+          "definition": "Pooled age group 2 (numeric)"
+        },
+        "AGEGR3": {
+          "definition": "Pooled age group 3 (16-17, 18-55, >55 years)"
+        },
+        "AGEGR3N": {
+          "definition": "Pooled age group 3 (numeric)"
+        }
+      }
+    },
+    {
+      "name": "Demographics Variables",
+      "fields": {
+        "AGE": {
+          "definition": "Age of Subject",
+          "comment": "ADSL"
+        },
+        "AGEU": {
+          "definition": "Age units (YEARS, MONTHS, WEEKS, DAYS)"
+        },
+        "AGE_M": {
+          "definition": "Age in months"
+        },
+        "AAGE": {
+          "definition": "Analysis age (calculated at enrollment)"
+        },
+        "AGETR01": {
+          "definition": "Age at Dose 1"
+        },
+        "AGETRU01": {
+          "definition": "Age units at treatment start"
+        },
+        "SEX": {
+          "definition": "Sex of subject (M/F)"
+        },
+        "SEXN": {
+          "definition": "Sex of subject (numeric: 1=M, 2=F)"
+        },
+        "RACE": {
+          "definition": "Race of subject"
+        },
+        "RACEN": {
+          "definition": "Race of subject (numeric)"
+        },
+        "RACEOTH": {
+          "definition": "Other race specification"
+        },
+        "RACE1": {
+          "definition": "*Primary race",
+          "comment": "uncertain"
+        },
+        "RACE2": {
+          "definition": "*Secondary race",
+          "comment": "uncertain"
+        },
+        "ARACE": {
+          "definition": "Analysis race"
+        },
+        "ARACEN": {
+          "definition": "Analysis race (numeric)"
+        },
+        "RACEGR1": {
+          "definition": "Pooled race group 1 (White, Black or African American, All others)"
+        },
+        "RACEGR1N": {
+          "definition": "Pooled race group 1 (numeric)"
+        },
+        "ETHNIC": {
+          "definition": "Ethnicity of subject",
+          "comment": "SAS"
+        },
+        "ETHNICN": {
+          "definition": "Ethnicity of subject (numeric)"
+        },
+        "HEIGHT": {
+          "definition": "Height of subject"
+        },
+        "WEIGHT": {
+          "definition": "Weight of subject"
+        },
+        "BMI": {
+          "definition": "Body mass index"
+        },
+        "BMICAT": {
+          "definition": "Baseline BMI category"
+        },
+        "BMICATN": {
+          "definition": "BMI category (numeric)"
+        },
+        "COUNTRY": {
+          "definition": "Country of investigational site"
+        }
+      }
+    },
+    {
+      "name": "Population Flags",
+      "fields": {
+        "SCRFL": {
+          "definition": "Screened population flag"
+        },
+        "SCRFN": {
+          "definition": "Screened population flag (numeric)"
+        },
+        "SAFFL": {
+          "definition": "Safety population flag"
+        },
+        "SAFFN": {
+          "definition": "Safety population flag (numeric)"
+        },
+        "SAFBFL": {
+          "definition": "Safety Boost Population Flag"
+        },
+        "SAFBFN": {
+          "definition": "Safety Boost Population Flag (numeric)"
+        },
+        "IMMFL": {
+          "definition": "Immunogenicity population flag"
+        },
+        "IMMFN": {
+          "definition": "Immunogenicity population flag (numeric)"
+        },
+        "PPROTFL": {
+          "definition": "Per-protocol population flag"
+        },
+        "PPROTFN": {
+          "definition": "Per-protocol population flag (numeric)"
+        },
+        "CP7FL": {
+          "definition": "Prime + 7 Days completers set"
+        },
+        "CP7FN": {
+          "definition": "Prime + 7 Days completers set (numeric)"
+        },
+        "CPBP28FL": {
+          "definition": "Prime to Boost or Prime +28 D. Comp. Set"
+        },
+        "CPBP28FN": {
+          "definition": "Prime to Boost or Prime +28 D. Comp. Set (numeric)"
+        },
+        "CB7FL": {
+          "definition": "Boost + 7 Days completers set"
+        },
+        "CB7FN": {
+          "definition": "Boost + 7 Days completers set (numeric)"
+        },
+        "CB28FL": {
+          "definition": "Prime or Boost + 28 Days completers Set"
+        },
+        "CB28FN": {
+          "definition": "Prime or Boost + 28 Days completers Set (numeric)"
+        },
+        "CPB28FL": {
+          "definition": "Prime or Boost + 28 Days completers Set"
+        },
+        "CPB28FN": {
+          "definition": "Completed period B day 28 flag (numeric)"
+        },
+        "COMPLFL": {
+          "definition": "Completers population flag"
+        },
+        "COMPLFN": {
+          "definition": "Completers population flag (numeric)"
+        },
+        "RANDFL": {
+          "definition": "Randomized population flag"
+        },
+        "EVALEFFL": {
+          "definition": "Evaluable efficacy population flag"
+        },
+        "AAI1EFFL": {
+          "definition": "Dose 1 all-available efficacy population flag - All randomized participants who complete 1 vaccination dose1."
+        },
+        "AAI2EFFL": {
+          "definition": "Dose 2 all-available efficacy population flag - All randomized participants who complete 2 vaccination doses."
+        },
+        "ENRLFL": {
+          "definition": "Enrolled population flag"
+        },
+        "JPNFL": {
+          "definition": "Japanese subject flag"
+        },
+        "EVAL01FL": {
+          "definition": "Dose 1 evaluable immunogenicity population flag",
+          "comment": "/https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c4591001-A-adrg.pdf"
+        },
+        "EVAL02FL": {
+          "definition": "Dose 2 evaluable immunogenicity population flag"
+        },
+        "AAI01FL": {
+          "definition": "Dose 1 all-available immunogenicity population flag"
+        },
+        "AAI02FL": {
+          "definition": "Dose 2 all-available immunogenicity population flag"
+        },
+        "MULENRFL": {
+          "definition": "Multiply enrolled subjects flag (Subjects with multiple sites are excluded from all analysis.)"
+        },
+        "STEXCFL": {
+          "definition": "Site/subject exclusion flag for SQE"
+        },
+        "UNKRDFL": {
+          "definition": "Unknown randomization group flag"
+        },
+        "EXCL1FL": {
+          "definition": "Exclusion criterion 1 flag"
+        },
+        "EXCL2FL": {
+          "definition": "Exclusion criterion 2 flag"
+        },
+        "EXCL3FL": {
+          "definition": "Exclusion criterion 3 flag"
+        },
+        "EXCL4FL": {
+          "definition": "Exclusion criterion 4 flag"
+        },
+        "EXCL5FL": {
+          "definition": "Exclusion criterion 5 flag"
+        },
+        "EXCL6FL": {
+          "definition": "Exclusion criterion 6 flag"
+        },
+        "EXCL7FL": {
+          "definition": "Exclusion criterion 7 flag"
+        },
+        "EXCL8FL": {
+          "definition": "Exclusion criterion 8 flag"
+        },
+        "EXCL9FL": {
+          "definition": "Exclusion criterion 9 flag"
+        },
+        "INCL1FL": {
+          "definition": "Are eligible for the study at rand"
+        },
+        "INCL2FL": {
+          "definition": "Have received vax 1 as randomized"
+        },
+        "INCL3FL": {
+          "definition": "Have valid and DTM immuno result 1"
+        },
+        "INCL4FL": {
+          "definition": "Have valid and DTM immuno result 2"
+        },
+        "INCL5FL": {
+          "definition": "Have blood draw within the timeframe 1"
+        },
+        "INCL6FL": {
+          "definition": "No important protocol deviations determined by clinician"
+        },
+        "INCL7FL": {
+          "definition": "Received 2 doses as rand within window"
+        },
+        "INCL8FL": {
+          "definition": "Have valid and DTM immuno result 3"
+        },
+        "INCL9FL": {
+          "definition": "Have blood draw within the timeframe 2"
+        },
+        "EXCRIT1": {
+          "definition": "Exclusion criterion (null/not eligible for the study at randomization)"
+        },
+        "EXCRIT2": {
+          "definition": "Exclusion criterion (null/did not receive Dose 1 as randomized)"
+        },
+        "EXCRIT3": {
+          "definition": "Exclusion criterion (null/did not have at least 1 valid and determinate immunogenicity result after Dose 1 but before Dose 2)"
+        },
+        "EXCRIT4": {
+          "definition": "Exclusion criterion (null/did not have at least 1 valid and determinate immunogenicity result 21 days after Dose 1)"
+        },
+        "EXCRIT5": {
+          "definition": "Exclusion criterion (null/did not have blood collection within 19-23 days after Dose 1)"
+        },
+        "EXCRIT6": {
+          "definition": "Exclusion criterion (null or 4 values starting with \"had important protocol deviation(s) as determined by the clinician\""
+        },
+        "EXCRIT7": {
+          "definition": "Exclusion criterion (null/did not receive all vaccination(s) as randomized or did not receive Dose 2 within the predefined window (19-42 days after Dose 1))"
+        },
+        "EXCRIT8": {
+          "definition": "Exclusion criterion (null/did not have at least 1 valid and determinate immunogenicity result after Dose 2)"
+        },
+        "EXCRIT9": {
+          "definition": "Exclusion criterion (null/did not have blood collection within 28-42 days after Dose 2 [Phase 2/3] or 6-8 days after Dose 2 [Phase 1])"
+        },
+        "DS30KFL": {
+          "definition": "Phase 3 30k subjects flag"
+        },
+        "NIGV1FL": {
+          "definition": "N-binding antibody negative at visit 1 flag"
+        },
+        "NAATNFL": {
+          "definition": "NAAT (active infection test) negative at baseline flag"
+        },
+        "COMBODFL": {
+          "definition": "Comorbidity flag",
+          "comment": "https://phmpt.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022867-to-0023006_125742_S1_M5_c4591001-A-P-adsl-sas.txt"
+        },
+        "PREFL": {
+          "definition": "Pre-treatment flag"
+        },
+        "INWDFL": {
+          "definition": "In window flag"
+        },
+        "KNOWVFL": {
+          "definition": "Known value flag - Y if reaction happened at least once during Days 1-7 post-dose (per subject/dose/event)"
+        },
+        "KNOWVDFL": {
+          "definition": "Data collection flag - Y if reaction data was recorded on this specific day, regardless of occurrence (per subject/dose/event/day)"
+        },
+        "EVENTFL": {
+          "definition": "Event value flag"
+        },
+        "EVENTDFL": {
+          "definition": "Day event value flag - \"Daily flag (Y/N) for adverse events meeting criteria on days 1-7 post-dose per subject/dose/parameter\""
+        },
+        "EVENTOCC": {
+          "definition": "Event occurrence"
+        },
+        "COMORBFL": {
+          "definition": "Comorbidity flag"
+        },
+        "EVIMMFL": {
+          "definition": "Evaluable immunogenicity flag"
+        },
+        "AAIMMFL": {
+          "definition": "Anti-antibody immunogenicity flag"
+        }
+      }
+    },
+    {
+      "name": "Date/Time Variables",
+      "fields": {
+        "PRIMDT": {
+          "definition": "*Primary endpoint date",
+          "comment": "uncertain"
+        },
+        "PRIMTM": {
+          "definition": "Primary endpoint time"
+        },
+        "PRIMDTM": {
+          "definition": "Primary endpoint datetime"
+        },
+        "BOIMDT": {
+          "definition": "*Baseline or initial measurement date",
+          "comment": "uncertain"
+        },
+        "BOIMTM": {
+          "definition": "Baseline or initial measurement time"
+        },
+        "BOIMDTM": {
+          "definition": "Baseline or initial measurement datetime"
+        },
+        "ALLOCDT": {
+          "definition": "Allocation date"
+        },
+        "ALLOCTM": {
+          "definition": "Allocation time"
+        },
+        "ALLOCDTM": {
+          "definition": "Allocation datetime"
+        },
+        "RFSTDTC": {
+          "definition": "Subject reference start date/time"
+        },
+        "RFSTDT": {
+          "definition": "Reference start date"
+        },
+        "RFSTTM": {
+          "definition": "Reference start time"
+        },
+        "RFENDTC": {
+          "definition": "Subject reference end date/time"
+        },
+        "RFENDT": {
+          "definition": "Reference end date"
+        },
+        "RFENTM": {
+          "definition": "Reference end time"
+        },
+        "RFXSTDTC": {
+          "definition": "Date/time of first study treatment"
+        },
+        "RFXENDTC": {
+          "definition": "Date/time of last study treatment"
+        },
+        "RFICDTC": {
+          "definition": "Date/time of informed consent"
+        },
+        "RFICDT": {
+          "definition": "Reference informed consent date"
+        },
+        "RFICTM": {
+          "definition": "Reference informed consent time"
+        },
+        "RFICDTM": {
+          "definition": "Reference informed consent datetime"
+        },
+        "RFPENDTC": {
+          "definition": "Date/time of end of participation"
+        },
+        "RFPENDT": {
+          "definition": "Reference participation end date"
+        },
+        "DTHDTC": {
+          "definition": "Date/time of death"
+        },
+        "DTHDT": {
+          "definition": "Death date"
+        },
+        "DTHDTF": {
+          "definition": "Death date flag"
+        },
+        "DTHFL": {
+          "definition": "Death flag (Y/N)"
+        },
+        "BRTHDT": {
+          "definition": "Birth date"
+        },
+        "BRTHDTC": {
+          "definition": "Birth date/time"
+        },
+        "BRTHDTF": {
+          "definition": "Date of birth imputation flag"
+        },
+        "DCODT": {
+          "definition": "Data cutoff date"
+        },
+        "RANDDT": {
+          "definition": "Randomization date"
+        },
+        "VAX101DT": {
+          "definition": "Date of first vaccination"
+        },
+        "VAX101TM": {
+          "definition": "Time of first vaccination"
+        },
+        "VAX102DT": {
+          "definition": "Date of second vaccination"
+        },
+        "VAX102TM": {
+          "definition": "Time of second vaccination"
+        },
+        "VAX103DT": {
+          "definition": "Date of third vaccination"
+        },
+        "VAX103TM": {
+          "definition": "Time of third vaccination"
+        },
+        "DVSTDT": {
+          "definition": "Start Date of important protocol deviation"
+        },
+        "EOTDCDT": {
+          "definition": "End of treatment discontinuation date"
+        },
+        "EOSDCDT": {
+          "definition": "End of study discontinuation date"
+        },
+        "COMPLDT": {
+          "definition": "Completion date"
+        },
+        "SCRDT": {
+          "definition": "Screening date"
+        },
+        "LVDT": {
+          "definition": "Last visit date"
+        },
+        "FIRICDT": {
+          "definition": "*First informed consent date",
+          "comment": "uncertain"
+        },
+        "ICR1DT": {
+          "definition": "Informed consent revision 1 date"
+        },
+        "ICR1TM": {
+          "definition": "Informed consent revision 1 time"
+        },
+        "ICR1DTM": {
+          "definition": "Informed consent revision 1 datetime"
+        },
+        "ICR2DT": {
+          "definition": "Informed consent revision 2 date"
+        },
+        "ICR2TM": {
+          "definition": "Informed consent revision 2 time"
+        },
+        "ICR2DTM": {
+          "definition": "Informed consent revision 2 datetime"
+        },
+        "ICR3DT": {
+          "definition": "Informed consent revision 3 date"
+        },
+        "ICR3TM": {
+          "definition": "Informed consent revision 3 time"
+        },
+        "ICR3DTM": {
+          "definition": "Informed consent revision 3 datetime"
+        },
+        "TR01SDT": {
+          "definition": "Date of first exposure in period 01"
+        },
+        "TR01STM": {
+          "definition": "Time of first exposure in period 01"
+        },
+        "TR01SDTM": {
+          "definition": "Datetime of first exposure in period 01"
+        },
+        "TR01EDT": {
+          "definition": "Date of last exposure in period 01"
+        },
+        "TR01ETM": {
+          "definition": "Time of last exposure in period 01"
+        },
+        "TR01EDTM": {
+          "definition": "Datetime of last exposure in period 01"
+        },
+        "V01DT": {
+          "definition": "Date of unblinding or visit at 1 month post dose 2",
+          "comment": "https://icandecide.org/wp-content/uploads/2023/09/125742-45_S211_M5_c4591001-A_1mth-P-adsl-sas.pdf"
+        },
+        "V02DT": {
+          "definition": "Date of unblinding or visit at 6 months post dose 2"
+        },
+        "BLDV1DT": {
+          "definition": "Blood sample date before vax 1"
+        },
+        "BLDV2DT": {
+          "definition": "Blood sample date 1 week after vax 1"
+        },
+        "BLDV3DT": {
+          "definition": "Blood sample date before vax 2"
+        },
+        "BLDV3ADT": {
+          "definition": "Additional blood sample date 3 weeks after vax 1"
+        },
+        "BLDV4DT": {
+          "definition": "Blood sample date 1 week after vax 2"
+        },
+        "BLDV4ADT": {
+          "definition": "Additional blood sample date 4 weeks after vax 1"
+        },
+        "BLDV5DT": {
+          "definition": "Blood sample date 2 weeks after vax 2"
+        },
+        "BLDV5ADT": {
+          "definition": "Additional blood sample date 5 weeks after vax 1"
+        },
+        "BLDV6DT": {
+          "definition": "Blood sample date 1 month after vax 2"
+        },
+        "BLDV6ADT": {
+          "definition": "Additional blood sample date 7 weeks after vax 1"
+        },
+        "BLDV7DT": {
+          "definition": "Blood sample date 6 months after vax 2"
+        },
+        "BLDV8DT": {
+          "definition": "Blood sample date"
+        },
+        "BLDV9DT": {
+          "definition": "Blood visit 9 date"
+        },
+        "M1PD2DT": {
+          "definition": "Seeking documentation. Possibly: Month 1 post dose 2 date"
+        },
+        "PD1POSDT": {
+          "definition": "Seeking documentation. Possibly: Post dose 1 positive date",
+          "comment": "uncertain"
+        }
+      }
+    },
+    {
+      "name": "Clinical Event Variables",
+      "fields": {
+        "CESEQ": {
+          "definition": "Sequence number for clinical event"
+        },
+        "CEGRPID": {
+          "definition": "Clinical event group ID"
+        },
+        "CETERM": {
+          "definition": "Reported term for the clinical event"
+        },
+        "CEDECOD": {
+          "definition": "Dictionary-derived term"
+        },
+        "CEBODSYS": {
+          "definition": "Body system or organ class"
+        },
+        "CEBDSYCD": {
+          "definition": "Body system or organ class code"
+        },
+        "CELLT": {
+          "definition": "Lowest level term"
+        },
+        "CELLTCD": {
+          "definition": "Lowest level term code"
+        },
+        "CEPTCD": {
+          "definition": "Preferred term code"
+        },
+        "CECAT": {
+          "definition": "Category for clinical event"
+        },
+        "CESCAT": {
+          "definition": "Subcategory for clinical event"
+        },
+        "ACAT1": {
+          "definition": "Analysis category 1"
+        },
+        "CESTDTC": {
+          "definition": "Start date/time of clinical event"
+        },
+        "CEENDTC": {
+          "definition": "End date/time of clinical event"
+        },
+        "CESTDY": {
+          "definition": "Study day of start of clinical event"
+        },
+        "CEENDY": {
+          "definition": "Study day of end of clinical event"
+        },
+        "CEDUR": {
+          "definition": "Duration of clinical event"
+        },
+        "CEENRTPT": {
+          "definition": "End reference time point"
+        },
+        "CEENTPT": {
+          "definition": "End time point"
+        },
+        "ATPT": {
+          "definition": "Analysis time point"
+        },
+        "ATPTN": {
+          "definition": "Analysis time point (numeric)"
+        },
+        "CETPT": {
+          "definition": "Clinical event time point"
+        },
+        "ATPTREF": {
+          "definition": "Analysis time point reference"
+        },
+        "CETPTREF": {
+          "definition": "Clinical event time point reference"
+        },
+        "CEOCCUR": {
+          "definition": "Clinical event occurrence"
+        },
+        "CEPRESP": {
+          "definition": "Clinical event pre-specified"
+        },
+        "CESEV": {
+          "definition": "Severity/intensity"
+        },
+        "CETOXGR": {
+          "definition": "Toxicity grade"
+        },
+        "CESTAT": {
+          "definition": "Completion status"
+        },
+        "CEREASND": {
+          "definition": "Reason not done"
+        },
+        "CELOC": {
+          "definition": "Location of clinical event"
+        },
+        "CELAT": {
+          "definition": "Laterality of clinical event"
+        },
+        "CEDTC": {
+          "definition": "Date/time of clinical event"
+        },
+        "CEDY": {
+          "definition": "Study day of clinical event"
+        },
+        "CELNKGRP": {
+          "definition": "Clinical event link group"
+        },
+        "CEHLT": {
+          "definition": "High level term"
+        },
+        "CEHLTCD": {
+          "definition": "High level term code"
+        },
+        "CEHLGT": {
+          "definition": "High level group term"
+        },
+        "CEHLGTCD": {
+          "definition": "High level group term code"
+        },
+        "CESOC": {
+          "definition": "System organ class"
+        },
+        "CESOCCD": {
+          "definition": "System organ class code"
+        },
+        "CETPTNUM": {
+          "definition": "Numeric identifier of when an observation is planned to occur"
+        },
+        "CERFTDTC": {
+          "definition": "Reference date/time"
+        },
+        "CEEVINTX": {
+          "definition": "Evaluation interval text"
+        }
+      }
+    },
+    {
+      "name": "Severity/Grade Variables",
+      "fields": {
+        "SEVGR1": {
+          "definition": "Severity grade 1"
+        },
+        "SEVGR1N": {
+          "definition": "Severity grade 1 (numeric)"
+        }
+      }
+    },
+    {
+      "name": "Analysis Variables",
+      "fields": {
+        "ADT": {
+          "definition": "Analysis date"
+        },
+        "ADTM": {
+          "definition": "Analysis datetime"
+        },
+        "ADY": {
+          "definition": "Analysis relative day"
+        },
+        "FADTC": {
+          "definition": "Findings analysis date/time"
+        },
+        "VSDTC": {
+          "definition": "Vital signs date/time"
+        },
+        "FATPT": {
+          "definition": "Findings analysis time point"
+        },
+        "VSTPT": {
+          "definition": "Vital signs time point"
+        },
+        "FATPTREF": {
+          "definition": "Findings analysis time point reference"
+        },
+        "VSTPTREF": {
+          "definition": "Vital signs time point reference"
+        },
+        "PARAM": {
+          "definition": "Parameter description"
+        },
+        "PARAMCD": {
+          "definition": "Parameter code"
+        },
+        "PARAMN": {
+          "definition": "Parameter (numeric)"
+        },
+        "AVAL": {
+          "definition": "Analysis value"
+        },
+        "AVALC": {
+          "definition": "Analysis value (character)"
+        },
+        "AVALCA1N": {
+          "definition": "Analysis value category 1 (numeric)"
+        },
+        "AVALCAT1": {
+          "definition": "Analysis value category 1"
+        },
+        "BASE": {
+          "definition": "Baseline value"
+        },
+        "BASEC": {
+          "definition": "Baseline value (character)"
+        },
+        "CHG": {
+          "definition": "Change from baseline"
+        },
+        "PCHG": {
+          "definition": "Percent change from baseline"
+        },
+        "R2BASE": {
+          "definition": "The ratio from post-baseline to baseline",
+          "comment": "https://phmpt.org/wp-content/uploads/2022/03/125742_S1_M5_c4591001-A-adrg.pdf"
+        },
+        "BASETYPE": {
+          "definition": "Baseline type"
+        },
+        "ANRIND": {
+          "definition": "Analysis reference range indicator"
+        },
+        "ANRINDN": {
+          "definition": "Analysis reference range indicator (numeric)"
+        },
+        "BNRIND": {
+          "definition": "Baseline reference range indicator"
+        },
+        "BNRINDN": {
+          "definition": "Baseline reference range indicator (numeric)"
+        },
+        "ANRLO": {
+          "definition": "Analysis normal range lower limit"
+        },
+        "ANRLOC": {
+          "definition": "Analysis normal range lower limit (character)"
+        },
+        "ANRHI": {
+          "definition": "Analysis normal range upper limit"
+        },
+        "ANRHIC": {
+          "definition": "Analysis normal range upper limit (character)"
+        },
+        "NABCS": {
+          "definition": "*Number of antibodies",
+          "comment": "uncertain"
+        },
+        "NABCSN": {
+          "definition": "Number of antibodies (numeric)"
+        },
+        "DTYPE": {
+          "definition": "Derivation type"
+        },
+        "WPBFL": {
+          "definition": "Worst post-baseline flag"
+        },
+        "ANL01FL": {
+          "definition": "Analysis flag 01"
+        },
+        "ANL02FL": {
+          "definition": "Analysis flag 02"
+        },
+        "ANL03FL": {
+          "definition": "Analysis flag 03"
+        },
+        "ANL04FL": {
+          "definition": "Analysis flag 04"
+        },
+        "UNSVFL": {
+          "definition": "Unscheduled visit flag"
+        },
+        "POBLFL": {
+          "definition": "Post-baseline flag"
+        },
+        "ABLFL": {
+          "definition": "Baseline flag"
+        },
+        "ABLPBLFL": {
+          "definition": "*At baseline or post-baseline flag",
+          "comment": "uncertain"
+        },
+        "APSBLFL": {
+          "definition": "*At or post screening baseline flag",
+          "comment": "uncertain"
+        }
+      }
+    },
+    {
+      "name": "Occurrence/Completion Flags",
+      "fields": {
+        "AOCCLRFL": {
+          "definition": "1st occurrence within subject flag",
+          "comment": "https://www.lexjansen.com/pharmasug/2017/QT/PharmaSUG-2017-QT03.pdf"
+        },
+        "AOCCL3FL": {
+          "definition": "AE occurred last 3 months flag"
+        },
+        "AOCCLPFL": {
+          "definition": "AE occurred last period flag"
+        },
+        "AOCCXPFL": {
+          "definition": "*AE occurred except period flag",
+          "comment": "uncertain"
+        },
+        "AOCCLBFL": {
+          "definition": "AE occurred last baseline flag"
+        },
+        "AOCCXBFL": {
+          "definition": "AE occurred except baseline flag"
+        },
+        "AOCCSRFL": {
+          "definition": "AE occurred since randomization flag"
+        },
+        "AOCCS3FL": {
+          "definition": "AE occurred since 3 months flag"
+        },
+        "AOCCSPFL": {
+          "definition": "AE occurred since period flag"
+        },
+        "AOCCYPFL": {
+          "definition": "*AE occurred year to period flag",
+          "comment": "uncertain"
+        },
+        "AOCCSBFL": {
+          "definition": "AE occurred since baseline flag"
+        },
+        "AOCCYBFL": {
+          "definition": "*AE occurred year to baseline flag",
+          "comment": "uncertain"
+        }
+      }
+    },
+    {
+      "name": "Findings Analysis Variables",
+      "fields": {
+        "FAOBJ": {
+          "definition": "Findings about object"
+        },
+        "FATEST": {
+          "definition": "Findings about test name"
+        },
+        "FATESTCD": {
+          "definition": "Findings about test code"
+        },
+        "VSTEST": {
+          "definition": "Vital signs test name"
+        },
+        "VSTESTCD": {
+          "definition": "Vital signs test short name"
+        },
+        "PARCAT1": {
+          "definition": "Parameter category 1"
+        },
+        "PARCAT1N": {
+          "definition": "Parameter category 1 (numeric)"
+        },
+        "PARCAT2": {
+          "definition": "Parameter category 2"
+        },
+        "PARCAT2N": {
+          "definition": "Parameter category 2 (numeric)"
+        },
+        "FASCAT": {
+          "definition": "Findings about subcategory"
+        },
+        "FASTRESC": {
+          "definition": "Findings character result in standard format"
+        },
+        "VSSTRESN": {
+          "definition": "Vital signs numeric result in standard units"
+        },
+        "SRCDOM": {
+          "definition": "Source data domain",
+          "comment": "ADaMIG"
+        },
+        "SRCVAR": {
+          "definition": "Source variable",
+          "comment": "IG"
+        },
+        "SRCSEQ": {
+          "definition": "Source  sequence number",
+          "comment": "IG"
+        },
+        "FALNKID": {
+          "definition": "Findings about link identifier"
+        },
+        "FALNKGRP": {
+          "definition": "Findings about link group"
+        },
+        "VSLNKID": {
+          "definition": "Vital signs link identifier"
+        },
+        "VSLNKGRP": {
+          "definition": "Vital signs link group"
+        }
+      }
+    },
+    {
+      "name": "Laboratory Variables",
+      "fields": {
+        "LBSEQ": {
+          "definition": "Sequence number for lab test"
+        },
+        "ASEQ": {
+          "definition": "Analysis sequence number"
+        },
+        "LBSPEC": {
+          "definition": "Specimen type"
+        },
+        "LBCLSIG": {
+          "definition": "Clinical significance"
+        },
+        "LBCLSIGN": {
+          "definition": "Clinical significance (numeric)"
+        },
+        "LBSTAT": {
+          "definition": "Completion status"
+        },
+        "LBREASND": {
+          "definition": "Reason test not done"
+        },
+        "LBNAM": {
+          "definition": "Laboratory/vendor name"
+        },
+        "LBMETHOD": {
+          "definition": "Method of test"
+        },
+        "LBFAST": {
+          "definition": "Fasting status"
+        },
+        "LBORRES1": {
+          "definition": "*Original result 1",
+          "comment": "uncertain"
+        },
+        "LBORRES2": {
+          "definition": "Original result 2"
+        },
+        "LBLOINC1": {
+          "definition": "LOINC code 1"
+        },
+        "LBLOINC2": {
+          "definition": "LOINC code 2"
+        },
+        "RBB": {
+          "definition": "*Reference baseline band",
+          "comment": "uncertain"
+        },
+        "RBB2": {
+          "definition": "Reference baseline band 2"
+        },
+        "LBDTC": {
+          "definition": "Date/time of specimen collection"
+        },
+        "ATM": {
+          "definition": "Analysis time"
+        },
+        "LBDY": {
+          "definition": "Study day of specimen collection"
+        },
+        "LBREFID": {
+          "definition": "Laboratory reference identifier"
+        },
+        "LBTESTCD": {
+          "definition": "Lab test or examination short name"
+        },
+        "LBTEST": {
+          "definition": "Lab test or examination name"
+        },
+        "LBCAT": {
+          "definition": "Category for lab test"
+        },
+        "LBSCAT": {
+          "definition": "Subcategory for lab test"
+        },
+        "LBORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "LBORRESU": {
+          "definition": "Original units"
+        },
+        "LBORNRLO": {
+          "definition": "Reference range lower limit in original units"
+        },
+        "LBORNRHI": {
+          "definition": "Reference range upper limit in original units"
+        },
+        "LBSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "LBSTRESN": {
+          "definition": "Numeric result in standard units"
+        },
+        "LBSTRESU": {
+          "definition": "Standard units"
+        },
+        "LBSTNRLO": {
+          "definition": "Reference range lower limit in standard units"
+        },
+        "LBSTNRHI": {
+          "definition": "Reference range upper limit in standard units"
+        },
+        "LBSTNRC": {
+          "definition": "Reference range for character results"
+        },
+        "LBNRIND": {
+          "definition": "Reference range indicator"
+        },
+        "LBLOINC": {
+          "definition": "LOINC code"
+        },
+        "LBBLFL": {
+          "definition": "Baseline flag"
+        },
+        "LBSPID": {
+          "definition": "Lab sponsor-defined identifier"
+        },
+        "ISLLOQ": {
+          "definition": "Lower limit of quantitation (COVID-19 S1 IgG (U/mL)) = 1.2665;"
+        }
+      }
+    },
+    {
+      "name": "Visit Variables",
+      "fields": {
+        "AVISIT": {
+          "definition": "Analysis visit"
+        },
+        "AVISITN": {
+          "definition": "Analysis visit (numeric)"
+        },
+        "VISIT": {
+          "definition": "Protocol-defined visit label"
+        },
+        "VISITNUM": {
+          "definition": "Clinical encounter number"
+        },
+        "VISITDY": {
+          "definition": "Planned study day of visit"
+        }
+      }
+    },
+    {
+      "name": "Comments Variables",
+      "fields": {
+        "COMMENT1": {
+          "definition": "Comment 1"
+        },
+        "COMEVAL1": {
+          "definition": "Comment evaluator 1"
+        },
+        "COMMENT2": {
+          "definition": "Comment 2"
+        },
+        "COMEVAL2": {
+          "definition": "Comment evaluator 2"
+        }
+      }
+    },
+    {
+      "name": "Protocol/Study Variables",
+      "fields": {
+        "EXPPROT1": {
+          "definition": "*Exposure protocol 1",
+          "comment": "uncertain"
+        },
+        "PROTVER1": {
+          "definition": "Protocol version 1"
+        },
+        "PROTVER2": {
+          "definition": "Protocol version 2"
+        },
+        "PROTVER3": {
+          "definition": "Protocol version 3"
+        },
+        "PROTVER4": {
+          "definition": "Protocol version 4"
+        },
+        "CRIT1": {
+          "definition": "Criterion 1"
+        },
+        "CRIT1FL": {
+          "definition": "Criterion 1 flag"
+        },
+        "CRIT1FN": {
+          "definition": "Criterion 1 flag (numeric)"
+        }
+      }
+    },
+    {
+      "name": "Study Status Variables",
+      "fields": {
+        "EOSSTT": {
+          "definition": "End of study status"
+        },
+        "EOSDT": {
+          "definition": "End of study date"
+        },
+        "EOFUDT": {
+          "definition": "End of follow-up date"
+        },
+        "DCSREAS": {
+          "definition": "Discontinuation reason"
+        },
+        "DCSREASP": {
+          "definition": "Discontinuation reason (specify)"
+        },
+        "DSEPRELI": {
+          "definition": "*Disposition episode related",
+          "comment": "uncertain"
+        },
+        "EOSDCRS": {
+          "definition": "End of study discontinuation reason"
+        },
+        "EOTDCRS": {
+          "definition": "End of treatment discontinuation reason"
+        }
+      }
+    },
+    {
+      "name": "Previous Treatment Variables",
+      "fields": {
+        "PREV_TSN": {
+          "definition": "Previous treatment sequence number"
+        }
+      }
+    },
+    {
+      "name": "Vital Signs Variables",
+      "fields": {
+        "VSSEQ": {
+          "definition": "Sequence number for vital sign"
+        },
+        "VSPOS": {
+          "definition": "Vital signs position"
+        },
+        "VSCLSIG": {
+          "definition": "Clinical significance"
+        },
+        "VSCLSIGN": {
+          "definition": "Clinical significance (numeric)"
+        },
+        "VSSTAT": {
+          "definition": "Completion status"
+        },
+        "VSREASND": {
+          "definition": "Reason not done"
+        },
+        "VSLOC": {
+          "definition": "Location of vital signs measurement"
+        },
+        "VSLAT": {
+          "definition": "Laterality"
+        },
+        "VSDY": {
+          "definition": "Study day of vital signs"
+        },
+        "VSTPTNUM": {
+          "definition": "numeric identifier of when an observation is planned to occur."
+        },
+        "VSRFTDTC": {
+          "definition": "Reference date/time"
+        },
+        "VSCAT": {
+          "definition": "Category for vital signs"
+        },
+        "VSSCAT": {
+          "definition": "Subcategory for vital signs"
+        },
+        "VSORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "VSORRESU": {
+          "definition": "Original units"
+        },
+        "VSSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "VSSTRESU": {
+          "definition": "Standard units"
+        },
+        "VSBLFL": {
+          "definition": "Baseline flag"
+        },
+        "VSREFID": {
+          "definition": "Reference identifier"
+        },
+        "VSSPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "VSDRVFL": {
+          "definition": "Derived flag"
+        },
+        "VSEVAL": {
+          "definition": "Evaluator"
+        },
+        "VSEVLINT": {
+          "definition": "Evaluation interval"
+        },
+        "VSEVINTX": {
+          "definition": "Evaluation interval text"
+        }
+      }
+    },
+    {
+      "name": "Domain Variable",
+      "fields": {
+        "DOMAIN": {
+          "definition": "Two-character abbreviation for the domain"
+        }
+      }
+    },
+    {
+      "name": "Concomitant Medication Variables",
+      "fields": {
+        "CMSEQ": {
+          "definition": "Sequence number for concomitant med"
+        },
+        "CMTRT": {
+          "definition": "Reported name of medication"
+        },
+        "CMMODIFY": {
+          "definition": "Modified medication name"
+        },
+        "CMDECOD": {
+          "definition": "Standardized medication name"
+        },
+        "CMINDC": {
+          "definition": "Indication for medication"
+        },
+        "CMDOSTXT": {
+          "definition": "Dose text"
+        },
+        "CMDOSU": {
+          "definition": "Dose units"
+        },
+        "CMDOSFRQ": {
+          "definition": "Dosing frequency per interval"
+        },
+        "CMROUTE": {
+          "definition": "Route of administration"
+        },
+        "CMSTDTC": {
+          "definition": "Start date/time of medication"
+        },
+        "CMENDTC": {
+          "definition": "End date/time of medication"
+        },
+        "CMSTDY": {
+          "definition": "Study day of start of medication"
+        },
+        "CMENDY": {
+          "definition": "Study day of end of medication"
+        },
+        "CMSTRTPT": {
+          "definition": "Start reference time point"
+        },
+        "CMSTTPT": {
+          "definition": "Start time point"
+        },
+        "CMENRTPT": {
+          "definition": "End reference time point"
+        },
+        "CMENTPT": {
+          "definition": "End time point"
+        },
+        "CMSPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "CMCAT": {
+          "definition": "Category for medication"
+        },
+        "CMSCAT": {
+          "definition": "Subcategory for medication"
+        },
+        "CMCLAS": {
+          "definition": "Medication class"
+        },
+        "CMCLASCD": {
+          "definition": "Medication class code"
+        },
+        "CMDOSE": {
+          "definition": "Dose per administration"
+        }
+      }
+    },
+    {
+      "name": "Comments/Relationships Variables",
+      "fields": {
+        "RDOMAIN": {
+          "definition": "Related domain"
+        },
+        "COSEQ": {
+          "definition": "Sequence number for comment"
+        },
+        "IDVAR": {
+          "definition": "Identifying variable"
+        },
+        "IDVARVAL": {
+          "definition": "Identifying variable value"
+        },
+        "COREF": {
+          "definition": "Comment reference"
+        },
+        "COVAL": {
+          "definition": "Comment value"
+        },
+        "COVAL1": {
+          "definition": "Comment value 1"
+        },
+        "COEVAL": {
+          "definition": "Comment evaluator"
+        },
+        "CODTC": {
+          "definition": "Date/time of comment"
+        },
+        "CODY": {
+          "definition": "Study day of comment"
+        }
+      }
+    },
+    {
+      "name": "Disposition Variables",
+      "fields": {
+        "DSSEQ": {
+          "definition": "Sequence number for disposition"
+        },
+        "DSTERM": {
+          "definition": "Reported term for disposition event"
+        },
+        "DSDECOD": {
+          "definition": "Standardized disposition term"
+        },
+        "DSCAT": {
+          "definition": "Category for disposition event"
+        },
+        "DSSCAT": {
+          "definition": "Subcategory for disposition event"
+        },
+        "DSSTDTC": {
+          "definition": "Start date/time of disposition event"
+        },
+        "DSSTDY": {
+          "definition": "Study day of disposition event"
+        },
+        "DSREFID": {
+          "definition": "Reference identifier"
+        },
+        "DSDTC": {
+          "definition": "Date/time of disposition"
+        },
+        "DSDY": {
+          "definition": "Study day of disposition"
+        },
+        "DSPHASE": {
+          "definition": "Disposition phase"
+        },
+        "DSPHASEN": {
+          "definition": "Disposition phase (numeric)"
+        },
+        "DSDECODN": {
+          "definition": "Disposition decode (numeric)"
+        },
+        "DSRANGRP": {
+          "definition": "*Disposition randomization group",
+          "comment": "uncertain"
+        }
+      }
+    },
+    {
+      "name": "Protocol Deviations Variables",
+      "fields": {
+        "DVSEQ": {
+          "definition": "Sequence number for protocol deviation"
+        },
+        "DVREFID": {
+          "definition": "Reference identifier"
+        },
+        "DVTERM": {
+          "definition": "Reported term for protocol deviation"
+        },
+        "DVDECOD": {
+          "definition": "Standardized protocol deviation term"
+        },
+        "DVSTDTC": {
+          "definition": "Start date/time of deviation"
+        },
+        "DVSTDY": {
+          "definition": "Study day of deviation"
+        },
+        "DVSPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "DVCAT": {
+          "definition": "Category for deviation"
+        }
+      }
+    },
+    {
+      "name": "Exposure Variables",
+      "fields": {
+        "ECSEQ": {
+          "definition": "Sequence number for exposure as collected"
+        },
+        "ECTRT": {
+          "definition": "Name of treatment"
+        },
+        "ECPRESP": {
+          "definition": "Pre-specified"
+        },
+        "ECOCCUR": {
+          "definition": "Occurrence"
+        },
+        "ECDOSE": {
+          "definition": "Dose"
+        },
+        "ECDOSU": {
+          "definition": "Dose units"
+        },
+        "ECDOSFRM": {
+          "definition": "Dose form"
+        },
+        "ECROUTE": {
+          "definition": "Route of administration"
+        },
+        "ECLOC": {
+          "definition": "Location of dose administration"
+        },
+        "ECLAT": {
+          "definition": "Laterality"
+        },
+        "ECDIR": {
+          "definition": "Direction"
+        },
+        "ECSTDTC": {
+          "definition": "Start date/time of treatment"
+        },
+        "ECENDTC": {
+          "definition": "End date/time of treatment"
+        },
+        "ECSTDY": {
+          "definition": "Study day of start of treatment"
+        },
+        "ECENDY": {
+          "definition": "Study day of end of treatment"
+        },
+        "ECLNKID": {
+          "definition": "Link identifier"
+        },
+        "ECLNKGRP": {
+          "definition": "Link group"
+        },
+        "ECMOOD": {
+          "definition": "Mood"
+        },
+        "ECCAT": {
+          "definition": "Category"
+        },
+        "ECSCAT": {
+          "definition": "Subcategory"
+        },
+        "ECADJ": {
+          "definition": "Adjustment"
+        },
+        "ECTPTREF": {
+          "definition": "Time point reference"
+        }
+      }
+    },
+    {
+      "name": "ECG Variables",
+      "fields": {
+        "EGSEQ": {
+          "definition": "Sequence number for ECG"
+        },
+        "EGTESTCD": {
+          "definition": "ECG test code"
+        },
+        "EGTEST": {
+          "definition": "ECG test name"
+        },
+        "EGCAT": {
+          "definition": "Category for ECG"
+        },
+        "EGPOS": {
+          "definition": "ECG position"
+        },
+        "EGORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "EGORRESU": {
+          "definition": "Original units"
+        },
+        "EGSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "EGSTRESN": {
+          "definition": "Numeric result in standard units"
+        },
+        "EGSTRESU": {
+          "definition": "Standard units"
+        },
+        "EGSTAT": {
+          "definition": "Completion status"
+        },
+        "EGREASND": {
+          "definition": "Reason not done"
+        },
+        "EGMETHOD": {
+          "definition": "Method of ECG"
+        },
+        "EGBLFL": {
+          "definition": "Baseline flag"
+        },
+        "EGEVAL": {
+          "definition": "Evaluator"
+        },
+        "EGDTC": {
+          "definition": "Date/time of ECG"
+        },
+        "EGDY": {
+          "definition": "Study day of ECG"
+        }
+      }
+    },
+    {
+      "name": "Exposure (EX) Variables",
+      "fields": {
+        "EXSEQ": {
+          "definition": "Sequence number for exposure"
+        },
+        "EXTRT": {
+          "definition": "Name of treatment"
+        },
+        "EXDOSE": {
+          "definition": "Dose per administration"
+        },
+        "EXDOSU": {
+          "definition": "Dose units"
+        },
+        "EXDOSFRM": {
+          "definition": "Dose form"
+        },
+        "EXROUTE": {
+          "definition": "Route of administration"
+        },
+        "EXLOC": {
+          "definition": "Location of dose administration"
+        },
+        "EXLAT": {
+          "definition": "Laterality"
+        },
+        "EXDIR": {
+          "definition": "Direction"
+        },
+        "EXSTDTC": {
+          "definition": "Start date/time of treatment"
+        },
+        "EXENDTC": {
+          "definition": "End date/time of treatment"
+        },
+        "EXSTDY": {
+          "definition": "Study day of start of treatment"
+        },
+        "EXENDY": {
+          "definition": "Study day of end of treatment"
+        },
+        "EXLNKID": {
+          "definition": "Link identifier"
+        },
+        "EXLNKGRP": {
+          "definition": "Link group"
+        },
+        "EXCAT": {
+          "definition": "Category"
+        },
+        "EXSCAT": {
+          "definition": "Subcategory"
+        },
+        "EXADJ": {
+          "definition": "Adjustment"
+        },
+        "EXTPTREF": {
+          "definition": "Time point reference"
+        }
+      }
+    },
+    {
+      "name": "Findings About Variables",
+      "fields": {
+        "FASEQ": {
+          "definition": "Sequence number for findings about"
+        },
+        "FAGRPID": {
+          "definition": "Group identifier"
+        },
+        "FACAT": {
+          "definition": "Category for findings about"
+        },
+        "FAORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "FASTAT": {
+          "definition": "Completion status"
+        },
+        "FAREASND": {
+          "definition": "Reason not done"
+        },
+        "FAEVAL": {
+          "definition": "Evaluator"
+        },
+        "FADY": {
+          "definition": "Study day of collection"
+        },
+        "FATPTNUM": {
+          "definition": "Numeric identifier of when an observation is planned to occur."
+        },
+        "FARFTDTC": {
+          "definition": "Reference date/time"
+        },
+        "FAEVLINT": {
+          "definition": "Evaluation interval"
+        },
+        "FAEVINTX": {
+          "definition": "Evaluation interval text"
+        },
+        "FAREFID": {
+          "definition": "Reference identifier"
+        },
+        "FAORRESU": {
+          "definition": "Original units"
+        },
+        "FASTRESN": {
+          "definition": "Numeric result in standard units"
+        },
+        "FASTRESU": {
+          "definition": "Standard units"
+        },
+        "FALOC": {
+          "definition": "Location"
+        },
+        "FALAT": {
+          "definition": "Laterality"
+        },
+        "FADRVFL": {
+          "definition": "Derived flag"
+        },
+        "FAENRTPT": {
+          "definition": "End reference time point"
+        },
+        "FAENTPT": {
+          "definition": "End time point"
+        },
+        "FASTINT": {
+          "definition": "Evaluation interval start ",
+          "comment": "uncertain"
+        },
+        "FAENINT": {
+          "definition": "Evaluation interval end",
+          "comment": "uncertain"
+        }
+      }
+    },
+    {
+      "name": "Immunogenicity Variables",
+      "fields": {
+        "ISSEQ": {
+          "definition": "Sequence number for immunogenicity"
+        },
+        "ISREFID": {
+          "definition": "Reference identifier"
+        },
+        "ISTESTCD": {
+          "definition": "Immunogenicity test code"
+        },
+        "ISTEST": {
+          "definition": "Immunogenicity test name"
+        },
+        "ISCAT": {
+          "definition": "Category for immunogenicity"
+        },
+        "ISORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "ISORRESU": {
+          "definition": "Original units"
+        },
+        "ISSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "ISSTRESN": {
+          "definition": "Numeric result in standard units"
+        },
+        "ISSTRESU": {
+          "definition": "Standard units"
+        },
+        "ISSTAT": {
+          "definition": "Completion status"
+        },
+        "ISREASND": {
+          "definition": "Reason not done"
+        },
+        "ISSPEC": {
+          "definition": "Specimen type"
+        },
+        "ISBLFL": {
+          "definition": "Baseline flag"
+        },
+        "ISDTC": {
+          "definition": "Date/time of specimen collection"
+        },
+        "ISDY": {
+          "definition": "Study day of specimen collection"
+        },
+        "ISGRPID": {
+          "definition": "Group identifier"
+        },
+        "ISMETHOD": {
+          "definition": "Method"
+        }
+      }
+    },
+    {
+      "name": "Microbiology Variables",
+      "fields": {
+        "MBSEQ": {
+          "definition": "Sequence number for microbiology"
+        },
+        "MBGRPID": {
+          "definition": "Group identifier"
+        },
+        "MBTESTCD": {
+          "definition": "Microbiology test code"
+        },
+        "MBTEST": {
+          "definition": "Microbiology test name"
+        },
+        "MBTSTDTL": {
+          "definition": "Test detail"
+        },
+        "MBCAT": {
+          "definition": "Category for microbiology"
+        },
+        "MBORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "MBORNRHI": {
+          "definition": "Reference range upper limit in original units"
+        },
+        "MBSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "MBSTNRHI": {
+          "definition": "Reference range upper limit in standard units"
+        },
+        "MBSTNRC": {
+          "definition": "Reference range for character results"
+        },
+        "MBNRIND": {
+          "definition": "Reference range indicator"
+        },
+        "MBRESCAT": {
+          "definition": "Result category"
+        },
+        "MBSTAT": {
+          "definition": "Completion status"
+        },
+        "MBREASND": {
+          "definition": "Reason not done"
+        },
+        "MBNAM": {
+          "definition": "Laboratory/vendor name"
+        },
+        "MBSPEC": {
+          "definition": "Specimen type"
+        },
+        "MBLOC": {
+          "definition": "Specimen location"
+        },
+        "MBMETHOD": {
+          "definition": "Method"
+        },
+        "MBBLFL": {
+          "definition": "Baseline flag"
+        },
+        "MBDTC": {
+          "definition": "Date/time of specimen collection"
+        },
+        "MBDY": {
+          "definition": "Study day of specimen collection"
+        },
+        "MBREFID": {
+          "definition": "Reference identifier"
+        },
+        "MBSPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "MBSCAT": {
+          "definition": "Subcategory"
+        },
+        "MBLOINC": {
+          "definition": "LOINC code"
+        }
+      }
+    },
+    {
+      "name": "Medical History Variables",
+      "fields": {
+        "MHSEQ": {
+          "definition": "Sequence number for medical history"
+        },
+        "MHTERM": {
+          "definition": "Reported term for medical history"
+        },
+        "MHMODIFY": {
+          "definition": "Modified medical history term"
+        },
+        "MHLLT": {
+          "definition": "Lowest level term"
+        },
+        "MHLLTCD": {
+          "definition": "Lowest level term code"
+        },
+        "MHDECOD": {
+          "definition": "Dictionary-derived term"
+        },
+        "MHPTCD": {
+          "definition": "Preferred term code"
+        },
+        "MHHLT": {
+          "definition": "High level term"
+        },
+        "MHHLTCD": {
+          "definition": "High level term code"
+        },
+        "MHHLGT": {
+          "definition": "High level group term"
+        },
+        "MHHLGTCD": {
+          "definition": "High level group term code"
+        },
+        "MHBODSYS": {
+          "definition": "Body system or organ class"
+        },
+        "MHBDSYCD": {
+          "definition": "Body system or organ class code"
+        },
+        "MHSOC": {
+          "definition": "System organ class"
+        },
+        "MHSOCCD": {
+          "definition": "System organ class code"
+        },
+        "MHSTDTC": {
+          "definition": "Start date/time of medical history event"
+        },
+        "MHENDTC": {
+          "definition": "End date/time of medical history event"
+        },
+        "MHENRTPT": {
+          "definition": "End reference time point"
+        },
+        "MHENTPT": {
+          "definition": "End time point"
+        },
+        "MHSPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "MHCAT": {
+          "definition": "Category"
+        },
+        "MHDTC": {
+          "definition": "Date/time of history collection"
+        },
+        "MHDY": {
+          "definition": "Study day of history collection"
+        },
+        "MHSTDY": {
+          "definition": "Study day of start of medical history"
+        },
+        "MHENDY": {
+          "definition": "Study day of end of medical history"
+        }
+      }
+    },
+    {
+      "name": "Physical Examination Variables",
+      "fields": {
+        "PESEQ": {
+          "definition": "Sequence number for physical exam"
+        },
+        "PESPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "PETESTCD": {
+          "definition": "Physical exam test code"
+        },
+        "PETEST": {
+          "definition": "Physical exam test name"
+        },
+        "PECAT": {
+          "definition": "Category for physical exam"
+        },
+        "PEORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "PESTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "PESTAT": {
+          "definition": "Completion status"
+        },
+        "PEREASND": {
+          "definition": "Reason not done"
+        },
+        "PEDTC": {
+          "definition": "Date/time of examination"
+        },
+        "PEDY": {
+          "definition": "Study day of examination"
+        }
+      }
+    },
+    {
+      "name": "Relationship Variables",
+      "fields": {
+        "RELTYPE": {
+          "definition": "Relationship type"
+        },
+        "RELID": {
+          "definition": "Relationship identifier"
+        }
+      }
+    },
+    {
+      "name": "Reproductive System Variables",
+      "fields": {
+        "RPSEQ": {
+          "definition": "Sequence number for reproductive system"
+        },
+        "RPTESTCD": {
+          "definition": "Reproductive system test code"
+        },
+        "RPTEST": {
+          "definition": "Reproductive system test name"
+        },
+        "RPORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "RPORRESU": {
+          "definition": "Original units"
+        },
+        "RPSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "RPSTRESN": {
+          "definition": "Numeric result in standard units"
+        },
+        "RPSTRESU": {
+          "definition": "Standard units"
+        },
+        "RPDTC": {
+          "definition": "Date/time of assessment"
+        },
+        "RPDY": {
+          "definition": "Study day of assessment"
+        }
+      }
+    },
+    {
+      "name": "Study Elements Variables",
+      "fields": {
+        "SESEQ": {
+          "definition": "Sequence number for study element"
+        },
+        "ETCD": {
+          "definition": "Element code"
+        },
+        "ELEMENT": {
+          "definition": "Description of element"
+        },
+        "TAETORD": {
+          "definition": "Planned order of element within trial arm"
+        },
+        "SESTDTC": {
+          "definition": "Start date/time of element"
+        },
+        "SEENDTC": {
+          "definition": "End date/time of element"
+        },
+        "SESTDY": {
+          "definition": "Study day of start of element"
+        },
+        "SEENDY": {
+          "definition": "Study day of end of element"
+        }
+      }
+    },
+    {
+      "name": "Supplemental Qualifiers Variables",
+      "fields": {
+        "QNAM": {
+          "definition": "Qualifier variable name"
+        },
+        "QLABEL": {
+          "definition": "Qualifier variable label"
+        },
+        "QVAL": {
+          "definition": "Qualifier variable value"
+        },
+        "QORIG": {
+          "definition": "Origin of data"
+        },
+        "QEVAL": {
+          "definition": "Evaluator"
+        }
+      }
+    },
+    {
+      "name": "Subject Visits Variables",
+      "fields": {
+        "SVSTDTC": {
+          "definition": "Start date/time of visit"
+        },
+        "SVENDTC": {
+          "definition": "End date/time of visit"
+        },
+        "SVSTDY": {
+          "definition": "Study day of start of visit"
+        },
+        "SVENDY": {
+          "definition": "Study day of end of visit"
+        },
+        "SVUPDES": {
+          "definition": "Unplanned visit description"
+        },
+        "SVREFID": {
+          "definition": "Reference identifier"
+        }
+      }
+    },
+    {
+      "name": "Trial Arms Variables",
+      "fields": {
+        "TABRANCH": {
+          "definition": "Trial arm branch"
+        },
+        "TATRANS": {
+          "definition": "Trial arm transition"
+        }
+      }
+    },
+    {
+      "name": "Trial Elements Variables",
+      "fields": {
+        "TESTRL": {
+          "definition": "Applicability rule for element start"
+        },
+        "TEENRL": {
+          "definition": "Applicability rule for element end"
+        },
+        "TEDUR": {
+          "definition": "Planned duration of element"
+        }
+      }
+    },
+    {
+      "name": "Inclusion/Exclusion Variables",
+      "fields": {
+        "IETESTCD": {
+          "definition": "Inclusion/exclusion test code"
+        },
+        "IETEST": {
+          "definition": "Inclusion/exclusion criterion"
+        },
+        "IECAT": {
+          "definition": "Category for inclusion/exclusion"
+        },
+        "IESEQ": {
+          "definition": "Sequence number"
+        },
+        "IESPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "IEORRES": {
+          "definition": "Result"
+        },
+        "IESTRESC": {
+          "definition": "Result in standard format"
+        },
+        "IEDTC": {
+          "definition": "Date/time of assessment"
+        },
+        "IEDY": {
+          "definition": "Study day of assessment"
+        }
+      }
+    },
+    {
+      "name": "Trial Inclusion Variables",
+      "fields": {
+        "TIVERS": {
+          "definition": "Trial inclusion version"
+        }
+      }
+    },
+    {
+      "name": "Trial Summary Variables",
+      "fields": {
+        "TSSEQ": {
+          "definition": "Sequence number for trial summary"
+        },
+        "TSGRPID": {
+          "definition": "Group identifier"
+        },
+        "TSPARMCD": {
+          "definition": "Trial summary parameter code"
+        },
+        "TSPARM": {
+          "definition": "Trial summary parameter"
+        },
+        "TSVAL": {
+          "definition": "Trial summary value"
+        },
+        "TSVAL1": {
+          "definition": "Trial summary value 1"
+        },
+        "TSVALNF": {
+          "definition": "Trial summary value not found"
+        },
+        "TSVALCD": {
+          "definition": "Trial summary value code"
+        },
+        "TSVCDREF": {
+          "definition": "Code reference"
+        },
+        "TSVCDVER": {
+          "definition": "Code version"
+        }
+      }
+    },
+    {
+      "name": "Trial Visits Variables",
+      "fields": {
+        "TVSTRL": {
+          "definition": "Visit start rule"
+        },
+        "TVENRL": {
+          "definition": "Visit end rule"
+        }
+      }
+    },
+    {
+      "name": "Additional Analysis Variables",
+      "fields": {
+        "XASEQ": {
+          "definition": "Sequence number for additional analysis"
+        },
+        "XATESTCD": {
+          "definition": "Additional analysis test code"
+        },
+        "XATEST": {
+          "definition": "Additional analysis test name"
+        },
+        "XACAT": {
+          "definition": "Category for additional analysis"
+        },
+        "XAORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "XASTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "XABLFL": {
+          "definition": "Baseline flag"
+        },
+        "XADTC": {
+          "definition": "Date/time of analysis"
+        },
+        "XADY": {
+          "definition": "Study day of analysis"
+        },
+        "XATPT": {
+          "definition": "Time point"
+        },
+        "XATPTNUM": {
+          "definition": "Numeric identifier of when an observation is planned to occur."
+        },
+        "XATPTREF": {
+          "definition": "Time point reference (Acts as a fixed reference for a series of planned time points, used for data tabulation)"
+        },
+        "XARFTDTC": {
+          "definition": "Reference date/time"
+        }
+      }
+    },
+    {
+      "name": "Randomization Variables",
+      "fields": {
+        "RANDNO": {
+          "definition": "Randomization number"
+        }
+      }
+    },
+    {
+      "name": "COVID-19 Specific Variables",
+      "fields": {
+        "C19ILHFL": {
+          "definition": "Prior COVID-19 illness History flag",
+          "comment": "27034_S1_M5_c4591001-A-P-adsympt-sas.pdf"
+        },
+        "CNCRSLFL": {
+          "definition": "Conclusive result flag",
+          "comment": "uncertain"
+        },
+        "VRBLNGFL": {
+          "definition": "Seeking documentation. Possibly viral baseline flag",
+          "comment": "uncertain"
+        },
+        "CRD1NGFL": {
+          "definition": "NAAT result at dose 1 negative flag"
+        },
+        "CRD2NGFL": {
+          "definition": "NAAT result at dose 1 negative flag"
+        },
+        "PDSYMFL": {
+          "definition": "Protocol defined symptom present flag",
+          "comment": "uncertain"
+        },
+        "PDSDMFL": {
+          "definition": "Protocol Defined SYMP Date Missing Flag"
+        },
+        "SEVSYMFL": {
+          "definition": "Severe symptom flag"
+        },
+        "ILD1FL": {
+          "definition": "*Influenza-like disease day 1 flag",
+          "comment": "uncertain"
+        },
+        "ILD27FL": {
+          "definition": "Flag indicates if COVID-19 illness occurred 7 days after dose 2"
+        },
+        "ILD17FL": {
+          "definition": "Influenza-like disease day 17 flag"
+        },
+        "ILD2FL": {
+          "definition": "Influenza-like disease day 2 flag"
+        },
+        "ILD214FL": {
+          "definition": "Influenza-like disease day 2-14 flag"
+        },
+        "FILOCRFL": {
+          "definition": "*First illness occurrence flag",
+          "comment": "uncertain"
+        },
+        "PDRMUFL": {
+          "definition": "*Pandemic remote monitoring flag",
+          "comment": "uncertain"
+        },
+        "PDP1FL": {
+          "definition": "*Pandemic day positive 1 flag",
+          "comment": "uncertain"
+        },
+        "PDP27FL": {
+          "definition": "Flag indicates if subject is included in vaccine efficacy population for protocol-defined COVID-19 7 days after dose 2"
+        },
+        "PDP17FL": {
+          "definition": "Pandemic day positive 17 flag"
+        },
+        "PDP214FL": {
+          "definition": "Pandemic day positive 2-14 flag"
+        },
+        "CDP1FL": {
+          "definition": "Flag indicates if subject is included in vaccine efficacy population for CDC-defined COVID-19 after dose 1",
+          "comment": "27034_S1_M5_c4591001-A-P-adc19ef-ia-sas.pdf"
+        },
+        "CDP17FL": {
+          "definition": "Flag indicates if subject is included in vaccine efficacy population for CDC-defined COVID-19 7 days after dose 1"
+        },
+        "CDP27FL": {
+          "definition": "Flag indicates if subject is included in vaccine efficacy population for CDC-defined COVID-19 after dose 2"
+        },
+        "CDP214FL": {
+          "definition": "Flag indicates if subject is included in vaccine efficacy population for CDC-defined COVID-19 7 days after dose 2"
+        },
+        "NMPDOCFL": {
+          "definition": "No major protocol deviation occurrence flag"
+        },
+        "CDCSYMFL": {
+          "definition": "CDC-defined symptom present flag"
+        },
+        "CDCRMUFL": {
+          "definition": "CDC-symptom result missing or unknown flag"
+        },
+        "COVBLST": {
+          "definition": "Baseline SARS-CoV-2 Status (Positive/Negative)"
+        },
+        "HIVFL": {
+          "definition": "HIV positive flag"
+        },
+        "EV14EFFL": {
+          "definition": "Evaluable efficacy population flag - 14 days"
+        }
+      }
+    },
+    {
+      "name": "Vaccination Variables",
+      "fields": {
+        "VAX101": {
+          "definition": "Vaccination 1 given"
+        },
+        "VAX102": {
+          "definition": "Vaccination 2 given"
+        },
+        "VAX103": {
+          "definition": "Vaccination Unplanned"
+        },
+        "VAXNO": {
+          "definition": "Vaccination number (1/2)"
+        }
+      }
+    },
+    {
+      "name": "Screening/Phase Variables",
+      "fields": {
+        "SCREEN": {
+          "definition": "Screening number"
+        },
+        "PHASEN": {
+          "definition": "Phase (numeric)"
+        },
+        "PHASE": {
+          "definition": "Phase"
+        },
+        "BLDV1FL": {
+          "definition": "Blood sample drawn before vax 1"
+        },
+        "BLDV2FL": {
+          "definition": "Blood sample drawn 1 week after vax 1"
+        },
+        "BLDV3FL": {
+          "definition": "Blood sample drawn before vax 2"
+        },
+        "BLDV4FL": {
+          "definition": "Blood sample drawn 1 week after vax 2"
+        },
+        "BLDV5FL": {
+          "definition": "Blood sample drawn 2 weeks after vax 2"
+        },
+        "BLDV6FL": {
+          "definition": "Blood sample drawn 1 month after vax 2"
+        },
+        "BLDV7FL": {
+          "definition": "Blood sample drawn 6 months after vax 2"
+        },
+        "BLDV8FL": {
+          "definition": "Blood sample drawn flag (timeframe not in source code)"
+        },
+        "BLDV9FL": {
+          "definition": "Blood sample drawn flag (timeframe not in source code)"
+        }
+      }
+    },
+    {
+      "name": "Dosing Variables",
+      "fields": {
+        "DOSALVL": {
+          "definition": "Actual dosing level"
+        },
+        "DOSALVLN": {
+          "definition": "Actual dosing level (numeric)"
+        },
+        "DOSPLVL": {
+          "definition": "Planned dosing level"
+        },
+        "DOSPLVLN": {
+          "definition": "Planned dosing level (numeric)"
+        }
+      }
+    },
+    {
+      "name": "Miscellaneous Variables",
+      "fields": {
+        "DICTVER": {
+          "definition": "Dictionary version"
+        },
+        "FU2MPD2": {
+          "definition": "*Follow-up 2 months post dose 2",
+          "comment": "uncertain"
+        },
+        "F2MP2CAT": {
+          "definition": "Follow-up 2 months post dose 2 category"
+        },
+        "F2MP2CAN": {
+          "definition": "Follow-up 2 months post dose 2 category (numeric)"
+        },
+        "CLTYP": {
+          "definition": "Collection type"
+        },
+        "FTEMCAT": {
+          "definition": "Fever temperature category"
+        },
+        "FTEMCATN": {
+          "definition": "Fever temperature category (numeric)"
+        },
+        "CAT1": {
+          "definition": "Charlson Comorbidity Index Category 1",
+          "comment": "https://icandecide.org/wp-content/uploads/2022/03/FDA-CBER-2021-5683-0022601-to-0022617_125742_S1_M5_c4591001-A-P-admh-sas.txt"
+        },
+        "CAT2": {
+          "definition": "Charlson Comorbidity Index Category 2",
+          "comment": "ibid."
+        },
+        "CDECASE": {
+          "definition": "*CDE case",
+          "comment": "uncertain"
+        },
+        "PC1MD2FL": {
+          "definition": "*Post challenge 1 month dose 2 flag",
+          "comment": "uncertain"
+        },
+        "BSSEROC": {
+          "definition": "*Baseline serostatus"
+        },
+        "BSSERON": {
+          "definition": "Baseline serostatus (numeric)"
+        }
+      }
+    },
+    {
+      "name": "Additional Domain-specific Variables",
+      "fields": {
+        "DDSEQ": {
+          "definition": "Sequence number for death details"
+        },
+        "DDTESTCD": {
+          "definition": "Death details test code"
+        },
+        "DDTEST": {
+          "definition": "Death details test name"
+        },
+        "DDCAT": {
+          "definition": "Category for death details"
+        },
+        "DDORRES": {
+          "definition": "Result or finding"
+        },
+        "DDSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "DDEVAL": {
+          "definition": "Evaluator"
+        },
+        "DDDTC": {
+          "definition": "Date/time of death detail"
+        },
+        "DDDY": {
+          "definition": "Study day of death detail"
+        }
+      }
+    },
+    {
+      "name": "Device Variables",
+      "fields": {
+        "SPDEVID": {
+          "definition": "Sponsor device identifier"
+        },
+        "DISEQ": {
+          "definition": "Sequence number for device in use"
+        },
+        "DIPARMCD": {
+          "definition": "Device in use parameter code"
+        },
+        "DIPARM": {
+          "definition": "Device in use parameter"
+        },
+        "DIVAL": {
+          "definition": "Device in use value"
+        }
+      }
+    },
+    {
+      "name": "Healthcare Encounters Variables",
+      "fields": {
+        "HOSEQ": {
+          "definition": "Sequence number for healthcare encounter"
+        },
+        "HOGRPID": {
+          "definition": "Healthcare encounter group identifier"
+        },
+        "HOLNKID": {
+          "definition": "Healthcare encounter link identifier"
+        },
+        "HOTERM": {
+          "definition": "Healthcare encounter term"
+        },
+        "HOCAT": {
+          "definition": "Category for healthcare encounter"
+        },
+        "HOPRESP": {
+          "definition": "Pre-specified"
+        },
+        "HOOCCUR": {
+          "definition": "Occurrence"
+        },
+        "HOSTAT": {
+          "definition": "Completion status"
+        },
+        "HODTC": {
+          "definition": "Date/time of healthcare encounter"
+        },
+        "HOSTDTC": {
+          "definition": "Start date/time of healthcare encounter"
+        },
+        "HOENDTC": {
+          "definition": "End date/time of healthcare encounter"
+        },
+        "HODY": {
+          "definition": "Study day of healthcare encounter"
+        },
+        "HOSTDY": {
+          "definition": "Study day of start of healthcare encounter"
+        },
+        "HOENDY": {
+          "definition": "Study day of end of healthcare encounter"
+        },
+        "HOEVINTX": {
+          "definition": "Evaluation interval text"
+        },
+        "HOENRTPT": {
+          "definition": "End reference time point"
+        },
+        "HOENTPT": {
+          "definition": "End time point"
+        }
+      }
+    },
+    {
+      "name": "Morphology Variables",
+      "fields": {
+        "MOSEQ": {
+          "definition": "Sequence number for morphology"
+        },
+        "MOTESTCD": {
+          "definition": "Morphology test code"
+        },
+        "MOTEST": {
+          "definition": "Morphology test name"
+        },
+        "MOCAT": {
+          "definition": "Category for morphology"
+        },
+        "MOORRES": {
+          "definition": "Result or finding in original units"
+        },
+        "MOSTRESC": {
+          "definition": "Character result in standard format"
+        },
+        "MOSTAT": {
+          "definition": "Completion status"
+        },
+        "MOLOC": {
+          "definition": "Location of morphology finding"
+        },
+        "MOMETHOD": {
+          "definition": "Method"
+        },
+        "MOBLFL": {
+          "definition": "Baseline flag"
+        },
+        "MODTC": {
+          "definition": "Date/time of morphology"
+        },
+        "MODY": {
+          "definition": "Study day of morphology"
+        }
+      }
+    },
+    {
+      "name": "Procedures Variables",
+      "fields": {
+        "PRSEQ": {
+          "definition": "Sequence number for procedure"
+        },
+        "PRSPID": {
+          "definition": "Sponsor-defined identifier"
+        },
+        "PRTRT": {
+          "definition": "Name of procedure"
+        },
+        "PRDECOD": {
+          "definition": "Standardized procedure name"
+        },
+        "PRCAT": {
+          "definition": "Category for procedure"
+        },
+        "PROCCUR": {
+          "definition": "Occurrence"
+        },
+        "PRSTAT": {
+          "definition": "Completion status"
+        },
+        "PRDTC": {
+          "definition": "Date/time of procedure"
+        },
+        "PRSTDTC": {
+          "definition": "Start date/time of procedure"
+        },
+        "PRENDTC": {
+          "definition": "End date/time of procedure"
+        },
+        "PRDY": {
+          "definition": "Study day of procedure"
+        },
+        "PRSTDY": {
+          "definition": "Study day of start of procedure"
+        },
+        "PRENDY": {
+          "definition": "Study day of end of procedure"
+        },
+        "PRENRTPT": {
+          "definition": "End reference time point"
+        },
+        "PRENTPT": {
+          "definition": "End time point"
+        },
+        "PRPRESP": {
+          "definition": "Pre-specified"
+        }
+      }
+    }
+  ]
+}

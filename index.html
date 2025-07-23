@@ -348,6 +348,85 @@
             background: #e2e8f0;
         }
         
+        .cite-button.active {
+            /* Background color set dynamically via JavaScript */
+        }
+        
+        .citation-popup {
+            position: fixed;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            max-width: 500px;
+            display: none;
+        }
+        
+        .citation-popup.active {
+            display: block;
+        }
+        
+        .citation-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .citation-popup-close {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #6c757d;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .citation-popup-close:hover {
+            color: #495057;
+        }
+        
+        .citation-text {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #495057;
+            margin-bottom: 12px;
+            word-wrap: break-word;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+        
+        .citation-copy-button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .citation-copy-button:hover {
+            background: #0052a3;
+        }
+        
+        .citation-copy-button.copied {
+            background: #28a745;
+        }
+        
         .loading-more {
             text-align: center;
             padding: 20px;
@@ -407,6 +486,22 @@
         
         .tag-filter-remove:hover {
             background: rgba(25, 118, 210, 0.1);
+        }
+        
+        .citation-feedback {
+            position: fixed;
+            background: #333;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1001;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
         }
         
         input[type="file"] {
@@ -1493,7 +1588,7 @@
                         </button>
                     </td>
                     <td>
-                        <button class="cite-button" onclick="citeDocument(${i})">Cite</button>
+                        <button class="cite-button" onclick="showCitationPopup(event, ${i})" data-color="${color}">Cite</button>
                     </td>
                 `;
                 
@@ -1707,10 +1802,120 @@
             `).join('');
         }
         
-        function citeDocument(fileIndex) {
+        // Helper function to determine if a color is light or dark
+        function isLightColor(color) {
+            // Convert hex to RGB
+            const hex = color.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16);
+            const g = parseInt(hex.substr(2, 2), 16);
+            const b = parseInt(hex.substr(4, 2), 16);
+            
+            // Calculate luminance
+            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+            return luminance > 0.5;
+        }
+        
+        function generateCitation(file) {
+            const year = file.date || 'n.d.';
+            const authors = file.people_mentioned && file.people_mentioned.trim() 
+                ? file.people_mentioned.split(',')[0].trim() + '. ' 
+                : 'FDA. ';
+            
+            const documentType = file.document_type ? ` [${file.document_type}]` : '';
+            const module = file.module || 'N/A';
+            
+            return `${authors}(${year}). ${file.title}${documentType}. ` +
+                   `Pfizer-BioNTech COVID-19 Vaccine EUA Documents, Module ${module}. ` +
+                   `FOIA Release: ${file.folder}. ` +
+                   `Retrieved from ${file.google_drive_link}`;
+        }
+        
+        function showCitationPopup(event, fileIndex) {
+            event.stopPropagation();
+            const button = event.currentTarget;
             const file = sortedFileData[fileIndex];
-            // TODO: Implement citation functionality
-            alert('Citation feature coming soon for: ' + file.filename);
+            const citation = generateCitation(file);
+            
+            // Remove any existing popup and active states
+            const existingPopup = document.querySelector('.citation-popup');
+            if (existingPopup) {
+                existingPopup.remove();
+            }
+            document.querySelectorAll('.cite-button.active').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.backgroundColor = '';
+                btn.style.borderColor = '';
+                btn.style.color = '';
+            });
+            
+            // Add active state to clicked button with file color
+            button.classList.add('active');
+            const fileColor = button.getAttribute('data-color');
+            if (fileColor) {
+                button.style.backgroundColor = fileColor;
+                button.style.borderColor = fileColor;
+                button.style.color = isLightColor(fileColor) ? '#000' : '#fff';
+            }
+            
+            // Create popup
+            const popup = document.createElement('div');
+            popup.className = 'citation-popup active';
+            
+            // Calculate position (below the button)
+            const rect = button.getBoundingClientRect();
+            popup.style.left = Math.min(rect.left, window.innerWidth - 520) + 'px';
+            popup.style.top = (rect.bottom + 10) + 'px';
+            
+            popup.innerHTML = `
+                <div class="citation-popup-header">
+                    <strong>Citation</strong>
+                    <button class="citation-popup-close" onclick="closeCitationPopup()">&times;</button>
+                </div>
+                <div class="citation-text">${citation}</div>
+                <button class="citation-copy-button" onclick="copyCitation('${citation.replace(/'/g, "\\'")}')">
+                    Copy Citation
+                </button>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            // Close popup when clicking outside
+            document.addEventListener('click', function closeOnClickOutside(e) {
+                if (!popup.contains(e.target) && e.target !== button) {
+                    closeCitationPopup();
+                    document.removeEventListener('click', closeOnClickOutside);
+                }
+            });
+        }
+        
+        function closeCitationPopup() {
+            const popup = document.querySelector('.citation-popup');
+            if (popup) {
+                popup.remove();
+            }
+            document.querySelectorAll('.cite-button.active').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.backgroundColor = '';
+                btn.style.borderColor = '';
+                btn.style.color = '';
+            });
+        }
+        
+        function copyCitation(citation) {
+            navigator.clipboard.writeText(citation).then(() => {
+                const button = document.querySelector('.citation-copy-button');
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy citation:', err);
+                prompt('Copy this citation:', citation);
+            });
         }
     </script>
 </body>

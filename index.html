@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EUA File Navigator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -131,12 +132,281 @@
         
         .file-type-button.active {
             border-color: #333;
-            box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
         }
         
         .file-type-button.all {
             background: #6B7280;
             color: white;
+        }
+        
+        /* Tab styles */
+        .tab-container {
+            display: flex;
+            gap: 0;
+            margin: 20px 0;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .tab-button {
+            padding: 10px 24px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            color: #6c757d;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        
+        .tab-button:hover {
+            color: #495057;
+            background: #f8f9fa;
+        }
+        
+        .tab-button.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+            font-weight: 600;
+        }
+        
+        /* File list styles */
+        .file-list-view {
+            display: none;
+        }
+        
+        .file-list-view.active {
+            display: block;
+        }
+        
+        .tag-chart-view {
+            display: block;
+        }
+        
+        .tag-chart-view.active {
+            display: block;
+        }
+        
+        
+        .file-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .file-table th {
+            text-align: left;
+            padding: 12px 8px;
+            border-bottom: 2px solid #e9ecef;
+            font-weight: 600;
+            color: #495057;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .file-table th:hover {
+            background: #f8f9fa;
+        }
+        
+        .file-table td {
+            padding: 8px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: middle;
+        }
+        
+        .file-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .color-bar {
+            width: 4px;
+            height: 24px;
+            border-radius: 2px;
+        }
+        
+        .filename-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .filename-link:hover {
+            text-decoration: underline;
+        }
+        
+        .tags-button {
+            background: #f0f4f8;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 6px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #495057;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tags-button:hover {
+            background: #e2e8f0;
+            transform: translateY(-1px);
+        }
+        
+        .tags-button:active {
+            transform: translateY(0);
+            background: #d4dae2;
+        }
+        
+        .tags-button.active {
+            /* Background and border color set dynamically via JavaScript */
+        }
+        
+        .tag-popup {
+            position: fixed;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 1000;
+            max-width: 250px;
+            display: none;
+        }
+        
+        .tag-popup.active {
+            display: block;
+        }
+        
+        .tag-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            cursor: move;
+            user-select: none;
+            padding: 4px;
+            margin: -4px -4px 8px -4px;
+            background: #f8f9fa;
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .tag-popup-close {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #6c757d;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tag-popup-close:hover {
+            color: #495057;
+        }
+        
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .tag-item {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .tag-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .cite-button {
+            background: #f0f4f8;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 4px 12px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #495057;
+            transition: all 0.2s ease;
+        }
+        
+        .cite-button:hover {
+            background: #e2e8f0;
+        }
+        
+        .loading-more {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #0066cc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .active-tag-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .tag-filter-badge {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tag-filter-remove {
+            background: none;
+            border: none;
+            color: #1976d2;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .tag-filter-remove:hover {
+            background: rgba(25, 118, 210, 0.1);
         }
         
         input[type="file"] {
@@ -290,12 +560,18 @@
         </nav>
         <h1>EUA File Navigator</h1>
         
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <button class="tab-button active" data-view="file-list">File List</button>
+            <button class="tab-button" data-view="tag-chart">Tag Chart</button>
+        </div>
+        
         <div id="loading-container" style="text-align: center; padding: 40px;">
             <p style="color: #666;">Loading data...</p>
         </div>
         
         <div id="controls" style="display: none; margin: 20px 0;">
-            <div style="margin-bottom: 20px;">
+            <div class="sort-controls tag-chart-only" style="margin-bottom: 20px;">
                 <label style="font-weight: bold; margin-right: 10px;">Sort by:</label>
                 <input type="radio" id="sortCount" name="sortOption" value="count" checked>
                 <label for="sortCount" style="margin-right: 20px;">Count (High to Low, then A-Z)</label>
@@ -423,7 +699,21 @@
         </div>
         
         <div id="stats" class="stats" style="display: none;"></div>
-        <div id="chart-container"></div>
+        
+        <!-- File List View -->
+        <div id="file-list-view" class="file-list-view active">
+            <div id="active-tag-filters" class="active-tag-filters"></div>
+            <div id="file-list-container"></div>
+            <div id="loading-indicator" class="loading-more" style="display: none;">
+                <span class="loading-spinner"></span>
+                Loading more files...
+            </div>
+        </div>
+        
+        <!-- Tag Chart View -->
+        <div id="tag-chart-view" class="tag-chart-view" style="display: none;">
+            <div id="chart-container"></div>
+        </div>
     </div>
     
     <div class="tooltip" style="display: none;"></div>
@@ -433,6 +723,15 @@
         let currentData = [];
         const tooltip = d3.select('.tooltip');
         let tooltipPersistent = false;
+        
+        // File list view variables
+        let currentView = 'file-list';
+        let displayedFiles = 0;
+        const filesPerPage = 200;
+        let filteredFileData = [];
+        let activeTagFilters = new Set();
+        let sortColumn = 'filename';
+        let sortDirection = 'asc';
         
         // Define colors for file extensions
         const extensionColors = {
@@ -501,6 +800,30 @@
         
         document.getElementById('domainFilter').addEventListener('change', function() {
             processData();
+        });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-button').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                document.querySelectorAll('.tab-button').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Switch views
+                currentView = this.dataset.view;
+                if (currentView === 'file-list') {
+                    document.getElementById('file-list-view').style.display = 'block';
+                    document.getElementById('tag-chart-view').style.display = 'none';
+                    document.querySelector('.sort-controls').style.display = 'none';
+                } else {
+                    document.getElementById('file-list-view').style.display = 'none';
+                    document.getElementById('tag-chart-view').style.display = 'block';
+                    document.querySelector('.sort-controls').style.display = 'block';
+                }
+                
+                // Refresh the current view
+                processData();
+            });
         });
         
         // Add button filter event listeners
@@ -802,12 +1125,7 @@
             // Display stats
             const statsDiv = document.getElementById('stats');
             statsDiv.style.display = 'block';
-            statsDiv.innerHTML = `
-                <strong>Summary:</strong> 
-                ${filteredData.length} files displayed (${csvData.length} total) | 
-                ${tagArray.length} unique tags found | 
-                Most common tag: "${tagArray[0]?.tag}" (${tagArray[0]?.count} files)
-            `;
+            statsDiv.innerHTML = `<strong>${filteredData.length} files displayed</strong>`;
             
             // Legend is now integrated into file type filter buttons
             // createLegend(allExtensions);
@@ -815,7 +1133,20 @@
             // Show controls
             document.getElementById('controls').style.display = 'block';
             
-            createChart(tagArray);
+            // Hide sort controls if in file list view
+            if (currentView === 'file-list') {
+                document.querySelector('.sort-controls').style.display = 'none';
+            }
+            
+            // Store filtered file data for file list view
+            filteredFileData = filteredData;
+            
+            // Update view based on current tab
+            if (currentView === 'file-list') {
+                renderFileList();
+            } else {
+                createChart(tagArray);
+            }
         }
         
         function createLegend(extensions) {
@@ -1061,6 +1392,325 @@
             tooltip
                 .style('display', 'none')
                 .classed('persistent', false);
+        }
+        
+        // File list view variables
+        let sortedFileData = [];
+        let infiniteScrollObserver = null;
+        
+        // File list view functions
+        function renderFileList() {
+            displayedFiles = 0;
+            sortFileData();
+            const container = document.getElementById('file-list-container');
+            container.innerHTML = '';
+            renderFileListPage();
+            updateActiveTagFilters();
+            updateFileListStats();
+            setupInfiniteScroll();
+        }
+        
+        function updateFileListStats() {
+            if (currentView === 'file-list') {
+                const statsDiv = document.getElementById('stats');
+                statsDiv.innerHTML = `<strong>${sortedFileData.length} files displayed</strong>`;
+            }
+        }
+        
+        function sortFileData() {
+            // Apply tag filters
+            let dataToDisplay = filteredFileData;
+            if (activeTagFilters.size > 0) {
+                dataToDisplay = filteredFileData.filter(file => {
+                    const fileTags = file.tags.split(',').map(t => t.trim());
+                    return Array.from(activeTagFilters).every(tag => fileTags.includes(tag));
+                });
+            }
+            
+            // Sort data
+            sortedFileData = [...dataToDisplay].sort((a, b) => {
+                let aVal = a[sortColumn] || '';
+                let bVal = b[sortColumn] || '';
+                
+                if (sortColumn === 'pageCount') {
+                    aVal = parseInt(aVal) || 0;
+                    bVal = parseInt(bVal) || 0;
+                }
+                
+                if (sortDirection === 'asc') {
+                    return aVal > bVal ? 1 : -1;
+                } else {
+                    return aVal < bVal ? 1 : -1;
+                }
+            });
+        }
+        
+        function renderFileListPage() {
+            const container = document.getElementById('file-list-container');
+            const startIndex = displayedFiles;
+            const endIndex = Math.min(startIndex + filesPerPage, sortedFileData.length);
+            
+            // Create table if it's the first page
+            if (displayedFiles === 0) {
+                container.innerHTML = `
+                    <table class="file-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 20px;"></th>
+                                <th onclick="sortFileList('module')">Module</th>
+                                <th onclick="sortFileList('document_type')">Document Type</th>
+                                <th onclick="sortFileList('filename')">Filename</th>
+                                <th>Tags</th>
+                                <th>Cite</th>
+                            </tr>
+                        </thead>
+                        <tbody id="file-table-body">
+                        </tbody>
+                    </table>
+                `;
+            }
+            
+            const tbody = document.getElementById('file-table-body');
+            const fragment = document.createDocumentFragment();
+            
+            // Add rows
+            for (let i = startIndex; i < endIndex && i < sortedFileData.length; i++) {
+                const file = sortedFileData[i];
+                const row = document.createElement('tr');
+                
+                // Color bar
+                const ext = getFileExtension(file.filename);
+                const color = extensionColors[ext] || extensionColors['other'];
+                
+                row.innerHTML = `
+                    <td><div class="color-bar" style="background-color: ${color};"></div></td>
+                    <td>${file.module || '-'}</td>
+                    <td>${file.document_type || '-'}</td>
+                    <td><a href="${file.google_drive_link}" target="_blank" class="filename-link">${file.filename}</a></td>
+                    <td>
+                        <button class="tags-button" onclick="showTagPopup(event, ${i})" title="View tags" data-color="${color}">
+                            <i class="fa-solid fa-tags"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button class="cite-button" onclick="citeDocument(${i})">Cite</button>
+                    </td>
+                `;
+                
+                fragment.appendChild(row);
+            }
+            
+            tbody.appendChild(fragment);
+            displayedFiles = endIndex;
+            
+            // Update loading indicator
+            const loadingIndicator = document.getElementById('loading-indicator');
+            if (displayedFiles < sortedFileData.length) {
+                loadingIndicator.style.display = 'block';
+            } else {
+                loadingIndicator.style.display = 'none';
+            }
+        }
+        
+        function setupInfiniteScroll() {
+            // Remove existing observer if any
+            if (infiniteScrollObserver) {
+                infiniteScrollObserver.disconnect();
+            }
+            
+            const loadingIndicator = document.getElementById('loading-indicator');
+            
+            infiniteScrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && displayedFiles < sortedFileData.length) {
+                        renderFileListPage();
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '100px',
+                threshold: 0.1
+            });
+            
+            infiniteScrollObserver.observe(loadingIndicator);
+        }
+        
+        function sortFileList(column) {
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortColumn = column;
+                sortDirection = 'asc';
+            }
+            renderFileList();
+        }
+        
+        function showTagPopup(event, fileIndex) {
+            event.stopPropagation();
+            const button = event.currentTarget;
+            const file = sortedFileData[fileIndex];
+            const tags = file.tags ? file.tags.split(',').map(t => t.trim()) : [];
+            
+            // Remove any existing popup and active states
+            const existingPopup = document.querySelector('.tag-popup');
+            if (existingPopup) {
+                existingPopup.remove();
+            }
+            document.querySelectorAll('.tags-button.active').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.backgroundColor = '';
+                btn.style.borderColor = '';
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.style.color = '';
+                }
+            });
+            
+            // Add active state to clicked button with file color background
+            button.classList.add('active');
+            const fileColor = button.getAttribute('data-color');
+            if (fileColor) {
+                button.style.backgroundColor = fileColor;
+                button.style.borderColor = fileColor;
+                const icon = button.querySelector('i');
+                if (icon) {
+                    icon.style.color = 'white';
+                }
+            }
+            
+            // Create popup
+            const popup = document.createElement('div');
+            popup.className = 'tag-popup active';
+            
+            // Calculate position (to the left of the button)
+            const rect = button.getBoundingClientRect();
+            popup.style.right = (window.innerWidth - rect.left + 10) + 'px';
+            popup.style.top = rect.top + 'px';
+            
+            popup.innerHTML = `
+                <div class="tag-popup-header">
+                    <strong>Tags</strong>
+                    <button class="tag-popup-close" onclick="closeTagPopup()">&times;</button>
+                </div>
+                <div class="tag-list">
+                    ${tags.map(tag => `<span class="tag-item" onclick="addTagFilter('${tag}')">${tag}</span>`).join('')}
+                </div>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            // Make popup draggable
+            let isDragging = false;
+            let currentX;
+            let currentY;
+            let initialX;
+            let initialY;
+            let xOffset = 0;
+            let yOffset = 0;
+            
+            const header = popup.querySelector('.tag-popup-header');
+            
+            header.addEventListener('mousedown', dragStart);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', dragEnd);
+            
+            function dragStart(e) {
+                if (e.target.classList.contains('tag-popup-close')) return;
+                
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
+                
+                if (e.target === header || header.contains(e.target)) {
+                    isDragging = true;
+                }
+            }
+            
+            function drag(e) {
+                if (!isDragging) return;
+                
+                e.preventDefault();
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+                
+                xOffset = currentX;
+                yOffset = currentY;
+                
+                popup.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            }
+            
+            function dragEnd(e) {
+                initialX = currentX;
+                initialY = currentY;
+                isDragging = false;
+            }
+            
+            // Handle click persistence
+            let isClicked = false;
+            
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                isClicked = true;
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!popup.contains(e.target) && e.target !== button) {
+                    popup.remove();
+                    button.classList.remove('active');
+                    button.style.backgroundColor = '';
+                    button.style.borderColor = '';
+                    const icon = button.querySelector('i');
+                    if (icon) {
+                        icon.style.color = '';
+                    }
+                }
+            });
+        }
+        
+        function closeTagPopup() {
+            const popup = document.querySelector('.tag-popup');
+            if (popup) {
+                popup.remove();
+            }
+            document.querySelectorAll('.tags-button.active').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.backgroundColor = '';
+                btn.style.borderColor = '';
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.style.color = '';
+                }
+            });
+        }
+        
+        function addTagFilter(tag) {
+            activeTagFilters.add(tag);
+            renderFileList();
+        }
+        
+        function removeTagFilter(tag) {
+            activeTagFilters.delete(tag);
+            renderFileList();
+        }
+        
+        function updateActiveTagFilters() {
+            const container = document.getElementById('active-tag-filters');
+            if (activeTagFilters.size === 0) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            container.innerHTML = Array.from(activeTagFilters).map(tag => `
+                <div class="tag-filter-badge">
+                    ${tag}
+                    <button class="tag-filter-remove" onclick="removeTagFilter('${tag}')">&times;</button>
+                </div>
+            `).join('');
+        }
+        
+        function citeDocument(fileIndex) {
+            const file = sortedFileData[fileIndex];
+            // TODO: Implement citation functionality
+            alert('Citation feature coming soon for: ' + file.filename);
         }
     </script>
 </body>

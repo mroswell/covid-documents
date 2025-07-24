@@ -68,6 +68,7 @@
             color: #333;
             margin-bottom: 10px;
             font-size: 24px;
+            display: inline-block;
         }
         
         .subtitle {
@@ -102,6 +103,11 @@
             outline: none;
         }
         
+        .filter-count {
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        
         .filter-button:hover {
             background: #e2e8f0;
         }
@@ -123,6 +129,11 @@
             outline: none;
             color: white;
             text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .file-type-count {
+            font-weight: 300;
+            opacity: 0.9;
         }
         
         .file-type-button:hover {
@@ -217,6 +228,10 @@
         
         .file-table tr:hover {
             background: #f8f9fa;
+        }
+        
+        .file-table tr.active-row {
+            background: #e9ecef;
         }
         
         .color-bar {
@@ -596,11 +611,14 @@
         }
         
         .stats {
-            margin: 20px 0;
-            padding: 15px;
+            display: inline-block;
+            margin: 0 0 10px 0;
+            padding: 6px 16px;
             background: #e8f5e9;
-            border-radius: 6px;
-            color: #2e7d32;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #1b5e20;
+            font-weight: 600;
         }
         
         .loading {
@@ -758,9 +776,9 @@
                 <div class="filter-section">
                     <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Folder:</label>
                     <div class="filter-buttons" id="folderFilters">
-                        <button class="filter-button active" data-filter="all">All Folders</button>
-                        <button class="filter-button" data-filter="eua-051925">eua-051925</button>
-                        <button class="filter-button" data-filter="eua-063025">eua-063025</button>
+                        <button class="filter-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
+                        <button class="filter-button" data-filter="eua-051925">eua-051925 <span class="filter-count"></span></button>
+                        <button class="filter-button" data-filter="eua-063025">eua-063025 <span class="filter-count"></span></button>
                     </div>
                 </div>
             </div>
@@ -768,36 +786,36 @@
             <div style="margin-bottom: 20px;">
                 <label style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Module:</label>
                 <div class="filter-buttons" id="moduleFilters">
-                    <button class="filter-button active" data-filter="all">All Modules</button>
-                    <button class="filter-button" data-filter="M1">M1</button>
-                    <button class="filter-button" data-filter="M2">M2</button>
-                    <button class="filter-button" data-filter="M4">M4</button>
-                    <button class="filter-button" data-filter="M5">M5</button>
-                    <button class="filter-button" data-filter="none">No Module</button>
+                    <button class="filter-button active" data-filter="all">All Modules <span class="filter-count"></span></button>
+                    <button class="filter-button" data-filter="M1">M1 <span class="filter-count"></span></button>
+                    <button class="filter-button" data-filter="M2">M2 <span class="filter-count"></span></button>
+                    <button class="filter-button" data-filter="M4">M4 <span class="filter-count"></span></button>
+                    <button class="filter-button" data-filter="M5">M5 <span class="filter-count"></span></button>
+                    <button class="filter-button" data-filter="none">No Module <span class="filter-count"></span></button>
                 </div>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <label style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by File Type:</label>
                     <div class="filter-buttons" id="fileTypeFilters">
-                        <button class="file-type-button all active" data-filter="all">All Types</button>
-                        <button class="file-type-button" data-filter="pdf" style="background: #DC2626;">PDF</button>
-                        <button class="file-type-button" data-filter="word" style="background: #2563EB;">Word</button>
-                        <button class="file-type-button" data-filter="sas" style="background: #EF4444;">SAS</button>
-                        <button class="file-type-button" data-filter="xpt" style="background: #7C3AED;">XPT</button>
-                        <button class="file-type-button" data-filter="xml" style="background: #059669;">XML</button>
-                        <button class="file-type-button" data-filter="xsl" style="background: #10B981;">XSL</button>
-                        <button class="file-type-button" data-filter="jpg" style="background: #EAB308;">JPG</button>
-                        <button class="file-type-button" data-filter="jmp" style="background: #EA580C;">JMP</button>
+                        <button class="file-type-button all active" data-filter="all">All Types <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="pdf" style="background: #DC2626;">PDF <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="xpt" style="background: #7C3AED;">XPT <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="sas" style="background: #F87171;">SAS <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="word" style="background: #2563EB;">Word <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="jpg" style="background: #EAB308;">JPG <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="xml" style="background: #059669;">XML <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="xsl" style="background: #10B981;">XSL <span class="file-type-count"></span></button>
+                        <button class="file-type-button" data-filter="jmp" style="background: #F97316;">JMP <span class="file-type-count"></span></button>
                     </div>
                 </div>
         </div>
         
-        <div id="stats" class="stats" style="display: none;"></div>
-        
         <!-- File List View -->
         <div id="file-list-view" class="file-list-view active">
             <div id="active-tag-filters" class="active-tag-filters"></div>
+            <div id="stats" class="stats"></div>
+            <div style="clear: both;"></div>
             <div id="file-list-container"></div>
             <div id="loading-indicator" class="loading-more" style="display: none;">
                 <span class="loading-spinner"></span>
@@ -847,8 +865,8 @@
             'csv': '#14B8A6',    // Teal
             'zip': '#64748B',    // Slate
             'msg': '#0891B2',    // Cyan
-            'html': '#F97316',   // Orange
-            'htm': '#FB923C',    // Light orange
+            'jmp': '#F97316',    // JMP orange
+            'sas': '#F87171',    // Lighter red for SAS (PDF)
             'other': '#9CA3AF'   // Light gray for unknown types
         };
         
@@ -950,6 +968,293 @@
             });
         });
         
+        // Function to calculate filter counts from filtered data
+        function updateFilterCountsFromFilteredData(dataToCount) {
+            // Get current active filters to know what NOT to count
+            const activeFileType = document.querySelector('#fileTypeFilters .file-type-button.active').dataset.filter;
+            const activeFolder = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+            const activeModule = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
+            const activeDomain = document.getElementById('domainFilter').value;
+            
+            // Calculate folder counts (only if folder filter is not active or is 'all')
+            const folderCounts = {};
+            const folderData = activeFolder === 'all' ? csvData : dataToCount;
+            folderData.forEach(row => {
+                // Apply other active filters to this row
+                if (activeFileType !== 'all') {
+                    const ext = getFileExtension(row.filename);
+                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
+                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
+                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
+                }
+                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
+                if (activeModule !== 'all') {
+                    if (activeModule === 'none' && row.module) return;
+                    if (activeModule !== 'none' && row.module !== activeModule) return;
+                }
+                
+                const folder = row.folder || 'none';
+                folderCounts[folder] = (folderCounts[folder] || 0) + 1;
+            });
+            
+            // Calculate module counts (only if module filter is not active or is 'all')
+            const moduleCounts = { none: 0 };
+            const moduleData = activeModule === 'all' ? csvData : dataToCount;
+            moduleData.forEach(row => {
+                // Apply other active filters to this row
+                if (activeFileType !== 'all') {
+                    const ext = getFileExtension(row.filename);
+                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
+                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
+                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
+                }
+                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
+                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
+                
+                const module = row.module || 'none';
+                if (module === '' || !module) {
+                    moduleCounts.none++;
+                } else {
+                    moduleCounts[module] = (moduleCounts[module] || 0) + 1;
+                }
+            });
+            
+            // Calculate file type counts (only if file type filter is not active or is 'all')
+            const fileTypeCounts = {};
+            const fileTypeData = activeFileType === 'all' ? csvData : dataToCount;
+            fileTypeData.forEach(row => {
+                // Apply other active filters to this row
+                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
+                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
+                if (activeModule !== 'all') {
+                    if (activeModule === 'none' && row.module) return;
+                    if (activeModule !== 'none' && row.module !== activeModule) return;
+                }
+                
+                const ext = getFileExtension(row.filename);
+                if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
+                    fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
+                } else if (ext === 'doc' || ext === 'docx') {
+                    fileTypeCounts['word'] = (fileTypeCounts['word'] || 0) + 1;
+                } else {
+                    fileTypeCounts[ext] = (fileTypeCounts[ext] || 0) + 1;
+                }
+            });
+            
+            // Update folder filter buttons
+            document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
+                const filter = button.dataset.filter;
+                if (filter === 'all') {
+                    button.innerHTML = `All Folders <span class="filter-count">(${dataToCount.length})</span>`;
+                } else {
+                    const count = folderCounts[filter] || 0;
+                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                }
+            });
+            
+            // Update module filter buttons
+            document.querySelectorAll('#moduleFilters .filter-button').forEach(button => {
+                const filter = button.dataset.filter;
+                if (filter === 'all') {
+                    button.innerHTML = `All Modules <span class="filter-count">(${dataToCount.length})</span>`;
+                } else if (filter === 'none') {
+                    button.innerHTML = `No Module <span class="filter-count">(${moduleCounts.none})</span>`;
+                } else {
+                    const count = moduleCounts[filter] || 0;
+                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                }
+            });
+            
+            // Update file type filter buttons
+            document.querySelectorAll('#fileTypeFilters .file-type-button').forEach(button => {
+                const filter = button.dataset.filter;
+                if (filter === 'all') {
+                    button.querySelector('.file-type-count').textContent = `(${dataToCount.length})`;
+                } else {
+                    const count = fileTypeCounts[filter] || 0;
+                    button.querySelector('.file-type-count').textContent = `(${count})`;
+                }
+            });
+            
+            // Calculate domain counts
+            const domainCounts = {};
+            const domainData = activeDomain === 'all' ? csvData : dataToCount;
+            domainData.forEach(row => {
+                // Apply other active filters to this row
+                if (activeFileType !== 'all') {
+                    const ext = getFileExtension(row.filename);
+                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
+                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
+                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
+                }
+                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
+                if (activeModule !== 'all') {
+                    if (activeModule === 'none' && row.module) return;
+                    if (activeModule !== 'none' && row.module !== activeModule) return;
+                }
+                
+                const domain = extractDomain(row.filename);
+                if (domain) {
+                    domainCounts[domain] = (domainCounts[domain] || 0) + 1;
+                }
+            });
+            
+            // Update domain dropdown options
+            const domainFilter = document.getElementById('domainFilter');
+            domainFilter.querySelectorAll('option').forEach(option => {
+                const value = option.value;
+                if (value === 'all') {
+                    option.textContent = `All Domains (${dataToCount.length})`;
+                } else if (domainCounts[value] !== undefined) {
+                    const originalText = option.textContent.split(' (')[0];
+                    option.textContent = `${originalText} (${domainCounts[value]})`;
+                } else {
+                    const originalText = option.textContent.split(' (')[0];
+                    option.textContent = `${originalText} (0)`;
+                }
+            });
+        }
+        
+        // Function to calculate filter counts
+        function updateFilterCounts() {
+            // Calculate folder counts
+            const folderCounts = {};
+            csvData.forEach(row => {
+                const folder = row.folder || 'none';
+                folderCounts[folder] = (folderCounts[folder] || 0) + 1;
+            });
+            
+            // Calculate module counts
+            const moduleCounts = { none: 0 };
+            csvData.forEach(row => {
+                const module = row.module || 'none';
+                if (module === '' || !module) {
+                    moduleCounts.none++;
+                } else {
+                    moduleCounts[module] = (moduleCounts[module] || 0) + 1;
+                }
+            });
+            
+            // Calculate file type counts
+            const fileTypeCounts = {};
+            csvData.forEach(row => {
+                const ext = getFileExtension(row.filename);
+                if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
+                    fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
+                } else if (ext === 'doc' || ext === 'docx') {
+                    fileTypeCounts['word'] = (fileTypeCounts['word'] || 0) + 1;
+                } else {
+                    fileTypeCounts[ext] = (fileTypeCounts[ext] || 0) + 1;
+                }
+            });
+            
+            // Update folder filter buttons
+            document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
+                const filter = button.dataset.filter;
+                if (filter === 'all') {
+                    button.innerHTML = `All Folders <span class="filter-count">(${csvData.length})</span>`;
+                } else {
+                    const count = folderCounts[filter] || 0;
+                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                }
+            });
+            
+            // Update module filter buttons
+            document.querySelectorAll('#moduleFilters .filter-button').forEach(button => {
+                const filter = button.dataset.filter;
+                if (filter === 'all') {
+                    button.innerHTML = `All Modules <span class="filter-count">(${csvData.length})</span>`;
+                } else if (filter === 'none') {
+                    button.innerHTML = `No Module <span class="filter-count">(${moduleCounts.none})</span>`;
+                } else {
+                    const count = moduleCounts[filter] || 0;
+                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                }
+            });
+            
+            // Sort and update file type filter buttons
+            sortAndUpdateFileTypeButtons(fileTypeCounts);
+        }
+        
+        // Function to sort and update file type buttons by count
+        function sortAndUpdateFileTypeButtons(fileTypeCounts) {
+            const container = document.getElementById('fileTypeFilters');
+            const allButton = container.querySelector('.file-type-button[data-filter="all"]');
+            const otherButtons = Array.from(container.querySelectorAll('.file-type-button:not([data-filter="all"])'));
+            
+            // Store button information including styles
+            const buttonInfo = otherButtons.map(button => {
+                const filter = button.dataset.filter;
+                const count = fileTypeCounts[filter] || 0;
+                const style = button.getAttribute('style');
+                const isActive = button.classList.contains('active');
+                const text = button.textContent.replace(/\s*\(\d+\)$/, ''); // Remove old count
+                
+                return {
+                    filter,
+                    count,
+                    style,
+                    isActive,
+                    text,
+                    element: button
+                };
+            });
+            
+            // Sort by count (descending)
+            buttonInfo.sort((a, b) => b.count - a.count);
+            
+            // Update the All button count
+            allButton.querySelector('.file-type-count')?.remove();
+            const allText = allButton.textContent.replace(/\s*\(\d+\)$/, '');
+            allButton.innerHTML = `${allText} <span class="file-type-count">(${csvData.length})</span>`;
+            
+            // Clear container and re-add buttons in sorted order
+            container.innerHTML = '';
+            container.appendChild(allButton);
+            
+            // Re-create buttons in sorted order with preserved styles
+            buttonInfo.forEach(info => {
+                const button = document.createElement('button');
+                button.className = 'file-type-button' + (info.isActive ? ' active' : '');
+                button.dataset.filter = info.filter;
+                if (info.style) {
+                    button.setAttribute('style', info.style);
+                }
+                button.innerHTML = `${info.text} <span class="file-type-count">(${info.count})</span>`;
+                container.appendChild(button);
+            });
+            
+            // Re-attach event listeners to all buttons
+            container.querySelectorAll('.file-type-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('#fileTypeFilters .file-type-button').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    processData();
+                });
+            });
+            
+            // Calculate domain counts
+            const domainCounts = {};
+            csvData.forEach(row => {
+                const domain = extractDomain(row.filename);
+                if (domain) {
+                    domainCounts[domain] = (domainCounts[domain] || 0) + 1;
+                }
+            });
+            
+            // Update domain dropdown options
+            const domainFilter = document.getElementById('domainFilter');
+            domainFilter.querySelectorAll('option').forEach(option => {
+                const value = option.value;
+                if (value === 'all') {
+                    option.textContent = `All Domains (${csvData.length})`;
+                } else if (domainCounts[value]) {
+                    const originalText = option.textContent.split(' (')[0];
+                    option.textContent = `${originalText} (${domainCounts[value]})`;
+                }
+            });
+        }
+        
         // Load data from JSON file on page load
         window.addEventListener('DOMContentLoaded', async function() {
             try {
@@ -977,6 +1282,9 @@
                     
                     // Hide loading indicator
                     document.getElementById('loading-container').style.display = 'none';
+                    
+                    // Update filter counts after data is loaded
+                    updateFilterCounts();
                     
                     processData();
                 } else {
@@ -1217,10 +1525,12 @@
             // Store data globally for re-sorting
             currentData = tagArray;
             
+            // Update filter counts based on the filtered data
+            updateFilterCountsFromFilteredData(filteredData);
+            
             // Display stats
             const statsDiv = document.getElementById('stats');
-            statsDiv.style.display = 'block';
-            statsDiv.innerHTML = `<strong>${filteredData.length} files displayed</strong>`;
+            statsDiv.innerHTML = `${filteredData.length} files displayed`;
             
             // Legend is now integrated into file type filter buttons
             // createLegend(allExtensions);
@@ -1506,9 +1816,13 @@
         }
         
         function updateFileListStats() {
+            const statsDiv = document.getElementById('stats');
             if (currentView === 'file-list') {
-                const statsDiv = document.getElementById('stats');
-                statsDiv.innerHTML = `<strong>${sortedFileData.length} files displayed</strong>`;
+                statsDiv.innerHTML = `${sortedFileData.length} files displayed`;
+            } else {
+                // Update stats for tag chart view when filtered
+                const filteredCount = currentData ? currentData.reduce((sum, tag) => sum + tag.files.length, 0) : 0;
+                statsDiv.innerHTML = `${filteredCount} files displayed`;
             }
         }
         
@@ -1643,10 +1957,17 @@
         function showTagPopup(event, fileIndex) {
             event.stopPropagation();
             const button = event.currentTarget;
+            const row = button.closest('tr');
             const file = sortedFileData[fileIndex];
             const tags = file.tags ? file.tags.split(',').map(t => t.trim()) : [];
             
-            // Remove any existing popup and active states
+            // Check if this button is already active (toggle behavior)
+            const isAlreadyActive = button.classList.contains('active');
+            
+            // Close any open citation popup
+            closeCitationPopup();
+            
+            // Remove any existing tag popup and active states
             const existingPopup = document.querySelector('.tag-popup');
             if (existingPopup) {
                 existingPopup.remove();
@@ -1661,6 +1982,16 @@
                 }
             });
             
+            // Remove active row styling
+            document.querySelectorAll('.file-table tr.active-row').forEach(tr => {
+                tr.classList.remove('active-row');
+            });
+            
+            // If button was already active, just close (toggle off)
+            if (isAlreadyActive) {
+                return;
+            }
+            
             // Add active state to clicked button with file color background
             button.classList.add('active');
             const fileColor = button.getAttribute('data-color');
@@ -1672,6 +2003,9 @@
                     icon.style.color = 'white';
                 }
             }
+            
+            // Add active row styling
+            row.classList.add('active-row');
             
             // Create popup
             const popup = document.createElement('div');
@@ -1688,7 +2022,7 @@
                     <button class="tag-popup-close" onclick="closeTagPopup()">&times;</button>
                 </div>
                 <div class="tag-list">
-                    ${tags.map(tag => `<span class="tag-item" onclick="addTagFilter('${tag}')">${tag}</span>`).join('')}
+                    ${tags.map(tag => `<span class="tag-item" onclick="addTagFilterFromPopup('${tag}', event)">${tag}</span>`).join('')}
                 </div>
             `;
             
@@ -1775,11 +2109,67 @@
                     icon.style.color = '';
                 }
             });
+            // Remove active row styling
+            document.querySelectorAll('.file-table tr.active-row').forEach(tr => {
+                tr.classList.remove('active-row');
+            });
         }
         
         function addTagFilter(tag) {
             activeTagFilters.add(tag);
             renderFileList();
+        }
+        
+        function addTagFilterFromPopup(tag, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            
+            // Find the currently active file to restore its state after filtering
+            const activeRow = document.querySelector('.file-table tr.active-row');
+            let activeFileName = null;
+            
+            if (activeRow) {
+                const fileLink = activeRow.querySelector('.filename-link');
+                if (fileLink) {
+                    activeFileName = fileLink.textContent;
+                }
+            }
+            
+            // Add the filter and re-render
+            activeTagFilters.add(tag);
+            renderFileList();
+            
+            // Restore active state after re-render
+            if (activeFileName) {
+                setTimeout(() => {
+                    // Find the row with the same filename
+                    const rows = document.querySelectorAll('.file-table tbody tr');
+                    for (let row of rows) {
+                        const fileLink = row.querySelector('.filename-link');
+                        if (fileLink && fileLink.textContent === activeFileName) {
+                            // Restore active row styling
+                            row.classList.add('active-row');
+                            
+                            // Restore active tag button styling
+                            const tagButton = row.querySelector('.tags-button');
+                            if (tagButton) {
+                                tagButton.classList.add('active');
+                                const fileColor = tagButton.getAttribute('data-color');
+                                if (fileColor) {
+                                    tagButton.style.backgroundColor = fileColor;
+                                    tagButton.style.borderColor = fileColor;
+                                    const icon = tagButton.querySelector('i');
+                                    if (icon) {
+                                        icon.style.color = 'white';
+                                    }
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }, 0);
+            }
         }
         
         function removeTagFilter(tag) {
@@ -1822,10 +2212,10 @@
                 : 'FDA. ';
             
             const documentType = file.document_type ? ` [${file.document_type}]` : '';
-            const module = file.module || 'N/A';
+            const moduleSection = file.module ? `, Module ${file.module}` : '';
             
             return `${authors}(${year}). ${file.title}${documentType}. ` +
-                   `Pfizer-BioNTech COVID-19 Vaccine EUA Documents, Module ${module}. ` +
+                   `Pfizer-BioNTech COVID-19 Vaccine EUA Documents${moduleSection}. ` +
                    `FOIA Release: ${file.folder}. ` +
                    `Retrieved from ${file.google_drive_link}`;
         }
@@ -1833,10 +2223,17 @@
         function showCitationPopup(event, fileIndex) {
             event.stopPropagation();
             const button = event.currentTarget;
+            const row = button.closest('tr');
             const file = sortedFileData[fileIndex];
             const citation = generateCitation(file);
             
-            // Remove any existing popup and active states
+            // Check if this button is already active (toggle behavior)
+            const isAlreadyActive = button.classList.contains('active');
+            
+            // Close any open tag popup
+            closeTagPopup();
+            
+            // Remove any existing citation popup and active states
             const existingPopup = document.querySelector('.citation-popup');
             if (existingPopup) {
                 existingPopup.remove();
@@ -1848,6 +2245,16 @@
                 btn.style.color = '';
             });
             
+            // Remove active row styling
+            document.querySelectorAll('.file-table tr.active-row').forEach(tr => {
+                tr.classList.remove('active-row');
+            });
+            
+            // If button was already active, just close (toggle off)
+            if (isAlreadyActive) {
+                return;
+            }
+            
             // Add active state to clicked button with file color
             button.classList.add('active');
             const fileColor = button.getAttribute('data-color');
@@ -1856,6 +2263,9 @@
                 button.style.borderColor = fileColor;
                 button.style.color = isLightColor(fileColor) ? '#000' : '#fff';
             }
+            
+            // Add active row styling
+            row.classList.add('active-row');
             
             // Create popup
             const popup = document.createElement('div');
@@ -1898,6 +2308,10 @@
                 btn.style.backgroundColor = '';
                 btn.style.borderColor = '';
                 btn.style.color = '';
+            });
+            // Remove active row styling
+            document.querySelectorAll('.file-table tr.active-row').forEach(tr => {
+                tr.classList.remove('active-row');
             });
         }
         

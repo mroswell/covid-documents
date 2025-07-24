@@ -101,11 +101,36 @@
             font-size: 13px;
             font-weight: 500;
             outline: none;
+            min-width: 110px;
+            text-align: left;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .filter-count {
             font-weight: 300;
             opacity: 0.8;
+            margin-left: 8px;
+            min-width: 40px;
+            text-align: right;
+            display: inline-block;
+        }
+        
+        /* Narrower width for single-word module buttons */
+        .filter-button.narrow {
+            min-width: 88px;  /* Much narrower for M1, M2, etc. */
+        }
+        
+        /* Slightly narrower width for two-word module buttons */
+        .filter-button.two-word {
+            min-width: 108px;  /* 110px - 2% = 108px */
+        }
+        
+        /* Consistent width for all "All" buttons */
+        .filter-button.all-button,
+        .file-type-button.all-button {
+            min-width: 110px;
         }
         
         .filter-button:hover {
@@ -129,11 +154,20 @@
             outline: none;
             color: white;
             text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            min-width: 79px;
+            text-align: left;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .file-type-count {
             font-weight: 300;
             opacity: 0.9;
+            margin-left: 8px;
+            min-width: 40px;
+            text-align: right;
+            display: inline-block;
         }
         
         .file-type-button:hover {
@@ -776,7 +810,7 @@
                 <div class="filter-section">
                     <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Folder:</label>
                     <div class="filter-buttons" id="folderFilters">
-                        <button class="filter-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
+                        <button class="filter-button all-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
                         <button class="filter-button" data-filter="eua-051925">eua-051925 <span class="filter-count"></span></button>
                         <button class="filter-button" data-filter="eua-063025">eua-063025 <span class="filter-count"></span></button>
                     </div>
@@ -786,19 +820,19 @@
             <div style="margin-bottom: 20px;">
                 <label style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Module:</label>
                 <div class="filter-buttons" id="moduleFilters">
-                    <button class="filter-button active" data-filter="all">All Modules <span class="filter-count"></span></button>
-                    <button class="filter-button" data-filter="M1">M1 <span class="filter-count"></span></button>
-                    <button class="filter-button" data-filter="M2">M2 <span class="filter-count"></span></button>
-                    <button class="filter-button" data-filter="M4">M4 <span class="filter-count"></span></button>
-                    <button class="filter-button" data-filter="M5">M5 <span class="filter-count"></span></button>
-                    <button class="filter-button" data-filter="none">No Module <span class="filter-count"></span></button>
+                    <button class="filter-button all-button active" data-filter="all">All Modules <span class="filter-count"></span></button>
+                    <button class="filter-button narrow" data-filter="M1">M1 <span class="filter-count"></span></button>
+                    <button class="filter-button narrow" data-filter="M2">M2 <span class="filter-count"></span></button>
+                    <button class="filter-button narrow" data-filter="M4">M4 <span class="filter-count"></span></button>
+                    <button class="filter-button narrow" data-filter="M5">M5 <span class="filter-count"></span></button>
+                    <button class="filter-button two-word" data-filter="none">No Module <span class="filter-count"></span></button>
                 </div>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <label style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by File Type:</label>
                     <div class="filter-buttons" id="fileTypeFilters">
-                        <button class="file-type-button all active" data-filter="all">All Types <span class="file-type-count"></span></button>
+                        <button class="file-type-button all all-button active" data-filter="all">All Types <span class="file-type-count"></span></button>
                         <button class="file-type-button" data-filter="pdf" style="background: #DC2626;">PDF <span class="file-type-count"></span></button>
                         <button class="file-type-button" data-filter="xpt" style="background: #7C3AED;">XPT <span class="file-type-count"></span></button>
                         <button class="file-type-button" data-filter="sas" style="background: #F87171;">SAS <span class="file-type-count"></span></button>
@@ -1044,24 +1078,40 @@
             // Update folder filter buttons
             document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
                 const filter = button.dataset.filter;
+                let countSpan = button.querySelector('.filter-count');
+                if (!countSpan) {
+                    // If span doesn't exist, recreate button content with span
+                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
+                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
+                    countSpan = button.querySelector('.filter-count');
+                }
+                
                 if (filter === 'all') {
-                    button.innerHTML = `All Folders <span class="filter-count">(${dataToCount.length})</span>`;
+                    countSpan.textContent = `(${dataToCount.length})`;
                 } else {
                     const count = folderCounts[filter] || 0;
-                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                    countSpan.textContent = `(${count})`;
                 }
             });
             
             // Update module filter buttons
             document.querySelectorAll('#moduleFilters .filter-button').forEach(button => {
                 const filter = button.dataset.filter;
+                let countSpan = button.querySelector('.filter-count');
+                if (!countSpan) {
+                    // If span doesn't exist, recreate button content with span
+                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
+                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
+                    countSpan = button.querySelector('.filter-count');
+                }
+                
                 if (filter === 'all') {
-                    button.innerHTML = `All Modules <span class="filter-count">(${dataToCount.length})</span>`;
+                    countSpan.textContent = `(${dataToCount.length})`;
                 } else if (filter === 'none') {
-                    button.innerHTML = `No Module <span class="filter-count">(${moduleCounts.none})</span>`;
+                    countSpan.textContent = `(${moduleCounts.none})`;
                 } else {
                     const count = moduleCounts[filter] || 0;
-                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                    countSpan.textContent = `(${count})`;
                 }
             });
             
@@ -1151,24 +1201,40 @@
             // Update folder filter buttons
             document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
                 const filter = button.dataset.filter;
+                let countSpan = button.querySelector('.filter-count');
+                if (!countSpan) {
+                    // If span doesn't exist, recreate button content with span
+                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
+                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
+                    countSpan = button.querySelector('.filter-count');
+                }
+                
                 if (filter === 'all') {
-                    button.innerHTML = `All Folders <span class="filter-count">(${csvData.length})</span>`;
+                    countSpan.textContent = `(${csvData.length})`;
                 } else {
                     const count = folderCounts[filter] || 0;
-                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                    countSpan.textContent = `(${count})`;
                 }
             });
             
             // Update module filter buttons
             document.querySelectorAll('#moduleFilters .filter-button').forEach(button => {
                 const filter = button.dataset.filter;
+                let countSpan = button.querySelector('.filter-count');
+                if (!countSpan) {
+                    // If span doesn't exist, recreate button content with span
+                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
+                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
+                    countSpan = button.querySelector('.filter-count');
+                }
+                
                 if (filter === 'all') {
-                    button.innerHTML = `All Modules <span class="filter-count">(${csvData.length})</span>`;
+                    countSpan.textContent = `(${csvData.length})`;
                 } else if (filter === 'none') {
-                    button.innerHTML = `No Module <span class="filter-count">(${moduleCounts.none})</span>`;
+                    countSpan.textContent = `(${moduleCounts.none})`;
                 } else {
                     const count = moduleCounts[filter] || 0;
-                    button.innerHTML = `${filter} <span class="filter-count">(${count})</span>`;
+                    countSpan.textContent = `(${count})`;
                 }
             });
             
@@ -1220,7 +1286,16 @@
                 if (info.style) {
                     button.setAttribute('style', info.style);
                 }
-                button.innerHTML = `${info.text} <span class="file-type-count">(${info.count})</span>`;
+                
+                // Create button with span structure for consistent width
+                const buttonText = info.text;
+                const countSpan = document.createElement('span');
+                countSpan.className = 'file-type-count';
+                countSpan.textContent = `(${info.count})`;
+                
+                button.textContent = buttonText + ' ';
+                button.appendChild(countSpan);
+                
                 container.appendChild(button);
             });
             

@@ -1287,45 +1287,18 @@
             const activeDomain = document.getElementById('domainFilter').value;
             const hasActiveTags = selectedTags.size > 0;
             
-            // Calculate folder counts (only if folder filter is not active or is 'all')
+            // Calculate folder counts
             const folderCounts = {};
-            const folderData = activeFolder === 'all' ? csvData : dataToCount;
-            folderData.forEach(row => {
-                // Apply other active filters to this row
-                if (activeFileType !== 'all') {
-                    const ext = getFileExtension(row.filename);
-                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
-                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
-                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
-                }
-                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
-                if (activeModule !== 'all') {
-                    if (activeModule === 'none' && row.module) return;
-                    if (activeModule !== 'none' && row.module !== activeModule) return;
-                }
-                if (hasActiveTags) {
-                    const rowTags = row.tags.split(', ').filter(t => t);
-                    if (!Array.from(selectedTags).some(tag => rowTags.includes(tag))) return;
-                }
-                
+            // Use dataToCount which contains the already-filtered data
+            dataToCount.forEach(row => {
                 const folder = row.folder || 'none';
                 folderCounts[folder] = (folderCounts[folder] || 0) + 1;
             });
             
-            // Calculate module counts (only if module filter is not active or is 'all')
+            // Calculate module counts
             const moduleCounts = { none: 0 };
-            const moduleData = activeModule === 'all' ? csvData : dataToCount;
-            moduleData.forEach(row => {
-                // Apply other active filters to this row
-                if (activeFileType !== 'all') {
-                    const ext = getFileExtension(row.filename);
-                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
-                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
-                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
-                }
-                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
-                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
-                
+            // Use dataToCount which contains the already-filtered data
+            dataToCount.forEach(row => {
                 const module = row.module || 'none';
                 if (module === '' || !module) {
                     moduleCounts.none++;
@@ -1334,49 +1307,18 @@
                 }
             });
             
-            // Calculate document type counts (only if document type filter is not active or is 'all')
+            // Calculate document type counts
             const documentTypeCounts = {};
-            const documentTypeData = activeDocumentType === 'all' ? csvData : dataToCount;
-            documentTypeData.forEach(row => {
-                // Apply other active filters to this row
-                if (activeFileType !== 'all') {
-                    const ext = getFileExtension(row.filename);
-                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
-                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
-                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
-                }
-                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
-                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
-                if (activeModule !== 'all') {
-                    if (activeModule === 'none' && row.module) return;
-                    if (activeModule !== 'none' && row.module !== activeModule) return;
-                }
-                if (hasActiveTags) {
-                    const rowTags = row.tags.split(', ').filter(t => t);
-                    if (!Array.from(selectedTags).some(tag => rowTags.includes(tag))) return;
-                }
-                
+            // Use dataToCount which contains the already-filtered data
+            dataToCount.forEach(row => {
                 const docType = row.documentType || 'Unknown';
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
             });
             
-            // Calculate file type counts (only if file type filter is not active or is 'all')
+            // Calculate file type counts
             const fileTypeCounts = {};
-            const fileTypeData = activeFileType === 'all' ? csvData : dataToCount;
-            fileTypeData.forEach(row => {
-                // Apply other active filters to this row
-                if (activeDomain !== 'all' && extractDomain(row.filename) !== activeDomain) return;
-                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
-                if (activeModule !== 'all') {
-                    if (activeModule === 'none' && row.module) return;
-                    if (activeModule !== 'none' && row.module !== activeModule) return;
-                }
-                if (hasActiveTags) {
-                    const rowTags = row.tags.split(', ').filter(t => t);
-                    if (!Array.from(selectedTags).some(tag => rowTags.includes(tag))) return;
-                }
-                if (activeDocumentType !== 'all' && row.documentType !== activeDocumentType) return;
-                
+            // Use dataToCount which contains the already-filtered data
+            dataToCount.forEach(row => {
                 const ext = getFileExtension(row.filename);
                 if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
                     fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
@@ -1461,26 +1403,8 @@
             
             // Calculate domain counts
             const domainCounts = {};
-            const domainData = activeDomain === 'all' ? csvData : dataToCount;
-            domainData.forEach(row => {
-                // Apply other active filters to this row
-                if (activeFileType !== 'all') {
-                    const ext = getFileExtension(row.filename);
-                    if (activeFileType === 'sas' && !row.filename.toLowerCase().endsWith('-sas.pdf')) return;
-                    if (activeFileType === 'word' && ext !== 'doc' && ext !== 'docx') return;
-                    if (activeFileType !== 'sas' && activeFileType !== 'word' && ext !== activeFileType) return;
-                }
-                if (activeFolder !== 'all' && row.folder !== activeFolder) return;
-                if (activeModule !== 'all') {
-                    if (activeModule === 'none' && row.module) return;
-                    if (activeModule !== 'none' && row.module !== activeModule) return;
-                }
-                if (hasActiveTags) {
-                    const rowTags = row.tags.split(', ').filter(t => t);
-                    if (!Array.from(selectedTags).some(tag => rowTags.includes(tag))) return;
-                }
-                if (activeDocumentType !== 'all' && row.documentType !== activeDocumentType) return;
-                
+            // Use dataToCount which contains the already-filtered data
+            dataToCount.forEach(row => {
                 const domain = extractDomain(row.filename);
                 if (domain) {
                     domainCounts[domain] = (domainCounts[domain] || 0) + 1;
@@ -2068,9 +1992,13 @@
             // Filter by module
             if (moduleFilter !== 'all') {
                 if (moduleFilter === 'none') {
-                    filteredData = filteredData.filter(row => !row.module || row.module === '');
+                    filteredData = filteredData.filter(row => !row.module || row.module === '' || row.module === null);
                 } else {
-                    filteredData = filteredData.filter(row => row.module === moduleFilter);
+                    filteredData = filteredData.filter(row => {
+                        // Ensure exact match with trimmed values
+                        const rowModule = row.module ? row.module.trim() : '';
+                        return rowModule === moduleFilter;
+                    });
                 }
             }
             
@@ -2081,10 +2009,16 @@
             
             // Filter by selected tags
             if (selectedTags.size > 0) {
+                console.log('Selected tags:', Array.from(selectedTags));
+                
                 filteredData = filteredData.filter(row => {
-                    const rowTags = row.tags.split(', ').filter(t => t);
-                    return Array.from(selectedTags).some(tag => rowTags.includes(tag));
+                    const rowTags = row.tags.split(', ').filter(t => t.trim());
+                    // Using AND logic - file must have ALL of the selected tags
+                    const hasAllTags = Array.from(selectedTags).every(tag => rowTags.includes(tag));
+                    return hasAllTags;
                 });
+                
+                console.log('After tag filter (AND logic):', filteredData.length, 'files');
             }
             
             // Define acronyms that should be all caps
@@ -2254,6 +2188,9 @@
             
             // Store filtered file data for file list view
             filteredFileData = filteredData;
+            
+            // Update filter counts based on the filtered data
+            updateFilterCountsFromFilteredData(filteredData);
             
             // Update view based on current tab
             if (currentView === 'file-list') {
@@ -2526,7 +2463,40 @@
         function updateFileListStats() {
             const statsDiv = document.getElementById('stats');
             if (currentView === 'file-list') {
-                statsDiv.innerHTML = `${sortedFileData.length} files displayed`;
+                // Build filter summary
+                const activeFilters = [];
+                
+                const fileTypeFilter = document.querySelector('#fileTypeFilters .file-type-button.active').dataset.filter;
+                if (fileTypeFilter !== 'all') activeFilters.push(`Type: ${fileTypeFilter}`);
+                
+                const moduleFilter = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
+                if (moduleFilter !== 'all') activeFilters.push(`Module: ${moduleFilter}`);
+                
+                const folderFilter = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+                if (folderFilter !== 'all') activeFilters.push(`Folder: ${folderFilter}`);
+                
+                const domainFilter = document.getElementById('domainFilter').value;
+                if (domainFilter !== 'all') activeFilters.push(`Domain: ${domainFilter}`);
+                
+                const documentTypeFilter = document.getElementById('documentTypeFilter').value;
+                if (documentTypeFilter !== 'all') activeFilters.push(`Doc Type: ${documentTypeFilter}`);
+                
+                if (selectedTags.size > 0) {
+                    const tagsList = Array.from(selectedTags);
+                    const moduleNames = ['M1', 'M2', 'M4', 'M5'];
+                    const moduleTags = tagsList.filter(tag => moduleNames.includes(tag));
+                    const otherTags = tagsList.filter(tag => !moduleNames.includes(tag));
+                    
+                    if (otherTags.length > 0) {
+                        activeFilters.push(`${otherTags.length} tag${otherTags.length > 1 ? 's' : ''}`);
+                    }
+                    if (moduleTags.length > 0) {
+                        activeFilters.push(`Module tags: ${moduleTags.join(', ')}`);
+                    }
+                }
+                
+                const filterInfo = activeFilters.length > 0 ? ` (Filters: ${activeFilters.join(', ')})` : '';
+                statsDiv.innerHTML = `${sortedFileData.length} files displayed${filterInfo}`;
             } else {
                 // Update stats for tag chart view when filtered
                 const filteredCount = currentData ? currentData.reduce((sum, tag) => sum + tag.files.length, 0) : 0;

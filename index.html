@@ -871,6 +871,35 @@
             font-size: 13px;
         }
         
+        .clear-filters-button {
+            background: #f8f9fa;
+            color: #495057;
+            border: 1px solid #dee2e6;
+            padding: 5px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 12px;
+            margin-bottom: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            vertical-align: top;
+        }
+        
+        .clear-filters-button:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+            color: #212529;
+        }
+        
+        .clear-filters-button i {
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
         .tag-clear-all {
             float: right;
             color: #0066cc;
@@ -1116,6 +1145,9 @@
         <!-- File List View -->
         <div id="file-list-view" class="file-list-view active">
             <div id="stats" class="stats"></div>
+            <button id="clearAllFilters" class="clear-filters-button" title="Clear all filters" style="display: none;">
+                ✕ Clear All Filters
+            </button>
             <div style="clear: both;"></div>
             <div id="file-list-container"></div>
             <div id="loading-indicator" class="loading-more" style="display: none;">
@@ -1230,6 +1262,9 @@
                 // Update active tab
                 document.querySelectorAll('.tab-button').forEach(t => t.classList.remove('active'));
                 this.classList.add('active');
+                
+                // Clear all filters when switching views
+                clearAllFilters();
                 
                 // Switch views
                 currentView = this.dataset.view;
@@ -1630,6 +1665,14 @@
             });
         }
         
+        // Clear all filters button
+        document.addEventListener('click', function(e) {
+            if (e.target.id === 'clearAllFilters' || e.target.parentElement?.id === 'clearAllFilters') {
+                clearAllFilters();
+                processData();
+            }
+        });
+        
         // Load data from JSON file on page load
         window.addEventListener('DOMContentLoaded', async function() {
             try {
@@ -1864,6 +1907,37 @@
             renderSelectedTags();
             hideTagDropdown();
             processData();
+        }
+        
+        function clearAllFilters() {
+            // Reset file type filter
+            document.querySelectorAll('#fileTypeFilters .file-type-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('#fileTypeFilters .file-type-button[data-filter="all"]').classList.add('active');
+            
+            // Reset module filter
+            document.querySelectorAll('#moduleFilters .filter-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('#moduleFilters .filter-button[data-filter="all"]').classList.add('active');
+            
+            // Reset folder filter
+            document.querySelectorAll('#folderFilters .filter-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('#folderFilters .filter-button[data-filter="all"]').classList.add('active');
+            
+            // Reset dropdowns
+            document.getElementById('domainFilter').value = 'all';
+            document.getElementById('documentTypeFilter').value = 'all';
+            
+            // Clear all tags
+            selectedTags.clear();
+            renderSelectedTags();
+            hideTagDropdown();
+            
+            // Don't call processData here - let the caller decide when to refresh
         }
         
         function renderSelectedTags() {
@@ -2497,6 +2571,12 @@
                 
                 const filterInfo = activeFilters.length > 0 ? ` (Filters: ${activeFilters.join(', ')})` : '';
                 statsDiv.innerHTML = `${sortedFileData.length} files displayed${filterInfo}`;
+                
+                // Show/hide clear filters button
+                const clearButton = document.getElementById('clearAllFilters');
+                if (clearButton) {
+                    clearButton.style.display = activeFilters.length > 0 ? 'inline-flex' : 'none';
+                }
             } else {
                 // Update stats for tag chart view when filtered
                 const filteredCount = currentData ? currentData.reduce((sum, tag) => sum + tag.files.length, 0) : 0;

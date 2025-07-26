@@ -126,30 +126,48 @@
         
         /* Narrower width for single-word module buttons */
         .filter-button.narrow {
-            width: auto !important;  /* Auto width */
-            min-width: unset;  /* Override parent min-width */
+            width: 75px !important;  /* Fixed width to prevent hopping */
+            min-width: 75px !important;
             padding: 6px 10px;  /* Slightly more padding for better spacing */
         }
         
         /* Override filter-count min-width for narrow buttons */
         .filter-button.narrow .filter-count {
-            min-width: unset;  /* Remove min-width */
+            min-width: 35px;  /* Fixed space for up to 3 digits */
+            display: inline-block;
+            text-align: left;
             margin-left: 6px;  /* More space between module and count */
+        }
+        
+        /* Override filter-count for two-word buttons */
+        .filter-button.two-word .filter-count {
+            min-width: 35px;  /* Fixed space for up to 3 digits */
+            display: inline-block;
+            text-align: left;
+        }
+        
+        /* Override filter-count for module all button */
+        #moduleFilters .filter-button.all-button .filter-count {
+            min-width: 35px;  /* Fixed space for up to 3 digits */
+            display: inline-block;
+            text-align: left;
         }
         
         /* Slightly narrower width for two-word module buttons */
         .filter-button.two-word {
-            min-width: unset;
-            width: auto !important;
+            width: 120px !important;  /* Fixed width for "No Module" - wider to prevent wrapping */
+            min-width: 120px !important;
             padding: 6px 10px;
+            white-space: nowrap;  /* Ensure text doesn't wrap */
         }
         
         /* Narrower width for module "All" button */
         #moduleFilters .filter-button.all-button {
-            width: auto !important;
-            min-width: unset !important;
+            width: 135px !important;  /* Fixed width to prevent hopping and wrapping */
+            min-width: 135px !important;
             flex: unset !important;
             padding: 6px 10px;
+            white-space: nowrap;  /* Ensure text doesn't wrap */
         }
         
         /* Keep original width for other "All" buttons */
@@ -412,8 +430,8 @@
         }
         
         .tag-item {
-            background: #e3f2fd;
-            color: #1976d2;
+            background: #f0f4f8;  /* Light grey background like filter buttons */
+            color: #000000;  /* Black text */
             padding: 4px 10px;
             border-radius: 16px;
             font-size: 12px;
@@ -501,7 +519,7 @@
             border-radius: 6px;
             font-size: 13px;
             line-height: 1.6;
-            color: #495057;
+            color: #000000;  /* Black text for citations */
             margin-bottom: 12px;
             word-wrap: break-word;
             font-family: 'Monaco', 'Consolas', monospace;
@@ -703,7 +721,7 @@
             background: #e8f5e9;
             border-radius: 4px;
             font-size: 13px;
-            color: #1b5e20;
+            color: #0d2e0f;  /* Much darker green, almost black */
             font-weight: 600;
         }
         
@@ -778,8 +796,8 @@
             align-items: center;
             gap: 4px;
             padding: 4px 8px;
-            background: #e3f2fd;
-            color: #1976d2;
+            background: #f0f4f8;  /* Light grey background like filter buttons */
+            color: #000000;  /* Black text */
             border-radius: 16px;
             font-size: 12px;
             margin-bottom: 6px;

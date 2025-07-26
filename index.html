@@ -378,6 +378,15 @@
             border-radius: 4px 4px 0 0;
         }
         
+        .tag-popup-header::before,
+        .citation-popup-header::before {
+            content: '≡';
+            color: #adb5bd;
+            margin-right: 8px;
+            font-size: 16px;
+            line-height: 1;
+        }
+        
         .tag-popup-close {
             background: none;
             border: none;
@@ -460,6 +469,12 @@
             align-items: center;
             margin-bottom: 12px;
             font-weight: 600;
+            cursor: move;
+            user-select: none;
+            padding: 4px;
+            margin: -4px -4px 12px -4px;
+            background: #f8f9fa;
+            border-radius: 4px 4px 0 0;
         }
         
         .citation-popup-close {
@@ -2791,15 +2806,24 @@
             
             const header = popup.querySelector('.tag-popup-header');
             
+            // Mouse events for desktop
             header.addEventListener('mousedown', dragStart);
             document.addEventListener('mousemove', drag);
             document.addEventListener('mouseup', dragEnd);
             
+            // Touch events for mobile
+            header.addEventListener('touchstart', dragStart, { passive: false });
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('touchend', dragEnd);
+            
             function dragStart(e) {
                 if (e.target.classList.contains('tag-popup-close')) return;
                 
-                initialX = e.clientX - xOffset;
-                initialY = e.clientY - yOffset;
+                const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+                
+                initialX = clientX - xOffset;
+                initialY = clientY - yOffset;
                 
                 if (e.target === header || header.contains(e.target)) {
                     isDragging = true;
@@ -2810,8 +2834,12 @@
                 if (!isDragging) return;
                 
                 e.preventDefault();
-                currentX = e.clientX - initialX;
-                currentY = e.clientY - initialY;
+                
+                const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+                
+                currentX = clientX - initialX;
+                currentY = clientY - initialY;
                 
                 xOffset = currentX;
                 yOffset = currentY;
@@ -2948,7 +2976,12 @@
                 : 'FDA. ';
             
             const documentType = file.document_type ? ` [${file.document_type}]` : '';
-            const moduleSection = file.module ? `, Module ${file.module}` : '';
+            let moduleSection = '';
+            if (file.module) {
+                // Remove 'M' prefix from module number
+                const moduleNumber = file.module.replace(/^M/, '');
+                moduleSection = `, Module ${moduleNumber}`;
+            }
             
             return `${authors}(${year}). ${file.title}${documentType}. ` +
                    `Pfizer-BioNTech COVID-19 Vaccine EUA Documents${moduleSection}. ` +
@@ -3007,10 +3040,25 @@
             const popup = document.createElement('div');
             popup.className = 'citation-popup active';
             
-            // Calculate position (below the button)
+            // Detect mobile
+            const isMobile = window.innerWidth <= 768;
+            
+            // Calculate position
             const rect = button.getBoundingClientRect();
-            popup.style.left = Math.min(rect.left, window.innerWidth - 520) + 'px';
-            popup.style.top = (rect.bottom + 10) + 'px';
+            
+            if (isMobile) {
+                // Center on mobile and position higher
+                popup.style.left = '50%';
+                popup.style.transform = 'translateX(-50%)';
+                popup.style.top = Math.max(50, window.scrollY + 50) + 'px';
+                popup.style.width = '90%';
+                popup.style.maxWidth = '500px';
+            } else {
+                // Position to the left of button and higher on desktop
+                const popupLeft = rect.left - 520; // 520 is approximate popup width
+                popup.style.left = Math.max(10, popupLeft) + 'px';
+                popup.style.top = Math.max(rect.top - 50, 10) + 'px';
+            }
             
             popup.innerHTML = `
                 <div class="citation-popup-header">
@@ -3024,6 +3072,80 @@
             `;
             
             document.body.appendChild(popup);
+            
+            // Make popup draggable
+            let isDragging = false;
+            let currentX;
+            let currentY;
+            let initialX;
+            let initialY;
+            let xOffset = 0;
+            let yOffset = 0;
+            
+            const header = popup.querySelector('.citation-popup-header');
+            
+            // Mouse events for desktop
+            header.addEventListener('mousedown', dragStart);
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', dragEnd);
+            
+            // Touch events for mobile
+            header.addEventListener('touchstart', dragStart, { passive: false });
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('touchend', dragEnd);
+            
+            function dragStart(e) {
+                if (e.target.classList.contains('citation-popup-close')) return;
+                
+                const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+                
+                initialX = clientX - xOffset;
+                initialY = clientY - yOffset;
+                
+                if (e.target === header || header.contains(e.target)) {
+                    isDragging = true;
+                    // Clear mobile transform on start if needed
+                    if (isMobile && popup.style.transform.includes('translateX(-50%)')) {
+                        // Adjust position to account for centering transform
+                        const rect = popup.getBoundingClientRect();
+                        popup.style.left = rect.left + 'px';
+                        popup.style.transform = 'none';
+                    }
+                }
+            }
+            
+            function drag(e) {
+                if (!isDragging) return;
+                
+                e.preventDefault();
+                
+                const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+                
+                currentX = clientX - initialX;
+                currentY = clientY - initialY;
+                
+                xOffset = currentX;
+                yOffset = currentY;
+                
+                // Get current position
+                const rect = popup.getBoundingClientRect();
+                const newLeft = rect.left + (currentX - (xOffset - currentX));
+                const newTop = rect.top + (currentY - (yOffset - currentY));
+                
+                // Boundary checking
+                if (newLeft >= 0 && newLeft + rect.width <= window.innerWidth &&
+                    newTop >= 0 && newTop + rect.height <= window.innerHeight) {
+                    popup.style.transform = `translate(${currentX}px, ${currentY}px)`;
+                }
+            }
+            
+            function dragEnd(e) {
+                initialX = currentX;
+                initialY = currentY;
+                isDragging = false;
+            }
             
             // Close popup when clicking outside
             document.addEventListener('click', function closeOnClickOutside(e) {

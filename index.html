@@ -2797,10 +2797,24 @@
             const popup = document.createElement('div');
             popup.className = 'tag-popup active';
             
-            // Calculate position (to the left of the button)
+            // Calculate position
             const rect = button.getBoundingClientRect();
-            popup.style.right = (window.innerWidth - rect.left + 10) + 'px';
-            popup.style.top = rect.top + 'px';
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isMobile) {
+                // Fixed positioning for mobile - centered at top
+                popup.style.position = 'fixed';
+                popup.style.left = '10px';
+                popup.style.right = '10px';
+                popup.style.top = '60px';  // Below typical header height
+                popup.style.width = 'auto';
+                popup.style.maxHeight = 'calc(100vh - 80px)';
+                popup.style.overflowY = 'auto';
+            } else {
+                // Position to the left of the button on desktop
+                popup.style.right = (window.innerWidth - rect.left + 10) + 'px';
+                popup.style.top = rect.top + 'px';
+            }
             
             popup.innerHTML = `
                 <div class="tag-popup-header">
@@ -3066,20 +3080,36 @@
             const rect = button.getBoundingClientRect();
             
             if (isMobile) {
-                // Fixed positioning for mobile
+                // Fixed positioning for mobile - centered at top
                 popup.style.position = 'fixed';
-                popup.style.left = '5%';
-                popup.style.right = '5%';
-                popup.style.top = '20px';
+                popup.style.left = '10px';
+                popup.style.right = '10px';
+                popup.style.top = '60px';  // Below typical header height
                 popup.style.width = 'auto';
                 popup.style.maxWidth = '500px';
-                popup.style.maxHeight = '80vh';
+                popup.style.maxHeight = 'calc(100vh - 80px)';
                 popup.style.overflowY = 'auto';
             } else {
-                // Position to the left of button and higher on desktop
-                const popupLeft = rect.left - 520; // 520 is approximate popup width
+                // Position to the left of button on desktop
+                const popupWidth = 520; // approximate popup width
+                const popupHeight = 300; // approximate popup height
+                
+                // Calculate left position
+                const popupLeft = rect.left - popupWidth - 10;
                 popup.style.left = Math.max(10, popupLeft) + 'px';
-                popup.style.top = Math.max(rect.top - 50, 10) + 'px';
+                
+                // Calculate top position - ensure popup fits in viewport
+                let popupTop = rect.top - 50;
+                
+                // If popup would go below viewport, position it higher
+                if (popupTop + popupHeight > window.innerHeight - 20) {
+                    popupTop = window.innerHeight - popupHeight - 20;
+                }
+                
+                // Ensure it doesn't go above viewport
+                popupTop = Math.max(10, popupTop);
+                
+                popup.style.top = popupTop + 'px';
             }
             
             popup.innerHTML = `
@@ -3088,7 +3118,7 @@
                     <button class="citation-popup-close" onclick="closeCitationPopup()">&times;</button>
                 </div>
                 <div class="citation-text">${citation}</div>
-                <button class="citation-copy-button" onclick="copyCitation('${citation.replace(/'/g, "\\'")}')">
+                <button class="citation-copy-button" onclick="event.stopPropagation(); copyCitation('${citation.replace(/'/g, "\\'")}')">
                     Copy Citation
                 </button>
             `;
@@ -3148,16 +3178,8 @@
                 xOffset = currentX;
                 yOffset = currentY;
                 
-                // Get current position
-                const rect = popup.getBoundingClientRect();
-                const newLeft = rect.left + (currentX - (xOffset - currentX));
-                const newTop = rect.top + (currentY - (yOffset - currentY));
-                
-                // Boundary checking
-                if (newLeft >= 0 && newLeft + rect.width <= window.innerWidth &&
-                    newTop >= 0 && newTop + rect.height <= window.innerHeight) {
-                    popup.style.transform = `translate(${currentX}px, ${currentY}px)`;
-                }
+                // Apply transform directly without complex boundary checking
+                popup.style.transform = `translate(${currentX}px, ${currentY}px)`;
             }
             
             function dragEnd(e) {
@@ -3193,7 +3215,12 @@
         }
         
         function copyCitation(citation) {
-            navigator.clipboard.writeText(citation).then(() => {
+            // Decode HTML entities that might have been encoded
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = citation;
+            const decodedCitation = textarea.value;
+            
+            navigator.clipboard.writeText(decodedCitation).then(() => {
                 const button = document.querySelector('.citation-copy-button');
                 const originalText = button.textContent;
                 button.textContent = 'Copied!';
@@ -3205,7 +3232,27 @@
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy citation:', err);
-                prompt('Copy this citation:', citation);
+                // Fallback for browsers that don't support clipboard API
+                const textArea = document.createElement('textarea');
+                textArea.value = decodedCitation;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const button = document.querySelector('.citation-copy-button');
+                    button.textContent = 'Copied!';
+                    button.classList.add('copied');
+                    setTimeout(() => {
+                        button.textContent = 'Copy Citation';
+                        button.classList.remove('copied');
+                    }, 2000);
+                } catch (err2) {
+                    prompt('Copy this citation:', decodedCitation);
+                }
+                document.body.removeChild(textArea);
             });
         }
     </script>

@@ -1051,11 +1051,35 @@
                 </div>
             </div>
             
-            <!-- 2 & 3. Document Type and Domain Type on same line -->
+            <!-- 2. Module and Folder on same line -->
             <div style="display: grid; grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); gap: 20px; margin-bottom: 20px;">
                 <div class="filter-section">
+                    <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Module:</label>
+                    <div class="filter-buttons" id="moduleFilters">
+                        <button class="filter-button all-button active" data-filter="all">All Modules <span class="filter-count"></span></button>
+                        <button class="filter-button narrow" data-filter="M1">M1 <span class="filter-count"></span></button>
+                        <button class="filter-button narrow" data-filter="M2">M2 <span class="filter-count"></span></button>
+                        <button class="filter-button narrow" data-filter="M4">M4 <span class="filter-count"></span></button>
+                        <button class="filter-button narrow" data-filter="M5">M5 <span class="filter-count"></span></button>
+                        <button class="filter-button two-word" data-filter="none">No Module <span class="filter-count"></span></button>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Folder:</label>
+                    <div class="filter-buttons" id="folderFilters">
+                        <button class="filter-button all-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
+                        <button class="filter-button" data-filter="eua-051925">eua-051925 <span class="filter-count"></span></button>
+                        <button class="filter-button" data-filter="eua-063025">eua-063025 <span class="filter-count"></span></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3. Document Type, Domain Type, and Vaccine Candidate on same line -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div class="filter-section">
                     <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Document Type:</label>
-                    <select id="documentTypeFilter" style="width: 100%; max-width: 500px; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
+                    <select id="documentTypeFilter" style="width: 100%; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
                         <option value="all">All Types</option>
                     </select>
                 </div>
@@ -1139,33 +1163,16 @@
                         </optgroup>
                     </select>
                 </div>
-            </div>
-            
-            <!-- 4 & 5. Module and Folder on same line -->
-            <div style="display: grid; grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); gap: 20px; margin-bottom: 20px;">
-                <div class="filter-section">
-                    <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Module:</label>
-                    <div class="filter-buttons" id="moduleFilters">
-                        <button class="filter-button all-button active" data-filter="all">All Modules <span class="filter-count"></span></button>
-                        <button class="filter-button narrow" data-filter="M1">M1 <span class="filter-count"></span></button>
-                        <button class="filter-button narrow" data-filter="M2">M2 <span class="filter-count"></span></button>
-                        <button class="filter-button narrow" data-filter="M4">M4 <span class="filter-count"></span></button>
-                        <button class="filter-button narrow" data-filter="M5">M5 <span class="filter-count"></span></button>
-                        <button class="filter-button two-word" data-filter="none">No Module <span class="filter-count"></span></button>
-                    </div>
-                </div>
                 
                 <div class="filter-section">
-                    <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Folder:</label>
-                    <div class="filter-buttons" id="folderFilters">
-                        <button class="filter-button all-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
-                        <button class="filter-button" data-filter="eua-051925">eua-051925 <span class="filter-count"></span></button>
-                        <button class="filter-button" data-filter="eua-063025">eua-063025 <span class="filter-count"></span></button>
-                    </div>
+                    <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Vaccine Candidate:</label>
+                    <select id="vaccineCandidateFilter" style="width: 100%; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
+                        <option value="all">All Candidates</option>
+                    </select>
                 </div>
             </div>
             
-            <!-- 6. Filter by Tags -->
+            <!-- 4. Filter by Tags -->
             <div style="margin-bottom: 20px;">
                 <label style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Tags:</label>
                 <div id="tagSearchContainer" class="tag-search-container">
@@ -1290,6 +1297,10 @@
             processData();
         });
         
+        document.getElementById('vaccineCandidateFilter').addEventListener('change', function() {
+            processData();
+        });
+        
         // Tab switching
         document.querySelectorAll('.tab-button').forEach(tab => {
             tab.addEventListener('click', function() {
@@ -1354,6 +1365,7 @@
             const activeModule = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
             const activeDocumentType = document.getElementById('documentTypeFilter').value;
             const activeDomain = document.getElementById('domainFilter').value;
+            const activeVaccineCandidate = document.getElementById('vaccineCandidateFilter').value;
             const hasActiveTags = selectedTags.size > 0;
             
             // Calculate folder counts
@@ -1378,10 +1390,14 @@
             
             // Calculate document type counts
             const documentTypeCounts = {};
+            const vaccineCandidateCounts = {};
             // Use dataToCount which contains the already-filtered data
             dataToCount.forEach(row => {
                 const docType = row.documentType || 'Unknown';
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
+                
+                const vaccineCandidate = row.vaccineCandidate || 'None';
+                vaccineCandidateCounts[vaccineCandidate] = (vaccineCandidateCounts[vaccineCandidate] || 0) + 1;
             });
             
             // Calculate file type counts
@@ -1459,6 +1475,26 @@
                 }
             });
             
+            // Update vaccine candidate dropdown
+            const vaccineCandidateFilter = document.getElementById('vaccineCandidateFilter');
+            const currentVaccineCandidateValue = vaccineCandidateFilter.value;
+            
+            vaccineCandidateFilter.querySelectorAll('option').forEach(option => {
+                const value = option.value;
+                const originalText = option.textContent.split(' (')[0];
+                
+                if (value === 'all') {
+                    option.textContent = 'All Candidates';
+                } else {
+                    const count = vaccineCandidateCounts[value] || 0;
+                    if (activeVaccineCandidate === 'all' || count > 0) {
+                        option.textContent = `${originalText} (${count})`;
+                    } else {
+                        option.textContent = originalText;
+                    }
+                }
+            });
+            
             // Update file type filter buttons
             document.querySelectorAll('#fileTypeFilters .file-type-button').forEach(button => {
                 const filter = button.dataset.filter;
@@ -1524,9 +1560,13 @@
             
             // Calculate document type counts
             const documentTypeCounts = {};
+            const vaccineCandidateCounts = {};
             csvData.forEach(row => {
                 const docType = row.documentType || 'Unknown';
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
+                
+                const vaccineCandidate = row.vaccineCandidate || 'None';
+                vaccineCandidateCounts[vaccineCandidate] = (vaccineCandidateCounts[vaccineCandidate] || 0) + 1;
             });
             
             // Calculate file type counts
@@ -1602,6 +1642,26 @@
             
             // Sort and update file type filter buttons
             sortAndUpdateFileTypeButtons(fileTypeCounts);
+            
+            // Update vaccine candidate dropdown - populate all unique candidates sorted alphabetically
+            const vaccineCandidateFilter = document.getElementById('vaccineCandidateFilter');
+            console.log('Vaccine candidate counts:', vaccineCandidateCounts);
+            const sortedVaccineCandidates = Object.entries(vaccineCandidateCounts)
+                .map(([candidate, count]) => ({ candidate, count }))
+                .sort((a, b) => a.candidate.localeCompare(b.candidate));
+            
+            // Clear existing options except "All Candidates"
+            vaccineCandidateFilter.innerHTML = '<option value="all">All Candidates</option>';
+            
+            // Add all vaccine candidates
+            sortedVaccineCandidates.forEach(({ candidate, count }) => {
+                const option = document.createElement('option');
+                option.value = candidate;
+                // Show counts initially since "All Candidates" is selected by default
+                option.textContent = `${candidate} (${count})`;
+                vaccineCandidateFilter.appendChild(option);
+            });
+            console.log('Added vaccine candidates to dropdown:', sortedVaccineCandidates.length);
         }
         
         // Function to sort and update file type buttons by count
@@ -1724,6 +1784,7 @@
                         page_count: doc.pageCount.toString(),
                         module: doc.module,
                         documentType: doc.documentType,
+                        vaccineCandidate: doc.vaccineCandidate,
                         people_mentioned: doc.peopleMentioned.join(', '),
                         tags: doc.tags.join(', '),
                         has_exemption: doc.hasExemption ? 'True' : 'False',
@@ -1965,6 +2026,7 @@
             // Reset dropdowns
             document.getElementById('domainFilter').value = 'all';
             document.getElementById('documentTypeFilter').value = 'all';
+            document.getElementById('vaccineCandidateFilter').value = 'all';
             
             // Clear all tags
             selectedTags.clear();
@@ -2113,6 +2175,15 @@
             // Filter by document type
             if (documentTypeFilter !== 'all') {
                 filteredData = filteredData.filter(row => row.documentType === documentTypeFilter);
+            }
+            
+            // Filter by vaccine candidate
+            const vaccineCandidateFilter = document.getElementById('vaccineCandidateFilter').value;
+            if (vaccineCandidateFilter !== 'all') {
+                filteredData = filteredData.filter(row => {
+                    const candidate = row.vaccineCandidate || 'None';
+                    return candidate === vaccineCandidateFilter;
+                });
             }
             
             // Filter by selected tags
@@ -2588,6 +2659,9 @@
                 
                 const documentTypeFilter = document.getElementById('documentTypeFilter').value;
                 if (documentTypeFilter !== 'all') activeFilters.push(`Doc Type: ${documentTypeFilter}`);
+                
+                const vaccineCandidateFilter = document.getElementById('vaccineCandidateFilter').value;
+                if (vaccineCandidateFilter !== 'all') activeFilters.push(`Vaccine: ${vaccineCandidateFilter}`);
                 
                 if (selectedTags.size > 0) {
                     const tagsList = Array.from(selectedTags);

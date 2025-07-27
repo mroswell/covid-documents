@@ -2802,12 +2802,13 @@
             const isMobile = window.innerWidth <= 768;
             
             if (isMobile) {
-                // Fixed positioning for mobile - centered at top
+                // Fixed positioning for mobile - centered
                 popup.style.position = 'fixed';
-                popup.style.left = '10px';
-                popup.style.right = '10px';
+                popup.style.left = '50%';
+                popup.style.transform = 'translateX(-50%)';
                 popup.style.top = '60px';  // Below typical header height
-                popup.style.width = 'auto';
+                popup.style.width = '90%';
+                popup.style.maxWidth = '400px';
                 popup.style.maxHeight = 'calc(100vh - 80px)';
                 popup.style.overflowY = 'auto';
             } else {
@@ -2860,6 +2861,12 @@
                 
                 if (e.target === header || header.contains(e.target)) {
                     isDragging = true;
+                    // Clear centering transform on mobile when starting to drag
+                    if (isMobile && popup.style.transform.includes('translateX(-50%)')) {
+                        const rect = popup.getBoundingClientRect();
+                        popup.style.left = rect.left + 'px';
+                        popup.style.transform = 'none';
+                    }
                 }
             }
             
@@ -3080,12 +3087,12 @@
             const rect = button.getBoundingClientRect();
             
             if (isMobile) {
-                // Fixed positioning for mobile - centered at top
+                // Fixed positioning for mobile - centered
                 popup.style.position = 'fixed';
-                popup.style.left = '10px';
-                popup.style.right = '10px';
+                popup.style.left = '50%';
+                popup.style.transform = 'translateX(-50%)';
                 popup.style.top = '60px';  // Below typical header height
-                popup.style.width = 'auto';
+                popup.style.width = '90%';
                 popup.style.maxWidth = '500px';
                 popup.style.maxHeight = 'calc(100vh - 80px)';
                 popup.style.overflowY = 'auto';

@@ -472,9 +472,10 @@
             border-radius: 8px;
             padding: 16px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
+            z-index: 9999;  /* Higher z-index for better mobile visibility */
             max-width: 500px;
             display: none;
+            -webkit-overflow-scrolling: touch;  /* Smooth scrolling on iOS */
         }
         
         .citation-popup.active {
@@ -3065,12 +3066,15 @@
             const rect = button.getBoundingClientRect();
             
             if (isMobile) {
-                // Center on mobile and position higher
-                popup.style.left = '50%';
-                popup.style.transform = 'translateX(-50%)';
-                popup.style.top = Math.max(50, window.scrollY + 50) + 'px';
-                popup.style.width = '90%';
+                // Fixed positioning for mobile
+                popup.style.position = 'fixed';
+                popup.style.left = '5%';
+                popup.style.right = '5%';
+                popup.style.top = '20px';
+                popup.style.width = 'auto';
                 popup.style.maxWidth = '500px';
+                popup.style.maxHeight = '80vh';
+                popup.style.overflowY = 'auto';
             } else {
                 // Position to the left of button and higher on desktop
                 const popupLeft = rect.left - 520; // 520 is approximate popup width
@@ -3123,11 +3127,8 @@
                 
                 if (e.target === header || header.contains(e.target)) {
                     isDragging = true;
-                    // Clear mobile transform on start if needed
-                    if (isMobile && popup.style.transform.includes('translateX(-50%)')) {
-                        // Adjust position to account for centering transform
-                        const rect = popup.getBoundingClientRect();
-                        popup.style.left = rect.left + 'px';
+                    // Clear any existing transform on mobile
+                    if (isMobile) {
                         popup.style.transform = 'none';
                     }
                 }

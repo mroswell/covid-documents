@@ -968,6 +968,39 @@
             color: #0052a3;
         }
         
+        /* Sort toggle button */
+        .sort-toggle-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 4px 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            transition: all 0.2s ease;
+            transform-origin: center;
+        }
+        
+        .sort-toggle-btn:hover {
+            background-color: #f0f0f0;
+            border-color: #bbb;
+            color: #333;
+        }
+        
+        .sort-toggle-btn:active {
+            background-color: #e0e0e0;
+        }
+        
+        @keyframes sortButtonClick {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+        
+        .sort-toggle-btn.animating {
+            animation: sortButtonClick 0.2s ease-out;
+        }
+        
         /* Responsive design for smaller screens */
         @media (max-width: 1200px) {
             /* Stack filter grids on smaller screens */
@@ -1106,7 +1139,12 @@
             <!-- 3. Document Type, Domain Type, Vaccine Candidate, and Clinical Trial on same line -->
             <div style="display: grid; grid-template-columns: 0.8fr 1.2fr 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                 <div class="filter-section">
-                    <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Document Type:</label>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <label class="filter-label" style="font-weight: bold;">Filter by Document Type:</label>
+                        <button id="documentTypeSortToggle" class="sort-toggle-btn" title="Currently sorted by count (click to sort A-Z)" onclick="toggleDocumentTypeSort()">
+                            <i class="fas fa-sort-amount-down"></i>
+                        </button>
+                    </div>
                     <select id="documentTypeFilter" style="width: 100%; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
                         <option value="all">All Types</option>
                     </select>
@@ -1244,6 +1282,7 @@
         let csvData = [];
         let currentData = [];
         const tooltip = d3.select('.tooltip');
+        let documentTypeSortMode = 'count'; // 'count' or 'alpha'
         let tooltipPersistent = false;
         
         // File list view variables
@@ -1330,6 +1369,14 @@
         
         document.getElementById('documentTypeFilter').addEventListener('change', function() {
             processData();
+        });
+        
+        // Add keyboard shortcut for sorting when dropdown has focus
+        document.getElementById('documentTypeFilter').addEventListener('keydown', function(e) {
+            if ((e.altKey || e.ctrlKey) && e.key === 's') {
+                e.preventDefault();
+                toggleDocumentTypeSort();
+            }
         });
         
         document.getElementById('vaccineCandidateFilter').addEventListener('change', function() {
@@ -1709,23 +1756,51 @@
                 }
             });
             
-            // Update document type dropdown - populate all unique types sorted by count
+            // Update document type dropdown - populate all unique types sorted by current mode
             const documentTypeFilter = document.getElementById('documentTypeFilter');
-            const sortedDocTypes = Object.entries(documentTypeCounts)
-                .sort((a, b) => b[1] - a[1])  // Sort by count descending
+            let sortedDocTypes = Object.entries(documentTypeCounts)
                 .map(([type, count]) => ({ type, count }));
             
-            // Clear existing options except "All Types"
-            documentTypeFilter.innerHTML = '<option value="all">All Types</option>';
+            // Sort based on current mode
+            if (documentTypeSortMode === 'count') {
+                sortedDocTypes.sort((a, b) => b.count - a.count);  // Sort by count descending
+            } else {
+                sortedDocTypes.sort((a, b) => a.type.localeCompare(b.type));  // Sort alphabetically
+            }
             
-            // Add all document types
+            // More efficient option rebuilding without innerHTML
+            // First, update the "All Types" option
+            const allTypesOption = documentTypeFilter.querySelector('option[value="all"]');
+            if (allTypesOption) {
+                allTypesOption.textContent = 'All Types';
+            }
+            
+            // Create a document fragment for better performance
+            const fragment = document.createDocumentFragment();
+            
+            // Keep track of existing options to reuse them
+            const existingOptions = {};
+            documentTypeFilter.querySelectorAll('option').forEach(opt => {
+                if (opt.value !== 'all') {
+                    existingOptions[opt.value] = opt;
+                    opt.remove();
+                }
+            });
+            
+            // Add all document types, reusing existing option elements where possible
             sortedDocTypes.forEach(({ type, count }) => {
-                const option = document.createElement('option');
-                option.value = type;
+                let option = existingOptions[type];
+                if (!option) {
+                    option = document.createElement('option');
+                    option.value = type;
+                }
                 // Show counts initially since "All Types" is selected by default
                 option.textContent = `${type} (${count})`;
-                documentTypeFilter.appendChild(option);
+                fragment.appendChild(option);
             });
+            
+            // Append all options at once
+            documentTypeFilter.appendChild(fragment);
             
             // Sort and update file type filter buttons
             sortAndUpdateFileTypeButtons(fileTypeCounts);
@@ -2109,6 +2184,50 @@
             renderSelectedTags();
             hideTagDropdown();
             processData();
+        }
+        
+        function toggleDocumentTypeSort() {
+            // Store current selection before rebuilding
+            const documentTypeFilter = document.getElementById('documentTypeFilter');
+            const currentSelection = documentTypeFilter.value;
+            
+            // Check if dropdown is currently open by looking at focus
+            const wasOpen = document.activeElement === documentTypeFilter;
+            
+            // Toggle between count and alphabetical sorting
+            documentTypeSortMode = documentTypeSortMode === 'count' ? 'alpha' : 'count';
+            
+            // Update button icon and title
+            const button = document.getElementById('documentTypeSortToggle');
+            const icon = button.querySelector('i');
+            
+            if (documentTypeSortMode === 'count') {
+                icon.className = 'fas fa-sort-amount-down';
+                button.title = 'Currently sorted by count (click to sort A-Z)';
+            } else {
+                icon.className = 'fas fa-sort-alpha-down';
+                button.title = 'Currently sorted A-Z (click to sort by count)';
+            }
+            
+            // Add animation class for visual feedback
+            button.classList.add('animating');
+            setTimeout(() => button.classList.remove('animating'), 200);
+            
+            // Re-populate the dropdown with new sort order
+            updateFilterCounts();
+            
+            // Restore the previous selection if it still exists
+            if (currentSelection && documentTypeFilter.querySelector(`option[value="${currentSelection}"]`)) {
+                documentTypeFilter.value = currentSelection;
+            }
+            
+            // If dropdown was open, try to refocus it (though it won't reopen automatically)
+            if (wasOpen) {
+                // Small delay to ensure DOM updates are complete
+                setTimeout(() => {
+                    documentTypeFilter.focus();
+                }, 10);
+            }
         }
         
         function clearAllFilters() {

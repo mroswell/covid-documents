@@ -24244,7 +24244,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "",
-      "documentType": "Memo",
+      "documentType": "Amendment",
       "peopleMentioned": [
         "RAMACHANDRA",
         "NAIK",
@@ -24267,7 +24267,8 @@
         "MCDC",
         "EUA",
         "Pfizer-biontech",
-        "Program Schema"
+        "Program Schema",
+        "Amendment"
       ],
       "hasExemption": false,
       "hasExclusion": false,
@@ -30094,7 +30095,7 @@
         "product information": 3,
         "slip sheet": 1,
         "email": 17,
-        "memo": 12,
+        "memo": 11,
         "introduction": 1,
         "statistical analysis plan": 1,
         "summary": 2,
@@ -30108,7 +30109,7 @@
         "label": 3,
         "meeting correspondence": 1,
         "study plan": 1,
-        "amendment": 3,
+        "amendment": 4,
         "information request": 1,
         "tables": 1
       },

@@ -58,3 +58,12 @@ yarn-error.log*
 # Custom project-specific
 # Add any large data files or sensitive information here
 # /path/to/sensitive/data/
+
+# VSCode Local History
+.history/
+.lh/
+
+# Temporary analysis files
+define/missing_documents_report.md
+define/missing_files.txt
+define/referenced_files.txt

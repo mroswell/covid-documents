@@ -67,3 +67,6 @@ yarn-error.log*
 define/missing_documents_report.md
 define/missing_files.txt
 define/referenced_files.txt
+define/moderna-bla/missing_files.txt
+define/moderna-bla/missing_documents_report.md
+define/moderna-bla/referenced_files.txt

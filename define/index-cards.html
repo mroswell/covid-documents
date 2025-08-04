@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Define-XML Files - Clinical Trial Metadata</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .nav-menu {
+            background: #f8f9fa;
+            padding: 12px 0;
+            margin: -20px -30px 20px -30px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            padding: 0 30px;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .study-section {
+            margin-bottom: 40px;
+        }
+        
+        .study-header {
+            background: #f0f4f8;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .study-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0066cc;
+            margin: 0 0 5px 0;
+        }
+        
+        .study-info {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .file-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .file-card:hover {
+            border-color: #0066cc;
+            box-shadow: 0 4px 12px rgba(0,102,204,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .file-name {
+            font-size: 14px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            color: #666;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+        
+        .file-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .file-details {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-adam {
+            background: #ede7f6;
+            color: #4527a0;
+        }
+        
+        .badge-sdtm {
+            background: #fff8e1;
+            color: #f57f17;
+        }
+        
+        .badge-phase2 {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .badge-phase3 {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #0066cc;
+            font-size: 16px;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .file-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../index.html">EUA File Navigator</a></li>
+                <li><a href="../data-dictionary.html">Data Dictionary</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+        
+        <h1>Define-XML Clinical Trial Metadata</h1>
+        <p class="subtitle">COVID-19 Vaccine Trial Dataset Definitions - Moderna mRNA-1273 & Pfizer-BioNTech BNT162b2</p>
+        
+        <div class="description">
+            <p>These Define-XML files contain comprehensive metadata documentation for the COVID-19 vaccine clinical trial datasets submitted to FDA. Each file provides detailed information about dataset structures, variables, controlled terminology, and computational methods used in the trials.</p>
+        </div>
+        
+        <!-- Moderna Studies Section -->
+        <h2 style="color: #0066cc; margin: 40px 0 20px 0; font-size: 24px;">Moderna mRNA-1273 Studies</h2>
+        
+        <!-- Phase 2 Study Section -->
+        <div class="study-section">
+            <div class="study-header">
+                <h2 class="study-title">Phase 2 Study (P201)</h2>
+                <p class="study-info">Early safety and immunogenicity assessment of mRNA-1273</p>
+            </div>
+            
+            <div class="file-grid">
+                <a href="moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-add1_A_D.html" class="file-card">
+                    <div class="file-name">FDA-CBER-2022-1614_mrna-1273-p201-add1_A_D.html</div>
+                    <div class="file-title">Phase 2 Part A - Analysis Datasets</div>
+                    <div class="file-details">
+                        <span class="badge badge-adam">ADaM</span>
+                        <span class="badge badge-phase2">Phase 2</span>
+                        <span>Additional Data</span>
+                    </div>
+                </a>
+                
+                <a href="moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-add1_S.html" class="file-card">
+                    <div class="file-name">FDA-CBER-2022-1614_mrna-1273-p201-add1_S.html</div>
+                    <div class="file-title">Phase 2 Part A - Study Data</div>
+                    <div class="file-details">
+                        <span class="badge badge-sdtm">SDTM</span>
+                        <span class="badge badge-phase2">Phase 2</span>
+                        <span>Additional Data</span>
+                    </div>
+                </a>
+                
+                <a href="moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-d57_A_D.html" class="file-card">
+                    <div class="file-name">FDA-CBER-2022-1614_mrna-1273-p201-d57_A_D.html</div>
+                    <div class="file-title">Phase 2 Day 57 - Analysis Datasets</div>
+                    <div class="file-details">
+                        <span class="badge badge-adam">ADaM</span>
+                        <span class="badge badge-phase2">Phase 2</span>
+                        <span>Day 57 Data</span>
+                    </div>
+                </a>
+                
+                <a href="moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-d57_S.html" class="file-card">
+                    <div class="file-name">FDA-CBER-2022-1614_mrna-1273-p201-d57_S.html</div>
+                    <div class="file-title">Phase 2 Day 57 - Study Data</div>
+                    <div class="file-details">
+                        <span class="badge badge-sdtm">SDTM</span>
+                        <span class="badge badge-phase2">Phase 2</span>
+                        <span>Day 57 Data</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Phase 3 COVE Study Section -->
+        <div class="study-section">
+            <div class="study-header">
+                <h2 class="study-title">Phase 3 COVE Study (P301)</h2>
+                <p class="study-info">Coronavirus Efficacy (COVE) - Pivotal efficacy trial with 30,000+ participants</p>
+            </div>
+            
+            <div class="file-grid">
+                <a href="moderna-bla/FDA-CBER-2022-1614_mrna-1273-p301_A_D.html" class="file-card">
+                    <div class="file-name">FDA-CBER-2022-1614_mrna-1273-p301_A_D.html</div>
+                    <div class="file-title">COVE Study - Analysis Datasets</div>
+                    <div class="file-details">
+                        <span class="badge badge-adam">ADaM</span>
+                        <span class="badge badge-phase3">Phase 3</span>
+                        <span>1.46 MB</span>
+                    </div>
+                </a>
+                
+                <a href="moderna-bla/FDA-CBER-2022-1614_mrna-1273-p301_S.html" class="file-card">
+                    <div class="file-name">FDA-CBER-2022-1614_mrna-1273-p301_S.html</div>
+                    <div class="file-title">COVE Study - Study Data</div>
+                    <div class="file-details">
+                        <span class="badge badge-sdtm">SDTM</span>
+                        <span class="badge badge-phase3">Phase 3</span>
+                        <span>718 KB</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Pfizer-BioNTech Studies Section -->
+        <h2 style="color: #0066cc; margin: 40px 0 20px 0; font-size: 24px;">Pfizer-BioNTech BNT162b2 Studies</h2>
+        
+        <!-- BNT162-01 Study Section -->
+        <div class="study-section">
+            <div class="study-header">
+                <h2 class="study-title">BNT162-01 Study</h2>
+                <p class="study-info">Early phase evaluation of BNT162 vaccine candidates</p>
+            </div>
+            
+            <div class="file-grid">
+                <a href="pfizer-eua/pfizer-eua-bnt162-01-A.html" class="file-card">
+                    <div class="file-name">pfizer-eua-bnt162-01-A.html</div>
+                    <div class="file-title">BNT162-01 - Analysis Datasets</div>
+                    <div class="file-details">
+                        <span class="badge badge-adam">ADaM</span>
+                        <span class="badge badge-phase2">Early Phase</span>
+                    </div>
+                </a>
+                
+                <a href="pfizer-eua/pfizer-eua-bnt162-01-S.html" class="file-card">
+                    <div class="file-name">pfizer-eua-bnt162-01-S.html</div>
+                    <div class="file-title">BNT162-01 - Study Data</div>
+                    <div class="file-details">
+                        <span class="badge badge-sdtm">SDTM</span>
+                        <span class="badge badge-phase2">Early Phase</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- C4591001 Interim Analysis Study Section -->
+        <div class="study-section">
+            <div class="study-header">
+                <h2 class="study-title">C4591001 Study - Interim Analysis</h2>
+                <p class="study-info">Pivotal Phase 3 efficacy trial interim analysis</p>
+            </div>
+            
+            <div class="file-grid">
+                <a href="pfizer-eua/pfizer-eua-c4591001-ia-efficacy-A.html" class="file-card">
+                    <div class="file-name">pfizer-eua-c4591001-ia-efficacy-A.html</div>
+                    <div class="file-title">C4591001 Interim - Analysis Datasets</div>
+                    <div class="file-details">
+                        <span class="badge badge-adam">ADaM</span>
+                        <span class="badge badge-phase3">Phase 3</span>
+                        <span>Efficacy Analysis</span>
+                    </div>
+                </a>
+                
+                <a href="pfizer-eua/pfizer-eua-c4591001-ia-efficacy-S.html" class="file-card">
+                    <div class="file-name">pfizer-eua-c4591001-ia-efficacy-S.html</div>
+                    <div class="file-title">C4591001 Interim - Study Data</div>
+                    <div class="file-details">
+                        <span class="badge badge-sdtm">SDTM</span>
+                        <span class="badge badge-phase3">Phase 3</span>
+                        <span>Efficacy Analysis</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- C4591001 Safety Follow-up Study Section -->
+        <div class="study-section">
+            <div class="study-header">
+                <h2 class="study-title">C4591001 Study - Safety Follow-up & Efficacy</h2>
+                <p class="study-info">Extended safety follow-up and comprehensive efficacy analysis</p>
+            </div>
+            
+            <div class="file-grid">
+                <a href="pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-A.html" class="file-card">
+                    <div class="file-name">pfizer-eua-c4591001-safety-fa-eff-A.html</div>
+                    <div class="file-title">C4591001 Safety/Efficacy - Analysis Datasets</div>
+                    <div class="file-details">
+                        <span class="badge badge-adam">ADaM</span>
+                        <span class="badge badge-phase3">Phase 3</span>
+                        <span>Safety & Efficacy</span>
+                    </div>
+                </a>
+                
+                <a href="pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-S.html" class="file-card">
+                    <div class="file-name">pfizer-eua-c4591001-safety-fa-eff-S.html</div>
+                    <div class="file-title">C4591001 Safety/Efficacy - Study Data</div>
+                    <div class="file-details">
+                        <span class="badge badge-sdtm">SDTM</span>
+                        <span class="badge badge-phase3">Phase 3</span>
+                        <span>Safety & Efficacy</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>About Define-XML Files</h3>
+            <p><strong>ADaM (Analysis Data Model):</strong> Contains analysis-ready datasets used for statistical analysis and regulatory submissions. These datasets are derived from SDTM data and include additional variables needed for analysis.</p>
+            <p><strong>SDTM (Study Data Tabulation Model):</strong> Contains raw clinical trial data in a standardized format. These datasets capture the original observations and measurements from the clinical trial.</p>
+            <p><strong>CDISC Standards:</strong> Both ADaM and SDTM follow CDISC (Clinical Data Interchange Standards Consortium) standards to ensure consistency and interoperability in clinical research data.</p>
+            <p><strong>Data Sources:</strong> These files document clinical trial data from both Moderna's mRNA-1273 vaccine (FDA-CBER-2022-1614) and Pfizer-BioNTech's BNT162b2 vaccine trials submitted to FDA.</p>
+        </div>
+    </div>
+</body>
+</html>

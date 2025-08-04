@@ -1,0 +1,767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<!--
+     xsl:version = "1.0"
+     xsl:vendor = "libxslt"
+     xsl:vendor-url = "http://xmlsoft.org/XSLT/"
+   -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>C4591001, SDTM-IG3.2</title>
+<script type="text/javascript">
+<!--
+/**
+ * With one argument, return the textContent or innerText of the element.
+ * With two arguments, set the textContent or innerText of element to value.
+ */
+function textContent(element, value) {
+  "use strict";
+  var rtn;
+  var content = element.textContent;  // Check if textContent is defined
+  if (value === undefined) { // No value passed, so return current text
+    if (content !== undefined) {
+      rtn = content;
+    } else {
+      rtn = element.innerText;
+    }
+    return rtn;
+  }
+  else { // A value was passed, so set text
+    if (content !== undefined) {
+      element.textContent = value;
+    } else {
+      element.innerText = value;
+    }
+  }
+}
+var ITEM  = '\u00A0';
+var CLOSE = '\u25BA';
+var OPEN  = '\u25BC';
+function toggle_submenu(e) {
+  "use strict";
+  if (textContent(e)===OPEN) {
+    textContent(e, CLOSE);
+  }
+  else {
+    textContent(e, OPEN);
+  }
+  var i;
+  for (i=0; i < e.parentNode.childNodes.length; i++) {
+    var c;
+    c=e.parentNode.childNodes[i];
+    if (c.tagName==='UL') {c.style.display=(c.style.display==='none') ? 'block' : 'none';}
+   }
+}
+function reset_menus() {
+"use strict";
+  var li;
+  var c;
+  var i;
+  var j;
+  var li_tags = document.getElementsByTagName('LI');
+  for (i=0; i < li_tags.length; i++) {
+    li=li_tags[i];
+    if ( li.className.match('hmenu-item') ){
+      for (j=0; j < li.childNodes.length; j++) {
+        c=li.childNodes[j];
+        if ( c.tagName === 'SPAN' && c.className.match('hmenu-bullet') ) {textContent(c, ITEM);}
+        }
+      }
+    if ( li.className.match('hmenu-submenu') ) {
+      for (j=0; j < li.childNodes.length; j++) {
+        c=li.childNodes[j];
+        if ( c.tagName === 'SPAN' && c.className.match('hmenu-bullet') ) {textContent(c, CLOSE);}
+        else if ( c.tagName === 'UL' ) { c.style.display = 'none'; }
+        }
+    }
+  }
+}
+function toggle_vlm(element) {
+  var child_id = element.childNodes[0].getAttribute("id");
+  var vlm_rows = document.getElementsByClassName(child_id);
+  for (j=0; j < vlm_rows.length; j++) {
+    if (vlm_rows[j].style.display==='none') {
+      vlm_rows[j].style.display=''; }
+    else {
+      vlm_rows[j].style.display='none'; 
+      }
+    }
+}
+function expand_all_vlm() {
+  var vlm_rows = document.getElementsByClassName("vlm");
+  for (j=0; j < vlm_rows.length; j++) {
+      vlm_rows[j].style.display='';
+    }
+}
+function collapse_all_vlm() {
+  var vlm_rows = document.getElementsByClassName("vlm");
+  for (j=0; j < vlm_rows.length; j++) {
+      vlm_rows[j].style.display='none';
+    }
+}
+/**
+ * Open external documents (PDFs, ...) in a new window.
+ */
+document.onclick = function(e)
+{
+  var target = e ? e.target : window.event.srcElement;    
+  while (target && !/^(a|body)$/i.test(target.nodeName))
+  {
+    target = target.parentNode;
+  }
+  if (target && target.className.match('external'))
+  {
+    var external = window.open(target.href);
+    return external.closed;
+  }
+}
+//-->
+</script>
+  <style type="text/css">
+      .external-link-gif{
+        background: 
+        url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gCGhErDWL4mOoAAAB6SURBVBjTbVCxDcAgDHNRP2KDY9gYO5YbWNno1mPY6E3pAJEIYCmCOCQOPogII6wNkug4d49KiXMz1EiUEg8uLBN3Ui7FVduYmxjG3JRru+facubVuIdLEV4Dzwe8V4BYg7t4Ap+d57qUnuWICBzi116v1ggfd3bM+AEZWXFvnym8EwAAAABJRU5ErkJggg==)
+       no-repeat
+       right center;
+        padding: 8px;
+      }      
+      
+      body{
+        background-color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 62.5%;
+        margin: 0;
+        padding: 30px;
+      }
+      
+      h1{
+        font-size: 1.6em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+      
+      h1.header{
+        text-align: center;
+      }
+      
+      ul{
+        margin-left: 0px;
+      }
+      
+      a{
+      color: #0000FF;
+        text-decoration: underline;
+      }
+      a.visited{
+      color: #551A8B;
+        text-decoration: underline;
+      }
+      a:hover{
+      color: #FF9900;
+        text-decoration: underline;
+      }
+      a.tocItem{
+      color: #004A95;
+      text-decoration: none;
+      margin-top: 2px;
+      font-size: 1.4em;
+      }
+      .tocItem{
+      text-decoration: none;
+      margin-top: 2px;
+      font-size: 1.4em;
+      }
+      
+      #menu{
+        position: fixed;
+        left: 0px;
+        top: 10px;
+        width: 20%;
+        height: 96%;
+        bottom: 0px;
+        overflow: auto;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 0px;
+        text-align: left;
+        white-space: nowrap;
+      }
+ 
+      .hmenu li{
+        list-style-type: none;
+        line-height: 200%;
+        padding-left: 0;
+      }
+      .hmenu ul{
+        padding-left: 14px;
+        margin-left: 0;
+      }
+      .hmenu-item{
+      }
+      .hmenu-submenu{
+      }
+      .hmenu-bullet{
+        float: left;
+        width: 16px;
+        color: #AAAAAA;
+        font-size: 1.2em;
+      }
+      
+      div.buttons {
+        padding: 5px 0 5px 40px;
+        display: inline-block;
+      }
+        div.button {
+        padding: 5px 0 5px 0;   
+      }
+      
+      button { 
+        width: 100%;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: 3px 3px 2px #888;
+        -moz-box-shadow: 3px 3px 2px #888;
+        box-shadow: 3px 3px 2px #888;
+        padding: 4px 16px 4px 16px;
+        display:block;
+        cursor: pointer;
+      }
+      #main{
+        position: absolute;
+        left: 22%;
+        top: 0px;
+        overflow: auto;
+        background-color: #FFFFFF;
+        color: #000000;
+        float: none !important;
+      }
+      
+      ul.codelist{
+        padding: 1px;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        
+      }
+      .codelist li{
+        list-style-type:none;
+        line-height: 200%;
+        padding-left: 0;
+        text-indent: -4px;
+      }
+      
+      .codelist-caption{
+        font-size: 1.4em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: left;
+        color: #696969;
+      }
+      
+      .codelist-item{
+        list-style-type: disk;
+        list-style-position: inside;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 0 0 0;
+        }
+      .codelist-item-decode{
+        white-space: pre; /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+         /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }      
+      ul.SubClass {
+        list-style-type: '- ';
+        padding-left: 5;
+        margin: 0 0 0 0;
+      }
+      ul.SubClass.li {}
+      #main .docinfo{
+        width: 95%;
+        text-align: right;
+        padding: 0px 5px;
+      }
+      
+      div.containerbox{
+        padding: 0px;
+        margin: 10px auto;
+        border: 0px;
+        page-break-after: always;
+      }
+      
+      .study-name{
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: left;
+        padding: 15px;
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        color: #696969;
+        border: 0px;
+      }
+      
+      div.study-metadata{
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: left;
+        padding: 0px;
+        margin-left: 0px;
+        margin-top: 00px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        color: #696969;
+        border: 0px;
+      }
+      
+      dl.study-metadata{
+        width: 95%;
+        padding: 5px 0px;
+        font-size: 0.8em;
+        color: black;
+      }
+      
+      dl.study-metadata dt{
+        clear: left;
+        float: left;
+        width: 200px;
+        margin: 0;
+        padding: 5px 5px 5px 0px;
+        font-weight: bold;
+      }
+      
+      dl.study-metadata dd{
+        margin-left: 210px;
+        padding: 5px;
+        font-weight: normal;
+        min-height: 20px;
+      }
+      
+      div.codelist{
+        page-break-after: avoid;
+      }
+      
+      div.qval-indent {
+      margin-left: 20px;
+      }
+      
+      div.qval-indent2 {
+      margin-left: 40px;
+      }
+      
+      table{
+        width: 95%;
+        border-spacing: 4px;
+        border: 1px solid #000000;
+        background-color: #EEEEEE;
+        margin-top: 5px;
+        border-collapse: collapse;
+        padding: 5px;
+        empty-cells: show;
+      }
+      
+      table caption{
+        border: 0px;
+        left: 20px;
+        font-size: 1.4em;
+        font-weight: bolder;
+        color: #696969;
+        margin: 10px auto;
+        text-align: left;
+      }
+      
+      .description{
+        margin-left: 0px;
+        color: black;
+        font-weight: normal;
+        font-size: 0.85em;
+      }
+      
+      table caption .dataset{
+        font-weight: normal;
+        float: right;
+      }
+      table caption.header{
+        font-size: 1.6em;
+        margin-left: 0;
+        font-weight: bolder;
+        text-align: center;
+        color: #696969;
+      }
+      
+      table tr{
+        border: 1px solid #000000;
+      }
+      
+      table tr.header{
+        background-color: #6699CC;
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+      
+      table th{
+        font-weight: bold;
+        vertical-align: top;
+        text-align: left;
+        padding: 5px;
+        border: 1px solid #000000;
+        font-size: 1.3em;
+      }
+      
+      table th.codedvalue{
+        width: 20%;
+      }
+      table th.length{
+        width: 7%;
+      }
+ 
+      table th.label{
+        width: 13%;
+      }
+ 
+      table td{
+        vertical-align: top;
+        padding: 5px;
+        border: 1px solid #000000;
+        font-size: 1.2em;
+        line-height: 150%;
+      }
+      table td.datatype{
+        text-align: left;
+      }
+      table td.role{
+        text-align: left;
+      }
+      table td.number{
+        text-align: right;
+      }
+      
+      tr.tablerowodd{
+        background-color: #FFFFFF;
+      }
+      tr.tableroweven{
+        background-color: #EEEEEE;
+      }
+      
+      .linebreakcell{
+        vertical-align: top;
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+      
+      .nci,
+      .extended{
+        font-style: italic;
+      }
+      .super{
+        vertical-align: super;
+      }
+      .footnote{
+        font-size: 1.2em;
+      }
+      
+      .valuelist-reference{
+      vertical-align: super;
+      font-size: 0.8em;
+      padding-left: 5px;
+      cursor: pointer;
+      }
+      
+      .valuelist-no-reference{
+      vertical-align: super;
+      font-size: 0.8em;
+      padding-left: 5px;
+      }
+      
+      div.formalexpression{
+        margin-top: 6px;
+        margin-bottom: 6px;      
+      }
+      span.label{
+        font-weight: bold;      
+      }
+      .formalexpression-reference{
+        vertical-align: super;
+        font-size: 0.8em;
+        padding-left: 5px;
+      }
+      .formalexpression-code{
+        font-family:"Courier New", monospace, serif;
+        font-size:1.2em;
+        line-height:120%;
+        display:block;
+        vertical-align:top;
+        margin: 0px;
+        padding: 5px 0 0 20px;
+        white-space:pre;  /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+        /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }
+      
+      .method-code{
+        vertical-align: top;
+        white-space: pre; /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+         /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }
+      .linktop{
+        font-size: 1.2em;
+        margin-top: 5px;
+      }
+      .documentinfo,
+      .stylesheetinfo{
+        font-size: 1.1em;
+        line-height: 60%;
+      }
+      
+      .invisible{
+        display: none;
+      }
+      
+      .standard-refeference {
+        width: 95%;
+        font-size: 1.0em;
+        font-weight: bold;
+        padding: 5px;
+        color: #696969;
+        white-space: nowrap;
+      }
+      .nodata{
+        width: 95%;
+        font-size: 1.0em;
+        font-weight: bold;
+        padding: 5px;
+        color: #000000;
+        white-space: nowrap;
+      }
+      span.unresolved{
+        color: #000000;
+      }
+      td.unresolved{
+      color: #000000;
+      }
+      td.span.unresolved{
+      color: #000000;
+      }
+      
+      span.prefix{
+        font-weight: normal;
+      }      
+      .arm-summary{
+        width: 95%;
+        border-spacing: 5px;
+        border-width: 1px;
+        border-color: #000000;
+        border-style: solid solid none solid;
+        background-color: #EEEEEE;
+        font-size: 1.2em;
+        line-height: 150%;
+        vertical-align: top;
+      }
+      .arm-summary-resultdisplay{
+        margin: 0px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;  
+        border-spacing: 5px;
+        border-width: 1px;
+        border-color #000000;
+        border-style: none none solid none;
+      }
+      .arm-display-title{
+        margin-left: 5pt;
+      }
+      
+      .table.analysisresults-detail{
+        background-color: #EEEEEE;
+      }
+      
+      .arm-summary-result{
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      th span.arm-displaytitle{
+        font-weight: bold;
+      }
+      td span.arm-resulttitle{
+        font-weight: bold;
+      }
+      tr.arm-analysisresult{
+        background-color: #6699CC;
+        color: #FFFFFF;
+        font-weight: bold;
+        border: 1px solid #000000;
+      }
+      td.arm-label{
+        font-weight: bold;
+      }
+      p.arm-analysisvariable{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .arm-data-reference{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      
+      .arm-code-context{
+        padding: 5px 0px;
+      }
+      .arm-code-ref{
+        font-size: 1.2em;
+        line-height: 150%;
+        padding: 5px;
+      }
+      .arm-code{
+        font-family:"Courier New", monospace, serif;
+        font-size:1.2em;
+        line-height:120%;
+        display:block;
+        vertical-align:top;
+        margin: 0px;
+        padding:0px;
+        white-space:pre;  /* CSS 2.0 */
+        white-space: pre-wrap; /* CSS 2.1 */
+        /* CSS 3.0 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP Printers */
+        word-wrap: break-word; /* IE 5+ */
+      }
+      
+      
+      @media print{
+      
+        @page {
+          margin: 1.5cm;
+        }
+      
+        body,
+        h1,
+        table caption,
+        table caption.header{
+          color: #000;
+          background: #fff;
+          float: none !important;
+        }
+      
+        div.containerbox{
+          padding: 0px;
+          border: 0px;
+          page-break-after: always;
+        }
+      
+        a:link,
+        a:visited{
+          background: transparent;
+          text-decoration: none;
+          color: black;
+        }
+        a.external:link:after,
+        #main a:visited:after{
+          content: " (" attr(href) ") ";
+          font-size: 100%;
+          text-decoration: underline;
+          font-weight: normal;
+          color: black;
+        }
+        .external-link-gif,
+        .formalexpression-reference
+        .valuelist-reference{
+          display: none !important;
+          width: 0px;
+        }
+        
+        table{
+          border-width: 2px;
+        }
+        table tr.vlm{
+        display: table-row !important;
+        }
+      
+        #menu,
+        .linktop{
+          display: none !important;
+          width: 0px;
+        }
+        #main{
+          left: 2cm;
+          float: none !important;
+        }
+        span.prefix{
+          font-weight: normal;
+        }
+        
+        row, ul, img {
+          page-break-inside: avoid;
+        }
+      
+      }
+    </style>
+  
+</head><body onload="reset_menus();">
+<div id="menu"><a name="top" class="invisible" href="#main">Skip Navigation Link</a><span class="study-name">C4591001</span><ul class="hmenu"><li class="hmenu-item"><span class="hmenu-bullet">+</span><a class="external tocItem" href="acrf.pdf">Annotated CRF</a><span class="external-link-gif"></span></li><li class="hmenu-submenu"><span onclick="toggle_submenu(this);" class="hmenu-bullet">+</span><a class="tocItem">Supplemental Documents</a><ul><li class="hmenu-item"><span class="hmenu-bullet">+</span><a class="external tocItem" href="csdrg.pdf">SDTM Data Reviewer's</a><span class="external-link-gif"></span></li></ul></li><li class="hmenu-submenu"><span class="hmenu-bullet" onclick="toggle_submenu(this);">+</span><a class="tocItem" href="#datasets">Datasets</a><ul><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#IG.IG.DM">DM (Demographics)</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#IG.IG.EX">EX (Exposure)</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#IG.IG.XB">XB (Sequencing Data)</a></li></ul></li><li class="hmenu-submenu"><span onclick="toggle_submenu(this);" class="hmenu-bullet">+</span><a href="#decodelist" class="tocItem">Controlled Terminology</a><ul><li class="hmenu-submenu"><span class="hmenu-bullet" onclick="toggle_submenu(this);">+</span><a class="tocItem" href="#decodelist">CodeLists</a><ul><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.AGEU">AGEU</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.DOMAIN">DOMAIN</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.EPOCH">EPOCH</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.ETHNIC">ETHNIC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.EXADJ">EXADJ</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.EXCAT">Category of Treatment</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.EXDOSU">EXDOSU</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.EXSCAT">Subcategory of Treatment</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.FRM">FRM</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.LAT">Laterality</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.LOC">LOC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.ND">ND</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.NY1">NY1</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.RACE">RACE</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.ROUTE">ROUTE</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.SEX">SEX</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.TPTREF">TPTREF</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.XBCAT">Category for Microbiology Finding</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.XBMETHOD">Method of Test or Examination in Microbiology Specimen</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.XBSPEC">Specimen Type in Microbiology Specimen</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.XBTEST">Microbiology Specimen Test Name</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.XBTESTCD">Microbiology Specimen Test Code</a></li></ul></li><li class="hmenu-submenu"><span class="hmenu-bullet" onclick="toggle_submenu(this);">+</span><a class="tocItem" href="#externaldictionary">External Dictionaries</a><ul><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.ISO3166">ISO3166(CL.ISO3166)</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.MedDRA">MedDRA</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.NDF-RT">National Drug File - Reference Terminology</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.SNOMED">Systematized Nomenclature of Medicine</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.UNII">Unique Ingredient Identifier</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.WHO%20DDE">WHO DD</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#CL.CL.WHODD">Medications Dictionary</a></li></ul></li></ul></li><li class="hmenu-submenu"><span class="hmenu-bullet" onclick="toggle_submenu(this);">+</span><a class="tocItem" href="#compmethod">Methods</a><ul><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.AGE">DM.DM.AGE</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.DTHDTC">DM.DM.DTHDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.DTHFL">DM.DM.DTHFL</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.RFENDTC">DM.DM.RFENDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.RFICDTC">DM.DM.RFICDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.RFPENDTC">DM.DM.RFPENDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.RFSTDTC">DM.DM.RFSTDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.RFXENDTC">DM.DM.RFXENDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.RFXSTDTC">DM.DM.RFXSTDTC</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.DM.DM.USUBJID">DM.DM.USUBJID</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.EPOCH">EX.EC.EPOCH</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.EXENDY">EX.EC.EXENDY</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.EXLNKGRP">EX.EC.EXLNKGRP</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.EXLNKID">EX.EC.EXLNKID</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.EXSEQ">EX.EC.EXSEQ</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.EXSTDY">EX.EC.EXSTDY</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.EX.EC.USUBJID">EX.EC.USUBJID</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.EPOCH">XB.EPOCH</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.USUBJID">XB.USUBJID</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.XBBLFL">XB.XBBLFL</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.XBDY">XB.XBDY</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.XBSEQ">XB.XBSEQ</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.XBSTAT">XB.XBSTAT</a></li><li class="hmenu-item"><span class="hmenu-bullet">-</span><a class="tocItem" href="#MT.MT.XB.XBSTRESC">XB.XBSTRESC</a></li></ul></li></ul></div><div id="main">
+    
+<div class="docinfo"><p class="documentinfo">Date/Time of Define-XML document generation: 2021-06-03T19:32:34Z</p><p class="documentinfo">Define-XML version: 2.0.0</p><p class="stylesheetinfo">Stylesheet version: 2018-11-21</p></div><div class="study-metadata"><dl class="study-metadata"><dt>Standard</dt><dd>SDTM-IG 3.2</dd><dt>Study Name</dt><dd>C4591001</dd><dt>Study Description</dt><dd>A Phase 1/2/3 Study to
+Evaluate the Safety,
+Tolerability,
+Immunogenicity,  and
+Efficacy of RNA Vaccine
+Candidates Against
+COVID-19 in Healthy
+Adults</dd><dt>Protocol Name</dt><dd>C4591001</dd><dt>Metadata Name</dt><dd>Study C4591001 Data Definitions</dd></dl></div><a id="datasets"></a><h1 class="invisible">Datasets</h1><div class="containerbox"><table summary="Data Definition Tables"><caption class="header">Datasets</caption><tr class="header"><th scope="col">Dataset</th><th scope="col">Description</th><th scope="col">Class
+            </th><th scope="col">Structure</th><th scope="col">Purpose</th><th scope="col">Keys</th><th scope="col">Documentation</th><th scope="col">Location</th></tr><tr class="tablerowodd" id="IG.DM"><td><a href="#IG.IG.DM">DM</a></td><td>Demographics</td><td>SPECIAL PURPOSE</td><td>One record per subject</td><td>Tabulation</td><td>STUDYID, USUBJID</td><td></td><td><a class="external" href="dm.xpt">dm.xpt</a><span class="external-link-gif"></span> </td></tr><tr class="tableroweven" id="IG.EX"><td><a href="#IG.IG.EX">EX</a></td><td>Exposure</td><td>INTERVENTIONS</td><td>One record per constant dosing interval per subject</td><td>Tabulation</td><td>STUDYID, USUBJID, EXTRT, EXSTDTC</td><td></td><td><a class="external" href="ex.xpt">ex.xpt</a><span class="external-link-gif"></span> </td></tr><tr class="tablerowodd" id="IG.XB"><td><a href="#IG.IG.XB">XB</a></td><td>Sequencing Data</td><td>FINDINGS</td><td>One record per microbiology specimen finding per time
+point per visit per subject</td><td>Tabulation</td><td>STUDYID, USUBJID, XBTESTCD, XBDTC</td><td></td><td><a class="external" href="xb.xpt">xb.xpt</a><span class="external-link-gif"></span> </td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="IG.IG.DM"></a><div class="containerbox"><h1 class="invisible">Demographics (DM) </h1><table summary="ItemGroup IG.IG.DM"><caption><span>DM (Demographics) - SPECIAL PURPOSE <span class="dataset">Location: <a class="external" href="dm.xpt">dm.xpt</a><span class="external-link-gif"></span> </span></span></caption><tr class="header"><th scope="col">Variable</th><th scope="col">Label / Description</th><th scope="col">Type</th><th scope="col">Role</th><th scope="col" class="length">Length or Display Format</th><th scope="col" abbr="Format">Controlled Terms or ISO Format</th><th scope="col">Origin / Source / Method / Comment</th></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.STUDYID"></a>STUDYID</td><td>Study Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">Protocol</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.DOMAIN"></a>DOMAIN</td><td>Domain Abbreviation</td><td class="datatype">text</td><td class="role">Req</td><td class="number">2</td><td><span class="linebreakcell"><a href="#CL.CL.DOMAIN">DOMAIN</a></span><ul class="codelist"><li class="codelist-item">• "DM" = "Demographics"</li><li class="codelist-item">• "EX" = "Exposure"</li><li class="codelist-item">• "XB" = "Microbiology Specimen"</li></ul></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">"DM"</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.USUBJID"></a>USUBJID</td><td>Unique Subject Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">22</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Concatenation of STUDYID, SITEID and SUBJID</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.SUBJID"></a>SUBJID</td><td>Subject Identifier for the Study</td><td class="datatype">text</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=25">25</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.RFSTDTC"></a>RFSTDTC</td><td>Subject Reference Start Date/Time</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">First date/time of study drug else Randomization
+date/time OR Enrollment date/time for subject.Null for
+screen failures.</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.RFENDTC"></a>RFENDTC</td><td>Subject Reference End Date/Time</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">Maximum of Visit date/Maximum of disposition date,
+whichever is greater.Null for Screen Failures.</div></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.RFXSTDTC"></a>RFXSTDTC</td><td>Date/Time of First Study Treatment</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">First date/time of study drug exposure date</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.RFXENDTC"></a>RFXENDTC</td><td>Date/Time of Last Study Treatment</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">Latest date/time of study drug exposure</div></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.RFICDTC"></a>RFICDTC</td><td>Date/Time of Informed Consent</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">Date/time of informed consent obtained</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.RFPENDTC"></a>RFPENDTC</td><td>Date/Time of End of Participation</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">Set to Date/time when subject ended participation in a
+trial.</div></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.DTHDTC"></a>DTHDTC</td><td>Date/Time of Death</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">Derived</div><div class="method-code">Date/time of death when Disposition mentioned as
+'DEATH'.</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.DTHFL"></a>DTHFL</td><td>Subject Death Flag</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">1</td><td><span class="linebreakcell"><a href="#CL.CL.NY1">NY1</a></span><ul class="codelist"><li class="codelist-item">• "Y" = "Y"</li></ul></td><td><div class="linebreakcell">Derived</div><div class="method-code">Populate Death flag is 'Y' when Standardized
+Disposition Term is 'DEATH'</div></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.SITEID"></a>SITEID</td><td>Study Site Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">4</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Rename SITEMNEMONIC as SITEID</p></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.INVID"></a>INVID</td><td>Investigator Identifier</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">7</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database by merging on StudyID and SiteID</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.INVNAM"></a>INVNAM</td><td>Investigator Name</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">37</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database by merging on StudyID and SiteID</p></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.BRTHDTC"></a>BRTHDTC</td><td>Date/Time of Birth</td><td class="datatype">datetime</td><td class="role">Perm</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=25">25</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.AGE"></a>AGE</td><td>Age</td><td class="datatype">integer</td><td class="role">Exp</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">If AGEU=YEARS then AGE=int((Informed Consent date - birthdate)/365.25)</div></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.AGEU"></a>AGEU</td><td>Age Units</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">5</td><td><span class="linebreakcell"><a href="#CL.CL.AGEU">AGEU</a></span><ul class="codelist"><li class="codelist-item">• "YEARS" = "YEARS"</li></ul></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Rename AGEU_001 as AGEU</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.SEX"></a>SEX</td><td>Sex</td><td class="datatype">text</td><td class="role">Req</td><td class="number">1</td><td><span class="linebreakcell"><a href="#CL.CL.SEX">SEX</a></span><ul class="codelist"><li class="codelist-item">• "F" = "F"</li><li class="codelist-item">• "M" = "M"</li></ul></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=25">25</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.RACE"></a>RACE</td><td>Race</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">41</td><td><a href="#CL.CL.RACE">RACE</a><p class="linebreakcell">
+                  [7 Terms]
+                </p></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=25">25</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.ETHNIC"></a>ETHNIC</td><td>Ethnicity</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">22</td><td><span class="linebreakcell"><a href="#CL.CL.ETHNIC">ETHNIC</a></span><ul class="codelist"><li class="codelist-item">• "HISPANIC OR LATINO" = "HISPANIC OR LATINO"</li><li class="codelist-item">• "NOT HISPANIC OR LATINO" = "NOT HISPANIC OR LATINO"</li><li class="codelist-item">• "NOT REPORTED" = "NOT REPORTED"</li></ul></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=25">25</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.ARMCD"></a>ARMCD</td><td>Planned Arm Code</td><td class="datatype">text</td><td class="role">Req</td><td class="number">9</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from Trial Arms based on Randomization file.</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.ARM"></a>ARM</td><td>Description of Planned Arm</td><td class="datatype">text</td><td class="role">Req</td><td class="number">27</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from Trial Arms based on Randomization file.</p></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.ACTARMCD"></a>ACTARMCD</td><td>Actual Arm Code</td><td class="datatype">text</td><td class="role">Req</td><td class="number">1</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">To be derived for submission from ADSL.</p></td></tr><tr class="tablerowodd"><td><a id="IG.DM.IT.DM.ACTARM"></a>ACTARM</td><td>Description of Actual Arm</td><td class="datatype">text</td><td class="role">Req</td><td class="number">1</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">To be derived for submission from ADSL.</p></td></tr><tr class="tableroweven"><td><a id="IG.DM.IT.DM.COUNTRY"></a>COUNTRY</td><td>Country</td><td class="datatype">text</td><td class="role">Req</td><td class="number">3</td><td><a href="#CL.CL.ISO3166">ISO3166(CL.ISO3166)</a><p class="linebreakcell">ISO3166 </p></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database by merging on StudyID and SiteID</p></td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="IG.IG.EX"></a><div class="containerbox"><h1 class="invisible">Exposure (EX) </h1><table summary="ItemGroup IG.IG.EX"><caption><span>EX (Exposure) - INTERVENTIONS <span class="dataset">Location: <a class="external" href="ex.xpt">ex.xpt</a><span class="external-link-gif"></span> </span></span></caption><tr class="header"><th scope="col">Variable</th><th scope="col">Label / Description</th><th scope="col">Type</th><th scope="col">Role</th><th scope="col" class="length">Length or Display Format</th><th scope="col" abbr="Format">Controlled Terms or ISO Format</th><th scope="col">Origin / Source / Method / Comment</th></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.STUDYID"></a>STUDYID</td><td>Study Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">Protocol</div></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.DOMAIN"></a>DOMAIN</td><td>Domain Abbreviation</td><td class="datatype">text</td><td class="role">Req</td><td class="number">2</td><td><span class="linebreakcell"><a href="#CL.CL.DOMAIN">DOMAIN</a></span><ul class="codelist"><li class="codelist-item">• "DM" = "Demographics"</li><li class="codelist-item">• "EX" = "Exposure"</li><li class="codelist-item">• "XB" = "Microbiology Specimen"</li></ul></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">"EX"</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.USUBJID"></a>USUBJID</td><td>Unique Subject Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">22</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">DM.USUBJID</div></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXSEQ"></a>EXSEQ</td><td>Sequence Number</td><td class="datatype">integer</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Sequential number identifying records within each USUBJID in the domain.</div></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXLNKID"></a>EXLNKID</td><td>Link ID</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">34</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Concatenate Link Group ID, Location and  Laterality  when Link Group ID is present</div></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXLNKGRP"></a>EXLNKGRP</td><td>Link Group ID</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">13</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Related vaccination number to assist with Reactogenicity assessment</div></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXTRT"></a>EXTRT</td><td>Name of Treatment</td><td class="datatype">text</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXCAT"></a>EXCAT</td><td>Category of Treatment</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">23</td><td><span class="linebreakcell"><a href="#CL.CL.EXCAT">Category of Treatment</a></span><ul class="codelist"><li class="codelist-item">• "INVESTIGATIONAL PRODUCT" = "INVESTIGATIONAL PRODUCT"</li></ul></td><td><div class="linebreakcell">Assigned</div></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXSCAT"></a>EXSCAT</td><td>Subcategory of Treatment</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">11</td><td><span class="linebreakcell"><a href="#CL.CL.EXSCAT">Subcategory of Treatment</a></span><ul class="codelist"><li class="codelist-item">• "VACCINATION" = "VACCINATION"</li></ul></td><td><div class="linebreakcell">Assigned</div></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXDOSE"></a>EXDOSE</td><td>Dose</td><td class="datatype">integer</td><td class="role">Exp</td><td class="number">8</td><td></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXDOSU"></a>EXDOSU</td><td>Dose Units</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">7</td><td><span class="linebreakcell"><a href="#CL.CL.EXDOSU">EXDOSU</a></span><ul class="codelist"><li class="codelist-item">• "mcg" = "Microgram"</li><li class="codelist-item">• "SYRINGE" = "SYRINGE"</li><li class="codelist-item">• "mL" = "Milliliter"</li><li class="codelist-item">• "ug" = "Microgram"</li></ul></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXDOSFRM"></a>EXDOSFRM</td><td>Dose Form</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">9</td><td><span class="linebreakcell"><a href="#CL.CL.FRM">FRM</a></span><ul class="codelist"><li class="codelist-item">• "INJECTION" = "INJECTION"</li></ul></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXROUTE"></a>EXROUTE</td><td>Route of Administration</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">13</td><td><a href="#CL.CL.ROUTE">ROUTE</a><p class="linebreakcell">
+                  [14 Terms]
+                </p></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXLOC"></a>EXLOC</td><td>Location of Dose Administration</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">14</td><td><a href="#CL.CL.LOC">LOC</a><p class="linebreakcell">
+                  [12 Terms]
+                </p></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXLAT"></a>EXLAT</td><td>Laterality</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">5</td><td><span class="linebreakcell"><a href="#CL.CL.LAT">Laterality</a></span><ul class="codelist"><li class="codelist-item">• "LEFT" = "LEFT"</li><li class="codelist-item">• "RIGHT" = "RIGHT"</li></ul></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXADJ"></a>EXADJ</td><td>Reason for Dose Adjustment</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">40</td><td><a href="#CL.CL.EXADJ">EXADJ</a><p class="linebreakcell">
+                  [7 Terms]
+                </p></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.VISITNUM"></a>VISITNUM</td><td>Visit Number</td><td class="datatype">integer</td><td class="role">Perm</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database. Note:If Unplanned visits exist, VISIT is set to Null and VISITNUM is re-sequenced as nearest previous scheduled visit incremented by 0.001 for each unplanned visit between two scheduled visits.</p></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.VISIT"></a>VISIT</td><td>Visit Name</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">21</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database. Note:If Unplanned visits exist, VISIT is set to Null and VISITNUM is re-sequenced as nearest previous scheduled visit incremented by 0.001 for each unplanned visit between two scheduled visits.</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EPOCH"></a>EPOCH</td><td>Epoch</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">11</td><td><a href="#CL.CL.EPOCH">EPOCH</a><p class="linebreakcell">
+                  [6 Terms]
+                </p></td><td><div class="linebreakcell">Derived</div><div class="method-code">--DTC element will be used to determine EPOCH value. If --DTC element is partial and Null then EPOCH will be NULL.</div></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXSTDTC"></a>EXSTDTC</td><td>Start Date/Time of Treatment</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXENDTC"></a>EXENDTC</td><td>End Date/Time of Treatment</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=106">106</a><span class="external-link-gif"></span>    <a class="external" href="acrf.pdf#page=108">108</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXSTDY"></a>EXSTDY</td><td>Study Day of Start of Treatment</td><td class="datatype">integer</td><td class="role">Perm</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Sequential number identifying records within each USUBJID in the domain.</div></td></tr><tr class="tablerowodd"><td><a id="IG.EX.IT.EX.EXENDY"></a>EXENDY</td><td>Study Day of End of Treatment</td><td class="datatype">integer</td><td class="role">Perm</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Study day of end of event relative to the sponsor-defined RFSTDTC. --ENDY= (date portion of --ENDTC) - (date portion of DM.RFSTDTC) + 1 where --ENDTC is on or after DM.RFSTDTC; Else --ENDY = (date portion of --ENDTC) - (date portion of DM.RFSTDTC)</div></td></tr><tr class="tableroweven"><td><a id="IG.EX.IT.EX.EXTPTREF"></a>EXTPTREF</td><td>Time Point Reference</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">13</td><td><span class="linebreakcell"><a href="#CL.CL.TPTREF">TPTREF</a></span><ul class="codelist"><li class="codelist-item">• "VACCINATION 1" = "VACCINATION 1"</li><li class="codelist-item">• "VACCINATION 2" = "VACCINATION 2"</li><li class="codelist-item">• "VACCINATION 3" = "VACCINATION 3"</li><li class="codelist-item">• "VACCINATION 4" = "VACCINATION 4"</li><li class="codelist-item">• "UNPLANNED VACCINATION" = "UNPLANNED VACCINATION"</li></ul></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Related vaccination number to assist with Reactogenicity assessment</p></td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="IG.IG.XB"></a><div class="containerbox"><h1 class="invisible">Sequencing Data (XB) </h1><table summary="ItemGroup IG.IG.XB"><caption><span>XB (Sequencing Data) - FINDINGS <span class="dataset">Location: <a class="external" href="xb.xpt">xb.xpt</a><span class="external-link-gif"></span> </span></span></caption><tr class="header"><th scope="col">Variable</th><th scope="col">Label / Description</th><th scope="col">Type</th><th scope="col">Role</th><th scope="col" class="length">Length or Display Format</th><th scope="col" abbr="Format">Controlled Terms or ISO Format</th><th scope="col">Origin / Source / Method / Comment</th></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.STUDYID"></a>STUDYID</td><td>Study Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">Protocol</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.DOMAIN"></a>DOMAIN</td><td>Domain Abbreviation</td><td class="datatype">text</td><td class="role">Req</td><td class="number">2</td><td><span class="linebreakcell"><a href="#CL.CL.DOMAIN">DOMAIN</a></span><ul class="codelist"><li class="codelist-item">• "DM" = "Demographics"</li><li class="codelist-item">• "EX" = "Exposure"</li><li class="codelist-item">• "XB" = "Microbiology Specimen"</li></ul></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">"XB"</p></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.USUBJID"></a>USUBJID</td><td>Unique Subject Identifier</td><td class="datatype">text</td><td class="role">Req</td><td class="number">22</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Unique subject identifier derived
+usingCOMP.USUBJID</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.SPDEVID"></a>SPDEVID</td><td>Sponsor Device Identifier</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">45</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Set to missing</p></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBSEQ"></a>XBSEQ</td><td>Sequence Number</td><td class="datatype">integer</td><td class="role">Req</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">Sequence Number
+derived using COMP.SEQ</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBGRPID"></a>XBGRPID</td><td>Group ID</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">1</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Set to missing</p></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBREFID"></a>XBREFID</td><td>Reference ID</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">10</td><td></td><td><div class="linebreakcell">eDT</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBTESTCD"></a>XBTESTCD</td><td>Microbiology Test or Finding Short Name</td><td class="datatype">text</td><td class="role">Req</td><td class="number">8</td><td><span class="linebreakcell"><a href="#CL.CL.XBTESTCD">Microbiology Specimen Test Code</a></span><ul class="codelist"><li class="codelist-item">• "WGSCLINE" = "SARS CoV2 lineage phylogenetic analysis"</li></ul></td><td><div class="linebreakcell">Assigned</div></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBTEST"></a>XBTEST</td><td>Microbiology Test or Finding Name</td><td class="datatype">text</td><td class="role">Req</td><td class="number">40</td><td><span class="linebreakcell"><a href="#CL.CL.XBTEST">Microbiology Specimen Test Name</a></span><ul class="codelist"><li class="codelist-item">• "SARS CoV2 lineage phylogenetic analysis"</li></ul></td><td><div class="linebreakcell">Assigned</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBCAT"></a>XBCAT</td><td>Category for Microbiology Finding</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">25</td><td><span class="linebreakcell"><a href="#CL.CL.XBCAT">Category for Microbiology Finding</a></span><ul class="codelist"><li class="codelist-item">• "VIROLOGY"</li></ul></td><td><div class="linebreakcell">Assigned</div></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBORRES"></a>XBORRES</td><td>Result or Finding in Original Units</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">9</td><td></td><td><div class="linebreakcell">eDT</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBSTRESC"></a>XBSTRESC</td><td>Character Result/Finding in Std Format</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">13</td><td></td><td><div class="linebreakcell">Assigned</div><div class="method-code">IF XBORRES is IND then Assign INDETERMINATE, else set to value to XBORRES</div></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBRESCAT"></a>XBRESCAT</td><td>Result Category</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">1</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Set to missing</p></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBSTAT"></a>XBSTAT</td><td>Completion Status</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">8</td><td><span class="linebreakcell"><a href="#CL.CL.ND">ND</a></span><ul class="codelist"><li class="codelist-item">• "NOT DONE" = "NOT DONE"</li></ul></td><td><div class="linebreakcell">Assigned</div><div class="method-code">Assign NOT DONE for records with missing XBORRES</div></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBSPEC"></a>XBSPEC</td><td>Specimen Type</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">22</td><td><span class="linebreakcell"><a href="#CL.CL.XBSPEC">Specimen Type in Microbiology Specimen</a></span><ul class="codelist"><li class="codelist-item">• "NASAL_SWAB"</li><li class="codelist-item">• "NASAL_SWAB_SELF"</li></ul></td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=87">87</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBLOC"></a>XBLOC</td><td>Specimen Collection Location</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">1</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Set to missing</p></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBMETHOD"></a>XBMETHOD</td><td>Method of Test or Examination</td><td class="datatype">text</td><td class="role">Exp</td><td class="number">24</td><td><span class="linebreakcell"><a href="#CL.CL.XBMETHOD">Method of Test or Examination in Microbiology Specimen</a></span><ul class="codelist"><li class="codelist-item">• "Next generation sequence"</li></ul></td><td><div class="linebreakcell">Assigned</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBBLFL"></a>XBBLFL</td><td>Baseline Flag</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">1</td><td><span class="linebreakcell"><a href="#CL.CL.NY1">NY1</a></span><ul class="codelist"><li class="codelist-item">• "Y" = "Y"</li></ul></td><td><div class="linebreakcell">Derived</div><div class="method-code">Last non-missing value on or before DM.RFSTDTC is
+flagged as Y COMM.BLFL</div></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.VISITNUM"></a>VISITNUM</td><td>Visit Number</td><td class="datatype">integer</td><td class="role">Exp</td><td class="number">8</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database. Note:If Unplanned visits exist, VISIT is set to Null and VISITNUM is re-sequenced as nearest previous scheduled visit incremented by 0.01 for each unplanned visit between two scheduled visits</p></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.VISIT"></a>VISIT</td><td>Visit Name</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">21</td><td></td><td><div class="linebreakcell">Assigned</div><p class="linebreakcell">Assigned from source database. Note:If Unplanned visits exist, VISIT is set to Null and VISITNUM is re-sequenced as nearest previous scheduled visit incremented by 0.01 for each unplanned visit between two scheduled visits</p></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.EPOCH"></a>EPOCH</td><td>Epoch</td><td class="datatype">text</td><td class="role">Perm</td><td class="number">11</td><td><a href="#CL.CL.EPOCH">EPOCH</a><p class="linebreakcell">
+                  [6 Terms]
+                </p></td><td><div class="linebreakcell">Derived</div><div class="method-code">Epoch derivation using COMP.EPOCH</div></td></tr><tr class="tableroweven"><td><a id="IG.XB.IT.XB.XBDTC"></a>XBDTC</td><td>Date/Time of Specimen Collection</td><td class="datatype">datetime</td><td class="role">Exp</td><td class="number"></td><td>ISO 8601</td><td><div class="linebreakcell">CRF</div><p class="linebreakcell">Annotated CRF [<a class="external" href="acrf.pdf#page=87">87</a><span class="external-link-gif"></span> ]</p></td></tr><tr class="tablerowodd"><td><a id="IG.XB.IT.XB.XBDY"></a>XBDY</td><td>Study Day of MB Specimen Collection</td><td class="datatype">integer</td><td class="role">Perm</td><td class="number">8</td><td></td><td><div class="linebreakcell">Derived</div><div class="method-code">DY derivation using  COMP.DY</div></td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="decodelist"></a><div class="containerbox"><h1 class="header">CodeLists</h1><div class="codelist" id="CL.CL.AGEU"><div class="codelist-caption">AGEU [<span class="nci">C66781</span>]</div><table summary="Controlled Term - AGEU"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>YEARS [<span class="nci">C29848</span>]</td><td class="codelist-item-decode">YEARS</td></tr></table></div><div class="codelist" id="CL.CL.DOMAIN"><div class="codelist-caption">DOMAIN [<span class="nci">C66734</span>]</div><table summary="Controlled Term - DOMAIN"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>DM [<span class="nci">C49572</span>]</td><td class="codelist-item-decode">Demographics</td></tr><tr class="tableroweven"><td>EX [<span class="nci">C49587</span>]</td><td class="codelist-item-decode">Exposure</td></tr><tr class="tablerowodd"><td>XB [<span class="extended">*</span>]</td><td class="codelist-item-decode">Microbiology Specimen</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.EPOCH"><div class="codelist-caption">EPOCH [<span class="nci">C99079</span>]</div><table summary="Controlled Term - EPOCH"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>FOLLOW-UP [<span class="nci">C99158</span>]</td><td class="codelist-item-decode">FOLLOW-UP</td></tr><tr class="tableroweven"><td>SCREENING [<span class="nci">C48262</span>]</td><td class="codelist-item-decode">SCREENING</td></tr><tr class="tablerowodd"><td>VACCINATION [<span class="extended">*</span>]</td><td class="codelist-item-decode">VACCINATION</td></tr><tr class="tableroweven"><td>REPEAT SCREENING 1 [<span class="extended">*</span>]</td><td class="codelist-item-decode">REPEAT SCREENING 1</td></tr><tr class="tablerowodd"><td>OPEN LABEL FOLLOW-UP [<span class="extended">*</span>]</td><td class="codelist-item-decode">OPEN LABEL FOLLOW-UP</td></tr><tr class="tableroweven"><td>OPEN LABEL TREATMENT [<span class="nci">C102256</span>]</td><td class="codelist-item-decode">OPEN LABEL TREATMENT</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.ETHNIC"><div class="codelist-caption">ETHNIC [<span class="nci">C66790</span>]</div><table summary="Controlled Term - ETHNIC"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>HISPANIC OR LATINO [<span class="nci">C17459</span>]</td><td class="codelist-item-decode">HISPANIC OR LATINO</td></tr><tr class="tableroweven"><td>NOT HISPANIC OR LATINO [<span class="nci">C41222</span>]</td><td class="codelist-item-decode">NOT HISPANIC OR LATINO</td></tr><tr class="tablerowodd"><td>NOT REPORTED [<span class="nci">C43234</span>]</td><td class="codelist-item-decode">NOT REPORTED</td></tr></table></div><div class="codelist" id="CL.CL.EXADJ"><div class="codelist-caption">EXADJ</div><table summary="Controlled Term - EXADJ"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>ADVERSE EVENT(S)</td><td class="codelist-item-decode">ADVERSE EVENT(S)</td></tr><tr class="tableroweven"><td>ANTICIPATED NON-STUDY VACCINATION</td><td class="codelist-item-decode">ANTICIPATED NON-STUDY VACCINATION</td></tr><tr class="tablerowodd"><td>FEVER OR ACUTE ILLNESS</td><td class="codelist-item-decode">FEVER OR ACUTE ILLNESS</td></tr><tr class="tableroweven"><td>MULTIPLE</td><td class="codelist-item-decode">MULTIPLE</td></tr><tr class="tablerowodd"><td>OTHER SPECIFY</td><td class="codelist-item-decode">OTHER SPECIFY</td></tr><tr class="tableroweven"><td>RECENT NON-STUDY VACCINATION</td><td class="codelist-item-decode">RECENT NON-STUDY VACCINATION</td></tr><tr class="tablerowodd"><td>RECENT SYSTEMIC CORTICOSTEROID TREATMENT</td><td class="codelist-item-decode">RECENT SYSTEMIC CORTICOSTEROID TREATMENT</td></tr></table></div><div class="codelist" id="CL.CL.EXCAT"><div class="codelist-caption">Category of Treatment</div><table summary="Controlled Term - Category of Treatment"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>INVESTIGATIONAL PRODUCT</td><td class="codelist-item-decode">INVESTIGATIONAL PRODUCT</td></tr></table></div><div class="codelist" id="CL.CL.EXDOSU"><div class="codelist-caption">EXDOSU [<span class="nci">C71620</span>]</div><table summary="Controlled Term - EXDOSU"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>mcg [<span class="extended">*</span>]</td><td class="codelist-item-decode">Microgram</td></tr><tr class="tableroweven"><td>SYRINGE [<span class="nci">C48540</span>]</td><td class="codelist-item-decode">SYRINGE</td></tr><tr class="tablerowodd"><td>mL [<span class="nci">C28254</span>]</td><td class="codelist-item-decode">Milliliter</td></tr><tr class="tableroweven"><td>ug [<span class="nci">C48152</span>]</td><td class="codelist-item-decode">Microgram</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.EXSCAT"><div class="codelist-caption">Subcategory of Treatment</div><table summary="Controlled Term - Subcategory of Treatment"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>VACCINATION</td><td class="codelist-item-decode">VACCINATION</td></tr></table></div><div class="codelist" id="CL.CL.FRM"><div class="codelist-caption">FRM [<span class="nci">C66726</span>]</div><table summary="Controlled Term - FRM"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>INJECTION [<span class="nci">C42946</span>]</td><td class="codelist-item-decode">INJECTION</td></tr></table></div><div class="codelist" id="CL.CL.LAT"><div class="codelist-caption">Laterality [<span class="nci">C99073</span>]</div><table summary="Controlled Term - Laterality"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>LEFT [<span class="nci">C25229</span>]</td><td class="codelist-item-decode">LEFT</td></tr><tr class="tableroweven"><td>RIGHT [<span class="nci">C25228</span>]</td><td class="codelist-item-decode">RIGHT</td></tr></table></div><div class="codelist" id="CL.CL.LOC"><div class="codelist-caption">LOC [<span class="nci">C74456</span>]</div><table summary="Controlled Term - LOC"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>AXILLA [<span class="nci">C12674</span>]</td><td class="codelist-item-decode">AXILLA</td></tr><tr class="tableroweven"><td>CHEST [<span class="nci">C25389</span>]</td><td class="codelist-item-decode">CHEST</td></tr><tr class="tablerowodd"><td>DELTOID MUSCLE [<span class="nci">C32446</span>]</td><td class="codelist-item-decode">DELTOID MUSCLE</td></tr><tr class="tableroweven"><td>EAR [<span class="nci">C12394</span>]</td><td class="codelist-item-decode">EAR</td></tr><tr class="tablerowodd"><td>FOREHEAD [<span class="nci">C89803</span>]</td><td class="codelist-item-decode">FOREHEAD</td></tr><tr class="tableroweven"><td>HEAD [<span class="nci">C12419</span>]</td><td class="codelist-item-decode">HEAD</td></tr><tr class="tablerowodd"><td>LOWER RESPIRATORY SYSTEM [<span class="nci">C33012</span>]</td><td class="codelist-item-decode">LOWER RESPIRATORY SYSTEM</td></tr><tr class="tableroweven"><td>NASAL CAVITY [<span class="nci">C12424</span>]</td><td class="codelist-item-decode">NASAL CAVITY</td></tr><tr class="tablerowodd"><td>NASOPHARYNX [<span class="nci">C12423</span>]</td><td class="codelist-item-decode">NASOPHARYNX</td></tr><tr class="tableroweven"><td>ORAL CAVITY [<span class="nci">C12421</span>]</td><td class="codelist-item-decode">ORAL CAVITY</td></tr><tr class="tablerowodd"><td>OTHER [<span class="extended">*</span>]</td><td class="codelist-item-decode">OTHER</td></tr><tr class="tableroweven"><td>THROAT [<span class="nci">C54272</span>]</td><td class="codelist-item-decode">THROAT</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.ND"><div class="codelist-caption">ND [<span class="nci">C66789</span>]</div><table summary="Controlled Term - ND"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>NOT DONE [<span class="nci">C49484</span>]</td><td class="codelist-item-decode">NOT DONE</td></tr></table></div><div class="codelist" id="CL.CL.NY1"><div class="codelist-caption">NY1 [<span class="nci">C66742</span>]</div><table summary="Controlled Term - NY1"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>Y [<span class="nci">C49488</span>]</td><td class="codelist-item-decode">Y</td></tr></table></div><div class="codelist" id="CL.CL.RACE"><div class="codelist-caption">RACE [<span class="nci">C74457</span>]</div><table summary="Controlled Term - RACE"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>AMERICAN INDIAN OR ALASKA NATIVE [<span class="nci">C41259</span>]</td><td class="codelist-item-decode">AMERICAN INDIAN OR ALASKA NATIVE</td></tr><tr class="tableroweven"><td>ASIAN [<span class="nci">C41260</span>]</td><td class="codelist-item-decode">ASIAN</td></tr><tr class="tablerowodd"><td>BLACK OR AFRICAN AMERICAN [<span class="nci">C16352</span>]</td><td class="codelist-item-decode">BLACK OR AFRICAN AMERICAN</td></tr><tr class="tableroweven"><td>MULTIPLE [<span class="extended">*</span>]</td><td class="codelist-item-decode">MULTIPLE</td></tr><tr class="tablerowodd"><td>NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER [<span class="nci">C41219</span>]</td><td class="codelist-item-decode">NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER</td></tr><tr class="tableroweven"><td>NOT REPORTED [<span class="nci">C43234</span>]</td><td class="codelist-item-decode">NOT REPORTED</td></tr><tr class="tablerowodd"><td>WHITE [<span class="nci">C41261</span>]</td><td class="codelist-item-decode">WHITE</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.ROUTE"><div class="codelist-caption">ROUTE [<span class="nci">C66729</span>]</div><table summary="Controlled Term - ROUTE"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>AURICULAR (OTIC) [<span class="nci">C38192</span>]</td><td class="codelist-item-decode">AURICULAR (OTIC)</td></tr><tr class="tableroweven"><td>CUTANEOUS [<span class="nci">C38675</span>]</td><td class="codelist-item-decode">CUTANEOUS</td></tr><tr class="tablerowodd"><td>INTRA-ARTICULAR [<span class="nci">C38223</span>]</td><td class="codelist-item-decode">INTRA-ARTICULAR</td></tr><tr class="tableroweven"><td>INTRADERMAL [<span class="nci">C38238</span>]</td><td class="codelist-item-decode">INTRADERMAL</td></tr><tr class="tablerowodd"><td>INTRAMUSCULAR [<span class="nci">C28161</span>]</td><td class="codelist-item-decode">INTRAMUSCULAR</td></tr><tr class="tableroweven"><td>INTRAUTERINE [<span class="nci">C38272</span>]</td><td class="codelist-item-decode">INTRAUTERINE</td></tr><tr class="tablerowodd"><td>INTRAVENOUS [<span class="nci">C38276</span>]</td><td class="codelist-item-decode">INTRAVENOUS</td></tr><tr class="tableroweven"><td>NASAL [<span class="nci">C38284</span>]</td><td class="codelist-item-decode">NASAL</td></tr><tr class="tablerowodd"><td>OPHTHALMIC [<span class="nci">C38287</span>]</td><td class="codelist-item-decode">OPHTHALMIC</td></tr><tr class="tableroweven"><td>ORAL [<span class="nci">C38288</span>]</td><td class="codelist-item-decode">ORAL</td></tr><tr class="tablerowodd"><td>RESPIRATORY (INHALATION) [<span class="nci">C38216</span>]</td><td class="codelist-item-decode">RESPIRATORY (INHALATION)</td></tr><tr class="tableroweven"><td>SUBCUTANEOUS [<span class="nci">C38299</span>]</td><td class="codelist-item-decode">SUBCUTANEOUS</td></tr><tr class="tablerowodd"><td>TOPICAL [<span class="nci">C38304</span>]</td><td class="codelist-item-decode">TOPICAL</td></tr><tr class="tableroweven"><td>VAGINAL [<span class="nci">C38313</span>]</td><td class="codelist-item-decode">VAGINAL</td></tr></table></div><div class="codelist" id="CL.CL.SEX"><div class="codelist-caption">SEX [<span class="nci">C66731</span>]</div><table summary="Controlled Term - SEX"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>F [<span class="nci">C16576</span>]</td><td class="codelist-item-decode">F</td></tr><tr class="tableroweven"><td>M [<span class="nci">C20197</span>]</td><td class="codelist-item-decode">M</td></tr></table></div><div class="codelist" id="CL.CL.TPTREF"><div class="codelist-caption">TPTREF</div><table summary="Controlled Term - TPTREF"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>VACCINATION 1</td><td class="codelist-item-decode">VACCINATION 1</td></tr><tr class="tableroweven"><td>VACCINATION 2</td><td class="codelist-item-decode">VACCINATION 2</td></tr><tr class="tablerowodd"><td>VACCINATION 3</td><td class="codelist-item-decode">VACCINATION 3</td></tr><tr class="tableroweven"><td>VACCINATION 4</td><td class="codelist-item-decode">VACCINATION 4</td></tr><tr class="tablerowodd"><td>UNPLANNED VACCINATION</td><td class="codelist-item-decode">UNPLANNED VACCINATION</td></tr></table></div><div class="codelist" id="CL.CL.XBCAT"><div class="codelist-caption">Category for Microbiology Finding</div><table summary="Code List - Category for Microbiology Finding"><tr class="header"><th scope="col">Permitted Value (Code)</th></tr><tr class="tablerowodd"><td>VIROLOGY</td></tr></table></div><div class="codelist" id="CL.CL.XBMETHOD"><div class="codelist-caption">Method of Test or Examination in Microbiology Specimen [<span class="nci">C85492</span>]</div><table summary="Code List - Method of Test or Examination in Microbiology Specimen"><tr class="header"><th scope="col">Permitted Value (Code)</th></tr><tr class="tablerowodd"><td>Next generation sequence [<span class="extended">*</span>]</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.XBSPEC"><div class="codelist-caption">Specimen Type in Microbiology Specimen [<span class="nci">C78734</span>]</div><table summary="Code List - Specimen Type in Microbiology Specimen"><tr class="header"><th scope="col">Permitted Value (Code)</th></tr><tr class="tablerowodd"><td>NASAL_SWAB [<span class="extended">*</span>]</td></tr><tr class="tableroweven"><td>NASAL_SWAB_SELF [<span class="extended">*</span>]</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.XBTEST"><div class="codelist-caption">Microbiology Specimen Test Name [<span class="nci">C120528</span>]</div><table summary="Code List - Microbiology Specimen Test Name"><tr class="header"><th scope="col">Permitted Value (Code)</th></tr><tr class="tablerowodd"><td>SARS CoV2 lineage phylogenetic analysis [<span class="extended">*</span>]</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><div class="codelist" id="CL.CL.XBTESTCD"><div class="codelist-caption">Microbiology Specimen Test Code [<span class="nci">C120527</span>]</div><table summary="Controlled Term - Microbiology Specimen Test Code"><tr class="header"><th scope="col" class="codedvalue">Permitted Value (Code)</th><th scope="col">Display Value (Decode)</th></tr><tr class="tablerowodd"><td>WGSCLINE [<span class="extended">*</span>]</td><td class="codelist-item-decode">SARS CoV2 lineage phylogenetic analysis</td></tr></table><p class="footnote"><span class="super">*</span> Extended Value</p></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br></div><a id="externaldictionary"></a><h1 class="invisible">External Dictionaries</h1><div class="containerbox"><table summary="External Dictionaries (MedDra, WHODRUG, ...)"><caption class="header">External Dictionaries</caption><tr class="header"><th scope="col">Reference Name</th><th scope="col">External Dictionary</th><th scope="col">Dictionary Version</th></tr><tr id="CL.CL.ISO3166" class="tablerowodd"><td>ISO3166(CL.ISO3166)</td><td>ISO3166</td><td></td></tr><tr id="CL.CL.MedDRA" class="tableroweven"><td>MedDRA</td><td>MedDRA</td><td>23.1</td></tr><tr id="CL.CL.NDF-RT" class="tablerowodd"><td>National Drug File - Reference Terminology</td><td>NDF-RT</td><td>2020-03-02</td></tr><tr id="CL.CL.SNOMED" class="tableroweven"><td>Systematized Nomenclature of Medicine</td><td>SNOMED</td><td>2020-03-01</td></tr><tr id="CL.CL.UNII" class="tablerowodd"><td>Unique Ingredient Identifier</td><td>UNII</td><td>2020-01-12</td></tr><tr id="CL.CL.WHO DDE" class="tableroweven"><td>WHO DD</td><td>WHO DD</td><td>202003</td></tr><tr id="CL.CL.WHODD" class="tablerowodd"><td>Medications Dictionary</td><td>WHODD</td><td>GLOBALB3Mar20</td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br><a id="compmethod"></a><div class="containerbox"><h1 class="invisible">Methods</h1><table summary="Methods"><caption class="header">Methods</caption><tr class="header"><th scope="col">Method</th><th scope="col">Type</th><th scope="col">Description</th></tr><tr id="MT.MT.DM.DM.AGE" class="tablerowodd"><td>DM.DM.AGE</td><td>Computation</td><td><div class="method-code">If AGEU=YEARS then AGE=int((Informed Consent date - birthdate)/365.25)</div></td></tr><tr id="MT.MT.DM.DM.DTHDTC" class="tableroweven"><td>DM.DM.DTHDTC</td><td>Computation</td><td><div class="method-code">Date/time of death when Disposition mentioned as
+'DEATH'.</div></td></tr><tr id="MT.MT.DM.DM.DTHFL" class="tablerowodd"><td>DM.DM.DTHFL</td><td>Computation</td><td><div class="method-code">Populate Death flag is 'Y' when Standardized
+Disposition Term is 'DEATH'</div></td></tr><tr id="MT.MT.DM.DM.RFENDTC" class="tableroweven"><td>DM.DM.RFENDTC</td><td>Computation</td><td><div class="method-code">Maximum of Visit date/Maximum of disposition date,
+whichever is greater.Null for Screen Failures.</div></td></tr><tr id="MT.MT.DM.DM.RFICDTC" class="tablerowodd"><td>DM.DM.RFICDTC</td><td>Computation</td><td><div class="method-code">Date/time of informed consent obtained</div></td></tr><tr id="MT.MT.DM.DM.RFPENDTC" class="tableroweven"><td>DM.DM.RFPENDTC</td><td>Computation</td><td><div class="method-code">Set to Date/time when subject ended participation in a
+trial.</div></td></tr><tr id="MT.MT.DM.DM.RFSTDTC" class="tablerowodd"><td>DM.DM.RFSTDTC</td><td>Computation</td><td><div class="method-code">First date/time of study drug else Randomization
+date/time OR Enrollment date/time for subject.Null for
+screen failures.</div></td></tr><tr id="MT.MT.DM.DM.RFXENDTC" class="tableroweven"><td>DM.DM.RFXENDTC</td><td>Computation</td><td><div class="method-code">Latest date/time of study drug exposure</div></td></tr><tr id="MT.MT.DM.DM.RFXSTDTC" class="tablerowodd"><td>DM.DM.RFXSTDTC</td><td>Computation</td><td><div class="method-code">First date/time of study drug exposure date</div></td></tr><tr id="MT.MT.DM.DM.USUBJID" class="tableroweven"><td>DM.DM.USUBJID</td><td>Computation</td><td><div class="method-code">Concatenation of STUDYID, SITEID and SUBJID</div></td></tr><tr id="MT.MT.EX.EC.EPOCH" class="tablerowodd"><td>EX.EC.EPOCH</td><td>Computation</td><td><div class="method-code">--DTC element will be used to determine EPOCH value. If --DTC element is partial and Null then EPOCH will be NULL.</div></td></tr><tr id="MT.MT.EX.EC.EXENDY" class="tableroweven"><td>EX.EC.EXENDY</td><td>Computation</td><td><div class="method-code">Study day of end of event relative to the sponsor-defined RFSTDTC. --ENDY= (date portion of --ENDTC) - (date portion of DM.RFSTDTC) + 1 where --ENDTC is on or after DM.RFSTDTC; Else --ENDY = (date portion of --ENDTC) - (date portion of DM.RFSTDTC)</div></td></tr><tr id="MT.MT.EX.EC.EXLNKGRP" class="tablerowodd"><td>EX.EC.EXLNKGRP</td><td>Computation</td><td><div class="method-code">Related vaccination number to assist with Reactogenicity assessment</div></td></tr><tr id="MT.MT.EX.EC.EXLNKID" class="tableroweven"><td>EX.EC.EXLNKID</td><td>Computation</td><td><div class="method-code">Concatenate Link Group ID, Location and  Laterality  when Link Group ID is present</div></td></tr><tr id="MT.MT.EX.EC.EXSEQ" class="tablerowodd"><td>EX.EC.EXSEQ</td><td>Computation</td><td><div class="method-code">Sequential number identifying records within each USUBJID in the domain.</div></td></tr><tr id="MT.MT.EX.EC.EXSTDY" class="tableroweven"><td>EX.EC.EXSTDY</td><td>Computation</td><td><div class="method-code">Sequential number identifying records within each USUBJID in the domain.</div></td></tr><tr id="MT.MT.EX.EC.USUBJID" class="tablerowodd"><td>EX.EC.USUBJID</td><td>Computation</td><td><div class="method-code">DM.USUBJID</div></td></tr><tr id="MT.MT.XB.EPOCH" class="tableroweven"><td>XB.EPOCH</td><td>Computation</td><td><div class="method-code">Epoch derivation using COMP.EPOCH</div></td></tr><tr id="MT.MT.XB.USUBJID" class="tablerowodd"><td>XB.USUBJID</td><td>Computation</td><td><div class="method-code">Unique subject identifier derived
+usingCOMP.USUBJID</div></td></tr><tr id="MT.MT.XB.XBBLFL" class="tableroweven"><td>XB.XBBLFL</td><td>Computation</td><td><div class="method-code">Last non-missing value on or before DM.RFSTDTC is
+flagged as Y COMM.BLFL</div></td></tr><tr id="MT.MT.XB.XBDY" class="tablerowodd"><td>XB.XBDY</td><td>Computation</td><td><div class="method-code">DY derivation using  COMP.DY</div></td></tr><tr id="MT.MT.XB.XBSEQ" class="tableroweven"><td>XB.XBSEQ</td><td>Computation</td><td><div class="method-code">Sequence Number
+derived using COMP.SEQ</div></td></tr><tr id="MT.MT.XB.XBSTAT" class="tablerowodd"><td>XB.XBSTAT</td><td>Computation</td><td><div class="method-code">Assign NOT DONE for records with missing XBORRES</div></td></tr><tr id="MT.MT.XB.XBSTRESC" class="tableroweven"><td>XB.XBSTRESC</td><td>Computation</td><td><div class="method-code">IF XBORRES is IND then Assign INDETERMINATE, else set to value to XBORRES</div></td></tr></table></div><p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br></div></body></html>

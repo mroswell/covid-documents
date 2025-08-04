@@ -5,7 +5,6 @@
      xsl:vendor = "libxslt"
      xsl:vendor-url = "http://xmlsoft.org/XSLT/"
    -->
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -37,11 +36,9 @@
         }
       }
     }
-
     var ITEM = '\u00A0';
     var CLOSE = '\u25BA';
     var OPEN = '\u25BC';
-
     function toggle_submenu(e) {
       "use strict";
       if (textContent(e) === OPEN) {
@@ -50,7 +47,6 @@
       else {
         textContent(e, OPEN);
       }
-
       var i;
       for (i = 0; i < e.parentNode.childNodes.length; i++) {
         var c;
@@ -58,7 +54,6 @@
         if (c.tagName === 'UL') { c.style.display = (c.style.display === 'none') ? 'block' : 'none'; }
       }
     }
-
     function reset_menus() {
       "use strict";
       var li;
@@ -83,7 +78,6 @@
         }
       }
     }
-
     function toggle_vlm(element) {
       var child_id = element.childNodes[0].getAttribute("id");
       var vlm_rows = document.getElementsByClassName(child_id);
@@ -96,21 +90,18 @@
         }
       }
     }
-
     function expand_all_vlm() {
       var vlm_rows = document.getElementsByClassName("vlm");
       for (j = 0; j < vlm_rows.length; j++) {
         vlm_rows[j].style.display = '';
       }
     }
-
     function collapse_all_vlm() {
       var vlm_rows = document.getElementsByClassName("vlm");
       for (j = 0; j < vlm_rows.length; j++) {
         vlm_rows[j].style.display = 'none';
       }
     }
-
     /**
      * Open external documents (PDFs, ...) in a new window.
      */
@@ -119,7 +110,6 @@
       while (target && !/^(a|body)$/i.test(target.nodeName)) {
         target = target.parentNode;
       }
-
       if (target && target.className.match('external')) {
         var external = window.open(target.href);
         return external.closed;
@@ -133,7 +123,6 @@
         url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gCGhErDWL4mOoAAAB6SURBVBjTbVCxDcAgDHNRP2KDY9gYO5YbWNno1mPY6E3pAJEIYCmCOCQOPogII6wNkug4d49KiXMz1EiUEg8uLBN3Ui7FVduYmxjG3JRru+facubVuIdLEV4Dzwe8V4BYg7t4Ap+d57qUnuWICBzi116v1ggfd3bM+AEZWXFvnym8EwAAAABJRU5ErkJggg==) no-repeat right center;
       padding: 8px;
     }
-
     body {
       background-color: #FFFFFF;
       font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -141,7 +130,6 @@
       margin: 0;
       padding: 30px;
     }
-
     h1 {
       font-size: 1.6em;
       margin-left: 0;
@@ -149,43 +137,35 @@
       text-align: left;
       color: #696969;
     }
-
     h1.header {
       text-align: center;
     }
-
     ul {
       margin-left: 0px;
     }
-
     a {
       color: #0000FF;
       text-decoration: underline;
     }
-
     a.visited {
       color: #551A8B;
       text-decoration: underline;
     }
-
     a:hover {
       color: #FF9900;
       text-decoration: underline;
     }
-
     a.tocItem {
       color: #004A95;
       text-decoration: none;
       margin-top: 2px;
       font-size: 1.4em;
     }
-
     .tocItem {
       text-decoration: none;
       margin-top: 2px;
       font-size: 1.4em;
     }
-
     #menu {
       position: fixed;
       left: 0px;
@@ -200,38 +180,30 @@
       text-align: left;
       white-space: nowrap;
     }
-
     .hmenu li {
       list-style-type: none;
       line-height: 200%;
       padding-left: 0;
     }
-
     .hmenu ul {
       padding-left: 14px;
       margin-left: 0;
     }
-
     .hmenu-item {}
-
     .hmenu-submenu {}
-
     .hmenu-bullet {
       float: left;
       width: 16px;
       color: #AAAAAA;
       font-size: 1.2em;
     }
-
     div.buttons {
       padding: 5px 0 5px 40px;
       display: inline-block;
     }
-
     div.button {
       padding: 5px 0 5px 0;
     }
-
     button {
       width: 100%;
       -webkit-border-radius: 10px;
@@ -244,7 +216,6 @@
       display: block;
       cursor: pointer;
     }
-
     #main {
       position: absolute;
       left: 22%;
@@ -254,23 +225,19 @@
       color: #000000;
       float: none !important;
     }
-
     ul.codelist {
       padding: 1px;
       margin-left: 1px;
       margin-right: 1px;
       margin-top: 1px;
       margin-bottom: 1px;
-
     }
-
     .codelist li {
       list-style-type: none;
       line-height: 200%;
       padding-left: 0;
       text-indent: -4px;
     }
-
     .codelist-caption {
       font-size: 1.4em;
       margin-top: 20px;
@@ -280,7 +247,6 @@
       text-align: left;
       color: #696969;
     }
-
     .codelist-item {
       list-style-type: disk;
       list-style-position: inside;
@@ -288,7 +254,6 @@
       padding-right: 0;
       margin: 0 0 0 0;
     }
-
     .codelist-item-decode {
       white-space: pre;
       /* CSS 2.0 */
@@ -306,28 +271,23 @@
       word-wrap: break-word;
       /* IE 5+ */
     }
-
     ul.SubClass {
       list-style-type: '- ';
       padding-left: 5;
       margin: 0 0 0 0;
     }
-
     ul.SubClass.li {}
-
     #main .docinfo {
       width: 95%;
       text-align: right;
       padding: 0px 5px;
     }
-
     div.containerbox {
       padding: 0px;
       margin: 10px auto;
       border: 0px;
       page-break-after: always;
     }
-
     .study-name {
       font-size: 1.6em;
       font-weight: bold;
@@ -340,7 +300,6 @@
       color: #696969;
       border: 0px;
     }
-
     div.study-metadata {
       font-size: 1.6em;
       font-weight: bold;
@@ -353,14 +312,12 @@
       color: #696969;
       border: 0px;
     }
-
     dl.study-metadata {
       width: 95%;
       padding: 5px 0px;
       font-size: 0.8em;
       color: black;
     }
-
     dl.study-metadata dt {
       clear: left;
       float: left;
@@ -369,26 +326,21 @@
       padding: 5px 5px 5px 0px;
       font-weight: bold;
     }
-
     dl.study-metadata dd {
       margin-left: 210px;
       padding: 5px;
       font-weight: normal;
       min-height: 20px;
     }
-
     div.codelist {
       page-break-after: avoid;
     }
-
     div.qval-indent {
       margin-left: 20px;
     }
-
     div.qval-indent2 {
       margin-left: 40px;
     }
-
     table {
       width: 95%;
       border-spacing: 4px;
@@ -399,7 +351,6 @@
       padding: 5px;
       empty-cells: show;
     }
-
     table caption {
       border: 0px;
       left: 20px;
@@ -409,19 +360,16 @@
       margin: 10px auto;
       text-align: left;
     }
-
     .description {
       margin-left: 0px;
       color: black;
       font-weight: normal;
       font-size: 0.85em;
     }
-
     table caption .dataset {
       font-weight: normal;
       float: right;
     }
-
     table caption.header {
       font-size: 1.6em;
       margin-left: 0;
@@ -429,17 +377,14 @@
       text-align: center;
       color: #696969;
     }
-
     table tr {
       border: 1px solid #000000;
     }
-
     table tr.header {
       background-color: #6699CC;
       color: #FFFFFF;
       font-weight: bold;
     }
-
     table th {
       font-weight: bold;
       vertical-align: top;
@@ -448,19 +393,15 @@
       border: 1px solid #000000;
       font-size: 1.3em;
     }
-
     table th.codedvalue {
       width: 20%;
     }
-
     table th.length {
       width: 7%;
     }
-
     table th.label {
       width: 13%;
     }
-
     table td {
       vertical-align: top;
       padding: 5px;
@@ -468,74 +409,59 @@
       font-size: 1.2em;
       line-height: 150%;
     }
-
     table td.datatype {
       text-align: left;
     }
-
     table td.role {
       text-align: left;
     }
-
     table td.number {
       text-align: right;
     }
-
     tr.tablerowodd {
       background-color: #FFFFFF;
     }
-
     tr.tableroweven {
       background-color: #EEEEEE;
     }
-
     .linebreakcell {
       vertical-align: top;
       margin-top: 3px;
       margin-bottom: 3px;
     }
-
     .nci,
     .extended {
       font-style: italic;
     }
-
     .super {
       vertical-align: super;
     }
-
     .footnote {
       font-size: 1.2em;
     }
-
     .valuelist-reference {
       vertical-align: super;
       font-size: 0.8em;
       padding-left: 5px;
       cursor: pointer;
     }
-
     .valuelist-no-reference {
       vertical-align: super;
       font-size: 0.8em;
       padding-left: 5px;
     }
-
     div.formalexpression {
       margin-top: 6px;
       margin-bottom: 6px;
     }
-
     span.label {
       font-weight: bold;
     }
-
     .formalexpression-reference {
       vertical-align: super;
       font-size: 0.8em;
       padding-left: 5px;
     }
-
     .formalexpression-code {
       font-family: "Courier New", monospace, serif;
       font-size: 1.2em;
@@ -560,7 +486,6 @@
       word-wrap: break-word;
       /* IE 5+ */
     }
-
     .method-code {
       vertical-align: top;
       white-space: pre;
@@ -579,22 +504,18 @@
       word-wrap: break-word;
       /* IE 5+ */
     }
-
     .linktop {
       font-size: 1.2em;
       margin-top: 5px;
     }
-
     .documentinfo,
     .stylesheetinfo {
       font-size: 1.1em;
       line-height: 60%;
     }
-
     .invisible {
       display: none;
     }
-
     .standard-refeference {
       width: 95%;
       font-size: 1.0em;
@@ -603,7 +524,6 @@
       color: #696969;
       white-space: nowrap;
     }
-
     .nodata {
       width: 95%;
       font-size: 1.0em;
@@ -612,23 +532,18 @@
       color: #000000;
       white-space: nowrap;
     }
-
     span.unresolved {
       color: #000000;
     }
-
     td.unresolved {
       color: #000000;
     }
-
     td.span.unresolved {
       color: #000000;
     }
-
     span.prefix {
       font-weight: normal;
     }
-
     .arm-summary {
       width: 95%;
       border-spacing: 5px;
@@ -640,7 +555,6 @@
       line-height: 150%;
       vertical-align: top;
     }
-
     .arm-summary-resultdisplay {
       margin: 0px 0px 0px 0px;
       padding: 10px 10px 10px 10px;
@@ -649,60 +563,48 @@
       border-color #000000;
       border-style: none none solid none;
     }
-
     .arm-display-title {
       margin-left: 5pt;
     }
-
     .table.analysisresults-detail {
       background-color: #EEEEEE;
     }
-
     .arm-summary-result {
       margin-left: 20px;
       margin-top: 5px;
       margin-bottom: 5px;
     }
-
     th span.arm-displaytitle {
       font-weight: bold;
     }
-
     td span.arm-resulttitle {
       font-weight: bold;
     }
-
     tr.arm-analysisresult {
       background-color: #6699CC;
       color: #FFFFFF;
       font-weight: bold;
       border: 1px solid #000000;
     }
-
     td.arm-label {
       font-weight: bold;
     }
-
     p.arm-analysisvariable {
       margin-top: 5px;
       margin-bottom: 5px;
     }
-
     .arm-data-reference {
       margin-top: 5px;
       margin-bottom: 5px;
     }
-
     .arm-code-context {
       padding: 5px 0px;
     }
-
     .arm-code-ref {
       font-size: 1.2em;
       line-height: 150%;
       padding: 5px;
     }
-
     .arm-code {
       font-family: "Courier New", monospace, serif;
       font-size: 1.2em;
@@ -727,15 +629,10 @@
       word-wrap: break-word;
       /* IE 5+ */
     }
-
-
-
     @media print {
-
       @page {
         margin: 1.5cm;
       }
-
       body,
       h1,
       table caption,
@@ -744,20 +641,17 @@
         background: #fff;
         float: none !important;
       }
-
       div.containerbox {
         padding: 0px;
         border: 0px;
         page-break-after: always;
       }
-
       a:link,
       a:visited {
         background: transparent;
         text-decoration: none;
         color: black;
       }
-
       a.external:link:after,
       #main a:visited:after {
         content: " (" attr(href) ") ";
@@ -766,46 +660,37 @@
         font-weight: normal;
         color: black;
       }
-
       .external-link-gif,
       .formalexpression-reference .valuelist-reference {
         display: none !important;
         width: 0px;
       }
-
       table {
         border-width: 2px;
       }
-
       table tr.vlm {
         display: table-row !important;
       }
-
       #menu,
       .linktop {
         display: none !important;
         width: 0px;
       }
-
       #main {
         left: 2cm;
         float: none !important;
       }
-
       span.prefix {
         font-weight: normal;
       }
-
       row,
       ul,
       img {
         page-break-inside: avoid;
       }
-
     }
   </style>
 </head>
-
 <body onload="reset_menus();">
   <div id="menu"><a name="top" class="invisible" href="#main">Skip Navigation Link</a><span
       class="study-name">COVE</span>
@@ -2234,6 +2119,7 @@
     </div>
   </div>
   <div id="main">
+    
     <div class="docinfo">
       <p class="documentinfo">Date/Time of Define-XML document generation: 2021-07-28T22:12:18Z</p>
       <p class="documentinfo">Define-XML version: 2.0.0</p>
@@ -2300,11 +2186,9 @@
           <td>
             <p class="arm-analysisvariable"><a href="#IG.ADTTEA">ADTTEA</a>.<a href="#IG.ADTTEA.IT.ADTTEA.AVAL">AVAL</a>
               (Analysis Value)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADTTEA">ADTTEA</a>.<a href="#IG.ADTTEA.IT.ADTTEA.CNSR">CNSR</a>
               (Censor)
-
             </p>
           </td>
         </tr>
@@ -2365,31 +2249,24 @@
           <td>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.AVISIT">AVISIT</a>
               (Analysis Visit)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.AVAL">AVAL</a>
               (Analysis Value)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.CRIT1FL">CRIT1FL</a>
               (Criterion 1 Evaluation Result Flag)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.CRIT2FL">CRIT2FL</a>
               (Criterion 2 Evaluation Result Flag)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.CRIT3FL">CRIT3FL</a>
               (Criterion 3 Evaluation Result Flag)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.CRIT4FL">CRIT4FL</a>
               (Criterion 4 Evaluation Result Flag)
-
             </p>
             <p class="arm-analysisvariable"><a href="#IG.ADIS">ADIS</a>.<a href="#IG.ADIS.IT.ADIS.CRIT6FL">CRIT6FL</a>
               (Criterion 6 Evaluation Result Flag)
-
             </p>
           </td>
         </tr>
@@ -4416,7 +4293,6 @@
               TRT01P in any case,
               5. Set to 'Received Vaccination #2 out of window' if DOSE2FL='Y' and (non-missing DOSE2DT - TR01SDT &lt;
               21 or &gt; 42),
-
               After above steps, if a subject satisfies more than one of 1-5, then concatenate reason with ','
               Set to null otherwise</div>
           </td>
@@ -6282,7 +6158,6 @@
             <div class="linebreakcell">Derived</div>
             <div class="method-code">If source data are from FACE, set to FACE.FATPT, otherwise
               If source data are from VS, set to VS.VSTPT
-
               Recode 'DAY 1' as 'DAY 1, AFTER VACCINATION (AT HOME)' if FAEVAL='INVESTIGATOR''</div>
           </td>
         </tr>
@@ -6412,10 +6287,8 @@
               '||'('||FAORRESU||')'
               If FAOBJ='Pyrexia' or 'Fever', then set to 'Fever (C)'
               set to FAOBJ, otherwise
-
               if source data are from VS and VSTESTCD in ('TEMP' 'VSALL'), set to 'Fever'||'('||VSSTRESU||'). (please
               add space between the VSTEST and VS unit. If the VSSTRESU is missing, use non-missing VSSTRESU)
-
               if there is one record in VS where SUPPVS.QNAM='MEDTAKP' and QVAL='Y', then create one record with
               PARAM='Prevent Pain or Fever from Occurring';
               if there is one record in VS where SUPPVS.QNAM='MEDTAKT' and QVAL='Y', then create one record with
@@ -8165,7 +8038,6 @@
             <div class="method-code">If source data are from FACE, set to FACE.FATPT
               If Source data are from FAAE, set to FAAE.FATPT
               If source data are from VS, set to VS.VSTPT
-
               Recode 'DAY 1' as 'DAY 1, AFTER VACCINATION (AT HOME)' if FAEVAL='INVESTIGATOR''</div>
           </td>
         </tr>
@@ -8253,10 +8125,8 @@
               '||'('||FAORRESU||')',
               If FAOBJ='Pyrexia' or 'Fever', then set to 'Fever (C)',
               set to FAOBJ, otherwise
-
               If source data are from VS and VSTESTCD in ('TEMP' 'VSALL'), set to 'Fever'||'('||VSSTRESU||'). (please
               add space between the VSTEST and VS unit. If the VSSTRESU is missing, use non-missing VSSTRESU)"
-
               If there is one record in VS where SUPPVS.QNAM='MEDTAKP' and QVAL='Y', then create one record with
               PARAM='Prevent Pain or Fever from Occurring',
               If there is one record in VS where SUPPVS.QNAM='MEDTAKT' and QVAL='Y', then create one record with
@@ -8304,7 +8174,6 @@
               Set to FACE.FASTRESN where FACE.FAOBJ in ('Erythema', 'Swelling') and FATESTCD='LDIAM'
               If data is from SDTM.FAAE
               Set to FAAE.FASTRESN where FAAE.FAOBJ in ('Erythema', 'Swelling') and FAAE.FATESTCE='LDIAM'
-
               [1]A least one records should be found from SDTM.FAAE where FAAE.FAOBJ in ('Erythema', 'Swelling') and
               FATESTCD='LDIAM')</div>
           </td>
@@ -13508,7 +13377,6 @@
               Set to 2 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA' and USUBJID is in HO and 1 &lt;= (any non-missing
               numeric HO.HOSTDTC – ADT + 1) &lt;= 7
               Set to 1 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA'
-
               For PARAMCD = “BOD28D”:
               Set to 0 if EVENTMO &gt; AWRANGEN or ADT=missing
               Set to 3 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA' and not missing (ADSL.DTHDT) and (DTHDT - ADT + 1)
@@ -13536,7 +13404,6 @@
               numeric HO.HOSTDTC - ADT + 1) &lt;= 7
               Set to 1 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA'
               Set to 0.5 if ADEFF.AVALC = 'Y' where PARAMCD = 'ASYMPINF'
-
               For PARAMCD = “BOI28D”:
               Set to 0 if EVENTMO &gt; AWRANGEN or ADT=missing
               Set to 3 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA' and not missing (ADSL.DTHDT) and (DTHDT-ADT+1)
@@ -16347,19 +16214,15 @@
               time):
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'Day 1',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'Day 1'
-
               If ADTM&gt; ADSL.DOS2DTM&gt;. and (ADTM&lt;ADSL.TR02SDTM or ADSL.DOS2DTM is the last dose date time):
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'Day 29',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'Day 29'
-
               If ADTM &gt;ADSL.TR02SDTM&gt;. and (ADTM&lt;ADSL.OLDO2DTM or TR02SDTM is the last dose date time):
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'OL-D1',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'OL-D1'
-
               If .&lt;ADSL.OLDO2DTM&lt;=ADTM:
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'OL-D29',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'OL-D29'
-
               Note: If time part of ADTM, TR01SDTM, DOS2DTM, TR02SDTM, or OLDO2DTM is missing, use ADT, TR01SDT,
               DOSE2DT, TR02SDT, and OLDOS2DT to replace ADTM, TR01SDTM, DOS2DTM, TR02SDTM, and OLDO2DTM, respectively
             </div>
@@ -21123,13 +20986,11 @@
             <div class="method-code">Set to PR.PRTRT if source data are from PR
               Set to HO.HOTERM if source data are from HO and re-code 'ADMITTED TO ICU' to 'Admission to an intensive
               care unit due to SARS-CoV-2'
-
               For SDTM.FAEF as source data:
               Set to FAEF.FAOBJ and recode follwing symptom terms -
               Recode to 'Vasopressors Required' if FAEF.FAOBJ='Evidence of Shock Requires Vasopressors'
               Recode to 'Muscle Aches (Myalgia)' if FAEF.FAOBJ='Myalgia'
               Recode to 'Runny Nose (Rhinorrhea)' if FAEF.FAOBJ='Rhinorrhea'
-
               For SDTM.VS as source data:
               Set to 'O2 Saturation &lt;=93%' if VSSCAT='COVID-19' and VSTESTCD='OXYSAT' and VSSTRESN is not missing and
               VSSTRESN&lt;=93
@@ -21147,12 +21008,10 @@
             <div class="linebreakcell">Derived</div>
             <div class="method-code">Set to PR.PROCCUR if source data are from PR
               Set to HO.HOOCCUR if source data are from HO
-
               For SDTM.FAEF as source data:
               Set to 'Y' if FAEF.FASCAT='COVID-19' and FAEF.FASTRESC in ('MILD', 'MODERATE', 'SEVERE')
               Set to 'N' if FAEF.FASCAT='COVID-19' and FAEF.FASTRESC = 'NONE'
               Set to FAEF.FASTRESC if FAEF.FASCAT='COVID-19 SEVERITY'
-
               For SDTM.VS as source data:
               Set to 'Y' if VSTESTCD='OXYSAT' and non-missing VSSTRESN&lt;=93
               Set to 'Y' if VSTESTCD='TEMP' and non-missing VSSTRESN&gt;=38 and VSSTRESU='C'</div>
@@ -27587,7 +27446,6 @@
               1)Set to 1 If ADEFF2.AVAL=0 where PARAMCD contains 'BOD',
               2)Set to 0 If ADEFF2.AVAL&gt;=1 where PARAMCD contains 'BOD',
               If EVENTSEQ=2 or 3, then set to 0
-
               Note: (1 for censor; 0 for event)</div>
           </td>
         </tr>
@@ -27604,7 +27462,6 @@
               1)Set to 1 If ADEFF2.AVAL=0 where PARAMCD contains 'BOI',
               2)Set to 0 If ADEFF2.AVAL&gt;=0.5 where PARAMCD contains 'BOI',
               If EVENTSEQ&gt;=2, then set to 0
-
               Note: (1 for censor; 0 for event)</div>
           </td>
         </tr>
@@ -28903,7 +28760,6 @@
               1) Set to 1 If temporary variable SUM (see derivation of EVENTSEQ) = 0,
               2) Set to 0 If temporary variable SUM (see derivation of EVENTSEQ) &gt; 0,
               if EVENTSEQ = 2 or 3 or 4, then set to 0
-
               Note: (1 for censor; 0 for event)</div>
           </td>
         </tr>
@@ -28953,7 +28809,6 @@
             <div class="linebreakcell">Derived</div>
             <div class="method-code">Derive based on the temporary variable SUM (see derivation of EVENTSEQ) and date of
               first symtom occure per subject (ADEFF3.ADT where FASYMPFL = 'Y')
-
               If SUM = 0 where EVENTSEQ = 1, set to the earliest date of (ADSL.DTHDT, ADSL.EOSDT, ADSL.CUTOFFDT) -
               TR01SDT.
               if 0 &lt; SUM &lt;= Q1 where EVENTSEQ = 1, set to the ADT - TR01SDT.
@@ -30416,7 +30271,6 @@
               ADSL.EOSDT, ADSL.DTHDT)
               Set to 'Follow-Up Analysis Period' if ADT &gt; non-missing TEMP. If TEMP, ADSL.EOSDT, and ADSL.DTHDT are
               all unavailable, set to ‘Vaccination stage’
-
               For APERIOD=2:
               If OLDOS2FL ='Y' then set TEMP to date of OL-Day57 (i.e. SV.SVSTDTC where SV.VISIT = 'OL-Day 57')
               else if OLDOS2FL ne 'Y' then set TEMP to date of OL-Day29 (i.e. SV.SVSTDTC where SV.VISIT = 'OL-Day 29')
@@ -32541,7 +32395,6 @@
               Vaccination 1',
               Set to (the largest integer less than or equal to (ASTDTM – ADSL.OLDO2DTM)/(24*60*60)) +1 if MDOSREF='OL
               Vaccination 2'
-
               Note: If time part of ASTDTM is missing, use ASTDT to replace ASTDTM and calculate as follows:
               Set to ASTDT – ADSL.TR01SDT + 1 if MDOSREF='Vaccination 1',
               Set to ASTDT – ADSL.DOSE2DT + 1 if MDOSREF='Vaccination 2',
@@ -32565,7 +32418,6 @@
               Vaccination 1',
               Set to (the largest integer less than or equal to (AENDTM – ADSL.OLDO2DTM)/(24*60*60)) + 1 If MDOSREF='OL
               Vaccination 2'
-
               If time part of AENDTM is missing, use AENDT to replace AEENDTM and calculate as follows:
               AENDT – ADSL.TR01SDT+ 1 If MDOSREF='Vaccination 1',
               AENDT – ADSL.DOSE2DT+ 1 If MDOSREF='Vaccination 2',
@@ -41764,7 +41616,6 @@
               Vaccination 1',
               Set to (the largest integer less than or equal to (AENDTM – ADSL.OLDO2DTM)/(24*60*60)) + 1 If MDOSREF='OL
               Vaccination 2'
-
               If time part of AENDTM is missing, use AENDT to replace AEENDTM and calculate as follows:
               AENDT – ADSL.TR01SDT+ 1 If MDOSREF='Vaccination 1',
               AENDT – ADSL.DOSE2DT+ 1 If MDOSREF='Vaccination 2',
@@ -41784,7 +41635,6 @@
               Vaccination 1',
               Set to (the largest integer less than or equal to (ASTDTM – ADSL.OLDO2DTM)/(24*60*60)) +1 if MDOSREF='OL
               Vaccination 2'
-
               Note: If time part of ASTDTM is missing, use ASTDT to replace ASTDTM and calculate as follows:
               Set to ASTDT – ADSL.TR01SDT + 1 if MDOSREF='Vaccination 1',
               Set to ASTDT – ADSL.DOSE2DT + 1 if MDOSREF='Vaccination 2',
@@ -42204,7 +42054,6 @@
           <td>
             <div class="method-code">If source data are from FACE, set to FACE.FATPT, otherwise
               If source data are from VS, set to VS.VSTPT
-
               Recode 'DAY 1' as 'DAY 1, AFTER VACCINATION (AT HOME)' if FAEVAL='INVESTIGATOR''</div>
           </td>
         </tr>
@@ -42408,7 +42257,6 @@
             <div class="method-code">If source data are from FACE, set to FACE.FATPT
               If Source data are from FAAE, set to FAAE.FATPT
               If source data are from VS, set to VS.VSTPT
-
               Recode 'DAY 1' as 'DAY 1, AFTER VACCINATION (AT HOME)' if FAEVAL='INVESTIGATOR''</div>
           </td>
         </tr>
@@ -42461,7 +42309,6 @@
               Set to FACE.FASTRESN where FACE.FAOBJ in ('Erythema', 'Swelling') and FATESTCD='LDIAM'
               If data is from SDTM.FAAE
               Set to FAAE.FASTRESN where FAAE.FAOBJ in ('Erythema', 'Swelling') and FAAE.FATESTCE='LDIAM'
-
               [1]A least one records should be found from SDTM.FAAE where FAAE.FAOBJ in ('Erythema', 'Swelling') and
               FATESTCD='LDIAM')</div>
           </td>
@@ -42502,10 +42349,8 @@
               '||'('||FAORRESU||')',
               If FAOBJ='Pyrexia' or 'Fever', then set to 'Fever (C)',
               set to FAOBJ, otherwise
-
               If source data are from VS and VSTESTCD in ('TEMP' 'VSALL'), set to 'Fever'||'('||VSSTRESU||'). (please
               add space between the VSTEST and VS unit. If the VSSTRESU is missing, use non-missing VSSTRESU)"
-
               If there is one record in VS where SUPPVS.QNAM='MEDTAKP' and QVAL='Y', then create one record with
               PARAM='Prevent Pain or Fever from Occurring',
               If there is one record in VS where SUPPVS.QNAM='MEDTAKT' and QVAL='Y', then create one record with
@@ -42530,10 +42375,8 @@
               '||'('||FAORRESU||')'
               If FAOBJ='Pyrexia' or 'Fever', then set to 'Fever (C)'
               set to FAOBJ, otherwise
-
               if source data are from VS and VSTESTCD in ('TEMP' 'VSALL'), set to 'Fever'||'('||VSSTRESU||'). (please
               add space between the VSTEST and VS unit. If the VSSTRESU is missing, use non-missing VSSTRESU)
-
               if there is one record in VS where SUPPVS.QNAM='MEDTAKP' and QVAL='Y', then create one record with
               PARAM='Prevent Pain or Fever from Occurring';
               if there is one record in VS where SUPPVS.QNAM='MEDTAKT' and QVAL='Y', then create one record with
@@ -43097,7 +42940,6 @@
               Set to 2 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA' and USUBJID is in HO and 1 &lt;= (any non-missing
               numeric HO.HOSTDTC – ADT + 1) &lt;= 7
               Set to 1 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA'
-
               For PARAMCD = “BOD28D”:
               Set to 0 if EVENTMO &gt; AWRANGEN or ADT=missing
               Set to 3 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA' and not missing (ADSL.DTHDT) and (DTHDT - ADT + 1)
@@ -43119,7 +42961,6 @@
               numeric HO.HOSTDTC - ADT + 1) &lt;= 7
               Set to 1 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA'
               Set to 0.5 if ADEFF.AVALC = 'Y' where PARAMCD = 'ASYMPINF'
-
               For PARAMCD = “BOI28D”:
               Set to 0 if EVENTMO &gt; AWRANGEN or ADT=missing
               Set to 3 if ADEFF.AVALC = 'Y' where PARAMCD = 'COVIDA' and not missing (ADSL.DTHDT) and (DTHDT-ADT+1)
@@ -44142,19 +43983,15 @@
               time):
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'Day 1',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'Day 1'
-
               If ADTM&gt; ADSL.DOS2DTM&gt;. and (ADTM&lt;ADSL.TR02SDTM or ADSL.DOS2DTM is the last dose date time):
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'Day 29',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'Day 29'
-
               If ADTM &gt;ADSL.TR02SDTM&gt;. and (ADTM&lt;ADSL.OLDO2DTM or TR02SDTM is the last dose date time):
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'OL-D1',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'OL-D1'
-
               If .&lt;ADSL.OLDO2DTM&lt;=ADTM:
               Set to 'Placebo' if EX.EXTRT='PLACEBO' where EX.VISIT contains 'OL-D29',
               Set to 'mRNA-1273' if EX.EXTRT='mRNA-1273' where EX.VISIT contains 'OL-D29'
-
               Note: If time part of ADTM, TR01SDTM, DOS2DTM, TR02SDTM, or OLDO2DTM is missing, use ADT, TR01SDT,
               DOSE2DT, TR02SDT, and OLDOS2DT to replace ADTM, TR01SDTM, DOS2DTM, TR02SDTM, and OLDO2DTM, respectively
             </div>
@@ -45036,7 +44873,6 @@
               TRT01P in any case,
               5. Set to 'Received Vaccination #2 out of window' if DOSE2FL='Y' and (non-missing DOSE2DT - TR01SDT &lt;
               21 or &gt; 42),
-
               After above steps, if a subject satisfies more than one of 1-5, then concatenate reason with ','
               Set to null otherwise</div>
           </td>
@@ -45773,12 +45609,10 @@
           <td>
             <div class="method-code">Set to PR.PROCCUR if source data are from PR
               Set to HO.HOOCCUR if source data are from HO
-
               For SDTM.FAEF as source data:
               Set to 'Y' if FAEF.FASCAT='COVID-19' and FAEF.FASTRESC in ('MILD', 'MODERATE', 'SEVERE')
               Set to 'N' if FAEF.FASCAT='COVID-19' and FAEF.FASTRESC = 'NONE'
               Set to FAEF.FASTRESC if FAEF.FASCAT='COVID-19 SEVERITY'
-
               For SDTM.VS as source data:
               Set to 'Y' if VSTESTCD='OXYSAT' and non-missing VSSTRESN&lt;=93
               Set to 'Y' if VSTESTCD='TEMP' and non-missing VSSTRESN&gt;=38 and VSSTRESU='C'</div>
@@ -45808,13 +45642,11 @@
             <div class="method-code">Set to PR.PRTRT if source data are from PR
               Set to HO.HOTERM if source data are from HO and re-code 'ADMITTED TO ICU' to 'Admission to an intensive
               care unit due to SARS-CoV-2'
-
               For SDTM.FAEF as source data:
               Set to FAEF.FAOBJ and recode follwing symptom terms -
               Recode to 'Vasopressors Required' if FAEF.FAOBJ='Evidence of Shock Requires Vasopressors'
               Recode to 'Muscle Aches (Myalgia)' if FAEF.FAOBJ='Myalgia'
               Recode to 'Runny Nose (Rhinorrhea)' if FAEF.FAOBJ='Rhinorrhea'
-
               For SDTM.VS as source data:
               Set to 'O2 Saturation &lt;=93%' if VSSCAT='COVID-19' and VSTESTCD='OXYSAT' and VSSTRESN is not missing and
               VSSTRESN&lt;=93
@@ -46585,7 +46417,6 @@
           <td>
             <div class="method-code">Derive based on the temporary variable SUM (see derivation of EVENTSEQ) and date of
               first symtom occure per subject (ADEFF3.ADT where FASYMPFL = 'Y')
-
               If SUM = 0 where EVENTSEQ = 1, set to the earliest date of (ADSL.DTHDT, ADSL.EOSDT, ADSL.CUTOFFDT) -
               TR01SDT.
               if 0 &lt; SUM &lt;= Q1 where EVENTSEQ = 1, set to the ADT - TR01SDT.
@@ -46611,7 +46442,6 @@
               1) Set to 1 If temporary variable SUM (see derivation of EVENTSEQ) = 0,
               2) Set to 0 If temporary variable SUM (see derivation of EVENTSEQ) &gt; 0,
               if EVENTSEQ = 2 or 3 or 4, then set to 0
-
               Note: (1 for censor; 0 for event)</div>
           </td>
         </tr>
@@ -46696,7 +46526,6 @@
               1)Set to 1 If ADEFF2.AVAL=0 where PARAMCD contains 'BOD',
               2)Set to 0 If ADEFF2.AVAL&gt;=1 where PARAMCD contains 'BOD',
               If EVENTSEQ=2 or 3, then set to 0
-
               Note: (1 for censor; 0 for event)</div>
           </td>
         </tr>
@@ -46708,7 +46537,6 @@
               1)Set to 1 If ADEFF2.AVAL=0 where PARAMCD contains 'BOI',
               2)Set to 0 If ADEFF2.AVAL&gt;=0.5 where PARAMCD contains 'BOI',
               If EVENTSEQ&gt;=2, then set to 0
-
               Note: (1 for censor; 0 for event)</div>
           </td>
         </tr>
@@ -46882,7 +46710,6 @@
               ADSL.EOSDT, ADSL.DTHDT)
               Set to 'Follow-Up Analysis Period' if ADT &gt; non-missing TEMP. If TEMP, ADSL.EOSDT, and ADSL.DTHDT are
               all unavailable, set to ‘Vaccination stage’
-
               For APERIOD=2:
               If OLDOS2FL ='Y' then set TEMP to date of OL-Day57 (i.e. SV.SVSTDTC where SV.VISIT = 'OL-Day 57')
               else if OLDOS2FL ne 'Y' then set TEMP to date of OL-Day29 (i.e. SV.SVSTDTC where SV.VISIT = 'OL-Day 29')
@@ -47179,5 +47006,4 @@
     <p class="linktop">Go to the <a href="#main">top</a> of the Define-XML document</p><br>
   </div>
 </body>
-
 </html>

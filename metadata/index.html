@@ -221,23 +221,48 @@
         }
         
         .badge-adam {
-            background: #ede7f6;
-            color: #4527a0;
+            background: #e0f2f1;
+            color: #00695c;
         }
         
         .badge-sdtm {
-            background: #fff8e1;
-            color: #f57f17;
+            background: #fce4ec;
+            color: #ad1457;
         }
         
         .badge-phase2 {
-            background: #e3f2fd;
-            color: #1976d2;
+            background: #fff3e0;
+            color: #ef6c00;
         }
         
         .badge-phase3 {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-nonclinical {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .badge-send {
+            background: #f0f4c3;
+            color: #827717;
+        }
+        
+        .badge-supp {
+            background: #e1bee7;
+            color: #6a1b9a;
+        }
+        
+        .badge-eua {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .badge-bla {
             background: #e8f5e9;
-            color: #388e3c;
+            color: #2e7d32;
         }
         
         .info-box {
@@ -291,7 +316,7 @@
     <div class="container">
         
         <h1>Define-XML Clinical Trial Metadata</h1>
-        <p class="subtitle">COVID-19 Vaccine Trial Dataset Definitions - Moderna mRNA-1273 & Pfizer-BioNTech BNT162b2</p>
+        <p class="subtitle">COVID-19 Vaccine Trial Dataset Definitions - Moderna mRNA-1273 & Pfizer-BioNTech BNT162b2 (EUA & BLA)</p>
         
         <div class="description">
             <p>These Define-XML files contain comprehensive metadata documentation for the COVID-19 vaccine clinical trial datasets submitted to FDA. Each file provides detailed information about dataset structures, variables, controlled terminology, and computational methods used in the trials.</p>
@@ -306,10 +331,11 @@
                 <thead>
                     <tr>
                         <th onclick="sortTable(0)">Manufacturer</th>
-                        <th onclick="sortTable(1)">Study/Protocol</th>
-                        <th onclick="sortTable(2)">Phase</th>
-                        <th onclick="sortTable(3)">Data Type</th>
-                        <th onclick="sortTable(4)" class="desktop-only">Description</th>
+                        <th onclick="sortTable(1)">Authorization</th>
+                        <th onclick="sortTable(2)">Study/Protocol</th>
+                        <th onclick="sortTable(3)">Phase</th>
+                        <th onclick="sortTable(4)">Data Type</th>
+                        <th onclick="sortTable(5)" class="desktop-only">Description</th>
                         <th>File Links</th>
                     </tr>
                 </thead>
@@ -333,6 +359,7 @@
             // Moderna Studies
             {
                 manufacturer: 'Moderna',
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'ADaM',
@@ -341,6 +368,7 @@
             },
             {
                 manufacturer: 'Moderna',
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'SDTM',
@@ -349,6 +377,7 @@
             },
             {
                 manufacturer: 'Moderna',
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'ADaM',
@@ -357,6 +386,7 @@
             },
             {
                 manufacturer: 'Moderna',
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'SDTM',
@@ -365,6 +395,7 @@
             },
             {
                 manufacturer: 'Moderna',
+                authorization: 'BLA',
                 study: 'P301 (COVE)',
                 phase: 'Phase 3',
                 dataType: 'ADaM',
@@ -373,6 +404,7 @@
             },
             {
                 manufacturer: 'Moderna',
+                authorization: 'BLA',
                 study: 'P301 (COVE)',
                 phase: 'Phase 3',
                 dataType: 'SDTM',
@@ -382,6 +414,7 @@
             // Pfizer Studies
             {
                 manufacturer: 'Pfizer',
+                authorization: 'EUA',
                 study: 'BNT162-01',
                 phase: 'Phase 1/2',
                 dataType: 'ADaM',
@@ -390,6 +423,7 @@
             },
             {
                 manufacturer: 'Pfizer',
+                authorization: 'EUA',
                 study: 'BNT162-01',
                 phase: 'Phase 1/2',
                 dataType: 'SDTM',
@@ -398,6 +432,7 @@
             },
             {
                 manufacturer: 'Pfizer',
+                authorization: 'EUA',
                 study: 'C4591001',
                 phase: 'Phase 1/2/3',
                 dataType: 'ADaM',
@@ -406,6 +441,7 @@
             },
             {
                 manufacturer: 'Pfizer',
+                authorization: 'EUA',
                 study: 'C4591001',
                 phase: 'Phase 1/2/3',
                 dataType: 'SDTM',
@@ -414,6 +450,7 @@
             },
             {
                 manufacturer: 'Pfizer',
+                authorization: 'EUA',
                 study: 'C4591001',
                 phase: 'Phase 1/2/3',
                 dataType: 'ADaM',
@@ -422,11 +459,103 @@
             },
             {
                 manufacturer: 'Pfizer',
+                authorization: 'EUA',
                 study: 'C4591001',
                 phase: 'Phase 1/2/3',
                 dataType: 'SDTM',
                 description: 'C4591001 Safety/Efficacy - Study Data',
                 links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-S.html'}]
+            },
+            // Pfizer BLA Studies
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'ADaM',
+                description: 'BNT162-01 - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-bnt162-01-A.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'SDTM',
+                description: 'BNT162-01 - Study Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-bnt162-01-S.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-A.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM',
+                description: 'C4591001 - Study Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-S.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM-Supp',
+                description: 'C4591001 - Supplemental Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-A-supp.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM-Supp',
+                description: 'C4591001 - Supplemental Study Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-S-supp.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 - Sequencing Analysis (ADSL, ADXB)',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-s6-define.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 - Additional Analysis Dataset',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-s6-define-1.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: '20GR142',
+                phase: 'Nonclinical',
+                dataType: 'SEND',
+                description: 'Study 20GR142 - Nonclinical Toxicology Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-20gr142.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                authorization: 'BLA',
+                study: '38166',
+                phase: 'Nonclinical',
+                dataType: 'SEND',
+                description: 'Study 38166 - Nonclinical Toxicology Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-38166.html'}]
             }
         ];
         
@@ -460,6 +589,14 @@
                 manuTd.textContent = row.manufacturer;
                 tr.appendChild(manuTd);
                 
+                // Authorization
+                const authTd = document.createElement('td');
+                const authSpan = document.createElement('span');
+                authSpan.className = `badge badge-${row.authorization.toLowerCase()}`;
+                authSpan.textContent = row.authorization;
+                authTd.appendChild(authSpan);
+                tr.appendChild(authTd);
+                
                 // Study
                 const studyTd = document.createElement('td');
                 studyTd.textContent = row.study;
@@ -468,7 +605,10 @@
                 // Phase
                 const phaseTd = document.createElement('td');
                 const phaseSpan = document.createElement('span');
-                phaseSpan.className = `badge ${row.phase.includes('3') ? 'badge-phase3' : 'badge-phase2'}`;
+                phaseSpan.className = `badge ${
+                    row.phase.includes('Nonclinical') ? 'badge-nonclinical' : 
+                    row.phase.includes('3') ? 'badge-phase3' : 'badge-phase2'
+                }`;
                 phaseSpan.textContent = row.phase;
                 phaseTd.appendChild(phaseSpan);
                 tr.appendChild(phaseTd);
@@ -476,7 +616,12 @@
                 // Data Type
                 const typeTd = document.createElement('td');
                 const typeSpan = document.createElement('span');
-                typeSpan.className = `badge ${row.dataType === 'ADaM' ? 'badge-adam' : 'badge-sdtm'}`;
+                typeSpan.className = `badge ${
+                    row.dataType === 'ADaM' ? 'badge-adam' : 
+                    row.dataType === 'SDTM' ? 'badge-sdtm' :
+                    row.dataType === 'SEND' ? 'badge-send' :
+                    row.dataType.includes('Supp') ? 'badge-supp' : 'badge-sdtm'
+                }`;
                 typeSpan.textContent = row.dataType;
                 typeTd.appendChild(typeSpan);
                 tr.appendChild(typeTd);
@@ -518,10 +663,11 @@
                 let aVal, bVal;
                 switch (column) {
                     case 0: aVal = a.manufacturer; bVal = b.manufacturer; break;
-                    case 1: aVal = a.study; bVal = b.study; break;
-                    case 2: aVal = a.phase; bVal = b.phase; break;
-                    case 3: aVal = a.dataType; bVal = b.dataType; break;
-                    case 4: aVal = a.description; bVal = b.description; break;
+                    case 1: aVal = a.authorization; bVal = b.authorization; break;
+                    case 2: aVal = a.study; bVal = b.study; break;
+                    case 3: aVal = a.phase; bVal = b.phase; break;
+                    case 4: aVal = a.dataType; bVal = b.dataType; break;
+                    case 5: aVal = a.description; bVal = b.description; break;
                 }
                 
                 if (aVal < bVal) return currentSort.ascending ? -1 : 1;
@@ -542,6 +688,7 @@
             } else {
                 filteredData = tableData.filter(row => {
                     return row.manufacturer.toLowerCase().includes(searchTerm) ||
+                           row.authorization.toLowerCase().includes(searchTerm) ||
                            row.study.toLowerCase().includes(searchTerm) ||
                            row.phase.toLowerCase().includes(searchTerm) ||
                            row.dataType.toLowerCase().includes(searchTerm) ||

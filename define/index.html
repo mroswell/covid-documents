@@ -157,6 +157,7 @@
         
         .data-table tbody tr {
             transition: background-color 0.2s ease;
+            cursor: pointer;
         }
         
         .data-table tbody tr:nth-child(even) {
@@ -441,6 +442,14 @@
             
             data.forEach(row => {
                 const tr = document.createElement('tr');
+                
+                // Add click handler to the entire row
+                tr.onclick = function(e) {
+                    // Don't navigate if clicking on a link
+                    if (e.target.tagName !== 'A') {
+                        window.location.href = row.links[0].url;
+                    }
+                };
                 
                 // Manufacturer
                 const manuTd = document.createElement('td');

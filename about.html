@@ -8,14 +8,14 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f5f5f5;
             line-height: 1.6;
         }
         
         .container {
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 20px auto;
             background: white;
             padding: 20px 30px;
             border-radius: 8px;
@@ -25,8 +25,6 @@
         .nav-menu {
             background: #f8f9fa;
             padding: 12px 0;
-            margin: -20px -30px 20px -30px;
-            border-radius: 8px 8px 0 0;
             border-bottom: 1px solid #e9ecef;
         }
         
@@ -36,7 +34,10 @@
             margin: 0;
             display: flex;
             gap: 30px;
-            padding: 0 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            justify-content: center;
         }
         
         .nav-menu li {
@@ -65,6 +66,7 @@
         
         h1 {
             color: #333;
+            margin-top: 0;
             margin-bottom: 20px;
             font-size: 28px;
         }
@@ -114,14 +116,15 @@
     </style>
 </head>
 <body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">EUA File Navigator</a></li>
+            <li><a href="data-dictionary.html">Data Dictionary</a></li>
+            <li><a href="metadata/index.html">Clinical Metadata</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html">EUA File Navigator</a></li>
-                <li><a href="data-dictionary.html">Data Dictionary</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
-        </nav>
         
         <div class="content-section">
             <h1>About the Pfizer EUA File Navigator</h1>
@@ -161,6 +164,38 @@
                 <li><strong>ADaM (Analysis Data Model):</strong> Datasets prepared for statistical analysis</li>
                 <li><strong>Supplemental Qualifiers:</strong> Additional data that extends the standard domains</li>
             </ul>
+            
+            <h2>Understanding the Metadata</h2>
+            <p>
+                This project provides two complementary ways to explore and understand the clinical trial metadata:
+            </p>
+            
+            <h3>Data Dictionary</h3>
+            <p>
+                The <a href="data-dictionary.html">Data Dictionary</a> is a searchable, filterable interface that consolidates field definitions across all clinical trial datasets. It allows you to:
+            </p>
+            <ul>
+                <li>Search for specific variables or terms</li>
+                <li>Filter by domain (e.g., adverse events, demographics)</li>
+                <li>View standardized definitions and formats</li>
+                <li>Understand relationships between different data elements</li>
+            </ul>
+            
+            <h3>Define-XML Metadata</h3>
+            <p>
+                The <a href="metadata/index.html">Define-XML Metadata</a> presents the original metadata documentation as submitted to the FDA in the FOIA'd documents. These files:
+            </p>
+            <ul>
+                <li>Contain the complete, unmodified metadata from each clinical trial</li>
+                <li>Follow CDISC Define-XML standards for regulatory submissions</li>
+                <li>Include detailed dataset structures, variable definitions, and computational methods</li>
+                <li>Are organized by manufacturer (Moderna and Pfizer-BioNTech) and study phase</li>
+                <li>Provide both ADaM (analysis) and SDTM (tabulation) metadata for each study</li>
+            </ul>
+            
+            <p>
+                While both resources describe the same underlying clinical trial data, they serve different purposes: the Data Dictionary offers a unified, searchable view across all studies, while the Define-XML files preserve the exact metadata structure and content from the original regulatory submissions.
+            </p>
             
             <h2>Using the Navigator</h2>
             <p>
@@ -206,7 +241,8 @@
             
             <h2>Related Resources</h2>
             <ul>
-                <li><a href="data-dictionary.html">Data Dictionary</a> - Definitions of all clinical trial data fields</li>
+                <li><a href="data-dictionary.html">Data Dictionary</a> - Searchable definitions of all clinical trial data fields</li>
+                <li><a href="metadata/index.html">Define-XML Metadata</a> - Original metadata documentation from FOIA'd submissions</li>
                 <li><a href="https://www.fda.gov" target="_blank">FDA Official Website</a></li>
                 <li><a href="https://www.cdisc.org" target="_blank">CDISC Standards</a></li>
             </ul>

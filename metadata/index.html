@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Define-XML Files - Clinical Trial Metadata</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .nav-menu {
+            background: #f8f9fa;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            justify-content: center;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        h1 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .study-section {
+            margin-bottom: 40px;
+        }
+        
+        .study-header {
+            background: #f0f4f8;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .study-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0066cc;
+            margin: 0 0 5px 0;
+        }
+        
+        .study-info {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .data-table thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .data-table th {
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+        
+        .data-table th:hover {
+            background: #e9ecef;
+        }
+        
+        .data-table th:after {
+            content: ' \2195';
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .data-table th.sort-asc:after {
+            content: ' \2191';
+            color: #0066cc;
+        }
+        
+        .data-table th.sort-desc:after {
+            content: ' \2193';
+            color: #0066cc;
+        }
+        
+        .data-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .data-table tbody tr {
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .data-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .data-table tbody tr:hover {
+            background-color: #e7f3ff;
+        }
+        
+        .data-table a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .data-table a:hover {
+            text-decoration: underline;
+        }
+        
+        .manufacturer-moderna {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .manufacturer-pfizer {
+            color: #0066cc;
+            font-weight: 600;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .data-table {
+                font-size: 12px;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 8px 10px;
+            }
+            
+            .desktop-only {
+                display: none;
+            }
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-adam {
+            background: #ede7f6;
+            color: #4527a0;
+        }
+        
+        .badge-sdtm {
+            background: #fff8e1;
+            color: #f57f17;
+        }
+        
+        .badge-phase2 {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .badge-phase3 {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #0066cc;
+            font-size: 16px;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .search-box {
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        .search-box input:focus {
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="../index.html">EUA File Navigator</a></li>
+            <li><a href="../data-dictionary.html">Data Dictionary</a></li>
+            <li><a href="index.html" class="active">Clinical Metadata</a></li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        
+        <h1>Define-XML Clinical Trial Metadata</h1>
+        <p class="subtitle">COVID-19 Vaccine Trial Dataset Definitions - Moderna mRNA-1273 & Pfizer-BioNTech BNT162b2</p>
+        
+        <div class="description">
+            <p>These Define-XML files contain comprehensive metadata documentation for the COVID-19 vaccine clinical trial datasets submitted to FDA. Each file provides detailed information about dataset structures, variables, controlled terminology, and computational methods used in the trials.</p>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by study, phase, data type, or description...">
+        </div>
+        
+        <div class="table-container">
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Manufacturer</th>
+                        <th onclick="sortTable(1)">Study/Protocol</th>
+                        <th onclick="sortTable(2)">Phase</th>
+                        <th onclick="sortTable(3)">Data Type</th>
+                        <th onclick="sortTable(4)" class="desktop-only">Description</th>
+                        <th>File Links</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="info-box">
+            <h3>About Define-XML Files</h3>
+            <p><strong>ADaM (Analysis Data Model):</strong> Contains analysis-ready datasets used for statistical analysis and regulatory submissions. These datasets are derived from SDTM data and include additional variables needed for analysis.</p>
+            <p><strong>SDTM (Study Data Tabulation Model):</strong> Contains raw clinical trial data in a standardized format. These datasets capture the original observations and measurements from the clinical trial.</p>
+            <p><strong>CDISC Standards:</strong> Both ADaM and SDTM follow CDISC (Clinical Data Interchange Standards Consortium) standards to ensure consistency and interoperability in clinical research data.</p>
+            <p><strong>Data Sources:</strong> These files document clinical trial data from both Moderna's mRNA-1273 vaccine (FDA-CBER-2022-1614) and Pfizer-BioNTech's BNT162b2 vaccine trials submitted to FDA.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Data for the table
+        const tableData = [
+            // Moderna Studies
+            {
+                manufacturer: 'Moderna',
+                study: 'P201',
+                phase: 'Phase 2a',
+                dataType: 'ADaM',
+                description: 'Phase 2a Part A - Analysis Datasets (Additional Data)',
+                links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-add1_A_D.html'}]
+            },
+            {
+                manufacturer: 'Moderna',
+                study: 'P201',
+                phase: 'Phase 2a',
+                dataType: 'SDTM',
+                description: 'Phase 2a Part A - Study Data (Additional Data)',
+                links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-add1_S.html'}]
+            },
+            {
+                manufacturer: 'Moderna',
+                study: 'P201',
+                phase: 'Phase 2a',
+                dataType: 'ADaM',
+                description: 'Phase 2a Day 57 - Analysis Datasets',
+                links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-d57_A_D.html'}]
+            },
+            {
+                manufacturer: 'Moderna',
+                study: 'P201',
+                phase: 'Phase 2a',
+                dataType: 'SDTM',
+                description: 'Phase 2a Day 57 - Study Data',
+                links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-d57_S.html'}]
+            },
+            {
+                manufacturer: 'Moderna',
+                study: 'P301 (COVE)',
+                phase: 'Phase 3',
+                dataType: 'ADaM',
+                description: 'COVE Study - Analysis Datasets (1.46 MB)',
+                links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p301_A_D.html'}]
+            },
+            {
+                manufacturer: 'Moderna',
+                study: 'P301 (COVE)',
+                phase: 'Phase 3',
+                dataType: 'SDTM',
+                description: 'COVE Study - Study Data (718 KB)',
+                links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p301_S.html'}]
+            },
+            // Pfizer Studies
+            {
+                manufacturer: 'Pfizer',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'ADaM',
+                description: 'BNT162-01 - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-bnt162-01-A.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'SDTM',
+                description: 'BNT162-01 - Study Data',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-bnt162-01-S.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 Interim - Analysis Datasets (Efficacy Analysis)',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-ia-efficacy-A.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM',
+                description: 'C4591001 Interim - Study Data (Efficacy Analysis)',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-ia-efficacy-S.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 Safety/Efficacy - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-A.html'}]
+            },
+            {
+                manufacturer: 'Pfizer',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM',
+                description: 'C4591001 Safety/Efficacy - Study Data',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-S.html'}]
+            }
+        ];
+        
+        let currentSort = { column: -1, ascending: true };
+        let filteredData = [...tableData];
+        
+        // Initialize table
+        function initTable() {
+            renderTable(tableData);
+        }
+        
+        // Render table
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                
+                // Add click handler to the entire row
+                tr.onclick = function(e) {
+                    // Don't navigate if clicking on a link
+                    if (e.target.tagName !== 'A') {
+                        window.location.href = row.links[0].url;
+                    }
+                };
+                
+                // Manufacturer
+                const manuTd = document.createElement('td');
+                manuTd.className = `manufacturer-${row.manufacturer.toLowerCase()}`;
+                manuTd.textContent = row.manufacturer;
+                tr.appendChild(manuTd);
+                
+                // Study
+                const studyTd = document.createElement('td');
+                studyTd.textContent = row.study;
+                tr.appendChild(studyTd);
+                
+                // Phase
+                const phaseTd = document.createElement('td');
+                const phaseSpan = document.createElement('span');
+                phaseSpan.className = `badge ${row.phase.includes('3') ? 'badge-phase3' : 'badge-phase2'}`;
+                phaseSpan.textContent = row.phase;
+                phaseTd.appendChild(phaseSpan);
+                tr.appendChild(phaseTd);
+                
+                // Data Type
+                const typeTd = document.createElement('td');
+                const typeSpan = document.createElement('span');
+                typeSpan.className = `badge ${row.dataType === 'ADaM' ? 'badge-adam' : 'badge-sdtm'}`;
+                typeSpan.textContent = row.dataType;
+                typeTd.appendChild(typeSpan);
+                tr.appendChild(typeTd);
+                
+                // Description
+                const descTd = document.createElement('td');
+                descTd.className = 'desktop-only';
+                descTd.textContent = row.description;
+                tr.appendChild(descTd);
+                
+                // Links
+                const linksTd = document.createElement('td');
+                row.links.forEach((link, index) => {
+                    if (index > 0) linksTd.appendChild(document.createTextNode(' | '));
+                    const a = document.createElement('a');
+                    a.href = link.url;
+                    a.textContent = link.text;
+                    linksTd.appendChild(a);
+                });
+                tr.appendChild(linksTd);
+                
+                tbody.appendChild(tr);
+            });
+        }
+        
+        // Sort table
+        function sortTable(column) {
+            const headers = document.querySelectorAll('th');
+            headers.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+            
+            if (currentSort.column === column) {
+                currentSort.ascending = !currentSort.ascending;
+            } else {
+                currentSort.column = column;
+                currentSort.ascending = true;
+            }
+            
+            const sortedData = [...filteredData].sort((a, b) => {
+                let aVal, bVal;
+                switch (column) {
+                    case 0: aVal = a.manufacturer; bVal = b.manufacturer; break;
+                    case 1: aVal = a.study; bVal = b.study; break;
+                    case 2: aVal = a.phase; bVal = b.phase; break;
+                    case 3: aVal = a.dataType; bVal = b.dataType; break;
+                    case 4: aVal = a.description; bVal = b.description; break;
+                }
+                
+                if (aVal < bVal) return currentSort.ascending ? -1 : 1;
+                if (aVal > bVal) return currentSort.ascending ? 1 : -1;
+                return 0;
+            });
+            
+            headers[column].classList.add(currentSort.ascending ? 'sort-asc' : 'sort-desc');
+            renderTable(sortedData);
+        }
+        
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            if (searchTerm === '') {
+                filteredData = [...tableData];
+            } else {
+                filteredData = tableData.filter(row => {
+                    return row.manufacturer.toLowerCase().includes(searchTerm) ||
+                           row.study.toLowerCase().includes(searchTerm) ||
+                           row.phase.toLowerCase().includes(searchTerm) ||
+                           row.dataType.toLowerCase().includes(searchTerm) ||
+                           row.description.toLowerCase().includes(searchTerm);
+                });
+            }
+            
+            renderTable(filteredData);
+        });
+        
+        // Initialize on load
+        initTable();
+    </script>
+</body>
+</html>

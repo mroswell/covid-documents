@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pfizer EUA File Navigator - COVID-19 Vaccine FOIA Documents</title>
-    <meta name="description" content="Navigate and search Pfizer-BioNTech COVID-19 vaccine clinical trial documents released under FOIA. Interactive file explorer for BNT162b2 EUA submission data.">
-    <meta name="keywords" content="Pfizer, BNT162b2, COVID-19 vaccine, clinical trial, FOIA, EUA, file navigator">
-    <link rel="canonical" href="https://coviddocuments.com/pfizer-eua-navigator.html">
+    <title>Moderna BLA File Navigator - COVID-19 Vaccine FOIA Documents</title>
+    <meta name="description" content="Navigate and search Moderna COVID-19 vaccine clinical trial documents released under FOIA. Interactive file explorer for mRNA-1273 BLA submission data.">
+    <meta name="keywords" content="Moderna, mRNA-1273, COVID-19 vaccine, clinical trial, FOIA, BLA, file navigator">
+    <link rel="canonical" href="https://coviddocuments.com/moderna-bla-navigator.html">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -195,17 +195,6 @@
             box-sizing: border-box;
         }
         
-        /* Fixed width for folder filter buttons */
-        #folderFilters .filter-button {
-            width: 125px !important;
-            min-width: 125px !important;
-            white-space: nowrap;
-        }
-        
-        #folderFilters .filter-button.all-button {
-            width: 125px !important;
-            min-width: 125px !important;
-        }
         
         .filter-button:hover {
             background: #90caf9;
@@ -1136,7 +1125,7 @@
     </nav>
     <div class="container">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; margin-top: 0;">
-            <h1 style="margin: 0; margin-bottom: 10px;">Pfizer EUA File Navigator</h1>
+            <h1 style="margin: 0; margin-bottom: 10px;">Moderna BLA File Navigator</h1>
             <!-- Tab Navigation -->
             <div class="tab-container" style="margin-bottom: 0;">
                 <button class="tab-button active" data-view="file-list">File List</button>
@@ -1162,14 +1151,7 @@
                 <label style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by File Type:</label>
                 <div class="filter-buttons" id="fileTypeFilters">
                     <button class="file-type-button all all-button active" data-filter="all">All Types <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="pdf" style="background: #DC2626;">PDF <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="xpt" style="background: #7C3AED;">XPT <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="sas" style="background: #F87171;">SAS <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="word" style="background: #2563EB;">Word <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="jpg" style="background: #EAB308;">JPG <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="xml" style="background: #059669;">XML <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="xsl" style="background: #10B981;">XSL <span class="file-type-count"></span></button>
-                    <button class="file-type-button" data-filter="jmp" style="background: #F97316;">JMP <span class="file-type-count"></span></button>
+                    <!-- File type buttons will be dynamically populated -->
                 </div>
             </div>
             
@@ -1189,11 +1171,9 @@
                 
                 <div class="filter-section">
                     <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Folder:</label>
-                    <div class="filter-buttons" id="folderFilters">
-                        <button class="filter-button all-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
-                        <button class="filter-button" data-filter="eua-051925">eua-051925 <span class="filter-count"></span></button>
-                        <button class="filter-button" data-filter="eua-063025">eua-063025 <span class="filter-count"></span></button>
-                    </div>
+                    <select id="folderFilter" style="width: 100%; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
+                        <option value="all">All Folders</option>
+                    </select>
                 </div>
             </div>
             
@@ -1218,21 +1198,44 @@
                     <select id="domainFilter" style="width: 100%; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
                         <option value="all">All Domains</option>
                         <optgroup label="ADaM (Analysis) Datasets">
+                            <option value="ada">ada - Analysis Dataset</option>
                             <option value="adae">adae - Analysis Dataset for Adverse Events</option>
+                            <option value="adar">adar - Analysis Dataset for Reactogenicity</option>
+                            <option value="adar1">adar1 - Analysis Dataset for Reactogenicity (Part 1)</option>
+                            <option value="adar2">adar2 - Analysis Dataset for Reactogenicity (Part 2)</option>
+                            <option value="adarp7d">adarp7d - Analysis Dataset for Reactogenicity (7-Day)</option>
+                            <option value="adarsum">adarsum - Analysis Dataset for Reactogenicity Summary</option>
                             <option value="adc19ef">adc19ef - Analysis Dataset for COVID-19 Efficacy</option>
                             <option value="adcevd">adcevd - Analysis Dataset for COVID-19 Events/Disease</option>
+                            <option value="adcm">adcm - Analysis Dataset for Concomitant Medications</option>
+                            <option value="adcov">adcov - Analysis Dataset for COVID-19</option>
                             <option value="adds">adds - Analysis Dataset for Disposition</option>
+                            <option value="addv">addv - Analysis Dataset for Protocol Deviations</option>
+                            <option value="adeff">adeff - Analysis Dataset for Efficacy</option>
+                            <option value="adeff2">adeff2 - Analysis Dataset for Efficacy (Part 2)</option>
+                            <option value="adeff3">adeff3 - Analysis Dataset for Efficacy (Part 3)</option>
+                            <option value="adex">adex - Analysis Dataset for Exposure</option>
                             <option value="adfacevd">adfacevd - Analysis Dataset for Findings About COVID-19 Events/Disease</option>
+                            <option value="adis">adis - Analysis Dataset for Immunogenicity</option>
                             <option value="adlb">adlb - Analysis Dataset for Laboratory Tests</option>
+                            <option value="admb">admb - Analysis Dataset for Microbiology</option>
                             <option value="admh">admh - Analysis Dataset for Medical History</option>
                             <option value="adsl">adsl - Subject-Level Analysis Dataset</option>
+                            <option value="adslsf">adslsf - Subject-Level Analysis Dataset (Safety)</option>
+                            <option value="adsymp">adsymp - Analysis Dataset for Symptoms</option>
                             <option value="adsympt">adsympt - Analysis Dataset for Symptoms</option>
+                            <option value="adtte">adtte - Analysis Dataset for Time-to-Event</option>
+                            <option value="adttea">adttea - Analysis Dataset for Time-to-Event (Analysis A)</option>
+                            <option value="adtteb">adtteb - Analysis Dataset for Time-to-Event (Analysis B)</option>
+                            <option value="adttre">adttre - Analysis Dataset for Time-to-Event Response</option>
+                            <option value="adttre2">adttre2 - Analysis Dataset for Time-to-Event Response (Part 2)</option>
                             <option value="adva">adva - Analysis Dataset for Vaccine Administration</option>
                             <option value="advs">advs - Analysis Dataset for Vital Signs</option>
                         </optgroup>
                         <optgroup label="SDTM Domains">
                             <option value="ae">ae - Adverse Events</option>
                             <option value="ce">ce - Clinical Events</option>
+                            <option value="clinsite">clinsite - Clinical Site</option>
                             <option value="cm">cm - Concomitant Medications</option>
                             <option value="co">co - Comments</option>
                             <option value="dd">dd - Death Details</option>
@@ -1242,9 +1245,13 @@
                             <option value="dv">dv - Protocol Deviations</option>
                             <option value="ec">ec - Exposure as Collected</option>
                             <option value="eg">eg - ECG Test Results</option>
+                            <option value="er">er - External Reference</option>
                             <option value="ex">ex - Exposure</option>
+                            <option value="faae">faae - Findings About Adverse Events</option>
                             <option value="face">face - Findings About Clinical Events</option>
+                            <option value="faef">faef - Findings About Efficacy</option>
                             <option value="faho">faho - Findings About Healthcare Organization</option>
+                            <option value="faot">faot - Findings About Other</option>
                             <option value="ho">ho - Healthcare Organization</option>
                             <option value="ie">ie - Inclusion/Exclusion Criteria</option>
                             <option value="is">is - Immunogenicity Specimen</option>
@@ -1265,8 +1272,10 @@
                             <option value="tv">tv - Trial Visits</option>
                             <option value="vs">vs - Vital Signs</option>
                             <option value="xa">xa - Custom Domain</option>
+                            <option value="xm">xm - Custom Miscellaneous</option>
                         </optgroup>
                         <optgroup label="Supplemental Qualifier Datasets">
+                            <option value="supp">supp - Supplemental Qualifiers (General)</option>
                             <option value="suppae">suppae - Supplemental Qualifiers for AE</option>
                             <option value="suppce">suppce - Supplemental Qualifiers for CE</option>
                             <option value="suppcm">suppcm - Supplemental Qualifiers for CM</option>
@@ -1276,7 +1285,9 @@
                             <option value="suppec">suppec - Supplemental Qualifiers for EC</option>
                             <option value="suppeg">suppeg - Supplemental Qualifiers for EG</option>
                             <option value="suppex">suppex - Supplemental Qualifiers for EX</option>
+                            <option value="suppfaae">suppfaae - Supplemental Qualifiers for FAAE</option>
                             <option value="suppface">suppface - Supplemental Qualifiers for FACE</option>
+                            <option value="suppfaot">suppfaot - Supplemental Qualifiers for FAOT</option>
                             <option value="suppho">suppho - Supplemental Qualifiers for HO</option>
                             <option value="suppie">suppie - Supplemental Qualifiers for IE</option>
                             <option value="suppis">suppis - Supplemental Qualifiers for IS</option>
@@ -1454,6 +1465,10 @@
             processData();
         });
         
+        document.getElementById('folderFilter').addEventListener('change', function() {
+            processData();
+        });
+        
         // Tab switching
         document.querySelectorAll('.tab-button').forEach(tab => {
             tab.addEventListener('click', function() {
@@ -1498,7 +1513,6 @@
             });
         }
         
-        setupButtonFilters('folderFilters');
         setupButtonFilters('moduleFilters');
         
         // Setup file type filter buttons
@@ -1510,11 +1524,25 @@
             });
         });
         
+        // Function to parse date from folder name (md-production-MMDDYY)
+        function parseFolderDate(folderName) {
+            const match = folderName.match(/(\d{2})(\d{2})(\d{2})$/);
+            if (match) {
+                const month = parseInt(match[1], 10);
+                const day = parseInt(match[2], 10);
+                let year = parseInt(match[3], 10);
+                // Assume 20XX for years
+                year = 2000 + year;
+                return new Date(year, month - 1, day);
+            }
+            return new Date(0); // Return epoch for non-matching folders
+        }
+        
         // Function to calculate filter counts from filtered data
         function updateFilterCountsFromFilteredData(dataToCount) {
             // Get current active filters to know what NOT to count
             const activeFileType = document.querySelector('#fileTypeFilters .file-type-button.active').dataset.filter;
-            const activeFolder = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+            const activeFolder = document.getElementById('folderFilter').value;
             const activeModule = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
             const activeDocumentType = document.getElementById('documentTypeFilter').value;
             const activeDomain = document.getElementById('domainFilter').value;
@@ -1571,32 +1599,38 @@
             const fileTypeCounts = {};
             // Use dataToCount which contains the already-filtered data
             dataToCount.forEach(row => {
-                const ext = getFileExtension(row.filename);
-                if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
-                    fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
-                } else if (ext === 'doc' || ext === 'docx') {
-                    fileTypeCounts['word'] = (fileTypeCounts['word'] || 0) + 1;
+                // Use file_type field from JSON data
+                const fileType = row.file_type ? row.file_type.toLowerCase() : null;
+                if (fileType) {
+                    fileTypeCounts[fileType] = (fileTypeCounts[fileType] || 0) + 1;
                 } else {
-                    fileTypeCounts[ext] = (fileTypeCounts[ext] || 0) + 1;
+                    // Fallback to extension extraction
+                    const ext = getFileExtension(row.filename);
+                    if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
+                        fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
+                    } else if (ext) {
+                        fileTypeCounts[ext] = (fileTypeCounts[ext] || 0) + 1;
+                    }
                 }
             });
             
-            // Update folder filter buttons
-            document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
-                const filter = button.dataset.filter;
-                let countSpan = button.querySelector('.filter-count');
-                if (!countSpan) {
-                    // If span doesn't exist, recreate button content with span
-                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
-                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
-                    countSpan = button.querySelector('.filter-count');
-                }
+            // Update folder filter dropdown
+            const folderDropdown = document.getElementById('folderFilter');
+            const currentFolderValue = folderDropdown.value;
+            
+            folderDropdown.querySelectorAll('option').forEach(option => {
+                const value = option.value;
+                const originalText = option.textContent.split(' (')[0];
                 
-                if (filter === 'all') {
-                    countSpan.textContent = `(${dataToCount.length})`;
+                if (value === 'all') {
+                    option.textContent = `All Folders (${dataToCount.length})`;
                 } else {
-                    const count = folderCounts[filter] || 0;
-                    countSpan.textContent = `(${count})`;
+                    const count = folderCounts[value] || 0;
+                    if (currentFolderValue === 'all' || count > 0) {
+                        option.textContent = `${originalText} (${count})`;
+                    } else {
+                        option.textContent = originalText;
+                    }
                 }
             });
             
@@ -1704,7 +1738,7 @@
                 }
             });
             
-            // Update domain dropdown options
+            // Update domain dropdown options (for filtered data, just update counts)
             const domainFilter = document.getElementById('domainFilter');
             const currentDomainValue = domainFilter.value;
             
@@ -1714,14 +1748,13 @@
                 
                 if (value === 'all') {
                     option.textContent = 'All Domains';
-                } else if (currentDomainValue === 'all' && domainCounts[value] !== undefined) {
-                    // Only show counts when "All Domains" is selected
-                    option.textContent = `${originalText} (${domainCounts[value]})`;
-                } else if (currentDomainValue === 'all') {
-                    option.textContent = `${originalText} (0)`;
                 } else {
-                    // Remove counts when a specific domain is selected
-                    option.textContent = originalText;
+                    const count = domainCounts[value] || 0;
+                    if (currentDomainValue === 'all' || count > 0) {
+                        option.textContent = `${originalText} (${count})`;
+                    } else {
+                        option.textContent = originalText;
+                    }
                 }
             });
         }
@@ -1773,33 +1806,39 @@
             // Calculate file type counts
             const fileTypeCounts = {};
             csvData.forEach(row => {
-                const ext = getFileExtension(row.filename);
-                if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
-                    fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
-                } else if (ext === 'doc' || ext === 'docx') {
-                    fileTypeCounts['word'] = (fileTypeCounts['word'] || 0) + 1;
+                // Use file_type field from JSON data
+                const fileType = row.file_type ? row.file_type.toLowerCase() : null;
+                if (fileType) {
+                    fileTypeCounts[fileType] = (fileTypeCounts[fileType] || 0) + 1;
                 } else {
-                    fileTypeCounts[ext] = (fileTypeCounts[ext] || 0) + 1;
+                    // Fallback to extension extraction
+                    const ext = getFileExtension(row.filename);
+                    if (row.filename.toLowerCase().endsWith('-sas.pdf')) {
+                        fileTypeCounts['sas'] = (fileTypeCounts['sas'] || 0) + 1;
+                    } else if (ext) {
+                        fileTypeCounts[ext] = (fileTypeCounts[ext] || 0) + 1;
+                    }
                 }
             });
             
-            // Update folder filter buttons
-            document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
-                const filter = button.dataset.filter;
-                let countSpan = button.querySelector('.filter-count');
-                if (!countSpan) {
-                    // If span doesn't exist, recreate button content with span
-                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
-                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
-                    countSpan = button.querySelector('.filter-count');
-                }
-                
-                if (filter === 'all') {
-                    countSpan.textContent = `(${csvData.length})`;
-                } else {
-                    const count = folderCounts[filter] || 0;
-                    countSpan.textContent = `(${count})`;
-                }
+            // Update folder filter dropdown (initial load)
+            const folderDropdown = document.getElementById('folderFilter');
+            folderDropdown.innerHTML = '<option value="all">All Folders</option>';
+            
+            // Get unique folders and sort by date
+            const uniqueFolders = [...new Set(csvData.map(row => row.folder).filter(f => f))];
+            const sortedFolders = uniqueFolders.sort((a, b) => {
+                // Parse dates from md-production-MMDDYY format
+                const dateA = parseFolderDate(a);
+                const dateB = parseFolderDate(b);
+                return dateB - dateA; // Sort newest first
+            });
+            
+            sortedFolders.forEach(folder => {
+                const option = document.createElement('option');
+                option.value = folder;
+                option.textContent = `${folder} (${folderCounts[folder] || 0})`;
+                folderDropdown.appendChild(option);
             });
             
             // Update module filter buttons
@@ -1916,54 +1955,58 @@
         function sortAndUpdateFileTypeButtons(fileTypeCounts) {
             const container = document.getElementById('fileTypeFilters');
             const allButton = container.querySelector('.file-type-button[data-filter="all"]');
-            const otherButtons = Array.from(container.querySelectorAll('.file-type-button:not([data-filter="all"])'));
             
-            // Store button information including styles
-            const buttonInfo = otherButtons.map(button => {
-                const filter = button.dataset.filter;
-                const count = fileTypeCounts[filter] || 0;
-                const style = button.getAttribute('style');
-                const isActive = button.classList.contains('active');
-                const text = button.textContent.replace(/\s*\(\d+\)$/, ''); // Remove old count
-                
-                return {
-                    filter,
-                    count,
-                    style,
-                    isActive,
-                    text,
-                    element: button
-                };
-            });
+            // Define file type styles and labels - preserving original Pfizer colors
+            const fileTypeDefinitions = {
+                'pdf': { label: 'PDF', color: '#DC2626' },
+                'xpt': { label: 'XPT', color: '#7C3AED' },
+                'txt': { label: 'TXT', color: '#6B7280' },
+                'docx': { label: 'DOCX', color: '#1E40AF' },
+                'doc': { label: 'DOC', color: '#2563EB' },
+                'word': { label: 'Word', color: '#2563EB' },
+                'xlsx': { label: 'XLSX', color: '#10B981' },
+                'xls': { label: 'XLS', color: '#059669' },
+                'xml': { label: 'XML', color: '#059669' },
+                'xsl': { label: 'XSL', color: '#10B981' },
+                'jmp': { label: 'JMP', color: '#F97316' },
+                'mp4': { label: 'MP4', color: '#EC4899' },
+                'sas': { label: 'SAS', color: '#F87171' }
+            };
             
-            // Sort by count (descending)
-            buttonInfo.sort((a, b) => b.count - a.count);
+            // Get current active filter
+            const currentActive = container.querySelector('.file-type-button.active')?.dataset.filter || 'all';
             
-            // Update the All button count
+            // Update "All" button count
             allButton.querySelector('.file-type-count')?.remove();
             const allText = allButton.textContent.replace(/\s*\(\d+\)$/, '');
             allButton.innerHTML = `${allText} <span class="file-type-count">(${csvData.length})</span>`;
             
-            // Clear container and re-add buttons in sorted order
+            // Clear container and re-add all button
             container.innerHTML = '';
             container.appendChild(allButton);
             
-            // Re-create buttons in sorted order with preserved styles
-            buttonInfo.forEach(info => {
-                const button = document.createElement('button');
-                button.className = 'file-type-button' + (info.isActive ? ' active' : '');
-                button.dataset.filter = info.filter;
-                if (info.style) {
-                    button.setAttribute('style', info.style);
-                }
+            // Get file types with counts > 0 and sort by count
+            const fileTypesWithCounts = Object.entries(fileTypeCounts)
+                .filter(([type, count]) => count > 0)
+                .sort((a, b) => b[1] - a[1]);
+            
+            // Create buttons for each file type
+            fileTypesWithCounts.forEach(([filter, count]) => {
+                const definition = fileTypeDefinitions[filter] || { label: filter.toUpperCase(), color: '#9CA3AF' };
                 
-                // Create button with span structure for consistent width
-                const buttonText = info.text;
+                const button = document.createElement('button');
+                button.className = 'file-type-button';
+                if (filter === currentActive) {
+                    button.classList.add('active');
+                }
+                button.dataset.filter = filter;
+                button.style.background = definition.color;
+                
+                // Create button content
+                button.textContent = definition.label + ' ';
                 const countSpan = document.createElement('span');
                 countSpan.className = 'file-type-count';
-                countSpan.textContent = `(${info.count})`;
-                
-                button.textContent = buttonText + ' ';
+                countSpan.textContent = `(${count})`;
                 button.appendChild(countSpan);
                 
                 container.appendChild(button);
@@ -1987,24 +2030,189 @@
                 }
             });
             
-            // Update domain dropdown options
+            // Rebuild domain dropdown with only domains that have data
             const domainFilter = document.getElementById('domainFilter');
             const currentDomainValue = domainFilter.value;
             
-            domainFilter.querySelectorAll('option').forEach(option => {
-                const value = option.value;
-                const originalText = option.textContent.split(' (')[0];
-                
-                if (value === 'all') {
-                    option.textContent = 'All Domains';
-                } else if (currentDomainValue === 'all' && domainCounts[value]) {
-                    // Only show counts when "All Domains" is selected
-                    option.textContent = `${originalText} (${domainCounts[value]})`;
+            // Save the structure of domain definitions
+            const domainDefinitions = {
+                'ada': 'ada - Analysis Dataset',
+                'adae': 'adae - Analysis Dataset for Adverse Events',
+                'adar': 'adar - Analysis Dataset for Reactogenicity',
+                'adar1': 'adar1 - Analysis Dataset for Reactogenicity (Part 1)',
+                'adar2': 'adar2 - Analysis Dataset for Reactogenicity (Part 2)',
+                'adarp7d': 'adarp7d - Analysis Dataset for Reactogenicity (7-Day)',
+                'adarsum': 'adarsum - Analysis Dataset for Reactogenicity Summary',
+                'adc19ef': 'adc19ef - Analysis Dataset for COVID-19 Efficacy',
+                'adcevd': 'adcevd - Analysis Dataset for COVID-19 Events/Disease',
+                'adcm': 'adcm - Analysis Dataset for Concomitant Medications',
+                'adcov': 'adcov - Analysis Dataset for COVID-19',
+                'adds': 'adds - Analysis Dataset for Disposition',
+                'addv': 'addv - Analysis Dataset for Protocol Deviations',
+                'adeff': 'adeff - Analysis Dataset for Efficacy',
+                'adeff2': 'adeff2 - Analysis Dataset for Efficacy (Part 2)',
+                'adeff3': 'adeff3 - Analysis Dataset for Efficacy (Part 3)',
+                'adex': 'adex - Analysis Dataset for Exposure',
+                'adfacevd': 'adfacevd - Analysis Dataset for Findings About COVID-19 Events/Disease',
+                'adis': 'adis - Analysis Dataset for Immunogenicity',
+                'adlb': 'adlb - Analysis Dataset for Laboratory Tests',
+                'admb': 'admb - Analysis Dataset for Microbiology',
+                'admh': 'admh - Analysis Dataset for Medical History',
+                'adsl': 'adsl - Subject-Level Analysis Dataset',
+                'adslsf': 'adslsf - Subject-Level Analysis Dataset (Safety)',
+                'adsymp': 'adsymp - Analysis Dataset for Symptoms',
+                'adsympt': 'adsympt - Analysis Dataset for Symptoms',
+                'adtte': 'adtte - Analysis Dataset for Time-to-Event',
+                'adttea': 'adttea - Analysis Dataset for Time-to-Event (Analysis A)',
+                'adtteb': 'adtteb - Analysis Dataset for Time-to-Event (Analysis B)',
+                'adttre': 'adttre - Analysis Dataset for Time-to-Event Response',
+                'adttre2': 'adttre2 - Analysis Dataset for Time-to-Event Response (Part 2)',
+                'adva': 'adva - Analysis Dataset for Vaccine Administration',
+                'advs': 'advs - Analysis Dataset for Vital Signs',
+                'ae': 'ae - Adverse Events',
+                'ce': 'ce - Clinical Events',
+                'clinsite': 'clinsite - Clinical Site',
+                'cm': 'cm - Concomitant Medications',
+                'co': 'co - Comments',
+                'dd': 'dd - Death Details',
+                'di': 'di - Device Identification',
+                'dm': 'dm - Demographics',
+                'ds': 'ds - Disposition',
+                'dv': 'dv - Protocol Deviations',
+                'ec': 'ec - Exposure as Collected',
+                'eg': 'eg - ECG Test Results',
+                'er': 'er - External Reference',
+                'ex': 'ex - Exposure',
+                'faae': 'faae - Findings About Adverse Events',
+                'face': 'face - Findings About Clinical Events',
+                'faef': 'faef - Findings About Efficacy',
+                'faho': 'faho - Findings About Healthcare Organization',
+                'faot': 'faot - Findings About Other',
+                'ho': 'ho - Healthcare Organization',
+                'ie': 'ie - Inclusion/Exclusion Criteria',
+                'is': 'is - Immunogenicity Specimen',
+                'lb': 'lb - Laboratory Test Results',
+                'mb': 'mb - Microbiology Specimen',
+                'mh': 'mh - Medical History',
+                'mo': 'mo - Morphology',
+                'pe': 'pe - Physical Examination',
+                'pr': 'pr - Procedures',
+                'relrec': 'relrec - Related Records',
+                'rp': 'rp - Reproductive System Findings',
+                'se': 'se - Subject Elements',
+                'sv': 'sv - Subject Visits',
+                'ta': 'ta - Trial Arms',
+                'te': 'te - Trial Elements',
+                'ti': 'ti - Trial Inclusion/Exclusion Criteria',
+                'ts': 'ts - Trial Summary',
+                'tv': 'tv - Trial Visits',
+                'vs': 'vs - Vital Signs',
+                'xa': 'xa - Custom Domain',
+                'xm': 'xm - Custom Miscellaneous',
+                'supp': 'supp - Supplemental Qualifiers (General)',
+                'suppae': 'suppae - Supplemental Qualifiers for AE',
+                'suppce': 'suppce - Supplemental Qualifiers for CE',
+                'suppcm': 'suppcm - Supplemental Qualifiers for CM',
+                'suppdm': 'suppdm - Supplemental Qualifiers for DM',
+                'suppds': 'suppds - Supplemental Qualifiers for DS',
+                'suppdv': 'suppdv - Supplemental Qualifiers for DV',
+                'suppec': 'suppec - Supplemental Qualifiers for EC',
+                'suppeg': 'suppeg - Supplemental Qualifiers for EG',
+                'suppex': 'suppex - Supplemental Qualifiers for EX',
+                'suppfaae': 'suppfaae - Supplemental Qualifiers for FAAE',
+                'suppface': 'suppface - Supplemental Qualifiers for FACE',
+                'suppfaot': 'suppfaot - Supplemental Qualifiers for FAOT',
+                'suppho': 'suppho - Supplemental Qualifiers for HO',
+                'suppie': 'suppie - Supplemental Qualifiers for IE',
+                'suppis': 'suppis - Supplemental Qualifiers for IS',
+                'supplb': 'supplb - Supplemental Qualifiers for LB',
+                'suppmb': 'suppmb - Supplemental Qualifiers for MB',
+                'suppmh': 'suppmh - Supplemental Qualifiers for MH',
+                'suppmo': 'suppmo - Supplemental Qualifiers for MO',
+                'supppe': 'supppe - Supplemental Qualifiers for PE',
+                'supppr': 'supppr - Supplemental Qualifiers for PR',
+                'supprp': 'supprp - Supplemental Qualifiers for RP',
+                'suppvs': 'suppvs - Supplemental Qualifiers for VS',
+                'suppxa': 'suppxa - Supplemental Qualifiers for XA',
+                've': 've - Vaccine Events',
+                'suppve': 'suppve - Supplemental Qualifiers for VE',
+                'supper': 'supper - Supplemental Qualifiers for ER',
+                'suppfaef': 'suppfaef - Supplemental Qualifiers for FAEF',
+                'suppsc': 'suppsc - Supplemental Qualifiers for SC',
+                'suppsv': 'suppsv - Supplemental Qualifiers for SV',
+                'suppxm': 'suppxm - Supplemental Qualifiers for XM',
+                'suppxq': 'suppxq - Supplemental Qualifiers for XQ'
+            };
+            
+            // Clear and rebuild dropdown
+            domainFilter.innerHTML = '<option value="all">All Domains</option>';
+            
+            // Get sorted domains with counts
+            const domainsWithCounts = Object.keys(domainCounts).sort();
+            
+            // Group domains by type
+            const adamDomains = [];
+            const sdtmDomains = [];
+            const suppDomains = [];
+            
+            domainsWithCounts.forEach(domain => {
+                if (domain.startsWith('ad')) {
+                    adamDomains.push(domain);
+                } else if (domain.startsWith('supp')) {
+                    suppDomains.push(domain);
                 } else {
-                    // Remove counts when a specific domain is selected
-                    option.textContent = originalText;
+                    sdtmDomains.push(domain);
                 }
             });
+            
+            // Add ADaM domains
+            if (adamDomains.length > 0) {
+                const adamGroup = document.createElement('optgroup');
+                adamGroup.label = 'ADaM (Analysis) Datasets';
+                adamDomains.forEach(domain => {
+                    const option = document.createElement('option');
+                    option.value = domain;
+                    const label = domainDefinitions[domain] || `${domain} - ${domain.toUpperCase()}`;
+                    option.textContent = `${label} (${domainCounts[domain]})`;
+                    adamGroup.appendChild(option);
+                });
+                domainFilter.appendChild(adamGroup);
+            }
+            
+            // Add SDTM domains
+            if (sdtmDomains.length > 0) {
+                const sdtmGroup = document.createElement('optgroup');
+                sdtmGroup.label = 'SDTM Domains';
+                sdtmDomains.forEach(domain => {
+                    const option = document.createElement('option');
+                    option.value = domain;
+                    const label = domainDefinitions[domain] || `${domain} - ${domain.toUpperCase()}`;
+                    option.textContent = `${label} (${domainCounts[domain]})`;
+                    sdtmGroup.appendChild(option);
+                });
+                domainFilter.appendChild(sdtmGroup);
+            }
+            
+            // Add Supplemental domains
+            if (suppDomains.length > 0) {
+                const suppGroup = document.createElement('optgroup');
+                suppGroup.label = 'Supplemental Qualifier Datasets';
+                suppDomains.forEach(domain => {
+                    const option = document.createElement('option');
+                    option.value = domain;
+                    const label = domainDefinitions[domain] || `${domain} - ${domain.toUpperCase()}`;
+                    option.textContent = `${label} (${domainCounts[domain]})`;
+                    suppGroup.appendChild(option);
+                });
+                domainFilter.appendChild(suppGroup);
+            }
+            
+            // Restore previous selection if it still exists
+            if (currentDomainValue && domainFilter.querySelector(`option[value="${currentDomainValue}"]`)) {
+                domainFilter.value = currentDomainValue;
+            } else {
+                domainFilter.value = 'all';
+            }
         }
         
         // Clear all filters button
@@ -2018,7 +2226,7 @@
         // Load data from JSON file on page load
         window.addEventListener('DOMContentLoaded', async function() {
             try {
-                const response = await fetch('eua-tagged-files.json');
+                const response = await fetch('moderna-tagged-files.json');
                 if (response.ok) {
                     const data = await response.json();
                     // Convert JSON structure to match CSV structure
@@ -2058,7 +2266,7 @@
             } catch (error) {
                 console.error('Error loading data:', error);
                 document.getElementById('loading-container').innerHTML = 
-                    '<p style="color: #d32f2f;">Error loading data. Please check that eua-tagged-files.json exists.</p>';
+                    '<p style="color: #d32f2f;">Error loading data. Please check that moderna-tagged-files.json exists.</p>';
             }
         });
         
@@ -2077,15 +2285,20 @@
                 return 'sas';
             }
             
+            // Only process XPT files for domain extraction
+            if (!filename.toLowerCase().endsWith('.xpt')) {
+                return null;
+            }
+            
             // Remove file extension
             const nameWithoutExt = filename.replace(/\.[^/.]+$/, '');
             
-            // Split by dash and get the last part
-            const parts = nameWithoutExt.split('-');
+            // Split by underscore and get the last part
+            const parts = nameWithoutExt.split('_');
             if (parts.length > 1) {
                 const lastPart = parts[parts.length - 1].toLowerCase();
                 // Check if it matches known domain patterns
-                if (lastPart.match(/^(ad[a-z]+|supp[a-z]+|[a-z]{2,})$/)) {
+                if (lastPart.match(/^(ad[a-z0-9]+|supp[a-z]+|[a-z]{2,})$/)) {
                     return lastPart;
                 }
             }
@@ -2311,10 +2524,7 @@
             document.querySelector('#moduleFilters .filter-button[data-filter="all"]').classList.add('active');
             
             // Reset folder filter
-            document.querySelectorAll('#folderFilters .filter-button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector('#folderFilters .filter-button[data-filter="all"]').classList.add('active');
+            document.getElementById('folderFilter').value = 'all';
             
             // Reset dropdowns
             document.getElementById('domainFilter').value = 'all';
@@ -2414,7 +2624,7 @@
             // Apply filters
             const fileTypeFilter = document.querySelector('#fileTypeFilters .file-type-button.active').dataset.filter;
             const domainFilter = document.getElementById('domainFilter').value;
-            const folderFilter = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+            const folderFilter = document.getElementById('folderFilter').value;
             const moduleFilter = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
             const documentTypeFilter = document.getElementById('documentTypeFilter').value;
             
@@ -2422,22 +2632,21 @@
             
             // Filter by file type
             if (fileTypeFilter !== 'all') {
-                if (fileTypeFilter === 'sas') {
-                    // Special handling for SAS files
-                    filteredData = filteredData.filter(row => 
-                        row.filename.toLowerCase().endsWith('-sas.pdf')
-                    );
-                } else if (fileTypeFilter === 'word') {
-                    // Handle both DOC and DOCX files
-                    filteredData = filteredData.filter(row => {
-                        const ext = getFileExtension(row.filename);
-                        return ext === 'doc' || ext === 'docx';
-                    });
-                } else {
-                    filteredData = filteredData.filter(row => 
-                        getFileExtension(row.filename) === fileTypeFilter
-                    );
-                }
+                filteredData = filteredData.filter(row => {
+                    // Use file_type field from JSON
+                    const fileType = row.file_type ? row.file_type.toLowerCase() : null;
+                    if (fileType) {
+                        return fileType === fileTypeFilter;
+                    } else {
+                        // Fallback to filename extension
+                        if (fileTypeFilter === 'sas') {
+                            return row.filename.toLowerCase().endsWith('-sas.pdf');
+                        } else {
+                            const ext = getFileExtension(row.filename);
+                            return ext === fileTypeFilter;
+                        }
+                    }
+                });
             }
             
             // Filter by domain
@@ -2960,7 +3169,7 @@
                 const moduleFilter = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
                 if (moduleFilter !== 'all') activeFilters.push(`Module: ${moduleFilter}`);
                 
-                const folderFilter = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+                const folderFilter = document.getElementById('folderFilter').value;
                 if (folderFilter !== 'all') activeFilters.push(`Folder: ${folderFilter}`);
                 
                 const domainFilter = document.getElementById('domainFilter').value;

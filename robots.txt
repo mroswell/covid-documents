@@ -1,0 +1,13 @@
+# robots.txt for https://coviddocuments.com/
+
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /.git/
+Disallow: /.github/
+
+# Sitemap location
+Sitemap: https://coviddocuments.com/sitemap.xml
+
+# Crawl-delay (be nice to servers)
+Crawl-delay: 1

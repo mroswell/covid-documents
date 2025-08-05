@@ -1100,7 +1100,24 @@
             margin-top: 5px;
         }
         
+        .nav-menu .dropdown.active .dropdown-menu,
         .nav-menu .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Add a transparent bridge to prevent gap issues */
+        .nav-menu .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: transparent;
+            display: none;
+        }
+        
+        .nav-menu .dropdown:hover::after {
             display: block;
         }
         
@@ -1549,6 +1566,7 @@
             // Use dataToCount which contains the already-filtered data
             dataToCount.forEach(row => {
                 const docType = row.documentType || 'Unknown';
+                // Document type is already normalized at load time
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
                 
                 // Handle vaccine candidates (can be array or string)
@@ -1752,6 +1770,7 @@
             const clinicalTrialCounts = {};
             csvData.forEach(row => {
                 const docType = row.documentType || 'Unknown';
+                // Document type is already normalized at load time
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
                 
                 // Handle vaccine candidates (can be array or string)
@@ -2022,25 +2041,35 @@
                 if (response.ok) {
                     const data = await response.json();
                     // Convert JSON structure to match CSV structure
-                    csvData = data.documents.map(doc => ({
-                        filename: doc.filename,
-                        title: doc.title,
-                        date: doc.date,
-                        google_drive_link: doc.googleDriveLink,
-                        folder: doc.folder,
-                        file_type: doc.fileType,
-                        page_count: doc.pageCount.toString(),
-                        module: doc.module,
-                        documentType: doc.documentType,
-                        vaccineCandidate: doc.vaccineCandidate,
-                        clinicalTrial: doc.clinicalTrial,
-                        people_mentioned: doc.peopleMentioned.join(', '),
-                        tags: doc.tags.join(', '),
-                        has_exemption: doc.hasExemption ? 'True' : 'False',
-                        has_exclusion: doc.hasExclusion ? 'True' : 'False',
-                        password_protected: doc.passwordProtected ? 'True' : 'False',
-                        processed: doc.processed ? 'True' : 'False'
-                    }));
+                    csvData = data.documents.map(doc => {
+                        // Normalize document type
+                        let docType = doc.documentType || 'Unknown';
+                        if (docType.toLowerCase() === 'slip sheet' || 
+                            docType.toLowerCase() === 'slipsheet' || 
+                            docType.toLowerCase() === 'foia redaction slip sheet') {
+                            docType = 'FOIA Redaction Slipsheet';
+                        }
+                        
+                        return {
+                            filename: doc.filename,
+                            title: doc.title,
+                            date: doc.date,
+                            google_drive_link: doc.googleDriveLink,
+                            folder: doc.folder,
+                            file_type: doc.fileType,
+                            page_count: doc.pageCount.toString(),
+                            module: doc.module,
+                            documentType: docType,
+                            vaccineCandidate: doc.vaccineCandidate,
+                            clinicalTrial: doc.clinicalTrial,
+                            people_mentioned: doc.peopleMentioned.join(', '),
+                            tags: doc.tags.join(', '),
+                            has_exemption: doc.hasExemption ? 'True' : 'False',
+                            has_exclusion: doc.hasExclusion ? 'True' : 'False',
+                            password_protected: doc.passwordProtected ? 'True' : 'False',
+                            processed: doc.processed ? 'True' : 'False'
+                        };
+                    });
                     
                     // Hide loading indicator
                     document.getElementById('loading-container').style.display = 'none';
@@ -2468,6 +2497,7 @@
             
             // Filter by document type
             if (documentTypeFilter !== 'all') {
+                // Document type is already normalized at load time
                 filteredData = filteredData.filter(row => row.documentType === documentTypeFilter);
             }
             
@@ -3648,6 +3678,62 @@
                 document.body.removeChild(textArea);
             });
         }
+        // Improve dropdown navigation reliability
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.nav-menu .dropdown');
+            if (!dropdown) return;
+            
+            const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+            let isClickOpen = false;
+            let hoverTimeout;
+            
+            // Handle click for explicit open/close
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                isClickOpen = !isClickOpen;
+                if (isClickOpen) {
+                    dropdown.classList.add('active');
+                } else {
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Handle hover with delay to prevent accidental closing
+            dropdown.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+                dropdown.classList.add('active');
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (!isClickOpen) {
+                    hoverTimeout = setTimeout(function() {
+                        dropdown.classList.remove('active');
+                    }, 300); // 300ms delay before closing
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target)) {
+                    isClickOpen = false;
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Ensure dropdown stays accessible when navigating with keyboard
+            dropdown.addEventListener('focusin', function() {
+                dropdown.classList.add('active');
+            });
+            
+            dropdown.addEventListener('focusout', function(e) {
+                setTimeout(function() {
+                    if (!dropdown.contains(document.activeElement)) {
+                        isClickOpen = false;
+                        dropdown.classList.remove('active');
+                    }
+                }, 100);
+            });
+        });
     </script>
 </body>
 </html>

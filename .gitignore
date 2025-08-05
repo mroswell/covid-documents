@@ -62,6 +62,11 @@ yarn-error.log*
 # Additional metadata temporary files
 metadata/nav-template.html
 
+# Claude prompt history
+prompts.txt
+prompts-older.txt
+extract_prompts.py
+
 # Claude-specific files
 .claude/
 CLAUDE.md.backup

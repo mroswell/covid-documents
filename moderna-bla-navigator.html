@@ -1089,7 +1089,24 @@
             margin-top: 5px;
         }
         
+        .nav-menu .dropdown.active .dropdown-menu,
         .nav-menu .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Add a transparent bridge to prevent gap issues */
+        .nav-menu .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: transparent;
+            display: none;
+        }
+        
+        .nav-menu .dropdown:hover::after {
             display: block;
         }
         
@@ -1385,13 +1402,14 @@
             'jpg': '#EAB308',    // Yellow
             'jpeg': '#CA8A04',   // Darker yellow
             'xml': '#059669',    // Green
-            'xlsx': '#10B981',   // Excel green
-            'xls': '#059669',    // Darker Excel green
+            'excel': '#0891B2',  // Cyan/Teal (combined XLS/XLSX)
+            'xlsx': '#10B981',   // Excel green (legacy)
+            'xls': '#059669',    // Darker Excel green (legacy)
             'ppt': '#EA580C',    // PowerPoint orange
             'pptx': '#DC2626',   // PowerPoint red-orange
             'png': '#F59E0B',    // Orange
             'gif': '#8B5CF6',    // Light purple
-            'txt': '#6B7280',    // Gray
+            'txt': '#D97706',    // Amber/Gold
             'csv': '#14B8A6',    // Teal
             'zip': '#64748B',    // Slate
             'msg': '#0891B2',    // Cyan
@@ -1577,6 +1595,7 @@
             // Use dataToCount which contains the already-filtered data
             dataToCount.forEach(row => {
                 const docType = row.documentType || 'Unknown';
+                // Document type is already normalized at load time
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
                 
                 // Handle vaccine candidates (can be array or string)
@@ -1602,7 +1621,12 @@
                 // Use file_type field from JSON data
                 const fileType = row.file_type ? row.file_type.toLowerCase() : null;
                 if (fileType) {
-                    fileTypeCounts[fileType] = (fileTypeCounts[fileType] || 0) + 1;
+                    // Combine XLS and XLSX into Excel
+                    if (fileType === 'xls' || fileType === 'xlsx') {
+                        fileTypeCounts['excel'] = (fileTypeCounts['excel'] || 0) + 1;
+                    } else {
+                        fileTypeCounts[fileType] = (fileTypeCounts[fileType] || 0) + 1;
+                    }
                 } else {
                     // Fallback to extension extraction
                     const ext = getFileExtension(row.filename);
@@ -1785,6 +1809,7 @@
             const clinicalTrialCounts = {};
             csvData.forEach(row => {
                 const docType = row.documentType || 'Unknown';
+                // Document type is already normalized at load time
                 documentTypeCounts[docType] = (documentTypeCounts[docType] || 0) + 1;
                 
                 // Handle vaccine candidates (can be array or string)
@@ -1809,7 +1834,12 @@
                 // Use file_type field from JSON data
                 const fileType = row.file_type ? row.file_type.toLowerCase() : null;
                 if (fileType) {
-                    fileTypeCounts[fileType] = (fileTypeCounts[fileType] || 0) + 1;
+                    // Combine XLS and XLSX into Excel
+                    if (fileType === 'xls' || fileType === 'xlsx') {
+                        fileTypeCounts['excel'] = (fileTypeCounts['excel'] || 0) + 1;
+                    } else {
+                        fileTypeCounts[fileType] = (fileTypeCounts[fileType] || 0) + 1;
+                    }
                 } else {
                     // Fallback to extension extraction
                     const ext = getFileExtension(row.filename);
@@ -1960,9 +1990,10 @@
             const fileTypeDefinitions = {
                 'pdf': { label: 'PDF', color: '#DC2626' },
                 'xpt': { label: 'XPT', color: '#7C3AED' },
-                'txt': { label: 'TXT', color: '#6B7280' },
+                'txt': { label: 'TXT', color: '#D97706' },  // Amber/Gold
                 'docx': { label: 'DOCX', color: '#1E40AF' },
                 'doc': { label: 'DOC', color: '#2563EB' },
+                'excel': { label: 'Excel', color: '#0891B2' },  // Cyan/Teal
                 'word': { label: 'Word', color: '#2563EB' },
                 'xlsx': { label: 'XLSX', color: '#10B981' },
                 'xls': { label: 'XLS', color: '#059669' },
@@ -2230,25 +2261,35 @@
                 if (response.ok) {
                     const data = await response.json();
                     // Convert JSON structure to match CSV structure
-                    csvData = data.documents.map(doc => ({
-                        filename: doc.filename,
-                        title: doc.title,
-                        date: doc.date,
-                        google_drive_link: doc.googleDriveLink,
-                        folder: doc.folder,
-                        file_type: doc.fileType,
-                        page_count: doc.pageCount.toString(),
-                        module: doc.module,
-                        documentType: doc.documentType,
-                        vaccineCandidate: doc.vaccineCandidate,
-                        clinicalTrial: doc.clinicalTrial,
-                        people_mentioned: doc.peopleMentioned.join(', '),
-                        tags: doc.tags.join(', '),
-                        has_exemption: doc.hasExemption ? 'True' : 'False',
-                        has_exclusion: doc.hasExclusion ? 'True' : 'False',
-                        password_protected: doc.passwordProtected ? 'True' : 'False',
-                        processed: doc.processed ? 'True' : 'False'
-                    }));
+                    csvData = data.documents.map(doc => {
+                        // Normalize document type
+                        let docType = doc.documentType || 'Unknown';
+                        if (docType.toLowerCase() === 'slip sheet' || 
+                            docType.toLowerCase() === 'slipsheet' || 
+                            docType.toLowerCase() === 'foia redaction slip sheet') {
+                            docType = 'FOIA Redaction Slipsheet';
+                        }
+                        
+                        return {
+                            filename: doc.filename,
+                            title: doc.title,
+                            date: doc.date,
+                            google_drive_link: doc.googleDriveLink,
+                            folder: doc.folder,
+                            file_type: doc.fileType,
+                            page_count: doc.pageCount.toString(),
+                            module: doc.module,
+                            documentType: docType,
+                            vaccineCandidate: doc.vaccineCandidate,
+                            clinicalTrial: doc.clinicalTrial,
+                            people_mentioned: doc.peopleMentioned.join(', '),
+                            tags: doc.tags.join(', '),
+                            has_exemption: doc.hasExemption ? 'True' : 'False',
+                            has_exclusion: doc.hasExclusion ? 'True' : 'False',
+                            password_protected: doc.passwordProtected ? 'True' : 'False',
+                            processed: doc.processed ? 'True' : 'False'
+                        };
+                    });
                     
                     // Hide loading indicator
                     document.getElementById('loading-container').style.display = 'none';
@@ -2636,11 +2677,18 @@
                     // Use file_type field from JSON
                     const fileType = row.file_type ? row.file_type.toLowerCase() : null;
                     if (fileType) {
+                        // Handle Excel filter (includes both XLS and XLSX)
+                        if (fileTypeFilter === 'excel') {
+                            return fileType === 'xls' || fileType === 'xlsx';
+                        }
                         return fileType === fileTypeFilter;
                     } else {
                         // Fallback to filename extension
                         if (fileTypeFilter === 'sas') {
                             return row.filename.toLowerCase().endsWith('-sas.pdf');
+                        } else if (fileTypeFilter === 'excel') {
+                            const ext = getFileExtension(row.filename);
+                            return ext === 'xls' || ext === 'xlsx';
                         } else {
                             const ext = getFileExtension(row.filename);
                             return ext === fileTypeFilter;
@@ -2677,6 +2725,7 @@
             
             // Filter by document type
             if (documentTypeFilter !== 'all') {
+                // Document type is already normalized at load time
                 filteredData = filteredData.filter(row => row.documentType === documentTypeFilter);
             }
             
@@ -3268,9 +3317,22 @@
                 const file = sortedFileData[i];
                 const row = document.createElement('tr');
                 
-                // Color bar
-                const ext = getFileExtension(file.filename);
-                const color = extensionColors[ext] || extensionColors['other'];
+                // Color bar - use file_type field if available, otherwise extract from filename
+                let fileType;
+                if (file.file_type) {
+                    fileType = file.file_type.toLowerCase();
+                    // Convert xls/xlsx to excel for display
+                    if (fileType === 'xls' || fileType === 'xlsx') {
+                        fileType = 'excel';
+                    }
+                } else {
+                    fileType = getFileExtension(file.filename);
+                    // Convert xls/xlsx to excel for display
+                    if (fileType === 'xls' || fileType === 'xlsx') {
+                        fileType = 'excel';
+                    }
+                }
+                const color = extensionColors[fileType] || extensionColors['other'];
                 
                 row.innerHTML = `
                     <td><div class="color-bar" style="background-color: ${color};"></div></td>
@@ -3857,6 +3919,62 @@
                 document.body.removeChild(textArea);
             });
         }
+        // Improve dropdown navigation reliability
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.nav-menu .dropdown');
+            if (!dropdown) return;
+            
+            const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+            let isClickOpen = false;
+            let hoverTimeout;
+            
+            // Handle click for explicit open/close
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                isClickOpen = !isClickOpen;
+                if (isClickOpen) {
+                    dropdown.classList.add('active');
+                } else {
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Handle hover with delay to prevent accidental closing
+            dropdown.addEventListener('mouseenter', function() {
+                clearTimeout(hoverTimeout);
+                dropdown.classList.add('active');
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                if (!isClickOpen) {
+                    hoverTimeout = setTimeout(function() {
+                        dropdown.classList.remove('active');
+                    }, 300); // 300ms delay before closing
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdown.contains(e.target)) {
+                    isClickOpen = false;
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Ensure dropdown stays accessible when navigating with keyboard
+            dropdown.addEventListener('focusin', function() {
+                dropdown.classList.add('active');
+            });
+            
+            dropdown.addEventListener('focusout', function(e) {
+                setTimeout(function() {
+                    if (!dropdown.contains(document.activeElement)) {
+                        isClickOpen = false;
+                        dropdown.classList.remove('active');
+                    }
+                }, 100);
+            });
+        });
     </script>
 </body>
 </html>

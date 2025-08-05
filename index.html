@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVID-19 Vaccine FOIA Documents</title>
-    <meta name="description" content="COVID-19 vaccine clinical trial documents released under Freedom of Information Act (FOIA) requests. Access Pfizer and Moderna trial data, metadata, and analysis tools.">
-    <meta name="keywords" content="COVID-19, vaccine, clinical trials, FOIA, Pfizer, Moderna, BNT162b2, mRNA-1273, FDA, clinical data">
+    <meta name="description"
+        content="COVID-19 vaccine clinical trial documents released under Freedom of Information Act (FOIA) requests. Access Pfizer and Moderna trial data, metadata, and analysis tools.">
+    <meta name="keywords"
+        content="COVID-19, vaccine, clinical trials, FOIA, Pfizer, Moderna, BNT162b2, mRNA-1273, FDA, clinical data">
     <meta name="author" content="Marjorie Roswell">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://coviddocuments.com/">
     <meta property="og:title" content="COVID-19 Vaccine FOIA Documents">
     <meta property="og:description" content="Clinical trial data released under Freedom of Information Act requests">
     <meta property="og:site_name" content="COVID Documents">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://coviddocuments.com/">
     <meta property="twitter:title" content="COVID-19 Vaccine FOIA Documents">
-    <meta property="twitter:description" content="Clinical trial data released under Freedom of Information Act requests">
-    
+    <meta property="twitter:description"
+        content="Clinical trial data released under Freedom of Information Act requests">
+
     <link rel="canonical" href="https://coviddocuments.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -42,7 +46,7 @@
             padding: 12px 0;
             border-bottom: 1px solid #e9ecef;
         }
-        
+
         .nav-menu ul {
             list-style: none;
             padding: 0;
@@ -54,11 +58,11 @@
             padding: 0 20px;
             justify-content: center;
         }
-        
+
         .nav-menu li {
             margin: 0;
         }
-        
+
         .nav-menu a {
             text-decoration: none;
             color: #495057;
@@ -68,12 +72,12 @@
             border-bottom: 2px solid transparent;
             transition: all 0.2s ease;
         }
-        
+
         .nav-menu a:hover {
             color: #0066cc;
             border-bottom-color: #0066cc;
         }
-        
+
         .nav-menu a.active {
             color: #0066cc;
             border-bottom-color: #0066cc;
@@ -109,14 +113,14 @@
         .document-card {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .document-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         }
 
         .card-header {
@@ -240,7 +244,7 @@
             background: white;
             border-radius: 8px;
             padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             margin-top: 40px;
         }
 
@@ -258,29 +262,29 @@
             .document-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
                 font-size: 2em;
             }
         }
-            
+
         /* Dropdown styles */
         .nav-menu .dropdown {
             position: relative;
         }
-        
+
         .nav-menu .dropdown-toggle {
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 5px;
         }
-        
+
         .nav-menu .dropdown-toggle::after {
             content: '▼';
             font-size: 0.8em;
         }
-        
+
         .nav-menu .dropdown-menu {
             position: absolute;
             top: 100%;
@@ -288,17 +292,17 @@
             background: white;
             border: 1px solid #e9ecef;
             border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             min-width: 220px;
             display: none;
             z-index: 1000;
             margin-top: 5px;
         }
-        
+
         .nav-menu .dropdown:hover .dropdown-menu {
             display: block;
         }
-        
+
         .nav-menu .dropdown-menu a {
             display: block;
             padding: 10px 15px;
@@ -306,13 +310,14 @@
             text-decoration: none;
             border-bottom: none !important;
         }
-        
+
         .nav-menu .dropdown-menu a:hover {
             background: #f8f9fa;
             color: #0066cc;
         }
-</style>
+    </style>
 </head>
+
 <body>
     <nav class="nav-menu">
         <ul>
@@ -498,10 +503,16 @@
 
         <div class="info-section">
             <h2>About This Repository</h2>
-            <p>This site provides access to COVID-19 vaccine clinical trial documents released under Freedom of Information Act (FOIA) requests. The documents include clinical study reports, datasets, and metadata that were submitted to the FDA as part of Emergency Use Authorization (EUA) and Biologics License Application (BLA) processes.</p>
-            
-            <p>Currently available resources include the complete Pfizer-BioNTech EUA submission documents with searchable file navigation, data dictionary, and clinical metadata. Additional document sets are being processed and will be added as they become available.</p>
+            <p>This site provides access to COVID-19 vaccine clinical trial documents released under Freedom of
+                Information Act (FOIA) requests.
+                The documents include clinical study reports, datasets, and metadata that were submitted to the FDA as
+                part of Emergency Use Authorization (EUA) and Biologics License Application (BLA) processes.</p>
+
+            <p>Source files: <a
+                    href="https://phmpt.org/multiple-file-downloads/">https://phmpt.org/multiple-file-downloads/</a>.
+            </p>
         </div>
     </div>
 </body>
+
 </html>

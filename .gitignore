@@ -59,6 +59,13 @@ yarn-error.log*
 # Add any large data files or sensitive information here
 # /path/to/sensitive/data/
 
+# Additional metadata temporary files
+metadata/nav-template.html
+
+# Claude-specific files
+.claude/
+CLAUDE.md.backup
+
 # VSCode Local History
 .history/
 .lh/

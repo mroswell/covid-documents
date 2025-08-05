@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - EUA File Navigator</title>
+    <title>About - COVID-19 Vaccine FOIA Documents</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -113,12 +113,66 @@
             border-left: 4px solid #ffc107;
             margin: 20px 0;
         }
-    </style>
+            
+        /* Dropdown styles */
+        .nav-menu .dropdown {
+            position: relative;
+        }
+        
+        .nav-menu .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-menu .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.8em;
+        }
+        
+        .nav-menu .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 200px;
+            display: none;
+            z-index: 1000;
+            margin-top: 5px;
+        }
+        
+        .nav-menu .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .nav-menu .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            color: #495057;
+            text-decoration: none;
+            border-bottom: none !important;
+        }
+        
+        .nav-menu .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #0066cc;
+        }
+</style>
 </head>
 <body>
     <nav class="nav-menu">
         <ul>
-            <li><a href="index.html">EUA File Navigator</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">File Navigator</a>
+                <div class="dropdown-menu">
+                    <a href="pfizer-eua-navigator.html">Pfizer EUA Navigator</a>
+                </div>
+            </li>
             <li><a href="data-dictionary.html">Data Dictionary</a></li>
             <li><a href="metadata/index.html">Clinical Metadata</a></li>
             <li><a href="about.html" class="active">About</a></li>
@@ -127,7 +181,7 @@
     <div class="container">
         
         <div class="content-section">
-            <h1>About the Pfizer EUA File Navigator</h1>
+            <h1>About COVID-19 Vaccine FOIA Documents</h1>
             
             <h2>Overview</h2>
             <p>

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pfizer EUA File Navigator - COVID-19 Vaccine FOIA Documents</title>
-    <meta name="description" content="Navigate and search Pfizer-BioNTech COVID-19 vaccine clinical trial documents released under FOIA. Interactive file explorer for BNT162b2 EUA submission data.">
-    <meta name="keywords" content="Pfizer, BNT162b2, COVID-19 vaccine, clinical trial, FOIA, EUA, file navigator">
-    <link rel="canonical" href="https://coviddocuments.com/pfizer-eua-navigator.html">
+    <title>Pfizer BLA File Navigator - COVID-19 Vaccine FOIA Documents</title>
+    <meta name="description" content="Navigate and search Pfizer-BioNTech COVID-19 vaccine clinical trial documents released under FOIA. Interactive file explorer for BNT162b2 BLA submission data.">
+    <meta name="keywords" content="Pfizer, BNT162b2, COVID-19 vaccine, clinical trial, FOIA, BLA, file navigator">
+    <link rel="canonical" href="https://coviddocuments.com/pfizer-bla-navigator.html">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -195,17 +195,7 @@
             box-sizing: border-box;
         }
         
-        /* Fixed width for folder filter buttons */
-        #folderFilters .filter-button {
-            width: 125px !important;
-            min-width: 125px !important;
-            white-space: nowrap;
-        }
-        
-        #folderFilters .filter-button.all-button {
-            width: 125px !important;
-            min-width: 125px !important;
-        }
+        /* Folder filter dropdown styling is handled inline */
         
         .filter-button:hover {
             background: #90caf9;
@@ -1154,7 +1144,7 @@
     </nav>
     <div class="container">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; margin-top: 0;">
-            <h1 style="margin: 0; margin-bottom: 10px;">Pfizer EUA File Navigator</h1>
+            <h1 style="margin: 0; margin-bottom: 10px;">Pfizer BLA File Navigator</h1>
             <!-- Tab Navigation -->
             <div class="tab-container" style="margin-bottom: 0;">
                 <button class="tab-button active" data-view="file-list">File List</button>
@@ -1207,11 +1197,9 @@
                 
                 <div class="filter-section">
                     <label class="filter-label" style="font-weight: bold; display: block; margin-bottom: 8px;">Filter by Folder:</label>
-                    <div class="filter-buttons" id="folderFilters">
-                        <button class="filter-button all-button active" data-filter="all">All Folders <span class="filter-count"></span></button>
-                        <button class="filter-button" data-filter="eua-051925">eua-051925 <span class="filter-count"></span></button>
-                        <button class="filter-button" data-filter="eua-063025">eua-063025 <span class="filter-count"></span></button>
-                    </div>
+                    <select id="folderFilter" style="width: 100%; padding: 8px; font-size: 13px; border: 2px solid #e0e0e0; border-radius: 8px; background-color: white;">
+                        <option value="all">All Folders</option>
+                    </select>
                 </div>
             </div>
             
@@ -1516,7 +1504,10 @@
             });
         }
         
-        setupButtonFilters('folderFilters');
+        // Setup folder dropdown filter
+        document.getElementById('folderFilter').addEventListener('change', function() {
+            processData();
+        });
         setupButtonFilters('moduleFilters');
         
         // Setup file type filter buttons
@@ -1532,7 +1523,7 @@
         function updateFilterCountsFromFilteredData(dataToCount) {
             // Get current active filters to know what NOT to count
             const activeFileType = document.querySelector('#fileTypeFilters .file-type-button.active').dataset.filter;
-            const activeFolder = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+            const activeFolder = document.getElementById('folderFilter').value;
             const activeModule = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
             const activeDocumentType = document.getElementById('documentTypeFilter').value;
             const activeDomain = document.getElementById('domainFilter').value;
@@ -1600,24 +1591,24 @@
                 }
             });
             
-            // Update folder filter buttons
-            document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
-                const filter = button.dataset.filter;
-                let countSpan = button.querySelector('.filter-count');
-                if (!countSpan) {
-                    // If span doesn't exist, recreate button content with span
-                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
-                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
-                    countSpan = button.querySelector('.filter-count');
-                }
+            // Update folder filter dropdown
+            const folderDropdown = document.getElementById('folderFilter');
+            const currentFolderValue = folderDropdown.value;
+            
+            folderDropdown.querySelectorAll('option').forEach(option => {
+                const value = option.value;
+                const originalText = option.textContent.split(' (')[0];
                 
-                if (filter === 'all') {
-                    countSpan.textContent = `(${dataToCount.length})`;
+                if (value === 'all') {
+                    option.textContent = `All Folders (${dataToCount.length})`;
                 } else {
-                    const count = folderCounts[filter] || 0;
-                    countSpan.textContent = `(${count})`;
+                    const count = folderCounts[value] || 0;
+                    option.textContent = `${originalText} (${count})`;
                 }
             });
+            
+            // Restore selection
+            folderDropdown.value = currentFolderValue;
             
             // Update module filter buttons
             document.querySelectorAll('#moduleFilters .filter-button').forEach(button => {
@@ -1803,23 +1794,27 @@
                 }
             });
             
-            // Update folder filter buttons
-            document.querySelectorAll('#folderFilters .filter-button').forEach(button => {
-                const filter = button.dataset.filter;
-                let countSpan = button.querySelector('.filter-count');
-                if (!countSpan) {
-                    // If span doesn't exist, recreate button content with span
-                    const buttonText = button.textContent.replace(/\s*\(\d+\)\s*$/, '');
-                    button.innerHTML = `${buttonText} <span class="filter-count"></span>`;
-                    countSpan = button.querySelector('.filter-count');
+            // Update folder filter dropdown (initial load)
+            const folderDropdown = document.getElementById('folderFilter');
+            folderDropdown.innerHTML = '<option value="all">All Folders</option>';
+            
+            // Get unique folders and sort by date (if they follow a date pattern)
+            const uniqueFolders = [...new Set(csvData.map(row => row.folder).filter(f => f))];
+            const sortedFolders = uniqueFolders.sort((a, b) => {
+                // Try to parse dates from folder names, fallback to alphabetical
+                const dateA = new Date(a.replace(/.*-(\d{6}).*/, '$1').replace(/(\d{2})(\d{2})(\d{2})/, '20$3-$1-$2'));
+                const dateB = new Date(b.replace(/.*-(\d{6}).*/, '$1').replace(/(\d{2})(\d{2})(\d{2})/, '20$3-$1-$2'));
+                if (isNaN(dateA) || isNaN(dateB)) {
+                    return a.localeCompare(b); // Alphabetical fallback
                 }
-                
-                if (filter === 'all') {
-                    countSpan.textContent = `(${csvData.length})`;
-                } else {
-                    const count = folderCounts[filter] || 0;
-                    countSpan.textContent = `(${count})`;
-                }
+                return dateB - dateA; // Sort newest first
+            });
+            
+            sortedFolders.forEach(folder => {
+                const option = document.createElement('option');
+                option.value = folder;
+                option.textContent = `${folder} (${folderCounts[folder] || 0})`;
+                folderDropdown.appendChild(option);
             });
             
             // Update module filter buttons
@@ -2038,7 +2033,7 @@
         // Load data from JSON file on page load
         window.addEventListener('DOMContentLoaded', async function() {
             try {
-                const response = await fetch('pfizer-eua-tagged-files.json');
+                const response = await fetch('pd-bla-tagged-files.json');
                 if (response.ok) {
                     const data = await response.json();
                     // Convert JSON structure to match CSV structure
@@ -2088,7 +2083,7 @@
             } catch (error) {
                 console.error('Error loading data:', error);
                 document.getElementById('loading-container').innerHTML = 
-                    '<p style="color: #d32f2f;">Error loading data. Please check that pfizer-eua-tagged-files.json exists.</p>';
+                    '<p style="color: #d32f2f;">Error loading data. Please check that pd-bla-tagged-files.json exists.</p>';
             }
         });
         
@@ -2341,10 +2336,7 @@
             document.querySelector('#moduleFilters .filter-button[data-filter="all"]').classList.add('active');
             
             // Reset folder filter
-            document.querySelectorAll('#folderFilters .filter-button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector('#folderFilters .filter-button[data-filter="all"]').classList.add('active');
+            document.getElementById('folderFilter').value = 'all';
             
             // Reset dropdowns
             document.getElementById('domainFilter').value = 'all';
@@ -2444,7 +2436,7 @@
             // Apply filters
             const fileTypeFilter = document.querySelector('#fileTypeFilters .file-type-button.active').dataset.filter;
             const domainFilter = document.getElementById('domainFilter').value;
-            const folderFilter = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+            const folderFilter = document.getElementById('folderFilter').value;
             const moduleFilter = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
             const documentTypeFilter = document.getElementById('documentTypeFilter').value;
             
@@ -2991,7 +2983,7 @@
                 const moduleFilter = document.querySelector('#moduleFilters .filter-button.active').dataset.filter;
                 if (moduleFilter !== 'all') activeFilters.push(`Module: ${moduleFilter}`);
                 
-                const folderFilter = document.querySelector('#folderFilters .filter-button.active').dataset.filter;
+                const folderFilter = document.getElementById('folderFilter').value;
                 if (folderFilter !== 'all') activeFilters.push(`Folder: ${folderFilter}`);
                 
                 const domainFilter = document.getElementById('domainFilter').value;
@@ -3441,7 +3433,7 @@
             }
             
             return `${authors}(${year}). ${file.title}${documentType}. ` +
-                   `Pfizer-BioNTech COVID-19 Vaccine EUA Documents${moduleSection}. ` +
+                   `Pfizer-BioNTech COVID-19 Vaccine BLA Documents${moduleSection}. ` +
                    `FOIA Release: ${file.folder}. ` +
                    `Retrieved from ${file.google_drive_link}`;
         }

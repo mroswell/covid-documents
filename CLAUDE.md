@@ -39,11 +39,11 @@ The project works with CDISC-compliant clinical trial data:
 - **Define-XML**: Metadata describing datasets and variables
 
 ### Web Components
-- **index.html**: Uses D3.js to create an interactive visualization of tagged documents from `eua_tagged_files.csv`
+- **index.html**: Uses D3.js to create an interactive visualization of tagged documents from `pfizer-eua-tagged-files.csv`
 - **data-dictionary.html**: Displays field definitions from `fda_field_dictionary.csv`
 
 ### Key Data Files
-- `eua_tagged_files.csv`: AI-generated tags for document navigation
+- `pfizer-eua-tagged-files.csv`: AI-generated tags for document navigation
 - `fda_field_dictionary.csv`: Field definitions for understanding clinical data
 - `CDISC-Domain-definitions.csv`: Standard domain definitions
 - `variables_report.csv`: Analysis of variables across datasets

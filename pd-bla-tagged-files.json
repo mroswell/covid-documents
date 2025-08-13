@@ -60,7 +60,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86,7 +86,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -125,7 +125,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -164,7 +164,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -242,7 +242,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -281,7 +281,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -320,7 +320,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -363,7 +363,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -403,7 +403,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -442,7 +442,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -481,7 +481,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -559,7 +559,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -598,7 +598,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -637,7 +637,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -757,7 +757,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -796,7 +796,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -879,7 +879,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -918,7 +918,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -957,7 +957,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -996,7 +996,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -1035,7 +1035,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -1156,7 +1156,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1195,7 +1195,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1234,7 +1234,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1316,7 +1316,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1355,7 +1355,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1394,7 +1394,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1433,7 +1433,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1601,7 +1601,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1679,7 +1679,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1718,7 +1718,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1878,7 +1878,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -1917,7 +1917,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2042,7 +2042,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2081,7 +2081,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2202,7 +2202,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2241,7 +2241,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2280,7 +2280,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -2319,7 +2319,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2398,7 +2398,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2437,7 +2437,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2476,7 +2476,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2515,7 +2515,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2593,7 +2593,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2632,7 +2632,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2710,7 +2710,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2749,7 +2749,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2796,7 +2796,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2835,7 +2835,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2874,7 +2874,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2913,7 +2913,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2952,7 +2952,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -2991,7 +2991,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3046,7 +3046,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -3085,7 +3085,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3170,7 +3170,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3252,7 +3252,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3330,7 +3330,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3369,7 +3369,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3408,7 +3408,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3447,7 +3447,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3512,7 +3512,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3551,7 +3551,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3590,7 +3590,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3668,7 +3668,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3751,7 +3751,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3797,7 +3797,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3836,7 +3836,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3875,7 +3875,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3914,7 +3914,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -3979,7 +3979,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4018,7 +4018,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4057,7 +4057,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4084,7 +4084,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -4110,7 +4110,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -4148,7 +4148,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4175,7 +4175,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -4213,7 +4213,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4252,7 +4252,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4279,7 +4279,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -4561,7 +4561,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4657,7 +4657,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -4726,7 +4726,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -4962,7 +4962,10 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162b2",
+        "BNT162b3c"
+      ],
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5001,7 +5004,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5040,7 +5043,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5170,7 +5173,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5212,7 +5215,12 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162a1",
+        "BNT162b1",
+        "BNT162b2",
+        "BNT162c2"
+      ],
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5293,7 +5301,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5335,7 +5343,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5379,7 +5387,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5540,7 +5548,10 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5663,7 +5674,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5704,7 +5715,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5745,7 +5756,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5829,7 +5840,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -5957,7 +5968,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -5996,7 +6007,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -6035,7 +6046,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -6197,7 +6208,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -6236,7 +6247,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -6318,7 +6329,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -6399,7 +6410,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -6445,7 +6456,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -6736,7 +6747,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -6896,7 +6907,10 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -7013,7 +7027,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -7054,7 +7068,10 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -7132,7 +7149,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -7885,7 +7902,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -8002,7 +8019,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -8600,7 +8617,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -8724,7 +8741,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -8886,7 +8903,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -9044,7 +9061,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -9244,7 +9261,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -9367,7 +9384,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -9486,7 +9503,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -10001,7 +10018,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -10083,7 +10100,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -10124,7 +10141,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -11755,7 +11772,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -11963,7 +11980,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -12093,7 +12110,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -12119,7 +12136,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -12145,7 +12162,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -12327,7 +12344,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -12405,7 +12422,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -12469,7 +12486,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -12685,7 +12702,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -12798,7 +12815,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -12933,7 +12950,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -12980,7 +12997,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -13019,7 +13036,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -14337,7 +14354,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -14469,7 +14486,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591014",
       "hasCRF": false,
       "hasProtocol": true
@@ -14594,7 +14611,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591015",
       "hasCRF": false,
       "hasProtocol": true
@@ -14716,7 +14733,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -14800,7 +14817,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -14839,7 +14856,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -14880,7 +14897,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591007",
       "hasCRF": false,
       "hasProtocol": true
@@ -14921,8 +14938,11 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -14960,7 +14980,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -15057,7 +15077,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -15099,7 +15119,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -24541,7 +24561,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -24661,7 +24681,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -24742,7 +24762,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -24782,7 +24802,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26081,7 +26101,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": true,
       "hasProtocol": true
     },
@@ -26165,7 +26185,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26209,7 +26229,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26335,7 +26355,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26373,7 +26393,10 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -26415,7 +26438,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26456,7 +26479,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26495,7 +26518,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": true,
       "hasProtocol": false
     },
@@ -26536,7 +26559,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26577,7 +26600,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26618,8 +26641,11 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26660,8 +26686,13 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": [
+        "BNT162a1",
+        "BNT162b1",
+        "BNT162b2",
+        "BNT162c2"
+      ],
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26700,7 +26731,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -26752,7 +26783,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -26795,7 +26826,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26835,7 +26866,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26878,8 +26909,11 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26921,8 +26955,8 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": true
     },
@@ -26960,8 +26994,8 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -26999,8 +27033,8 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27045,7 +27079,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27083,8 +27117,8 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27122,8 +27156,11 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2"
+      ],
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27165,7 +27202,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27204,8 +27241,8 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27244,7 +27281,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27282,8 +27319,8 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27321,8 +27358,8 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "vaccineCandidate": "BNT162b1",
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -27360,7 +27397,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -30227,7 +30264,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -30308,7 +30345,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -30376,7 +30413,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b1",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -30415,7 +30452,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -30534,7 +30571,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -40046,7 +40083,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -40086,7 +40123,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -40237,7 +40274,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -40487,7 +40524,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -40645,7 +40682,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -40693,7 +40730,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -40732,7 +40769,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -40812,7 +40849,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -40854,7 +40891,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -40935,7 +40972,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -41099,7 +41136,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -41177,7 +41214,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -41216,7 +41253,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -50548,7 +50585,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -50574,7 +50611,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -50600,7 +50637,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -50626,7 +50663,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -50678,7 +50715,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -50716,7 +50753,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -50806,7 +50843,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -50849,7 +50886,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -50933,7 +50970,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -50972,7 +51009,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51053,7 +51090,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51102,7 +51139,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51141,7 +51178,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51221,7 +51258,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51261,7 +51298,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -51300,7 +51337,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51339,7 +51376,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51378,7 +51415,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51417,7 +51454,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51536,7 +51573,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51616,7 +51653,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51655,7 +51692,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51694,7 +51731,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51733,7 +51770,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51852,7 +51889,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -51930,7 +51967,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52008,7 +52045,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52047,7 +52084,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52166,7 +52203,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52246,7 +52283,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52285,7 +52322,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52412,7 +52449,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52492,7 +52529,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52572,7 +52609,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52691,7 +52728,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52734,7 +52771,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52774,7 +52811,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -52813,7 +52850,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52901,7 +52938,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52940,7 +52977,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -52979,7 +53016,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53018,7 +53055,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53060,7 +53097,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53099,7 +53136,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53138,7 +53175,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53218,7 +53255,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53257,7 +53294,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53296,7 +53333,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53337,7 +53374,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53415,7 +53452,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -53625,7 +53662,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -53750,7 +53787,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -63267,7 +63304,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -63348,7 +63385,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -63526,7 +63563,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -63704,7 +63741,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -63876,7 +63913,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -63916,7 +63953,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -63995,7 +64032,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -64074,7 +64111,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -64119,7 +64156,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -64207,7 +64244,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -64331,7 +64368,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591021",
       "hasCRF": false,
       "hasProtocol": true
@@ -64374,7 +64411,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -64509,7 +64546,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -64551,7 +64588,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -64736,7 +64773,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -64781,7 +64818,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -64826,7 +64863,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -64865,7 +64902,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -64950,7 +64987,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -65114,7 +65151,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65153,7 +65190,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65276,7 +65313,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65434,7 +65471,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65473,7 +65510,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65512,7 +65549,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65701,7 +65738,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65740,7 +65777,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65780,7 +65817,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -65819,7 +65856,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -65957,7 +65994,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66008,7 +66045,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66088,7 +66125,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66176,7 +66213,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66319,7 +66356,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66458,7 +66495,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66509,7 +66546,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66680,7 +66717,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -66772,7 +66809,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -66812,7 +66849,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -66904,7 +66941,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67023,7 +67060,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67068,7 +67105,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67148,7 +67185,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67345,7 +67382,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67465,7 +67502,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67504,7 +67541,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67544,7 +67581,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67584,7 +67621,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67623,7 +67660,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67663,7 +67700,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67702,7 +67739,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67751,7 +67788,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67830,7 +67867,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67914,7 +67951,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67954,7 +67991,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -67994,7 +68031,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68034,7 +68071,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68157,7 +68194,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68197,7 +68234,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68237,7 +68274,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68277,7 +68314,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68317,7 +68354,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68357,7 +68394,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68397,7 +68434,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68437,7 +68474,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68486,7 +68523,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68526,7 +68563,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68566,7 +68603,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68606,7 +68643,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68646,7 +68683,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68725,7 +68762,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68765,7 +68802,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -68792,7 +68829,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68818,7 +68855,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68844,7 +68881,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68870,7 +68907,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68896,7 +68933,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68922,7 +68959,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68948,7 +68985,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -68974,7 +69011,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -69000,7 +69037,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -69116,7 +69153,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -69170,7 +69207,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -69353,7 +69390,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -69457,7 +69494,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -69577,7 +69614,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": true
@@ -70259,7 +70296,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -70597,7 +70634,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -70744,7 +70781,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -70793,7 +70830,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71174,7 +71211,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71269,7 +71306,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71321,7 +71358,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71373,7 +71410,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71639,7 +71676,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -71691,7 +71728,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71795,7 +71832,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71834,7 +71871,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71886,7 +71923,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -71939,7 +71976,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -71992,7 +72029,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72044,7 +72081,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72097,7 +72134,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -72148,7 +72185,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72200,7 +72237,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72357,7 +72394,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -72411,7 +72448,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -72463,7 +72500,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72675,7 +72712,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -72727,7 +72764,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72832,7 +72869,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -72890,7 +72927,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -72943,7 +72980,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -73087,7 +73124,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -73219,7 +73256,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -73414,7 +73451,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -73532,7 +73569,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -73571,7 +73608,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -73636,7 +73673,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -74105,7 +74142,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74146,7 +74183,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74202,7 +74239,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74246,7 +74283,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74285,7 +74322,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74331,7 +74368,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74372,7 +74409,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74415,7 +74452,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74493,7 +74530,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74576,7 +74613,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -74961,7 +74998,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75045,7 +75082,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75304,7 +75341,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75385,7 +75422,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75471,7 +75508,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75558,7 +75595,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75597,7 +75634,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75640,7 +75677,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75685,7 +75722,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75724,7 +75761,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75767,7 +75804,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75816,7 +75853,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75861,7 +75898,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75904,7 +75941,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -75949,7 +75986,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76033,7 +76070,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76131,7 +76168,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76174,7 +76211,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76217,7 +76254,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76346,7 +76383,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76432,7 +76469,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76477,7 +76514,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76522,7 +76559,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76567,7 +76604,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76612,7 +76649,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76657,7 +76694,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76706,7 +76743,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76751,7 +76788,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76796,7 +76833,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76845,7 +76882,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76888,7 +76925,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76933,7 +76970,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -76979,7 +77016,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -77063,7 +77100,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77112,7 +77149,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77157,7 +77194,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77235,7 +77272,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591001",
       "hasCRF": false,
       "hasProtocol": false
@@ -77280,7 +77317,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77323,7 +77360,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77366,7 +77403,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77411,7 +77448,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77459,7 +77496,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77502,7 +77539,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77549,7 +77586,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77592,7 +77629,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77635,7 +77672,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77678,7 +77715,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77763,7 +77800,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77808,7 +77845,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77854,7 +77891,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -77897,7 +77934,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77940,7 +77977,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -77983,7 +78020,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78028,7 +78065,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78073,7 +78110,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78116,7 +78153,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78161,7 +78198,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78248,7 +78285,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78291,7 +78328,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78334,7 +78371,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78379,7 +78416,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78424,7 +78461,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78467,7 +78504,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78511,7 +78548,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78599,7 +78636,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78686,7 +78723,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78731,7 +78768,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78814,7 +78851,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78884,7 +78921,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -78967,7 +79004,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79035,7 +79072,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79080,7 +79117,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79123,7 +79160,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79166,7 +79203,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79215,7 +79252,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79258,7 +79295,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79301,7 +79338,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79401,7 +79438,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79468,7 +79505,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -79534,7 +79571,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79580,7 +79617,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79623,7 +79660,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79668,7 +79705,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79713,7 +79750,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79759,7 +79796,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -79803,7 +79840,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -79885,7 +79922,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79928,7 +79965,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -79970,7 +80007,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -80009,7 +80046,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -80805,7 +80842,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -81228,7 +81265,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591007",
       "hasCRF": false,
       "hasProtocol": false
@@ -81559,7 +81596,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591007",
       "hasCRF": false,
       "hasProtocol": true
@@ -81640,7 +81677,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591007",
       "hasCRF": false,
       "hasProtocol": true
@@ -82017,7 +82054,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591007",
       "hasCRF": false,
       "hasProtocol": false
@@ -82136,7 +82173,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -82483,7 +82520,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -83056,7 +83093,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -83270,7 +83307,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591020",
       "hasCRF": false,
       "hasProtocol": true
@@ -83388,7 +83425,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591020",
       "hasCRF": false,
       "hasProtocol": true
@@ -83645,7 +83682,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -83685,7 +83722,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -83991,7 +84028,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -84033,7 +84070,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591008",
       "hasCRF": false,
       "hasProtocol": true
@@ -84166,7 +84203,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591014",
       "hasCRF": false,
       "hasProtocol": true
@@ -84332,7 +84369,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": "c4591020",
       "hasCRF": false,
       "hasProtocol": true
@@ -84717,7 +84754,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84769,7 +84806,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84795,7 +84832,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84821,7 +84858,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84847,7 +84884,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84873,7 +84910,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84899,7 +84936,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84925,7 +84962,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84951,7 +84988,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -84977,7 +85014,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85046,7 +85083,11 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": [
+        "BNT162b1",
+        "BNT162b2",
+        "BNT162b3"
+      ],
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85073,7 +85114,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85099,7 +85140,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85125,7 +85166,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85151,7 +85192,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85177,7 +85218,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85203,7 +85244,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85229,7 +85270,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85255,7 +85296,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -85312,7 +85353,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85365,7 +85406,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -85411,7 +85452,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85464,7 +85505,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -85516,7 +85557,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85565,7 +85606,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85606,7 +85647,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85776,7 +85817,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -85824,7 +85865,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -85928,7 +85969,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86005,7 +86046,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86109,7 +86150,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86195,7 +86236,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86238,7 +86279,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86330,7 +86371,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86373,7 +86414,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86511,7 +86552,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86557,7 +86598,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86603,7 +86644,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86689,7 +86730,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86732,7 +86773,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86774,7 +86815,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86816,7 +86857,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -86900,7 +86941,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86949,7 +86990,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -86988,7 +87029,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -87129,7 +87170,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -87605,7 +87646,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -88029,7 +88070,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -88112,7 +88153,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -88450,7 +88491,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88489,7 +88530,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88580,7 +88621,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88620,7 +88661,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -88659,7 +88700,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88698,7 +88739,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88737,7 +88778,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88776,7 +88817,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88815,7 +88856,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88854,7 +88895,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88893,7 +88934,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88932,7 +88973,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -88971,7 +89012,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89010,7 +89051,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89049,7 +89090,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89088,7 +89129,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89127,7 +89168,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89166,7 +89207,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89205,7 +89246,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89244,7 +89285,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89291,7 +89332,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89330,7 +89371,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89369,7 +89410,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89408,7 +89449,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89447,7 +89488,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89486,7 +89527,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89525,7 +89566,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89564,7 +89605,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89603,7 +89644,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89642,7 +89683,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89681,7 +89722,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89721,7 +89762,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -89762,7 +89803,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89807,7 +89848,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89846,7 +89887,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89885,7 +89926,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89924,7 +89965,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -89967,7 +90008,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -90007,7 +90048,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -90048,7 +90089,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90087,7 +90128,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90126,7 +90167,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90165,7 +90206,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90243,7 +90284,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90282,7 +90323,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90362,7 +90403,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -90909,7 +90950,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -91052,7 +91093,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -91441,7 +91482,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -91564,7 +91605,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -91693,7 +91734,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -91733,7 +91774,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -91773,7 +91814,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -91813,7 +91854,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -91901,7 +91942,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -91946,7 +91987,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -92292,7 +92333,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -92607,7 +92648,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -92649,7 +92690,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -92753,7 +92794,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -92850,7 +92891,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -92895,7 +92936,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -92986,7 +93027,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93039,7 +93080,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93149,7 +93190,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93279,7 +93320,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -93368,7 +93409,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93570,7 +93611,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93624,7 +93665,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93720,7 +93761,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93772,7 +93813,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -93977,7 +94018,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -94163,7 +94204,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -94421,7 +94462,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -94528,7 +94569,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -94622,7 +94663,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -94730,7 +94771,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -94802,7 +94843,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -94856,7 +94897,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -94898,7 +94939,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -94992,7 +95033,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95130,7 +95171,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95185,7 +95226,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -95294,7 +95335,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -95342,7 +95383,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -95390,7 +95431,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95432,7 +95473,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95489,7 +95530,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95597,7 +95638,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95807,7 +95848,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -95869,7 +95910,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -95963,7 +96004,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -96012,7 +96053,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true
@@ -96101,7 +96142,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -96143,7 +96184,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -96227,7 +96268,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -96372,7 +96413,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -96520,7 +96561,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -96546,7 +96587,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -96572,7 +96613,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -96598,7 +96639,7 @@
       "passwordProtected": false,
       "processed": true,
       "vaccineCandidate": null,
-      "clinicalTrial": null,
+      "clinicalTrial": "BNT162-01",
       "hasCRF": false,
       "hasProtocol": false
     },
@@ -96835,7 +96876,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -96941,7 +96982,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -97102,7 +97143,7 @@
       "hasExclusion": false,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": false
@@ -97306,7 +97347,7 @@
       "hasExclusion": true,
       "passwordProtected": false,
       "processed": true,
-      "vaccineCandidate": null,
+      "vaccineCandidate": "BNT162b2",
       "clinicalTrial": null,
       "hasCRF": false,
       "hasProtocol": true

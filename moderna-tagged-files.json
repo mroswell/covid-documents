@@ -49374,7 +49374,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "manufacturing",
@@ -50673,7 +50673,7 @@
       "fileType": "TXT",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "SAS Code",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "data management",
@@ -50710,7 +50710,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -50747,7 +50747,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Analysis Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -50821,7 +50821,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Analysis Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -50858,7 +50858,7 @@
       "fileType": "TXT",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -51006,7 +51006,7 @@
       "fileType": "TXT",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -51047,7 +51047,7 @@
       "fileType": "TXT",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Analysis Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -51238,7 +51238,7 @@
       "fileType": "TXT",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "Moderna Therapeutics",
@@ -51547,7 +51547,7 @@
       "fileType": "TXT",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "SAS Code",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -51924,7 +51924,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -52035,7 +52035,7 @@
       "fileType": "TXT",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "Analysis Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -57814,7 +57814,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "SAS Script",
+      "documentType": "SAS Program",
       "peopleMentioned": [],
       "tags": [
         "data management",

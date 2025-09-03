@@ -2,8 +2,8 @@
 
 User-agent: *
 Allow: /
-Disallow: /scripts/
-Disallow: /conversion_scripts/
+Disallow: /_scripts/
+Disallow: /_conversion_scripts/
 Disallow: /.git/
 Disallow: /.github/
 

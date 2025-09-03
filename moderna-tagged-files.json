@@ -641,7 +641,7 @@
       "fileType": "XLSX",
       "pageCount": 20,
       "module": "M1",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "injection site pain",
@@ -841,7 +841,7 @@
       "fileType": "PDF",
       "pageCount": 131,
       "module": "M1",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -1688,7 +1688,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -1765,7 +1765,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -1922,7 +1922,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -14227,7 +14227,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -14302,7 +14302,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -14339,7 +14339,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Fernanda Tavares Da Silva",
         "Filip De Keyser",
@@ -17409,7 +17409,7 @@
       "fileType": "PDF",
       "pageCount": 2819,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -17450,7 +17450,7 @@
       "fileType": "PDF",
       "pageCount": 43,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -20986,7 +20986,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Markus Czub",
         "Hana Weingartl",
@@ -21068,7 +21068,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [],
       "tags": [
         "auto-disable",
@@ -21232,7 +21232,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Katalin Karikó",
         "Michael Buckstein",
@@ -21335,7 +21335,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "S. J. LEHNER",
         "B. W. MULLER",
@@ -21377,7 +21377,7 @@
       "fileType": "PDF",
       "pageCount": 19,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Bruce Y. Lee",
         "Bryan A. Norman",
@@ -21424,7 +21424,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "BRIAN R. MURPHY",
         "EDWARD E. WALSH"
@@ -21590,7 +21590,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Courtney Jarrahian",
         "Annie Rein-Weston",
@@ -21877,7 +21877,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Jef Rozenski",
         "Pamela F. Crain",
@@ -22045,7 +22045,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Daniel Wrapp",
         "Nianshuang Wang",
@@ -23097,7 +23097,7 @@
       "fileType": "PDF",
       "pageCount": 27,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Eileen M. Burd"
       ],
@@ -23422,7 +23422,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Markus Czub",
         "Hana Weingartl",
@@ -23465,7 +23465,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Seder",
         "Graham"
@@ -23568,7 +23568,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "de Wit",
         "van Doremalen",
@@ -23649,7 +23649,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Desmet"
       ],
@@ -23831,7 +23831,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Eve Escalante",
         "Robyn L. Golden",
@@ -24213,7 +24213,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Stephanie A. Irving",
         "Mary F. Vandermause",
@@ -24321,7 +24321,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Katalin Karikó",
         "Michael Buckstein",
@@ -24512,7 +24512,7 @@
       "fileType": "PDF",
       "pageCount": 17,
       "module": "M5",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [],
       "tags": [
         "September 15",
@@ -24697,7 +24697,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Feng",
         "Leung",
@@ -25170,7 +25170,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Jef Rozenski",
         "Pamela F. Crain",
@@ -26250,7 +26250,7 @@
       "fileType": "PDF",
       "pageCount": 1650,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -26324,7 +26324,7 @@
       "fileType": "PDF",
       "pageCount": 11505,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "angioedema",
@@ -26363,7 +26363,7 @@
       "fileType": "PDF",
       "pageCount": 218,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -28480,7 +28480,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M1",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Baden"
       ],
@@ -28715,7 +28715,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M1",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Reichmuth"
       ],
@@ -32465,7 +32465,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Douglas Ball",
         "James Blanchard",
@@ -32579,7 +32579,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Hyeshik Chang",
         "Jaechul Lim",
@@ -32643,7 +32643,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Swapnil C. Devarkar",
         "Chen Wang",
@@ -32770,7 +32770,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Seder",
         "Graham"
@@ -32810,7 +32810,7 @@
       "fileType": "PDF",
       "pageCount": 25,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Kausiki Datta",
         "Peter H. von Hippel"
@@ -32850,7 +32850,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Ann Fiegen Durbin",
         "Chen Wang",
@@ -32892,7 +32892,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Martha Folmsbee",
         "Michael Moussourakis"
@@ -32932,7 +32932,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Martha Folmsbee"
       ],
@@ -32971,7 +32971,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Anne-Lise Fabre",
         "Marthe Colotte",
@@ -33180,7 +33180,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Erin E. Heyer",
         "Hakan Ozadam",
@@ -33223,7 +33223,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Jennifer L. Hyde",
         "Michael S. Diamond"
@@ -33324,7 +33324,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Shinu John",
         "Olga Yuzhakov",
@@ -33391,7 +33391,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Katalin Kariko",
         "Hiromi Muramatsu",
@@ -33433,7 +33433,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [],
       "tags": [
         "nucleic acid receptors",
@@ -33470,7 +33470,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Jones"
       ],
@@ -33509,7 +33509,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Katalin Karikó",
         "Michael Buckstein",
@@ -33627,7 +33627,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Dawid Koscielniak",
         "Ewa Wons",
@@ -33711,7 +33711,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "kunitz"
       ],
@@ -33750,7 +33750,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "S. J. LEHNER",
         "B. W. MULLER",
@@ -33791,7 +33791,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Li"
       ],
@@ -33830,7 +33830,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Lindahl"
       ],
@@ -33930,7 +33930,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Srabani Mukherjee",
         "Luis G. Brieba",
@@ -34010,7 +34010,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Dmitry L. Lyakhov",
         "Biao He",
@@ -34054,7 +34054,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "I.C. Munroa",
         "A.G. Renwickb"
@@ -34094,7 +34094,7 @@
       "fileType": "PDF",
       "pageCount": 30,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "G. Patlewicz",
         "N. Jeliazkova",
@@ -34174,7 +34174,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Choon Ping Tan",
         "Peter Liljeström",
@@ -34377,7 +34377,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Alys Peisleya",
         "Myung Hyun Jo",
@@ -34467,7 +34467,7 @@
       "fileType": "PDF",
       "pageCount": 18,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "GARRETT A. SOUKUP",
         "RONALD R. BREAKER"
@@ -34507,7 +34507,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Shuman"
       ],
@@ -34607,7 +34607,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "Thomas Schlake",
         "Andreas Thess",
@@ -34649,7 +34649,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "Research article",
+      "documentType": "Research Article",
       "peopleMentioned": [],
       "tags": [
         "TLR8",
@@ -34725,7 +34725,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [],
       "tags": [
         "Vaccine development",
@@ -34762,7 +34762,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "Research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [],
       "tags": [
         "regulatory affairs",
@@ -35022,7 +35022,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -35062,7 +35062,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "research paper",
+      "documentType": "Research Paper",
       "peopleMentioned": [
         "SUSHUANG ZHENG",
         "STEWART SHUMAN"
@@ -42232,7 +42232,7 @@
       "fileType": "PDF",
       "pageCount": 10000,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "treated",
@@ -42349,7 +42349,7 @@
       "fileType": "PDF",
       "pageCount": 10000,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [
         "US3412303",
         "US3412304"
@@ -42429,7 +42429,7 @@
       "fileType": "PDF",
       "pageCount": 10000,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -42466,7 +42466,7 @@
       "fileType": "PDF",
       "pageCount": 2780,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -46768,7 +46768,7 @@
       "fileType": "XLSX",
       "pageCount": 20,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -57581,7 +57581,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -59502,7 +59502,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -59622,7 +59622,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "Clinical trial data",
+      "documentType": "Clinical Trial Data",
       "peopleMentioned": [],
       "tags": [
         "Fold rise",
@@ -96226,7 +96226,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -96368,7 +96368,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "Keith Vrbicky",
         "MD",
@@ -96570,7 +96570,7 @@
       "fileType": "PDF",
       "pageCount": 79,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -96610,7 +96610,7 @@
       "fileType": "PDF",
       "pageCount": 5673,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -96727,7 +96727,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "Participant US2081123",
         "Participant US2021094"
@@ -96808,7 +96808,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -96870,7 +96870,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "Chu L",
         "McPhee R",
@@ -97068,7 +97068,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -97108,7 +97108,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -97188,7 +97188,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -97626,7 +97626,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "US2011089",
         "US2021031",
@@ -97896,7 +97896,7 @@
       "fileType": "PDF",
       "pageCount": 772,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98017,7 +98017,7 @@
       "fileType": "PDF",
       "pageCount": 95,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98057,7 +98057,7 @@
       "fileType": "PDF",
       "pageCount": 4848,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -98095,7 +98095,7 @@
       "fileType": "PDF",
       "pageCount": 1398,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98135,7 +98135,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98452,7 +98452,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98492,7 +98492,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "US3172349",
         "US3182151",
@@ -98655,7 +98655,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98777,7 +98777,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98857,7 +98857,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -98897,7 +98897,7 @@
       "fileType": "PDF",
       "pageCount": 878,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "US3022004",
         "US3022005",
@@ -99297,7 +99297,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -99337,7 +99337,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -99514,7 +99514,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "Lisa A. Jackson",
         "Evan J. Anderson",
@@ -99889,7 +99889,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "COV.00138",
         "COV.00031",
@@ -100069,7 +100069,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "COV.00090",
         "COV.00044",
@@ -100481,7 +100481,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "Lisa A. Jackson",
         "Evan J. Anderson",
@@ -100596,7 +100596,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -101101,7 +101101,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -101138,7 +101138,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -101175,7 +101175,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "CV01KP076"
       ],
@@ -110586,7 +110586,7 @@
       "fileType": "PDF",
       "pageCount": 41,
       "module": "M5",
-      "documentType": "Clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",

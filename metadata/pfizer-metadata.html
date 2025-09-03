@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pfizer Clinical Trial Metadata - Define-XML Files</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        
+        .nav-menu {
+            background: #f8f9fa;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            justify-content: center;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        .nav-menu a.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+        
+        h1 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .description {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .study-section {
+            margin-bottom: 40px;
+        }
+        
+        .study-header {
+            background: #f0f4f8;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        .study-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0066cc;
+            margin: 0 0 5px 0;
+        }
+        
+        .study-info {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .data-table thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .data-table th {
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+        
+        .data-table th:hover {
+            background: #e9ecef;
+        }
+        
+        .data-table th:after {
+            content: ' \2195';
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .data-table th.sort-asc:after {
+            content: ' \2191';
+            color: #0066cc;
+        }
+        
+        .data-table th.sort-desc:after {
+            content: ' \2193';
+            color: #0066cc;
+        }
+        
+        .data-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .data-table tbody tr {
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .data-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .data-table tbody tr:hover {
+            background-color: #e7f3ff;
+        }
+        
+        .data-table a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .data-table a:hover {
+            text-decoration: underline;
+        }
+        
+        .manufacturer-pfizer {
+            color: #0066cc;
+            font-weight: 600;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .data-table {
+                font-size: 12px;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 8px 10px;
+            }
+            
+            .desktop-only {
+                display: none;
+            }
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-adam {
+            background: #e0f2f1;
+            color: #00695c;
+        }
+        
+        .badge-sdtm {
+            background: #fce4ec;
+            color: #ad1457;
+        }
+        
+        .badge-phase2 {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        
+        .badge-phase3 {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-nonclinical {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .badge-send {
+            background: #f0f4c3;
+            color: #827717;
+        }
+        
+        .badge-supp {
+            background: #e1bee7;
+            color: #6a1b9a;
+        }
+        
+        .badge-eua {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .badge-bla {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #0066cc;
+            font-size: 16px;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .search-box {
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        .search-box input:focus {
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+        }
+            
+        /* Dropdown styles */
+        .nav-menu .dropdown {
+            position: relative;
+        }
+        
+        .nav-menu .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-menu .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.8em;
+        }
+        
+        .nav-menu .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 220px;
+            display: none;
+            z-index: 1000;
+            margin-top: 5px;
+        }
+        
+        .nav-menu .dropdown.active .dropdown-menu,
+        .nav-menu .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Add a transparent bridge to prevent gap issues */
+        .nav-menu .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: transparent;
+            display: none;
+        }
+        
+        .nav-menu .dropdown:hover::after {
+            display: block;
+        }
+        
+        .nav-menu .dropdown-menu a {
+            display: block;
+            padding: 10px 15px;
+            color: #495057;
+            text-decoration: none;
+            border-bottom: none !important;
+        }
+        
+        .nav-menu .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #0066cc;
+        }
+</style>
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">File Navigator</a>
+                <div class="dropdown-menu">
+                    <a href="../moderna-bla-navigator.html">Moderna BLA Navigator</a>
+                    <a href="../pfizer-bla-navigator.html">Pfizer BLA Navigator</a>
+                    <a href="../pfizer-eua-navigator.html">Pfizer EUA Navigator</a>
+                </div>
+            </li>
+            <li><a href="../data-dictionary.html">Data Dictionary</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle active">Clinical Metadata</a>
+                <div class="dropdown-menu">
+                    <a href="moderna-metadata.html">Moderna Metadata</a>
+                    <a href="pfizer-metadata.html" class="active">Pfizer Metadata</a>
+                </div>
+            </li>
+            <li><a href="../about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        
+        <h1>Pfizer Clinical Trial Metadata</h1>
+        <p class="subtitle">COVID-19 Vaccine BNT162b2 Define-XML Dataset Definitions (EUA & BLA)</p>
+        
+        <div class="description">
+            <p>These Define-XML files contain comprehensive metadata documentation for Pfizer-BioNTech's BNT162b2 COVID-19 vaccine clinical trial datasets submitted to FDA under both Emergency Use Authorization (EUA) and Biologics License Application (BLA 125742). Each file provides detailed information about dataset structures, variables, controlled terminology, and computational methods used in the BNT162-01 and C4591001 trials.</p>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by authorization, study, phase, data type, or description...">
+        </div>
+        
+        <div class="table-container">
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Authorization</th>
+                        <th onclick="sortTable(1)">Study/Protocol</th>
+                        <th onclick="sortTable(2)">Phase</th>
+                        <th onclick="sortTable(3)">Data Type</th>
+                        <th onclick="sortTable(4)" class="desktop-only">Description</th>
+                        <th>File Links</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="info-box">
+            <h3>About Pfizer Define-XML Files</h3>
+            <p><strong>Study BNT162-01:</strong> Phase 1/2 dose-escalation study evaluating safety and immunogenicity of BNT162b2 vaccine candidates.</p>
+            <p><strong>Study C4591001:</strong> Phase 1/2/3 pivotal efficacy trial evaluating the safety and efficacy of BNT162b2 in preventing COVID-19.</p>
+            <p><strong>Nonclinical Studies:</strong> Studies 20GR142 and 38166 contain nonclinical toxicology data in SEND format.</p>
+            <p><strong>ADaM (Analysis Data Model):</strong> Contains analysis-ready datasets used for statistical analysis and regulatory submissions.</p>
+            <p><strong>SDTM (Study Data Tabulation Model):</strong> Contains raw clinical trial data in a standardized format.</p>
+            <p><strong>SEND (Standard for Exchange of Nonclinical Data):</strong> Contains nonclinical study data following CDISC standards.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Data for the table - Pfizer only
+        const tableData = [
+            // Pfizer EUA Studies
+            {
+                authorization: 'EUA',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'ADaM',
+                description: 'BNT162-01 - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-bnt162-01-A.html'}]
+            },
+            {
+                authorization: 'EUA',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'SDTM',
+                description: 'BNT162-01 - Study Data',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-bnt162-01-S.html'}]
+            },
+            {
+                authorization: 'EUA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 Interim - Analysis Datasets (Efficacy Analysis)',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-ia-efficacy-A.html'}]
+            },
+            {
+                authorization: 'EUA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM',
+                description: 'C4591001 Interim - Study Data (Efficacy Analysis)',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-ia-efficacy-S.html'}]
+            },
+            {
+                authorization: 'EUA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 Safety/Efficacy - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-A.html'}]
+            },
+            {
+                authorization: 'EUA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM',
+                description: 'C4591001 Safety/Efficacy - Study Data',
+                links: [{text: 'View', url: 'pfizer-eua/pfizer-eua-c4591001-safety-fa-eff-S.html'}]
+            },
+            // Pfizer BLA Studies
+            {
+                authorization: 'BLA',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'ADaM',
+                description: 'BNT162-01 - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-bnt162-01-A.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'BNT162-01',
+                phase: 'Phase 1/2',
+                dataType: 'SDTM',
+                description: 'BNT162-01 - Study Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-bnt162-01-S.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 - Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-A.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM',
+                description: 'C4591001 - Study Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-S.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM-Supp',
+                description: 'C4591001 - Supplemental Analysis Datasets',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-A-supp.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'SDTM-Supp',
+                description: 'C4591001 - Supplemental Study Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-c4591001-S-supp.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 - Sequencing Analysis (ADSL, ADXB)',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-s6-define.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: 'C4591001',
+                phase: 'Phase 1/2/3',
+                dataType: 'ADaM',
+                description: 'C4591001 - Additional Analysis Dataset',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-s6-define-1.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: '20GR142',
+                phase: 'Nonclinical',
+                dataType: 'SEND',
+                description: 'Study 20GR142 - Nonclinical Toxicology Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-20gr142.html'}]
+            },
+            {
+                authorization: 'BLA',
+                study: '38166',
+                phase: 'Nonclinical',
+                dataType: 'SEND',
+                description: 'Study 38166 - Nonclinical Toxicology Data',
+                links: [{text: 'View', url: 'pfizer-bla/pfizer-38166.html'}]
+            }
+        ];
+        
+        let currentSort = { column: -1, ascending: true };
+        let filteredData = [...tableData];
+        
+        // Initialize table
+        function initTable() {
+            renderTable(tableData);
+        }
+        
+        // Render table
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                
+                // Add click handler to the entire row
+                tr.onclick = function(e) {
+                    // Don't navigate if clicking on a link
+                    if (e.target.tagName !== 'A') {
+                        window.location.href = row.links[0].url;
+                    }
+                };
+                
+                // Authorization
+                const authTd = document.createElement('td');
+                const authSpan = document.createElement('span');
+                authSpan.className = `badge badge-${row.authorization.toLowerCase()}`;
+                authSpan.textContent = row.authorization;
+                authTd.appendChild(authSpan);
+                tr.appendChild(authTd);
+                
+                // Study
+                const studyTd = document.createElement('td');
+                studyTd.textContent = row.study;
+                tr.appendChild(studyTd);
+                
+                // Phase
+                const phaseTd = document.createElement('td');
+                const phaseSpan = document.createElement('span');
+                phaseSpan.className = `badge ${
+                    row.phase.includes('Nonclinical') ? 'badge-nonclinical' : 
+                    row.phase.includes('3') ? 'badge-phase3' : 'badge-phase2'
+                }`;
+                phaseSpan.textContent = row.phase;
+                phaseTd.appendChild(phaseSpan);
+                tr.appendChild(phaseTd);
+                
+                // Data Type
+                const typeTd = document.createElement('td');
+                const typeSpan = document.createElement('span');
+                typeSpan.className = `badge ${
+                    row.dataType === 'ADaM' ? 'badge-adam' : 
+                    row.dataType === 'SDTM' ? 'badge-sdtm' :
+                    row.dataType === 'SEND' ? 'badge-send' :
+                    row.dataType.includes('Supp') ? 'badge-supp' : 'badge-sdtm'
+                }`;
+                typeSpan.textContent = row.dataType;
+                typeTd.appendChild(typeSpan);
+                tr.appendChild(typeTd);
+                
+                // Description
+                const descTd = document.createElement('td');
+                descTd.className = 'desktop-only';
+                descTd.textContent = row.description;
+                tr.appendChild(descTd);
+                
+                // Links
+                const linksTd = document.createElement('td');
+                row.links.forEach((link, index) => {
+                    if (index > 0) linksTd.appendChild(document.createTextNode(' | '));
+                    const a = document.createElement('a');
+                    a.href = link.url;
+                    a.textContent = link.text;
+                    linksTd.appendChild(a);
+                });
+                tr.appendChild(linksTd);
+                
+                tbody.appendChild(tr);
+            });
+        }
+        
+        // Sort table
+        function sortTable(column) {
+            const headers = document.querySelectorAll('th');
+            headers.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+            
+            if (currentSort.column === column) {
+                currentSort.ascending = !currentSort.ascending;
+            } else {
+                currentSort.column = column;
+                currentSort.ascending = true;
+            }
+            
+            const sortedData = [...filteredData].sort((a, b) => {
+                let aVal, bVal;
+                switch (column) {
+                    case 0: aVal = a.authorization; bVal = b.authorization; break;
+                    case 1: aVal = a.study; bVal = b.study; break;
+                    case 2: aVal = a.phase; bVal = b.phase; break;
+                    case 3: aVal = a.dataType; bVal = b.dataType; break;
+                    case 4: aVal = a.description; bVal = b.description; break;
+                }
+                
+                if (aVal < bVal) return currentSort.ascending ? -1 : 1;
+                if (aVal > bVal) return currentSort.ascending ? 1 : -1;
+                return 0;
+            });
+            
+            headers[column].classList.add(currentSort.ascending ? 'sort-asc' : 'sort-desc');
+            renderTable(sortedData);
+        }
+        
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            if (searchTerm === '') {
+                filteredData = [...tableData];
+            } else {
+                filteredData = tableData.filter(row => {
+                    return row.authorization.toLowerCase().includes(searchTerm) ||
+                           row.study.toLowerCase().includes(searchTerm) ||
+                           row.phase.toLowerCase().includes(searchTerm) ||
+                           row.dataType.toLowerCase().includes(searchTerm) ||
+                           row.description.toLowerCase().includes(searchTerm);
+                });
+            }
+            
+            renderTable(filteredData);
+        });
+        
+        // Initialize on load
+        initTable();
+    </script>
+    <script>
+        // Improve dropdown navigation reliability
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.nav-menu .dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+                let isClickOpen = false;
+                let hoverTimeout;
+                
+                // Handle click for explicit open/close
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    isClickOpen = !isClickOpen;
+                    if (isClickOpen) {
+                        dropdown.classList.add('active');
+                    } else {
+                        dropdown.classList.remove('active');
+                    }
+                });
+                
+                // Handle hover with delay to prevent accidental closing
+                dropdown.addEventListener('mouseenter', function() {
+                    clearTimeout(hoverTimeout);
+                    dropdown.classList.add('active');
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    if (!isClickOpen) {
+                        hoverTimeout = setTimeout(function() {
+                            dropdown.classList.remove('active');
+                        }, 300);
+                    }
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                dropdowns.forEach(dropdown => {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

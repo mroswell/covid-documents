@@ -382,17 +382,18 @@
         </div>
         
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search by study, phase, data type, or description...">
+            <input type="text" id="searchInput" placeholder="Search by authorization, study, phase, data type, or description...">
         </div>
         
         <div class="table-container">
             <table class="data-table" id="dataTable">
                 <thead>
                     <tr>
-                        <th onclick="sortTable(0)">Study/Protocol</th>
-                        <th onclick="sortTable(1)">Phase</th>
-                        <th onclick="sortTable(2)">Data Type</th>
-                        <th onclick="sortTable(3)" class="desktop-only">Description</th>
+                        <th onclick="sortTable(0)">Authorization</th>
+                        <th onclick="sortTable(1)">Study/Protocol</th>
+                        <th onclick="sortTable(2)">Phase</th>
+                        <th onclick="sortTable(3)">Data Type</th>
+                        <th onclick="sortTable(4)" class="desktop-only">Description</th>
                         <th>File Links</th>
                     </tr>
                 </thead>
@@ -414,6 +415,7 @@
         // Data for the table - Moderna only
         const tableData = [
             {
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'ADaM',
@@ -421,6 +423,7 @@
                 links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-add1_A_D.html'}]
             },
             {
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'SDTM',
@@ -428,6 +431,7 @@
                 links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-add1_S.html'}]
             },
             {
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'ADaM',
@@ -435,6 +439,7 @@
                 links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-d57_A_D.html'}]
             },
             {
+                authorization: 'BLA',
                 study: 'P201',
                 phase: 'Phase 2a',
                 dataType: 'SDTM',
@@ -442,6 +447,7 @@
                 links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p201-d57_S.html'}]
             },
             {
+                authorization: 'BLA',
                 study: 'P301 (COVE)',
                 phase: 'Phase 3',
                 dataType: 'ADaM',
@@ -449,6 +455,7 @@
                 links: [{text: 'View', url: 'moderna-bla/FDA-CBER-2022-1614_mrna-1273-p301_A_D.html'}]
             },
             {
+                authorization: 'BLA',
                 study: 'P301 (COVE)',
                 phase: 'Phase 3',
                 dataType: 'SDTM',
@@ -480,6 +487,14 @@
                         window.location.href = row.links[0].url;
                     }
                 };
+                
+                // Authorization
+                const authTd = document.createElement('td');
+                const authSpan = document.createElement('span');
+                authSpan.className = `badge badge-${row.authorization.toLowerCase()}`;
+                authSpan.textContent = row.authorization;
+                authTd.appendChild(authSpan);
+                tr.appendChild(authTd);
                 
                 // Study
                 const studyTd = document.createElement('td');
@@ -542,10 +557,11 @@
             const sortedData = [...filteredData].sort((a, b) => {
                 let aVal, bVal;
                 switch (column) {
-                    case 0: aVal = a.study; bVal = b.study; break;
-                    case 1: aVal = a.phase; bVal = b.phase; break;
-                    case 2: aVal = a.dataType; bVal = b.dataType; break;
-                    case 3: aVal = a.description; bVal = b.description; break;
+                    case 0: aVal = a.authorization; bVal = b.authorization; break;
+                    case 1: aVal = a.study; bVal = b.study; break;
+                    case 2: aVal = a.phase; bVal = b.phase; break;
+                    case 3: aVal = a.dataType; bVal = b.dataType; break;
+                    case 4: aVal = a.description; bVal = b.description; break;
                 }
                 
                 if (aVal < bVal) return currentSort.ascending ? -1 : 1;
@@ -565,7 +581,8 @@
                 filteredData = [...tableData];
             } else {
                 filteredData = tableData.filter(row => {
-                    return row.study.toLowerCase().includes(searchTerm) ||
+                    return row.authorization.toLowerCase().includes(searchTerm) ||
+                           row.study.toLowerCase().includes(searchTerm) ||
                            row.phase.toLowerCase().includes(searchTerm) ||
                            row.dataType.toLowerCase().includes(searchTerm) ||
                            row.description.toLowerCase().includes(searchTerm);

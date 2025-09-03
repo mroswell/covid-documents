@@ -63,10 +63,7 @@ yarn-error.log*
 metadata/nav-template.html
 
 # Claude prompt history
-prompts.txt
-prompts-older.txt
-prompts2.txt
-extract_prompts.py
+_prompts/
 
 # Claude-specific files
 .claude/

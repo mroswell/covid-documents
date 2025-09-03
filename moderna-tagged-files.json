@@ -120,7 +120,7 @@
       "fileType": "DOCX",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Safety data report",
+      "documentType": "Safety Data Report",
       "peopleMentioned": [
         "Sponsor"
       ],
@@ -760,7 +760,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -800,7 +800,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -1001,7 +1001,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Safety response",
+      "documentType": "Safety Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -1042,7 +1042,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Safety response",
+      "documentType": "Safety Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -1165,7 +1165,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Safety response",
+      "documentType": "Safety Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -1287,7 +1287,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Meeting minutes",
+      "documentType": "Meeting Minutes",
       "peopleMentioned": [
         "Paul Granadillo",
         "Jennifer White",
@@ -1333,7 +1333,7 @@
       "fileType": "PDF",
       "pageCount": 19,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "Warnings and precautions",
@@ -1451,7 +1451,7 @@
       "fileType": "PDF",
       "pageCount": 18,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "COVID-19 vaccine",
@@ -1529,7 +1529,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -1725,7 +1725,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -1802,7 +1802,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Medical response",
+      "documentType": "Medical Response",
       "peopleMentioned": [
         "Subject US3352594"
       ],
@@ -1841,7 +1841,7 @@
       "fileType": "PDF",
       "pageCount": 108,
       "module": "M1",
-      "documentType": "Clinical report",
+      "documentType": "Clinical Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -2000,7 +2000,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Regulatory submission",
+      "documentType": "Regulatory Submission",
       "peopleMentioned": [
         "Marion Gruber",
         "PhD",
@@ -2082,7 +2082,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Technical response",
+      "documentType": "Technical Response",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -2159,7 +2159,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -2566,7 +2566,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Regulatory submission",
+      "documentType": "Regulatory Submission",
       "peopleMentioned": [
         "Marion Gruber",
         "PhD",
@@ -2607,7 +2607,7 @@
       "fileType": "PDF",
       "pageCount": 18,
       "module": "M1",
-      "documentType": "Safety report",
+      "documentType": "Safety Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc",
@@ -2766,7 +2766,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -3127,7 +3127,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -3167,7 +3167,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -3288,7 +3288,7 @@
       "fileType": "PDF",
       "pageCount": 184,
       "module": "M1",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -12422,7 +12422,7 @@
       "fileType": "PDF",
       "pageCount": 53,
       "module": "M5",
-      "documentType": "Clinical study protocol",
+      "documentType": "Clinical Study Protocol",
       "peopleMentioned": [
         "Moderna Biotech Spain",
         "S.L."
@@ -12575,7 +12575,7 @@
       "fileType": "PDF",
       "pageCount": 53,
       "module": "M5",
-      "documentType": "Post-marketing safety study protocol",
+      "documentType": "Post-Marketing Safety Study Protocol",
       "peopleMentioned": [
         "Prof. Vera Ehrenstein",
         "Dr. Signe Sørup"
@@ -14264,7 +14264,7 @@
       "fileType": "PDF",
       "pageCount": 22,
       "module": "M1",
-      "documentType": "User guide",
+      "documentType": "User Guide",
       "peopleMentioned": [],
       "tags": [
         "data representation",
@@ -14383,7 +14383,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "Data table",
+      "documentType": "Data Table",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -14534,7 +14534,7 @@
       "fileType": "XLSX",
       "pageCount": 20,
       "module": "M1",
-      "documentType": "Medical reference",
+      "documentType": "Medical Reference",
       "peopleMentioned": [],
       "tags": [
         "hematological disorders",
@@ -14571,7 +14571,7 @@
       "fileType": "XLSX",
       "pageCount": 20,
       "module": "M1",
-      "documentType": "Safety report",
+      "documentType": "Safety Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -15709,7 +15709,7 @@
       "fileType": "PDF",
       "pageCount": 17,
       "module": "M1",
-      "documentType": "Vaccine information",
+      "documentType": "Vaccine Information",
       "peopleMentioned": [],
       "tags": [
         "COVID-19 vaccine",
@@ -15785,7 +15785,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M1",
-      "documentType": "Patient information",
+      "documentType": "Patient Information",
       "peopleMentioned": [],
       "tags": [
         "pregnancy",
@@ -15822,7 +15822,7 @@
       "fileType": "PDF",
       "pageCount": 33,
       "module": "M5",
-      "documentType": "Validation protocol",
+      "documentType": "Validation Protocol",
       "peopleMentioned": [
         "(b) (6)",
         "(b)(6)",
@@ -15900,7 +15900,7 @@
       "fileType": "PDF",
       "pageCount": 19,
       "module": "M5",
-      "documentType": "Verification report",
+      "documentType": "Verification Report",
       "peopleMentioned": [
         "(b) (6)",
         "(b)(6)"
@@ -15977,7 +15977,7 @@
       "fileType": "PDF",
       "pageCount": 56,
       "module": "M5",
-      "documentType": "Verification report",
+      "documentType": "Verification Report",
       "peopleMentioned": [
         "(b) (6)",
         "(b)(6)",
@@ -16636,7 +16636,7 @@
       "fileType": "PDF",
       "pageCount": 61,
       "module": "M5",
-      "documentType": "Qualification report",
+      "documentType": "Qualification Report",
       "peopleMentioned": [
         "Tina Green",
         "Victoria Piscitella",
@@ -16701,7 +16701,7 @@
       "fileType": "PDF",
       "pageCount": 61,
       "module": "M5",
-      "documentType": "Qualification report",
+      "documentType": "Qualification Report",
       "peopleMentioned": [
         "Tina Green",
         "Victoria Pisciella",
@@ -16744,7 +16744,7 @@
       "fileType": "PDF",
       "pageCount": 26,
       "module": "M5",
-      "documentType": "Laboratory method",
+      "documentType": "Laboratory Method",
       "peopleMentioned": [
         "Jack Hester",
         "Adrienne Howlett",
@@ -16786,7 +16786,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M5",
-      "documentType": "Validation plan",
+      "documentType": "Validation Plan",
       "peopleMentioned": [
         "PPD"
       ],
@@ -17076,7 +17076,7 @@
       "fileType": "PDF",
       "pageCount": 25,
       "module": "M5",
-      "documentType": "Validation plan",
+      "documentType": "Validation Plan",
       "peopleMentioned": [
         "Jack Hester",
         "Adrienne Howlett",
@@ -17203,7 +17203,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "Validation plan",
+      "documentType": "Validation Plan",
       "peopleMentioned": [
         "Carl Breidenbach",
         "Adrienne Howlett",
@@ -17246,7 +17246,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M5",
-      "documentType": "Validation plan",
+      "documentType": "Validation Plan",
       "peopleMentioned": [
         "Carl Breidenbach",
         "Adrienne Howlett",
@@ -17330,7 +17330,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "Validation plan",
+      "documentType": "Validation Plan",
       "peopleMentioned": [
         "Carl Breidenbach",
         "Adrienne Howlett",
@@ -20146,7 +20146,7 @@
       "fileType": "PDF",
       "pageCount": 18,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "myocarditis",
@@ -20294,7 +20294,7 @@
       "fileType": "DOCX",
       "pageCount": 11,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "myocarditis",
@@ -20558,7 +20558,7 @@
       "fileType": "DOCX",
       "pageCount": 11,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "contraindications",
@@ -20633,7 +20633,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M2",
-      "documentType": "Study synopsis",
+      "documentType": "Study Synopsis",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -20885,7 +20885,7 @@
       "fileType": "PDF",
       "pageCount": 22,
       "module": "M5",
-      "documentType": "Technical article",
+      "documentType": "Technical Article",
       "peopleMentioned": [
         "David P. Elder",
         "Patrick J. Crowley"
@@ -22714,7 +22714,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [
         "Hana El Sahly",
         "Lindsey Baden"
@@ -23217,7 +23217,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "Research report",
+      "documentType": "Research Report",
       "peopleMentioned": [
         "carfi"
       ],
@@ -23527,7 +23527,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "Research review",
+      "documentType": "Research Review",
       "peopleMentioned": [
         "Cui",
         "Guangdong",
@@ -24134,7 +24134,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Research study",
+      "documentType": "Research Study",
       "peopleMentioned": [
         "Havervall"
       ],
@@ -25942,7 +25942,7 @@
       "fileType": "DOCX",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Patient information",
+      "documentType": "Patient Information",
       "peopleMentioned": [],
       "tags": [
         "vaccine guidance",
@@ -25979,7 +25979,7 @@
       "fileType": "PDF",
       "pageCount": 18,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "COVID-19 vaccine",
@@ -26016,7 +26016,7 @@
       "fileType": "DOCX",
       "pageCount": 11,
       "module": "M1",
-      "documentType": "Prescribing information",
+      "documentType": "Prescribing Information",
       "peopleMentioned": [],
       "tags": [
         "FDA approval",
@@ -27347,7 +27347,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Promotional material",
+      "documentType": "Promotional Material",
       "peopleMentioned": [],
       "tags": [
         "pharmaceutical industry",
@@ -27646,7 +27646,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Promotional material",
+      "documentType": "Promotional Material",
       "peopleMentioned": [],
       "tags": [
         "Display URL",
@@ -27683,7 +27683,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M1",
-      "documentType": "Promotional material",
+      "documentType": "Promotional Material",
       "peopleMentioned": [],
       "tags": [
         "Ad extensions",
@@ -27877,7 +27877,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M1",
-      "documentType": "Vaccine information",
+      "documentType": "Vaccine Information",
       "peopleMentioned": [],
       "tags": [
         "FDA approval",
@@ -28867,7 +28867,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M1",
-      "documentType": "Research study",
+      "documentType": "Research Study",
       "peopleMentioned": [],
       "tags": [
         "COVID-19 hospitalization",
@@ -29707,7 +29707,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Information request response",
+      "documentType": "Information Request Response",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -29902,7 +29902,7 @@
       "fileType": "PDF",
       "pageCount": 11591,
       "module": "M1",
-      "documentType": "Periodic safety report",
+      "documentType": "Periodic Safety Report",
       "peopleMentioned": [
         "Dr. Marie-Pierre Caby-Tosi"
       ],
@@ -29980,7 +29980,7 @@
       "fileType": "PDF",
       "pageCount": 91,
       "module": "M1",
-      "documentType": "Safety report",
+      "documentType": "Safety Report",
       "peopleMentioned": [
         "Dr. Marie-Pierre Caby-Tosi"
       ],
@@ -30056,7 +30056,7 @@
       "fileType": "DOCX",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Vaccine information",
+      "documentType": "Vaccine Information",
       "peopleMentioned": [],
       "tags": [
         "pregnancy",
@@ -30131,7 +30131,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -30335,7 +30335,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M1",
-      "documentType": "Safety response",
+      "documentType": "Safety Response",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -30375,7 +30375,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -30415,7 +30415,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Post-marketing study response",
+      "documentType": "Post-Marketing Study Response",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -30573,7 +30573,7 @@
       "fileType": "PDF",
       "pageCount": 48,
       "module": "M5",
-      "documentType": "Safety protocol",
+      "documentType": "Safety Protocol",
       "peopleMentioned": [
         "Moderna Inc."
       ],
@@ -30692,7 +30692,7 @@
       "fileType": "PDF",
       "pageCount": 17,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -30813,7 +30813,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M1",
-      "documentType": "Pharmacovigilance plan",
+      "documentType": "Pharmacovigilance Plan",
       "peopleMentioned": [],
       "tags": [
         "Populations not studied",
@@ -30924,7 +30924,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M1",
-      "documentType": "Pharmacovigilance plan",
+      "documentType": "Pharmacovigilance Plan",
       "peopleMentioned": [],
       "tags": [
         "Populations not studied",
@@ -31088,7 +31088,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "ModernaTx",
         "Inc."
@@ -34424,7 +34424,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M3",
-      "documentType": "Technical report",
+      "documentType": "Technical Report",
       "peopleMentioned": [
         "Thorsten Sogding",
         "Daniel Canton",
@@ -34799,7 +34799,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "Technical report",
+      "documentType": "Technical Report",
       "peopleMentioned": [
         "Andrea Straka"
       ],
@@ -34875,7 +34875,7 @@
       "fileType": "PDF",
       "pageCount": 67,
       "module": "M2",
-      "documentType": "Clinical study summary",
+      "documentType": "Clinical Study Summary",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -38468,7 +38468,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Notification letter",
+      "documentType": "Notification Letter",
       "peopleMentioned": [
         "Agnihothram",
         "Sudhakar",
@@ -38614,7 +38614,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Notification letter",
+      "documentType": "Notification Letter",
       "peopleMentioned": [
         "Lori Austin-Hansberry",
         "Michelle Olsen",
@@ -41872,7 +41872,7 @@
       "fileType": "PDF",
       "pageCount": 40,
       "module": "M3",
-      "documentType": "Batch analysis report",
+      "documentType": "Batch Analysis Report",
       "peopleMentioned": [],
       "tags": [
         "Sterility",
@@ -41912,7 +41912,7 @@
       "fileType": "PDF",
       "pageCount": 52,
       "module": "M1",
-      "documentType": "Inspection report",
+      "documentType": "Inspection Report",
       "peopleMentioned": [
         "(b) (6)",
         "(b) (4)"
@@ -41992,7 +41992,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Manufacturing information",
+      "documentType": "Manufacturing Information",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -42035,7 +42035,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M1",
-      "documentType": "Waiver request",
+      "documentType": "Waiver Request",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -45824,7 +45824,7 @@
       "fileType": "PDF",
       "pageCount": 66,
       "module": "M2",
-      "documentType": "Regulatory filing",
+      "documentType": "Regulatory Filing",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -48732,7 +48732,7 @@
       "fileType": "TXT",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -48806,7 +48806,7 @@
       "fileType": "TXT",
       "pageCount": 20,
       "module": "M5",
-      "documentType": "Macro definition",
+      "documentType": "Macro Definition",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -49562,7 +49562,7 @@
       "fileType": "TXT",
       "pageCount": 8,
       "module": "M5",
-      "documentType": "Analysis plan",
+      "documentType": "Analysis Plan",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -49758,7 +49758,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical report",
+      "documentType": "Clinical Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -50747,7 +50747,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Analysis script",
+      "documentType": "Analysis Script",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -50821,7 +50821,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Analysis script",
+      "documentType": "Analysis Script",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -51047,7 +51047,7 @@
       "fileType": "TXT",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Analysis script",
+      "documentType": "Analysis Script",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -51275,7 +51275,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical report",
+      "documentType": "Clinical Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -51430,7 +51430,7 @@
       "fileType": "TXT",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Technical report",
+      "documentType": "Technical Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -52035,7 +52035,7 @@
       "fileType": "TXT",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "Analysis script",
+      "documentType": "Analysis Script",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -56316,7 +56316,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M3",
-      "documentType": "Manufacturing protocol",
+      "documentType": "Manufacturing Protocol",
       "peopleMentioned": [],
       "tags": [
         "quality-control",
@@ -56393,7 +56393,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -56554,7 +56554,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -56873,7 +56873,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -57507,7 +57507,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -57888,7 +57888,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "Macro documentation",
+      "documentType": "Macro Documentation",
       "peopleMentioned": [],
       "tags": [
         "Macro",
@@ -57999,7 +57999,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "Macro documentation",
+      "documentType": "Macro Documentation",
       "peopleMentioned": [],
       "tags": [
         "dataset manipulation",
@@ -58558,7 +58558,7 @@
       "fileType": "PDF",
       "pageCount": 32,
       "module": "M5",
-      "documentType": "Macro documentation",
+      "documentType": "Macro Documentation",
       "peopleMentioned": [
         "(b) (6)"
       ],
@@ -58782,7 +58782,7 @@
       "fileType": "PDF",
       "pageCount": 30,
       "module": "M5",
-      "documentType": "Macro documentation",
+      "documentType": "Macro Documentation",
       "peopleMentioned": [],
       "tags": [
         "BIGN",
@@ -59080,7 +59080,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -59117,7 +59117,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -59191,7 +59191,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -59268,7 +59268,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "Guidance document",
+      "documentType": "Guidance Document",
       "peopleMentioned": [],
       "tags": [
         "visit date",
@@ -59305,7 +59305,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "Study protocol",
+      "documentType": "Study Protocol",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -59426,7 +59426,7 @@
       "fileType": "PDF",
       "pageCount": 67,
       "module": "M5",
-      "documentType": "Clinical report",
+      "documentType": "Clinical Report",
       "peopleMentioned": [
         "(b) (6)"
       ],
@@ -59465,7 +59465,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "Clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -59659,7 +59659,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "Study protocol",
+      "documentType": "Study Protocol",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -63886,7 +63886,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Manufacturing information",
+      "documentType": "Manufacturing Information",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -63929,7 +63929,7 @@
       "fileType": "PDF",
       "pageCount": 32,
       "module": "M3",
-      "documentType": "Stability summary",
+      "documentType": "Stability Summary",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -63969,7 +63969,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "Stability data",
+      "documentType": "Stability Data",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -64046,7 +64046,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "Stability report",
+      "documentType": "Stability Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -64083,7 +64083,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "Stability report",
+      "documentType": "Stability Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -64120,7 +64120,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "Stability report",
+      "documentType": "Stability Report",
       "peopleMentioned": [
         "Catalent"
       ],
@@ -64351,7 +64351,7 @@
       "fileType": "PDF",
       "pageCount": 22,
       "module": "M3",
-      "documentType": "Stability report",
+      "documentType": "Stability Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -65956,7 +65956,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedure validation",
+      "documentType": "Analytical Procedure Validation",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -65993,7 +65993,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -66068,7 +66068,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -66149,7 +66149,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Manufacturing information",
+      "documentType": "Manufacturing Information",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -66192,7 +66192,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Product information",
+      "documentType": "Product Information",
       "peopleMentioned": [
         "Elasomeran",
         "CX-024414"
@@ -66232,7 +66232,7 @@
       "fileType": "PDF",
       "pageCount": 31,
       "module": "M3",
-      "documentType": "Stability summary",
+      "documentType": "Stability Summary",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -66313,7 +66313,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M3",
-      "documentType": "Stability data",
+      "documentType": "Stability Data",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -66393,7 +66393,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Stability protocol",
+      "documentType": "Stability Protocol",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -68140,7 +68140,7 @@
       "fileType": "PDF",
       "pageCount": 40,
       "module": "M3",
-      "documentType": "Batch analysis",
+      "documentType": "Batch Analysis",
       "peopleMentioned": [],
       "tags": [
         "Sterility",
@@ -68182,7 +68182,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Validation report",
+      "documentType": "Validation Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -68256,7 +68256,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Validation report",
+      "documentType": "Validation Report",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -68340,7 +68340,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -68385,7 +68385,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -68585,7 +68585,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Manufacturing information",
+      "documentType": "Manufacturing Information",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -68631,7 +68631,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "Product description",
+      "documentType": "Product Description",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -68834,7 +68834,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Technical response",
+      "documentType": "Technical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc.",
@@ -69641,7 +69641,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -69679,7 +69679,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -69717,7 +69717,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedure validation",
+      "documentType": "Analytical Procedure Validation",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -69754,7 +69754,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -69831,7 +69831,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "Analytical procedures",
+      "documentType": "Analytical Procedures",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -82765,7 +82765,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Regulatory filing",
+      "documentType": "Regulatory Filing",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -82805,7 +82805,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Regulatory filing",
+      "documentType": "Regulatory Filing",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -82845,7 +82845,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -82885,7 +82885,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Regulatory document",
+      "documentType": "Regulatory Document",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -82925,7 +82925,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Regulatory filing",
+      "documentType": "Regulatory Filing",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -83165,7 +83165,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Vaccine information",
+      "documentType": "Vaccine Information",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -83285,7 +83285,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "Manufacturing information",
+      "documentType": "Manufacturing Information",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -85948,7 +85948,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M1",
-      "documentType": "Regulatory response",
+      "documentType": "Regulatory Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -89406,7 +89406,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M2",
-      "documentType": "Pharmacokinetic summary",
+      "documentType": "Pharmacokinetic Summary",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -89446,7 +89446,7 @@
       "fileType": "PDF",
       "pageCount": 73,
       "module": "M2",
-      "documentType": "Pharmacology summary",
+      "documentType": "Pharmacology Summary",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -89526,7 +89526,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M2",
-      "documentType": "Pharmacokinetic report",
+      "documentType": "Pharmacokinetic Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -89603,7 +89603,7 @@
       "fileType": "PDF",
       "pageCount": 69,
       "module": "M2",
-      "documentType": "Toxicology report",
+      "documentType": "Toxicology Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -89640,7 +89640,7 @@
       "fileType": "PDF",
       "pageCount": 52,
       "module": "M2",
-      "documentType": "Toxicology report",
+      "documentType": "Toxicology Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -96109,7 +96109,7 @@
       "fileType": "PDF",
       "pageCount": 130,
       "module": "M2",
-      "documentType": "Clinical overview",
+      "documentType": "Clinical Overview",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -96189,7 +96189,7 @@
       "fileType": "PDF",
       "pageCount": 194,
       "module": "M2",
-      "documentType": "Safety report",
+      "documentType": "Safety Report",
       "peopleMentioned": [],
       "tags": [
         "mRNA-1273",
@@ -101390,7 +101390,7 @@
       "fileType": "PDF",
       "pageCount": 20,
       "module": "M5",
-      "documentType": "Clinical trial site listing",
+      "documentType": "Clinical Trial Site Listing",
       "peopleMentioned": [
         "Brandon James Essink",
         "Laurence Chu",
@@ -110018,7 +110018,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Clinical trial site list",
+      "documentType": "Clinical Trial Site List",
       "peopleMentioned": [
         "Laurence Chu",
         "MD",
@@ -110149,7 +110149,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Certification form",
+      "documentType": "Certification Form",
       "peopleMentioned": [],
       "tags": [
         "FDA regulation",
@@ -110265,7 +110265,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Certification form",
+      "documentType": "Certification Form",
       "peopleMentioned": [],
       "tags": [
         "regulatory compliance",
@@ -110302,7 +110302,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Meeting requests",
+      "documentType": "Meeting Requests",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -110342,7 +110342,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "Regulatory document",
+      "documentType": "Regulatory Document",
       "peopleMentioned": [
         "ModernaTx",
         "Inc.",
@@ -110384,7 +110384,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Obligation transfer",
+      "documentType": "Obligation Transfer",
       "peopleMentioned": [
         "Carlota Vinals"
       ],
@@ -110464,7 +110464,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "Deferral request",
+      "documentType": "Deferral Request",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -110546,7 +110546,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "Proprietary name request",
+      "documentType": "Proprietary Name Request",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -110664,7 +110664,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "Audit report",
+      "documentType": "Audit Report",
       "peopleMentioned": [
         "Cynthia Gay",
         "MD",
@@ -110713,7 +110713,7 @@
       "fileType": "PDF",
       "pageCount": 22,
       "module": "M5",
-      "documentType": "Research report",
+      "documentType": "Research Report",
       "peopleMentioned": [
         "Rolando Pajon",
         "Groves Dixon",
@@ -110796,7 +110796,7 @@
       "fileType": "PDF",
       "pageCount": 36,
       "module": "M5",
-      "documentType": "Clinical trial informed consent form",
+      "documentType": "Clinical Trial Informed Consent Form",
       "peopleMentioned": [
         "PiFullName"
       ],
@@ -121727,7 +121727,7 @@
       "fileType": "PDF",
       "pageCount": 1015,
       "module": "M5",
-      "documentType": "Toxicology report",
+      "documentType": "Toxicology Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",
@@ -121891,7 +121891,7 @@
       "fileType": "PDF",
       "pageCount": 1014,
       "module": "M5",
-      "documentType": "Toxicology study report",
+      "documentType": "Toxicology Study Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",

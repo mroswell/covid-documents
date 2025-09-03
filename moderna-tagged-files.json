@@ -351,7 +351,7 @@
       "fileType": "XLSX",
       "pageCount": 20,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -882,7 +882,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc."
@@ -1205,7 +1205,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "clinical response",
+      "documentType": "Clinical Response",
       "peopleMentioned": [
         "Moderna TX",
         "Inc.",
@@ -2726,7 +2726,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M1",
-      "documentType": "form",
+      "documentType": "Form",
       "peopleMentioned": [
         "Modernatx",
         "Inc."
@@ -16024,7 +16024,7 @@
       "fileType": "PDF",
       "pageCount": 26,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -16130,7 +16130,7 @@
       "fileType": "PDF",
       "pageCount": 42,
       "module": "M5",
-      "documentType": "clinical pharmacology summary",
+      "documentType": "Clinical Pharmacology Summary",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -16327,7 +16327,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "protocol",
+      "documentType": "Protocol",
       "peopleMentioned": [
         "David Montefiori",
         "Marcella Sarzotti-Kelsoe"
@@ -16367,7 +16367,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M5",
-      "documentType": "report",
+      "documentType": "Report",
       "peopleMentioned": [],
       "tags": [
         "Biomedical Research",
@@ -16478,7 +16478,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -16537,7 +16537,7 @@
       "fileType": "PDF",
       "pageCount": 20,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -16679,7 +16679,7 @@
       "fileType": "PDF",
       "pageCount": 38,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -20220,7 +20220,7 @@
       "fileType": "DOCX",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "patient information",
+      "documentType": "Patient Information",
       "peopleMentioned": [],
       "tags": [
         "vaccine for people with heart conditions",
@@ -20863,7 +20863,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -20964,7 +20964,7 @@
       "fileType": "PDF",
       "pageCount": 50,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21144,7 +21144,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21166,7 +21166,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21188,7 +21188,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21210,7 +21210,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21274,7 +21274,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21464,7 +21464,7 @@
       "fileType": "PDF",
       "pageCount": 22,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21486,7 +21486,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M5",
-      "documentType": "review",
+      "documentType": "Review",
       "peopleMentioned": [
         "BRIAN K. MEYER",
         "ALEX NI",
@@ -21528,7 +21528,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21550,7 +21550,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Hussin A. Rothana",
         "Siddappa N. Byrareddyb"
@@ -21635,7 +21635,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "FERNANDO P. POLACK"
       ],
@@ -21674,7 +21674,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21735,7 +21735,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21794,7 +21794,7 @@
       "fileType": "PDF",
       "pageCount": 29,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21855,7 +21855,7 @@
       "fileType": "PDF",
       "pageCount": 36,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21918,7 +21918,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -21979,7 +21979,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -22001,7 +22001,7 @@
       "fileType": "PDF",
       "pageCount": 23,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -22023,7 +22023,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -22136,7 +22136,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -22417,7 +22417,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M1",
-      "documentType": "patient information",
+      "documentType": "Patient Information",
       "peopleMentioned": [],
       "tags": [
         "recipient information",
@@ -22454,7 +22454,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "patient information",
+      "documentType": "Patient Information",
       "peopleMentioned": [],
       "tags": [
         "pregnancy",
@@ -22791,7 +22791,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Noa Berar Yanay",
         "Zaher Armaly"
@@ -23136,7 +23136,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23195,7 +23195,7 @@
       "fileType": "PDF",
       "pageCount": 50,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23333,7 +23333,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "clinical trial report",
+      "documentType": "Clinical Trial Report",
       "peopleMentioned": [
         "Laurence Chua",
         "Roderick McPhee",
@@ -23378,7 +23378,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23400,7 +23400,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23505,7 +23505,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23689,7 +23689,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23711,7 +23711,7 @@
       "fileType": "PDF",
       "pageCount": 53,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23772,7 +23772,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23875,7 +23875,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23934,7 +23934,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "research report",
+      "documentType": "Research Report",
       "peopleMentioned": [
         "Rafael Harpaz",
         "Jessica W. Leung"
@@ -23974,7 +23974,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -23996,7 +23996,7 @@
       "fileType": "PDF",
       "pageCount": 29,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24255,7 +24255,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24277,7 +24277,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Barbara H. Johnson",
         "Liisa Palmer",
@@ -24363,7 +24363,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24385,7 +24385,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24407,7 +24407,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24429,7 +24429,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24490,7 +24490,7 @@
       "fileType": "PDF",
       "pageCount": 36,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24587,7 +24587,7 @@
       "fileType": "PDF",
       "pageCount": 29,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24609,7 +24609,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24631,7 +24631,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24653,7 +24653,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Li Li",
         "Qiao Yan Chen",
@@ -24782,7 +24782,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24843,7 +24843,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24865,7 +24865,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "research letter",
+      "documentType": "Research Letter",
       "peopleMentioned": [
         "Marinaki"
       ],
@@ -24904,7 +24904,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -24926,7 +24926,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "FERNANDO P. POLACK"
       ],
@@ -24965,7 +24965,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "review",
+      "documentType": "Review",
       "peopleMentioned": [
         "Marianthi Papagianni",
         "Symeon Metallidis",
@@ -25006,7 +25006,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25104,7 +25104,7 @@
       "fileType": "PDF",
       "pageCount": 36,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25126,7 +25126,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25148,7 +25148,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25211,7 +25211,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25233,7 +25233,7 @@
       "fileType": "PDF",
       "pageCount": 26,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25255,7 +25255,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25356,7 +25356,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25378,7 +25378,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25400,7 +25400,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25498,7 +25498,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25520,7 +25520,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25542,7 +25542,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -25791,7 +25791,7 @@
       "fileType": "DOCX",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "patient information",
+      "documentType": "Patient Information",
       "peopleMentioned": [],
       "tags": [
         "pregnancy",
@@ -26167,7 +26167,7 @@
       "fileType": "PDF",
       "pageCount": 280,
       "module": "M4",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",
@@ -26208,7 +26208,7 @@
       "fileType": "PDF",
       "pageCount": 814,
       "module": "M4",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "Moderna TX",
         "Inc.",
@@ -26607,7 +26607,7 @@
       "fileType": "PDF",
       "pageCount": 1614,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -27234,7 +27234,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "marketing email",
+      "documentType": "Marketing Email",
       "peopleMentioned": [],
       "tags": [
         "e-Pharm",
@@ -27609,7 +27609,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "advertisement",
+      "documentType": "Advertisement",
       "peopleMentioned": [],
       "tags": [
         "myocarditis",
@@ -32511,7 +32511,7 @@
       "fileType": "PDF",
       "pageCount": 39,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -32533,7 +32533,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M3",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Hoang Hiep Nguyen",
         "Jeho Park",
@@ -32621,7 +32621,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -32728,7 +32728,7 @@
       "fileType": "PDF",
       "pageCount": 15,
       "module": "M3",
-      "documentType": "research article",
+      "documentType": "Research Article",
       "peopleMentioned": [
         "Joke Devoldere",
         "Heleen Dewitte",
@@ -33053,7 +33053,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -33075,7 +33075,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -33097,7 +33097,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -33158,7 +33158,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -33263,7 +33263,7 @@
       "fileType": "PDF",
       "pageCount": 12,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -33369,7 +33369,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -33869,7 +33869,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -34215,7 +34215,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "protocol",
+      "documentType": "Protocol",
       "peopleMentioned": [
         "Timothy W. Nilsen",
         "Donald C. Rio",
@@ -34336,7 +34336,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M3",
-      "documentType": "survey and summary",
+      "documentType": "Survey and Summary",
       "peopleMentioned": [
         "Anand Ramanathan",
         "G. Brett Robb",
@@ -34585,7 +34585,7 @@
       "fileType": "PDF",
       "pageCount": 19,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -34915,7 +34915,7 @@
       "fileType": "PDF",
       "pageCount": 16,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -34937,7 +34937,7 @@
       "fileType": "PDF",
       "pageCount": 10,
       "module": "M2",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -34959,7 +34959,7 @@
       "fileType": "PDF",
       "pageCount": 13,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -38510,7 +38510,7 @@
       "fileType": "PDF",
       "pageCount": 48,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -45864,7 +45864,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -46062,7 +46062,7 @@
       "fileType": "PDF",
       "pageCount": 33,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -53152,7 +53152,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -53256,7 +53256,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -53278,7 +53278,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -53798,7 +53798,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -55172,7 +55172,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -55194,7 +55194,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -55216,7 +55216,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -55359,7 +55359,7 @@
       "fileType": "PDF",
       "pageCount": 11,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -55381,7 +55381,7 @@
       "fileType": "PDF",
       "pageCount": 637,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -55610,7 +55610,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "information request",
+      "documentType": "Information Request",
       "peopleMentioned": [
         "Michelle Olsen",
         "Josephine Resnick",
@@ -55692,7 +55692,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -56056,7 +56056,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -57313,7 +57313,7 @@
       "fileType": "PDF",
       "pageCount": 61,
       "module": "M5",
-      "documentType": "clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -57619,7 +57619,7 @@
       "fileType": "PDF",
       "pageCount": 40,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -57659,7 +57659,7 @@
       "fileType": "PDF",
       "pageCount": 37,
       "module": "M5",
-      "documentType": "study guide",
+      "documentType": "Study Guide",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -59228,7 +59228,7 @@
       "fileType": "PDF",
       "pageCount": 32,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -59345,7 +59345,7 @@
       "fileType": "PDF",
       "pageCount": 46,
       "module": "M5",
-      "documentType": "clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -59582,7 +59582,7 @@
       "fileType": "PDF",
       "pageCount": 33,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc."
@@ -64464,7 +64464,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64486,7 +64486,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64508,7 +64508,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64530,7 +64530,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64552,7 +64552,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64574,7 +64574,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64596,7 +64596,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64618,7 +64618,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64640,7 +64640,7 @@
       "fileType": "PDF",
       "pageCount": 31,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64662,7 +64662,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64684,7 +64684,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64706,7 +64706,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64728,7 +64728,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64750,7 +64750,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64772,7 +64772,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64794,7 +64794,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64816,7 +64816,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64838,7 +64838,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64860,7 +64860,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64882,7 +64882,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64904,7 +64904,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64926,7 +64926,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64948,7 +64948,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64970,7 +64970,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -64992,7 +64992,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65014,7 +65014,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65036,7 +65036,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65058,7 +65058,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65080,7 +65080,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65102,7 +65102,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65124,7 +65124,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65146,7 +65146,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65168,7 +65168,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65190,7 +65190,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65212,7 +65212,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65234,7 +65234,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65256,7 +65256,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65278,7 +65278,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65300,7 +65300,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65322,7 +65322,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65344,7 +65344,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65366,7 +65366,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65388,7 +65388,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65410,7 +65410,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65432,7 +65432,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65454,7 +65454,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65476,7 +65476,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65498,7 +65498,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65520,7 +65520,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65542,7 +65542,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65564,7 +65564,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65586,7 +65586,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65608,7 +65608,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65630,7 +65630,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65652,7 +65652,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65674,7 +65674,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65696,7 +65696,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65718,7 +65718,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65740,7 +65740,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65762,7 +65762,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65784,7 +65784,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65846,7 +65846,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65868,7 +65868,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65890,7 +65890,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65912,7 +65912,7 @@
       "fileType": "PDF",
       "pageCount": 3,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -65934,7 +65934,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66551,7 +66551,7 @@
       "fileType": "PDF",
       "pageCount": 7,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66573,7 +66573,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66595,7 +66595,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66617,7 +66617,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66639,7 +66639,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66661,7 +66661,7 @@
       "fileType": "PDF",
       "pageCount": 18,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66683,7 +66683,7 @@
       "fileType": "PDF",
       "pageCount": 21,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66705,7 +66705,7 @@
       "fileType": "PDF",
       "pageCount": 22,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66727,7 +66727,7 @@
       "fileType": "PDF",
       "pageCount": 23,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66749,7 +66749,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66771,7 +66771,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66793,7 +66793,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66815,7 +66815,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66837,7 +66837,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -66859,7 +66859,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -68296,7 +68296,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -68318,7 +68318,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M3",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -83125,7 +83125,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M1",
-      "documentType": "meeting minutes",
+      "documentType": "Meeting Minutes",
       "peopleMentioned": [
         "Michelle Olsen",
         "Emma Harrington"
@@ -96306,7 +96306,7 @@
       "fileType": "PDF",
       "pageCount": 19,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -96848,7 +96848,7 @@
       "fileType": "PDF",
       "pageCount": 14,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -97712,7 +97712,7 @@
       "fileType": "PDF",
       "pageCount": 8,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -99492,7 +99492,7 @@
       "fileType": "PDF",
       "pageCount": 28,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -99793,7 +99793,7 @@
       "fileType": "PDF",
       "pageCount": 5,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -100010,7 +100010,7 @@
       "fileType": "PDF",
       "pageCount": 96,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -100228,7 +100228,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -101251,7 +101251,7 @@
       "fileType": "PDF",
       "pageCount": 6,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -109914,7 +109914,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M1",
-      "documentType": "regulatory letter",
+      "documentType": "Regulatory Letter",
       "peopleMentioned": [
         "Michelle Olsen"
       ],
@@ -109996,7 +109996,7 @@
       "fileType": "PDF",
       "pageCount": 9,
       "module": "M1",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -110623,7 +110623,7 @@
       "fileType": "PDF",
       "pageCount": 4,
       "module": "M5",
-      "documentType": "clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "ModernaTX",
         "Inc.",
@@ -110881,7 +110881,7 @@
       "fileType": "PDF",
       "pageCount": 2,
       "module": "M5",
-      "documentType": "unknown",
+      "documentType": "Unknown",
       "peopleMentioned": [],
       "tags": [
         "claude-parse",
@@ -111036,7 +111036,7 @@
       "fileType": "PDF",
       "pageCount": 1,
       "module": "M5",
-      "documentType": "clinical study report",
+      "documentType": "Clinical Study Report",
       "peopleMentioned": [
         "Lisa A. Jackson",
         "MD",
@@ -121686,7 +121686,7 @@
       "fileType": "PDF",
       "pageCount": 811,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",
@@ -121768,7 +121768,7 @@
       "fileType": "PDF",
       "pageCount": 831,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",
@@ -121809,7 +121809,7 @@
       "fileType": "PDF",
       "pageCount": 983,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",
@@ -121850,7 +121850,7 @@
       "fileType": "PDF",
       "pageCount": 957,
       "module": "M5",
-      "documentType": "Study report",
+      "documentType": "Study Report",
       "peopleMentioned": [
         "Moderna Therapeutics",
         "Inc.",

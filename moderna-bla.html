@@ -2802,7 +2802,7 @@
             if (tooltipPersistent) return; // Don't show hover tooltip if persistent one is open
             
             const fileLinks = d.files
-                .map(file => `<a href="${file.link}" target="_blank">${file.filename}</a>`)
+                .map(file => `<a href="${file.link}" target="_blank" rel="noopener noreferrer">${file.filename}</a>`)
                 .join('<br>');
             
             tooltip
@@ -2821,7 +2821,7 @@
             tooltipPersistent = true;
             
             const fileLinks = d.files
-                .map(file => `<a href="${file.link}" target="_blank">${file.filename}</a>`)
+                .map(file => `<a href="${file.link}" target="_blank" rel="noopener noreferrer">${file.filename}</a>`)
                 .join('<br>');
             
             tooltip
@@ -3006,7 +3006,7 @@
                     <td><div class="color-bar" style="background-color: ${color};"></div></td>
                     <td>${file.module || '-'}</td>
                     <td>${file.documentType || '-'}</td>
-                    <td><a href="${file.google_drive_link}" target="_blank" class="filename-link">${file.filename}</a></td>
+                    <td><a href="${file.google_drive_link}" target="_blank" rel="noopener noreferrer" class="filename-link">${file.filename}</a></td>
                     <td>
                         <button class="tags-button" onclick="showTagPopup(event, ${i})" title="View tags" data-color="${color}">
                             <i class="fa-solid fa-tags"></i>

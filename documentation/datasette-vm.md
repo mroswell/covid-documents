@@ -1,4 +1,28 @@
+
+
+
+
 ####
+
+### Create the virtual environment
+python3 -m venv datasette-env
+
+### Activate it
+source datasette-env/bin/activate
+
+### Install datasette
+pip install datasette
+
+### Verify it worked
+datasette --version
+Then to open your database:
+datasette md-bla-data.db
+
+
+
+
+
+
 Visit: http://35.231.8.125:8001/pd-eua-data
 
 - http://35.231.8.125:8001/md-bla-data
